@@ -15,13 +15,14 @@ title: Vimのユーザと開発者を結ぶコミュニティサイト
     <li><span>{{ post.date | date_to_string }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-
+<br />
+<br />
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: '#vim OR #vimeditor',
+  search: 'vim lang:ja',
   interval: 30000,
   title: 'vim-jp',
   subject: 'Vimのユーザと開発者を結ぶコミュニティサイト',
