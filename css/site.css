@@ -120,3 +120,7 @@ code {
  border: solid 1px #ccc;
  padding: 3px;
 }
+pre>code {
+  color: white;
+ background-color: black;
+}
