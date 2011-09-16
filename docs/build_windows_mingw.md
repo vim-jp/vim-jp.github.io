@@ -2,8 +2,6 @@
 layout: docs
 title: MinGWを使ってのビルド方法
 ---
-MinGWをインストールする
------------------------
 
 1. MinGWのインストール
 > [MinGW | Minimalist GNU for Windows](http://www.mingw.org/)からお使いのコンピュータにあったコンパイラをダウンロードしてインストールします。
@@ -26,7 +24,7 @@ MinGWをインストールする
 >       ICONV=yes PERL=C:\strawberry\perl DYNAMIC_PERL=yes
 >       PERL_VER=512 PYTHON=c:\python27 DYNAMIC_PYTHON=yes
 >       PYTHON_VER=27 RUBY=c:\ruby192 DYNAMIC_RUBY=yes RUBY_VER=191
->       RUBY_VER_LONG=1.9.1 CSCOPE=yes MSVCVER=6.0 NETBEANS=yes
+>       RUBY_VER_LONG=1.9.1 CSCOPE=yes NETBEANS=yes
 >       DEBUG=no
 > ※実際は1行
 
