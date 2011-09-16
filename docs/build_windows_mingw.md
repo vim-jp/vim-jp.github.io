@@ -15,16 +15,19 @@ title: MinGWを使ってのビルド方法
 
 4. コンパイル
 > `vim/src`フォルダに移動し以下のコマンドを実行します。
+> 
 >     mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes
 >       ICONV=yes DEBUG=no
+> 
 > ※実際は1行
 > 
 > もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
+> 
 >     mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes
 >       ICONV=yes PERL=C:\strawberry\perl DYNAMIC_PERL=yes
 >       PERL_VER=512 PYTHON=c:\python27 DYNAMIC_PYTHON=yes
 >       PYTHON_VER=27 RUBY=c:\ruby192 DYNAMIC_RUBY=yes RUBY_VER=191
 >       RUBY_VER_LONG=1.9.1 CSCOPE=yes NETBEANS=yes
 >       DEBUG=no
+> 
 > ※実際は1行
-
