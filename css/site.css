@@ -115,3 +115,8 @@ a:active, a:hover {
 a:visited {
   color: #8899aa;
 }
+
+code {
+ border: solid 1px #ccc;
+ padding: 3px;
+}
