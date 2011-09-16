@@ -129,3 +129,9 @@ pre {
  background-color: black;
  padding: 0.5em;
 }
+.entry-logo {
+ float: left;
+}
+br.clear {
+ clear: both;
+}
