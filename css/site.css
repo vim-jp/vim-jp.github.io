@@ -135,3 +135,18 @@ pre {
 br.clear {
  clear: both;
 }
+
+#link dt {
+ margin: 0 0 0.8em;
+ width: 7.5em;
+ border-left: solid 8px #aaa;
+ padding-left: 5px;
+ white-space: nowrap;
+}
+#link dt a {
+ color: #0000aa;
+ font-weight: bold;
+}
+#link dd {
+ margin-bottom: 1em;
+}
