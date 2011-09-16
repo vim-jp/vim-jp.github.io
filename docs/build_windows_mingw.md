@@ -7,7 +7,7 @@ MinGWをインストールする
 
 1. MinGWのインストール
 
-> [MinGW \| Minimalist GNU for Windows](http://www.mingw.org/)からお使いのコンピュータにあったコンパイラをダウンロードしてインストールします。
+> [MinGW | Minimalist GNU for Windows](http://www.mingw.org/)からお使いのコンピュータにあったコンパイラをダウンロードしてインストールします。
 
 2. Mercurialのインストール
 
