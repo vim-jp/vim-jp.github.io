@@ -94,6 +94,8 @@ form textarea {
   float: right;
   clear: right;
   width: 250px;
+  background: #eee;
+  padding: 10px;
 }
 
 #header {
@@ -102,4 +104,14 @@ form textarea {
 
 .body {
   overflow:hidden;
+}
+
+a, a:link {
+  color: #6699cc;
+}
+a:active, a:hover {
+  color: #669933;
+}
+a:visited {
+  color: #8899aa;
 }
