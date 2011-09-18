@@ -150,3 +150,75 @@ br.clear {
 #link dd {
  margin-bottom: 1em;
 }
+
+/*
+ * For binary_download buttons.
+ *
+ * Most of styles are imported from github-button.
+ */
+
+#binary_download {
+  float: right;
+  clear: right;
+  width: 250px;
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#binary_download h2 {
+  margin: 0.5em 0em;
+}
+
+#binary_download ul {
+  -webkit-padding-start: 0px;
+}
+
+#binary_download li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.download_button,
+.download_button:link {
+  display: block;
+  padding: 10px;
+  border: 1px solid black;
+  /* From github-button */
+  text-decoration: none; 
+  text-shadow: 1px 1px 0 #fff; 
+  color: #333;
+  white-space: nowrap; 
+  cursor: pointer; 
+  outline: none; 
+  background-color: #aaaaaa;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#aaaaaa));
+  background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
+  background-image: -o-linear-gradient(#ffffff, #aaaaaa);
+  background-image: linear-gradient(#ffffff, #aaaaaa);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box; 
+  /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+  -webkit-border-radius: 0.5em; 
+  -moz-border-radius: 0.5em; 
+  border-radius: 0.5em; 
+  /* IE hacks */
+  zoom: 1; 
+}
+
+.download_button:hover,
+.download_button:focus,
+.download_button:active,
+.download_button.active {
+  border-color: #30b372;
+  border-bottom-color: #2aa065;
+  text-decoration: none; 
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3); 
+  color: #fff; 
+  background-color: #80cc66;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#50bb50), to(#80cc66));
+  background-image: -moz-linear-gradient(#50bb50, #80cc66);
+  background-image: -o-linear-gradient(#50bb50, #80cc66);
+  background-image: linear-gradient(#50bb50, #80cc66);
+}
