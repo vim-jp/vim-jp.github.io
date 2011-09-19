@@ -187,16 +187,16 @@ br.clear {
   border: 1px solid black;
   /* From github-button */
   text-decoration: none; 
-  text-shadow: 1px 1px 0 #fff; 
-  color: #333;
+  font-weight: bold;
+  color: #fff;
   white-space: normal; 
   cursor: pointer; 
   outline: none; 
-  background-color: #bbeecc;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bbffdd), to(#bbccaa));
-  background-image: -moz-linear-gradient(#bbffdd, #bbccaa);
-  background-image: -o-linear-gradient(#bbffdd, #bbccaa);
-  background-image: linear-gradient(#bbffdd, #bbccaa);
+  background-color: #50bb50;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#50bb50), to(#80cc66));
+  background-image: -moz-linear-gradient(#50bb50, #80cc66);
+  background-image: -o-linear-gradient(#50bb50, #80cc66);
+  background-image: linear-gradient(#50bb50, #80cc66);
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   -o-background-clip: padding-box; 
@@ -215,13 +215,13 @@ br.clear {
   border-color: #30b372;
   border-bottom-color: #2aa065;
   text-decoration: none; 
-  text-shadow: -1px -1px 0 rgba(0,0,0,0.3); 
+  font-weight: bold;
   color: #fff; 
-  background-color: #80cc66;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#50bb50), to(#80cc66));
-  background-image: -moz-linear-gradient(#50bb50, #80cc66);
-  background-image: -o-linear-gradient(#50bb50, #80cc66);
-  background-image: linear-gradient(#50bb50, #80cc66);
+  background-color: #70dd70;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70dd70), to(#80cc66));
+  background-image: -moz-linear-gradient(#70dd70, #80cc66);
+  background-image: -o-linear-gradient(#70dd70, #80cc66);
+  background-image: linear-gradient(#70dd70, #80cc66);
 }
 
 .download_button .info {
