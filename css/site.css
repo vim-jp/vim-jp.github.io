@@ -90,15 +90,16 @@ form textarea {
   padding-right: 280px;
 }
 
-#link {
+.links>div {
   float: right;
   clear: right;
   width: 250px;
   background: #eee;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
-#header {
+#footer {
   text-align: center;
 }
 
@@ -151,20 +152,19 @@ br.clear {
  margin-bottom: 1em;
 }
 
+#about span a {
+ border-left: solid 8px #aaa;
+ padding-left: 5px;
+ white-space: nowrap;
+ color: #0000aa;
+ font-weight: bold;
+}
+
 /*
  * For binary_download buttons.
  *
  * Most of styles are imported from github-button.
  */
-
-#binary_download {
-  float: right;
-  clear: right;
-  width: 250px;
-  background: #eee;
-  padding: 10px;
-  margin-bottom: 20px;
-}
 
 #binary_download h2 {
   margin: 0.5em 0em;
