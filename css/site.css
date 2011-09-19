@@ -188,14 +188,14 @@ br.clear {
   text-decoration: none; 
   text-shadow: 1px 1px 0 #fff; 
   color: #333;
-  white-space: nowrap; 
+  white-space: normal; 
   cursor: pointer; 
   outline: none; 
-  background-color: #aaaaaa;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#aaaaaa));
-  background-image: -moz-linear-gradient(#ffffff, #aaaaaa);
-  background-image: -o-linear-gradient(#ffffff, #aaaaaa);
-  background-image: linear-gradient(#ffffff, #aaaaaa);
+  background-color: #66aa88;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bbffdd), to(#66aa88));
+  background-image: -moz-linear-gradient(#bbffdd, #66aa88);
+  background-image: -o-linear-gradient(#bbffdd, #66aa88);
+  background-image: linear-gradient(#bbffdd, #66aa88);
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   -o-background-clip: padding-box; 
@@ -221,4 +221,8 @@ br.clear {
   background-image: -moz-linear-gradient(#50bb50, #80cc66);
   background-image: -o-linear-gradient(#50bb50, #80cc66);
   background-image: linear-gradient(#50bb50, #80cc66);
+}
+
+.download_button .info {
+  font-size: 0.75em;
 }
