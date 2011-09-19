@@ -180,7 +180,8 @@ br.clear {
 }
 
 .download_button,
-.download_button:link {
+.download_button:link,
+.download_button:visited {
   display: block;
   padding: 10px;
   border: 1px solid black;
