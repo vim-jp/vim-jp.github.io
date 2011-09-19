@@ -191,11 +191,11 @@ br.clear {
   white-space: normal; 
   cursor: pointer; 
   outline: none; 
-  background-color: #66aa88;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bbffdd), to(#66aa88));
-  background-image: -moz-linear-gradient(#bbffdd, #66aa88);
-  background-image: -o-linear-gradient(#bbffdd, #66aa88);
-  background-image: linear-gradient(#bbffdd, #66aa88);
+  background-color: #bbccaa;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bbffdd), to(#bbccaa));
+  background-image: -moz-linear-gradient(#bbffdd, #bbccaa);
+  background-image: -o-linear-gradient(#bbffdd, #bbccaa);
+  background-image: linear-gradient(#bbffdd, #bbccaa);
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   -o-background-clip: padding-box; 
