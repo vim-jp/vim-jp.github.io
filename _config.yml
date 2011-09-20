@@ -1,8 +1,8 @@
 safe:        false
-auto:        true
+auto:        false
 server:      false
 server_port: 4000
-base-url:    /
+base-url:    http://vim-jp
 
 source:      .
 destination: ./_site
