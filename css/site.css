@@ -233,4 +233,8 @@ br.clear {
   font-size: 0.75em;
 }
 
+.hatena-bookmark-icon {
+  height: 18px;
+}
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
