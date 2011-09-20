@@ -8,7 +8,11 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script> 
 $(function() {
-	gapi.plusone.render("plusone-div", { "size": "medium", "count": true, "href": "{{ site.base-url }}{{ page.url }}" });
+	var url = "{{ site.base-url }}{{ page.url }}";
+  if (url ==  "http://vim-jp.org/index.html") {
+    url = "http://vim-jp.org/";
+  }
+  gapi.plusone.render("plusone-div", { "size": "medium", "count": true, "href": url });
 });
 </script> 
 </head>
