@@ -53,3 +53,10 @@ title: Vimテクニックバイブル 作業効率をカイゼンする150の技
 > 正：使用例：例えば、Perlのスクリプトで:makeによりエラーチェックを走らせた場合<br />
 
 > スクリーンショットが明らかにPerlスクリプトです。Rubyにもprint文はあるので完全な間違いではありませんが……。<br />
+
+<hr />
+# 9-5 ソースコード中のtrue・falseをトグルで置き換える
+* P.314 リスト2 CTRL-Cにtoggle.vimプラグインの機能をマッピングする
+
+> 誤：vmap &lt;C-C&gt; &gt;Plug&gt;ToggleV<br />
+> 正：vmap &lt;C-C&gt; &lt;Plug&gt;ToggleV<br />
