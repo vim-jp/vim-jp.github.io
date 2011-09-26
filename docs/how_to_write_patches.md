@@ -11,7 +11,7 @@ title: パッチの書き方
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
-    hg clone https://code.google.com/p/vim/
+	hg clone https://vim.googlecode.com/hg/ vim
 
 次に修正内容に対応するブランチを作成します。
 
