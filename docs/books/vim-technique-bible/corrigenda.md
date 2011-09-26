@@ -34,7 +34,6 @@ title: Vimテクニックバイブル 作業効率をカイゼンする150の技
 <tr><td>S&lt;strong&gt;</td><td>選択箇所を&lt;strong&gt;タグで囲む</td></tr>
 </tbody></table>
 
-
 <hr />
 # 6-5 APIドキュメントを参照する
 * P.195 コマンドライン補完
@@ -60,3 +59,66 @@ title: Vimテクニックバイブル 作業効率をカイゼンする150の技
 
 > 誤：vmap &lt;C-C&gt; &gt;Plug&gt;ToggleV<br />
 > 正：vmap &lt;C-C&gt; &lt;Plug&gt;ToggleV<br />
+
+<hr />
+# 9-8 zencodingをより活用する
+* P.321
+
+> 誤：リスト1
+> 
+>     let g:user_zen_settings = {
+>     \  'lang' : 'ja',
+>     \  'indentation' : '\t',
+>     \  'html' : {
+>     \    'indentation' : ' ',
+>     \  },
+>     \  'css' : {
+>     \    'filters' : 'fc',
+>     \  },
+>     \ },
+>     \}
+> 
+> 正：リスト1
+> 
+>     let g:user_zen_settings = {
+>     \  'lang' : 'ja',
+>     \  'indentation' : '\t',
+>     \  'html' : {
+>     \    'indentation' : ' ',
+>     \  },
+>     \  'css' : {
+>     \    'filters' : 'fc',
+>     \  },
+>     \}
+> 
+> 中括弧が一つ多い
+
+* P.323
+
+> 誤：リスト3
+> 
+>     let g:user_zen_settings = {
+>     \  'javascript' : {
+>     \    'snippets' : {
+>     \      'jq' : "$(function() {\n\t${cursor}${child}\n});",
+>     \      'jq:each' : "$.each(${cursor}, function(index, item)\n\t${child}\n});",
+>     \      'fn' : "(function() {\n\t${cursor}\n})();",
+>     \      'tm' : "setTimeout(function() {\n\t${cursor}\n}, 100);",
+>     \    },
+>     \  },
+>     \}
+>     
+> 誤：リスト3
+> 
+>     let g:user_zen_settings = {
+>     \  'javascript' : {
+>     \    'snippets' : {
+>     \      'jq' : "$(function() {\n\t${cursor}${child}\n});",
+>     \      'jq:each' : "$.each(${cursor}, function(index, item) {\n\t${child}\n});",
+>     \      'fn' : "(function() {\n\t${cursor}\n})();",
+>     \      'tm' : "setTimeout(function() {\n\t${cursor}\n}, 100);",
+>     \    },
+>     \  },
+>     \}
+>     
+> jq:eachに関数の中括弧開始が無い
