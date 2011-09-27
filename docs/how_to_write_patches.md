@@ -25,6 +25,10 @@ title: パッチの書き方
 
     vim os_win32.c
 
+この際コーディングスタイルは既存のものに合わせるようにしましょう。
+[:help coding-style](http://vim-jp.org/vimdoc-ja/develop.html#coding-style)にコーディング規約が書かれてあります。
+また[:help develop.txt](http://vim-jp.org/vimdoc-ja/develop.html)にはVimの開発に関する事項が書かれています。一度目を通すといいでしょう。
+
 修正したらcommitしましょう。
 
     hg commit
