@@ -140,6 +140,14 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 それはかなり不便なように思えます。確かに不便なので、筆者も改善をしたいと考えています。」
 とありますが、この機能は最新版であるvimshell Ver.9で実装されました:-)
 
+<hr />
+# 8-16 Vimエディタで標準入力をフィルター し、標準出力に結果を出力する
+
+* P.303
+※：間違いではありませんが、こちらのURLの方が望ましいだろう、ということで。
+
+> 誤：https://github.com/jakobi/script-archive/tree/master/vim/ <br />
+> 正：https://raw.github.com/jakobi/script-archive/master/vim/pipe.vim <br />
 
 <hr />
 # 9-5 ソースコード中のtrue・falseをトグルで置き換える
