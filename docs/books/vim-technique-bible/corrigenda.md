@@ -210,3 +210,15 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 >     \}
 >     
 > jq:eachに関数の中括弧開始が無い
+>
+
+# 9-10 neocomplcacheを使用して自動補完する
+
+* P.329
+
+> クイックマッチ
+> g:neocomplcache_enable_quick_matchオプションをオンにした場合、-記号を入力すると、
+> 補完候補の横に英数字が出てくるので、それを入力することによって、簡単に候補を選択できます。
+>
+> neocomplcacheのクイックマッチ機能はneocomplcache Ver.6.2で廃止されました。
+
