@@ -99,6 +99,29 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 
 <hr />
 # 6-8 errormarker.vimでエラー行を目立たせる
+* P.202
+
+> 誤：リスト1
+> if has('win32') || has('win64')
+>   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>   let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
+> else
+>   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>   let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
+> endif
+
+> 正：リスト1
+> if has('win32') || has('win64')
+>   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>   let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
+> else
+>   let g:errormarker_erroricon = expand('~/.vim/signs/err.png')
+>   let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
+> endif
+>
+> else側がbmpになっており、本文の解説と矛盾している。
+>
+
 * P.203
 
 > 誤：それが面倒な場合、fpluginや<br />
