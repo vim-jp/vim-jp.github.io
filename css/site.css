@@ -161,27 +161,46 @@ br.clear {
 }
 
 /*
- * For binary_download buttons.
- *
- * Most of styles are imported from github-button.
+ * For starting_vim area.
  */
 
-#binary_download h2 {
+#starting_vim h2 {
   margin: 0.5em 0em;
 }
 
-#binary_download ul {
+#starting_vim dt {
+  margin: 0.8em 0 0.4em;
+  border-left: solid 8px #aaa;
+  padding-left: 5px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+#starting_vim dt a {
+ color: #0000aa;
+}
+
+#starting_vim dd {
+  margin: 0 0 0 13px;
+}
+
+#starting_vim ul {
   -webkit-padding-start: 0px;
   -moz-padding-start: 0px;
   padding-start: 0px;
   padding: 0;
 }
 
-#binary_download li {
+#starting_vim li {
   display: block;
   margin-bottom: 10px;
 }
 
+div#VimdocJaSearch {
+  height: 28px;
+}
+
+/* Most of styles are imported from github-button. */
 .download_button,
 .download_button:link,
 .download_button:visited {
@@ -233,6 +252,9 @@ br.clear {
   font-size: 0.75em;
 }
 
+/*
+ * for hatena bookmarks.
+ */
 .hatena-bookmark-icon {
   height: 18px;
 }
