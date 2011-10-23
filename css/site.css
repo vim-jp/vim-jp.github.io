@@ -252,11 +252,4 @@ div#VimdocJaSearch {
   font-size: 0.75em;
 }
 
-/*
- * for hatena bookmarks.
- */
-.hatena-bookmark-icon {
-  height: 18px;
-}
-
 /* vim:set ts=8 sts=2 sw=2 noet: */
