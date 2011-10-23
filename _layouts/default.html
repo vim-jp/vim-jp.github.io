@@ -24,12 +24,6 @@
 <script> 
 $(function() {
   var url = "{{ site.base-url }}{{ page.url }}";
-  if (url ==  "http://vim-jp.org/index.html") {
-    url = "http://vim-jp.org/";
-    $('.hatena-bookmark-icon').each(function() {
-      this.src = 'http://b.hatena.ne.jp/entry/image/http://vim-jp.org/';
-    });
-  }
   gapi.plusone.render("plusone-div", { "size": "medium", "count": true, "href": url });
 });
 </script> 
