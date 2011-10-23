@@ -252,4 +252,9 @@ div#VimdocJaSearch {
   font-size: 0.75em;
 }
 
+/* @override */
+.fb_iframe_widget iframe {
+  vertical-align: baseline !important;
+}
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
