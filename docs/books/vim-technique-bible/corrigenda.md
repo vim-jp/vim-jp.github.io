@@ -2,6 +2,13 @@
 layout: docs
 title: Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表
 ---
+# 1-2 project.vimを使いやすくする
+* P.26 「インストール・設定」を差し替えます。<br />
+
+> 誤：本Tipsを利用するには、リスト1の設定をVimエディタの設定ファイルに追加してください。<br />
+> 正：本Tipsを利用するには、設定ファイルディレクトリにafter/pluginディレクトリを作成し、project.vimという名前でリスト1の設定ファイルを用意してください。<br />
+
+<hr />
 # 1-14 Vimプラグインを管理する
 * P.51 pathogen.vim との違い<br />
 
@@ -90,6 +97,11 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 </tbody></table>
 
 <hr />
+# 5-15 テキストオブジェクト機能を拡張する
+リスト2が抜けていて、リスト1→リスト3→リスト4という並びになっています。
+内容には問題はありません。
+
+<hr />
 # 6-5 APIドキュメントを参照する
 * P.195 コマンドライン補完
 
@@ -101,22 +113,22 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 * P.202
 
 > 誤：リスト1
-> if has('win32') || has('win64')
->   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
->   let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
-> else
->   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
->   let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
-> endif
-
+>     if has('win32') || has('win64')
+>       let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>       let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
+>     else
+>       let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>       let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
+>     endif
+>
 > 正：リスト1
-> if has('win32') || has('win64')
->   let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
->   let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
-> else
->   let g:errormarker_erroricon = expand('~/.vim/signs/err.png')
->   let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
-> endif
+>     if has('win32') || has('win64')
+>       let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
+>       let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
+>     else
+>       let g:errormarker_erroricon = expand('~/.vim/signs/err.png')
+>       let g:errormarker_warningicon = expand('~/.vim/signs/err.png')
+>     endif
 >
 > else側がbmpになっており、本文の解説と矛盾している。
 >
@@ -226,7 +238,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 >     \  },
 >     \}
 >     
-> 誤：リスト3
+> 正：リスト3
 > 
 >     let g:user_zen_settings = {
 >     \  'javascript' : {
