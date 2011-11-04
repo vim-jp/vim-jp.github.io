@@ -279,7 +279,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 > neocomplcacheのクイックマッチ機能はneocomplcache Ver.6.2で廃止されました。
 >
 > さらに追記：ただし、neocomplcache最新版とunite.vimの最新版をインストールしている場合、
-> <Plug>(neocomplcache_start_unite_quick_match)のマッピングで同等のことができます。
+> &lt;Plug&gt;(neocomplcache_start_unite_quick_match)のマッピングで同等のことができます。
 
 <hr />
 
