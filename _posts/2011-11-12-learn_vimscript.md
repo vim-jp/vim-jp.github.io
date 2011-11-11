@@ -12,6 +12,6 @@ pathogen-vim/bundle系プラグインでVimプラグインを管理されてお�
 # cd ~/.vim/bundle
 # git clone https://github.com/mattn/learn-vimscript.git
 
-``
+```
 
 でインストール出来ます。VimScriptの文法等で分からない事があれば`:help learn-vimscript`を実行してみて下さい。
