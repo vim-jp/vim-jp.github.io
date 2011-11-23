@@ -302,10 +302,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 
 >unite.vim Ver.3.1以降においても、互換性のために
 >ここで紹介されている「unite#set\_buffer\_option()」も残されてはいますが非推奨です。
->代わりに「unite#set\_profile()」を使用してください。引数は同じです。
-
-> 誤：-bufer-name<br />
-> 正：-buffer-name<br />
+>代わりに「unite#set\_profile()」を使用してください。引数の仕様は同じです。
 
 * P.363 :UniteResumeとバッファ名
 
