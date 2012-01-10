@@ -231,4 +231,4 @@ Vimに関する記事をVim Hacker達が繰り広げる「Vim Advent Calendar」
 
 Vim Advent Calendarはまだ続く予定です。お気軽にご参加下さい。
 
-[http://atnd.org/events/21925]()
+[http://atnd.org/events/21925](http://atnd.org/events/21925)
