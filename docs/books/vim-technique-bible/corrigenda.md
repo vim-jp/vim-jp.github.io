@@ -308,6 +308,31 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 
 <hr />
 
+# 9-11 neocomplcacheを使用して自動補完する
+
+* P.333
+
+> g:neocomplcache_plugin_disable
+>
+> 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache_source_disableという名前になっています。
+
+* P.334
+
+> Vimのスニペット展開のためのプラグインとしては、snipMateが有名ですが、neocomplcache
+もスニペット機能を内蔵しています。
+> 追記：Ver.7以降ではスニペット補完するsourceが標準添付でなくなりました。
+
+> neocomplcacheのスニペット機能は標準添付のsnippets_complete sourceにより実現さ
+れています。neocomplcacheをインストールさえすれば、特に他のプラグインをインストールする必要が
+ありません。
+> 追記：neocomplcache Ver.7移行では、スニペット機能が標準添付ではありません。
+> 別配布(https://github.com/Shougo/neocomplcache-snippets-complete)となっているため、各自でインストールする必要があります。
+
+<hr />
+
+# 9-13 neocomplcacheを使用してスニペット補完を行う
+
+* P.333
 # 10-5 unite.vimを本格的にカスタマイズする
 
 * P.360 表2 :Unite系コマンドのオプション一覧
