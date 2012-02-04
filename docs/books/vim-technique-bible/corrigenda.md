@@ -317,6 +317,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 > 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache_source_disableという名前になっています。
 
 * P.334
+
 > g:neocomplcache_plugin_completion_length
 >
 > 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache_source_completion_lengthという名前になっています。
@@ -328,11 +329,13 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 
 > Vimのスニペット展開のためのプラグインとしては、snipMateが有名ですが、neocomplcache
 もスニペット機能を内蔵しています。
+>
 > 追記：Ver.7以降ではスニペット補完するsourceが標準添付でなくなりました。
 
 > neocomplcacheのスニペット機能は標準添付のsnippets_complete sourceにより実現さ
 れています。neocomplcacheをインストールさえすれば、特に他のプラグインをインストールする必要が
 ありません。
+>
 > 追記：neocomplcache Ver.7移行では、スニペット機能が標準添付ではありません。
 > 別配布(https://github.com/Shougo/neocomplcache-snippets-complete)となっているため、各自でインストールする必要があります。
 
