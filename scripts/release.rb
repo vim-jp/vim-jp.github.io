@@ -13,6 +13,7 @@ if !ARGV.empty? && conf['downloads'].has_key?(ARGV[0])
   file = "_posts/#{Date.today.to_s}-#{ARGV[0]}-#{ver}.md"
   open("#{root}/#{file}", "wb") {|f|
     f.puts <<"EOS"
+---
 layout: post
 title: #{rel['title']} #{rel['version']} リリース
 ---
