@@ -38,3 +38,19 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: style
+
+exclude: scripts
+
+downloads:
+  vim73w32:
+    title: Windows 32ビット Kaoriya
+    version: 7.3.434
+    info: +kaoriya, 14MB ZIP
+  vim73w64:
+    title: Windows 64ビット Kaoriya
+    version: 7.3.434
+    info: +kaoriya, 14MB ZIP
+  vim73mac:
+    title: MacOSX 10.6/10.7
+    version: 7.3.390
+    info: +macvim-kaoriya, 15MB
