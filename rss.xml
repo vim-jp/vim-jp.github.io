@@ -5,17 +5,17 @@ layout: nil
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vim-jp</title>
-    <link>http://vim-jp.github.com/</link>
-    <atom:link href="http://vim-jp.github.com/rss.xml" rel="self" type="application/rss+xml" />
+    <link>http://vim-jp.org/</link>
+    <atom:link href="http://vim-jp.org/rss.xml" rel="self" type="application/rss+xml" />
     <description>vim-jp &amp;raquo; Vimのユーザと開発者を結ぶコミュニティサイト</description>
 
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
-      <link>http://vim-jp.github.com{{ post.url }}</link>
+      <link>http://vim-jp.org{{ post.url }}.html</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }}</pubDate>
       <author>vim-jp</author>
-      <guid>http://vim-jp.github.com{{ post.id }}</guid>
+      <guid>http://vim-jp.org{{ post.id }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
