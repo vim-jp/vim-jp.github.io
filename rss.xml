@@ -12,7 +12,7 @@ layout: nil
     {% for post in site.posts %}
     <item>
       <title>{{ post.title }}</title>
-      <link>http://vim-jp.org{{ post.url }}.html</link>
+      <link>http://vim-jp.org{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }}</pubDate>
       <author>vim-jp</author>
       <guid>http://vim-jp.org{{ post.id }}</guid>
