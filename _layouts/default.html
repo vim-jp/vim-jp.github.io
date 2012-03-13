@@ -12,8 +12,30 @@
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
+  google.load("feeds", "1", {language : "ja"});
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
+    // feeds
+    var feed = new google.feeds.Feed("http://vim-jp.appspot.com/patches/");
+		feed.load(function(result) {
+      if (!result.error) {
+        var container = document.getElementById("patches-list");
+        for (var i = 0; i < result.feed.entries.length; i++) {
+          var entry = result.feed.entries[i];
+          var li = document.createElement("li");
+					var link = document.createElement("a");
+					link.appendChild(document.createTextNode("Patch " + entry.title));
+					link.setAttribute('href', entry.link);
+					link.setAttribute('target', '_blank');
+					li.appendChild(link);
+					li.appendChild(document.createElement("br"));
+          li.appendChild(document.createTextNode(entry.content));
+          container.appendChild(li);
+        }
+      }
+    });
+
+    // search
     var customSearchControl = new google.search.CustomSearchControl("001325159752250591701:65aunpq8rlg");
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     var options = new google.search.DrawOptions();
@@ -87,6 +109,10 @@
 					<dt><a href="http://vimwiki.net/">VimWiki</a></dt>
 					<dd>匿名掲示板2ちゃんねるから収集されたVimのTipsなど。</dd>
 				</dl>
+			</div>
+			<div id="patches">
+				<h2>Patches</h2>
+				<ul id="patches-list"></ul>
 			</div>
 			<div id="about">
 				<span><a href="/about.html">このサイトについて</a></span><br />
