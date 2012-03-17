@@ -189,6 +189,11 @@ URLで配布されているvimprocも同時にインストールします。」
 neocomplcacheがインストールされていない環境下では警告が表示されます。
 自動補完を使用する・しないに関わらず、neocomplcacheをインストールすることを推奨します。
 
+* P.211
+vimprocのコンパイル方法として、このページに記述されているMakefile名はvimproc ver.6.1以下でのみ有効です。
+vimproc ver.7.0からはMakefileの名前が異なっています。
+正確なMakefile名については、":help vimproc-install"に書いてあるものを参照してください。
+
 * P.213
 
 「vimshellは実装上の制限により、iexeコマンドを用いないと起動したコマンドに入力を送ることができません」
