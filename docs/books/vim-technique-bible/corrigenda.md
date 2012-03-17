@@ -183,6 +183,7 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 ※：正誤表というより、補足情報です。
 
 * P.211
+
 「vimshellはvimprocというプラグインに依存しているため、それだけでは動作しません。下記の
 URLで配布されているvimprocも同時にインストールします。」
 とありますが、vimshell Ver.9.1からは補完機能がneocomplcacheに依存するようになりました。
@@ -190,6 +191,7 @@ neocomplcacheがインストールされていない環境下では警告が表�
 自動補完を使用する・しないに関わらず、neocomplcacheをインストールすることを推奨します。
 
 * P.211
+
 vimprocのコンパイル方法として、このページに記述されているMakefile名はvimproc ver.6.1以下でのみ有効です。
 vimproc ver.7.0からはMakefileの名前が異なっています。
 正確なMakefile名については、":help vimproc-install"に書いてあるものを参照してください。
@@ -198,7 +200,7 @@ vimproc ver.7.0からはMakefileの名前が異なっています。
 
 「vimshellは実装上の制限により、iexeコマンドを用いないと起動したコマンドに入力を送ることができません」
 とありますが、この制限は最新版であるvimshell Ver.9で撤廃されました。
-ただしvimshell Ver.9を使用するためには、vimproc Ver.6をインストールし、DLLをコンパイルしておく必要があります。
+ただしvimshell Ver.9を使用するためには、vimproc Ver.6.0以上をインストールし、DLLをコンパイルしておく必要があります。
 iexeコマンドはもちろん残っていますが、iexeコマンドを用いる必要はありません。
 ただし、Windows環境ではコマンドに対して適切なオプションを与える必要があります。
 iexeではそれを自動的に処理しているため、Windows環境はiexeを用いる方法がオススメです。
@@ -212,7 +214,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 
 「vimshellは普通のシェルとは異なり、コマンドにキーボードからの入力を与えることができません」
 とありますが、この制限は最新版であるvimshell Ver.9で撤廃されました。
-ただしvimshell Ver.9を使用するためには、vimproc Ver.6をインストールし、DLLをコンパイルしておく必要があります。
+ただしvimshell Ver.9を使用するためには、vimproc Ver.6以上をインストールし、DLLをコンパイルしておく必要があります。
 
 * P.217
 
