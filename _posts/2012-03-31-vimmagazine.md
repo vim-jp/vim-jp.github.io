@@ -6,6 +6,14 @@ title: Vim Magazine 3 月号
 # Vim Magazine 3 月号
 
 
+## 話題
+
+### [vim_dev: Google summer of code mentor](http://groups.google.com/group/vim_dev/browse_thread/thread/5e806ba0ecfb0283)
+
+Google Summer of Code への参加に向けて準備が進められています。小規模でや
+りたいとのことで生徒の募集は 3 人程度になりそうです。
+
+
 ## リリース情報
 
 - [7.3.465 : cannot get file name with newline from glob()](http://code.google.com/p/vim/source/detail?r=d1096a4e96bdd5bfc0ce2f1aaddcbff1475c69ad)
@@ -65,4 +73,11 @@ Open : 111 (+3) | Closed : 70 (+4)
 - [Issue #179 : There is not the way to set executed external command encoding.](https://github.com/vim-jp/issues/issues/179)
 - [Issue #180 : mingwでif_perlのビルドに失敗する](https://github.com/vim-jp/issues/issues/180)
 - [Issue #181 : タスクバーが上部にある場合にウィンドウ位置が不正になる](https://github.com/vim-jp/issues/issues/181)
+
+
+## 付録
+
+[Vim ロゴ入り栞](https://github.com/downloads/vim-jp/vim-jp.github.com/bookmark-vim1.pdf)
+
+A4 用紙に印刷して切り取ってお使いください。普通紙なら 2 枚分切り取って半分に折ってのりでくっつけると両面になって厚みもでて良いかもしれません。
 
