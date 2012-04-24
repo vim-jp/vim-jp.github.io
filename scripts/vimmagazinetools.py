@@ -188,8 +188,9 @@ def scriptranking(oldstate, curstate):
     ranking.sort(key=lambda e: int(e['script_id']), reverse=True)
     ranking.sort(key=lambda e: e['downloads_diff'], reverse=True)
     for i, e in enumerate(ranking, start=1):
+        summary = "{} : {}".format(e["name"], e["summary"])
         yield "{}. [{}]({}) ({})".format(
-                i, mdescape(e['summary']), e["url"], e['downloads_diff'])
+                i, mdescape(summary), e["url"], e['downloads_diff'])
 
 
 def cmd_patchlist(_args):
@@ -200,7 +201,8 @@ def cmd_patchlist(_args):
 
 def cmd_scriptlist(_args):
     for e in vimscript_all():
-        print("- [{}]({})".format(mdescape(e["summary"]), e["url"]))
+        summary = "{} : {}".format(e["name"], e["summary"])
+        print("- [{}]({})".format(mdescape(summary), e["url"]))
 
 
 def cmd_githubissuelist(args):
@@ -224,7 +226,7 @@ def cmd_scriptranking(args):
 
 # state["updated"] = "%Y-%m-%d"
 # state["vim"]["version"] = "X.Y.ZZZ"
-# state["script"]["id"] = "script_id"
+# state["script"]["script_id"] = "script_id"
 # state["script"]["state"] = [...]
 # state["vim-jp/issues"]["opencount"] = 0
 # state["vim-jp/issues"]["closedcount"] = 0
@@ -255,9 +257,10 @@ def cmd_generate(args):
     print("## 新着スクリプト")
     print("")
     for e in vimscripts:
-        if int(e["script_id"]) <= int(state["script"]["id"]):
+        if int(e["script_id"]) <= int(state["script"]["script_id"]):
             continue
-        print("- [{}]({})".format(mdescape(e["summary"]), e["url"]))
+        summary = "{} : {}".format(e["name"], e["summary"])
+        print("- [{}]({})".format(mdescape(summary), e["url"]))
     print("")
 
     print("## 月間ダウンロードランキング")
@@ -284,7 +287,7 @@ def cmd_generate(args):
             "version": vimpatches[-1]["version"],
         },
         "script": {
-            "id": vimscripts[-1]["script_id"],
+            "script_id": vimscripts[-1]["script_id"],
             "state": vimscripts,
         },
         "vim-jp/issues": {
