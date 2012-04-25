@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Vim 20 周年
 ---
 

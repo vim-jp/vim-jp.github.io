@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Vimのパッチの書き方
 ---
 Vimにバグがあった際、どの様にしてパッチを書いたら良いかを簡単ですが記事にしました。

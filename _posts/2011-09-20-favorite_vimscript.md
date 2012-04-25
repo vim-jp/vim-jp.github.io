@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: 好きなVimScriptは何ですか？
 ---
 
