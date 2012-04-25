@@ -15,6 +15,7 @@ if !ARGV.empty? && conf['downloads'].has_key?(ARGV[0])
     f.puts <<"EOS"
 ---
 layout: post
+category: release
 title: #{rel['title']} #{rel['version']} リリース
 ---
 
