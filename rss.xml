@@ -15,7 +15,7 @@ layout: nil
       <link>http://vim-jp.org{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }}</pubDate>
       <author>vim-jp</author>
-      <guid>http://vim-jp.org{{ post.id }}</guid>
+      <guid>http://vim-jp.org{{ post.url }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
