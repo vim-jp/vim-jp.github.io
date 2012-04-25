@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: プラグイン製作者様へのお願いとプラグイン利用者様への注意喚起
 ---
 

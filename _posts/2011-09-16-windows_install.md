@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Windowsへのインストール方法とビルド方法
 ---
 Windowsへのインストール方法についての記事を作成しました。

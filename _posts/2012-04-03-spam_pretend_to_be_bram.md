@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Spam pretend to be Bram
 ---
 

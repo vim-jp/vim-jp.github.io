@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Vim チャリティー決算報告
 ---
 

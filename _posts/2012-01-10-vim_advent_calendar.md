@@ -1,5 +1,6 @@
 ---
 layout: post
+category: blog
 title: Vim Advent Calendar 2011
 ---
 
