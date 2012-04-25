@@ -11,8 +11,8 @@ import argparse
 import datetime
 
 
-VIMPATCH_URL = "ftp://ftp.vim.org/pub/vim/patches/7.3/{version}"
-VIMPATCH_README_URL = "ftp://ftp.vim.org/pub/vim/patches/7.3/README"
+VIMPATCH_URL = "http://ftp.vim.org/pub/vim/patches/7.3/{version}"
+VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/7.3/README"
 VIMSCRIPT_URL = "http://www.vim.org/scripts/script.php?script_id={script_id}"
 VIMSCRIPT_LIST_URL = "http://www.vim.org/scripts/script_search_results.php?&show_me=99999"
 VIMHG_COMMIT_URL = "http://code.google.com/p/vim/source/detail?r={r}"
