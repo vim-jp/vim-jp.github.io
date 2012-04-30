@@ -119,7 +119,7 @@ title: Vim Magazine 4 月号
 1. [taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)](http://www.vim.org/scripts/script.php?script_id=273) (3299)
 2. [The NERD tree : A tree explorer plugin for navigating the filesystem](http://www.vim.org/scripts/script.php?script_id=1658) (3166)
 3. [snipMate : TextMate-style snippets for Vim](http://www.vim.org/scripts/script.php?script_id=2540) (1804)
-4. [Color Sampler Pack : *NEW* \[Jan 2010 Update\] Top 100 Themes, GUI Menu](http://www.vim.org/scripts/script.php?script_id=625) (1424)
+4. [Color Sampler Pack : *NEW* Jan 2010 Update Top 100 Themes, GUI Menu](http://www.vim.org/scripts/script.php?script_id=625) (1424)
 5. [python.vim : Enhanced version of the python syntax highlighting script](http://www.vim.org/scripts/script.php?script_id=790) (1418)
 6. [c.vim : C/C++ IDE --  Write and run programs. Insert statements, idioms, comments etc.](http://www.vim.org/scripts/script.php?script_id=213) (1354)
 7. [molokai : A port of the monokai scheme for TextMate](http://www.vim.org/scripts/script.php?script_id=2340) (1263)
