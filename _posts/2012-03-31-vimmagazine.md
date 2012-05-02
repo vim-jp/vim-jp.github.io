@@ -1,6 +1,6 @@
 ---
 layout: post
-category: blog
+category: vimmagazine
 title: Vim Magazine 3 月号
 ---
 

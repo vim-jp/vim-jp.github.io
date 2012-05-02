@@ -1,6 +1,6 @@
 ---
 layout: post
-category: blog
+category: vimmagazine
 title: Vim Magazine 4 月号
 ---
 
