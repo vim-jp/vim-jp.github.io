@@ -32,6 +32,6 @@ vital.vim は plugin's plugin、つまりプラグインが使うライブラリ
 ### http スキーマを使っておられる方
 
     cd /path/to/your/.vim/bundle/vital.vim
-    git remote set-url origin http://github.com/vim-jp/vital.vim 
+    git remote set-url origin https://github.com/vim-jp/vital.vim 
 
 vim-jp では vital.vim の開発に参加頂ける方を募集しています。
