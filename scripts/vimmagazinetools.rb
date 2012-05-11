@@ -45,8 +45,16 @@ end
 
 
 def htmlentityunescape(text)
-  # FIXME
-  html_entities_name2codepoint = {}
+  # TODO: add entry when you found a entity in the output.
+  html_entities_name2codepoint = {
+    "quot" => "\"",
+    "amp" => "&",
+    "apos" => "'",
+    "lt" => "<",
+    "gt" => ">",
+    "nbsp" => " ",
+  }
+  # TODO: web browser accept entity without semicolon.  pass it for now.
   text.gsub(/&#?\w+;/) {|text|
     if text[0...2] == "&#"
       # character reference
@@ -56,7 +64,7 @@ def htmlentityunescape(text)
         text[2...-1].to_i().chr("UTF-8")
       end
     else
-      html_entities_name2codepoint[text[1...-1]]
+      html_entities_name2codepoint[text[1...-1]] || text
     end
   }
 end
