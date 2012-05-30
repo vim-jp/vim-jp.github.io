@@ -18,6 +18,10 @@ title: Vim Magazine 5 月号
 
   Vimに関する何かをやる会 6月2日 東京
 
+- [第五回 Sugamo.vim](http://atnd.org/event/sugamovim05)
+
+  Vimについてｇｄｇｄ語ろうの会 東京 7月15日
+
 
 [ここに新着情報が入る]
 
