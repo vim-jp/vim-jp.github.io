@@ -218,7 +218,7 @@ def scriptranking(oldstate, curstate)
   i = 1
   for e in ranking
     summary = "#{e["name"]} : #{e["summary"]}"
-    items << "#{i}. [#{mdescape(summary)}][#{e["url"]}] (#{e["downloads_diff"]})"
+    items << "#{i}. [#{mdescape(summary)}](#{e["url"]}) (#{e["downloads_diff"]})"
     i = i + 1
   end
   return items
