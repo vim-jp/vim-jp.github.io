@@ -31,14 +31,15 @@ end
 
 
 def httpget(url)
+  proxy = URI.parse((ENV['http_proxy'] or ""))
   if url.start_with?("https")
     uri = URI.parse(url)
-    http = Net::HTTP.new(uri.host, uri.port)
+    http = Net::HTTP::Proxy(proxy.host, proxy.port).new(uri.host, uri.port)
     http.use_ssl = true
     request = Net::HTTP::Get.new(uri.request_uri)
     response = http.request(request)
   else
-    response = Net::HTTP.get_response(URI.parse(url))
+    response = Net::HTTP::Proxy(proxy.host, proxy.port).get_response(URI.parse(url))
   end
   return response
 end
