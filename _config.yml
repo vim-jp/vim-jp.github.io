@@ -44,11 +44,11 @@ exclude: scripts
 downloads:
   vim73w32:
     title: Windows 32ビット Kaoriya
-    version: 7.3.566
+    version: 7.3.584
     info: +kaoriya, 14MB ZIP
   vim73w64:
     title: Windows 64ビット Kaoriya
-    version: 7.3.566
+    version: 7.3.584
     info: +kaoriya, 14MB ZIP
   vim73mac:
     title: MacOSX 10.6/10.7
