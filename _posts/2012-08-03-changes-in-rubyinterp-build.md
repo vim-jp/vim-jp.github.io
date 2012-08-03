@@ -20,7 +20,7 @@ Patch 7.3.620 によりWindows上でruby拡張を有効にする際のビルド�
     # if defined(DYNAMIC_RUBY_VER) && DYNAMIC_RUBY_VER >= 19
 
 の様なコードに影響を及ぼしていました。つまり、rubyのバージョンとAPIバージョンが混同して使われてきました。
-今回の修正によって、今後はRUBY_VERはrubyそのもののバージョンを、またRUBY_VER_LONGにABIのバージョンを指定する事になりました。
+今回の修正によって、今後はRUBY_VERはrubyのバージョンそのものを、またRUBY_VER_LONGにAPIのバージョンを指定する事になりました。
  
      nmake -f Make_mvc.mak GUI=yes IME=yes MBYTE=yes
        ICONV=yes PERL=C:\strawberry\perl DYNAMIC_PERL=yes
@@ -29,7 +29,7 @@ Patch 7.3.620 によりWindows上でruby拡張を有効にする際のビルド�
        RUBY_VER_LONG=1.9.1 CSCOPE=yes MSVCVER=6.0 NETBEANS=yes
        DEBUG=no
  
-実際には、RUBY_VER_LONGはその値を使ってincludeパスに使用したり、ドットを削除した値用いてランタイムライブラリ(msvcrt-ruby193.dll)の名前を決定するパラメータとしても使用されます。
+実際には、RUBY_VER_LONGはその値を使ってincludeパスに使用したり、ドットを削除した値用いてランタイムライブラリ(msvcrt-ruby193.dll)の名前を決定する材料としても使用されます。
 
 これまでWindows上でruby拡張を有効にしてvimをビルドしてこられた方には以上の変更が必要となります。お気を付け下さい。
 
