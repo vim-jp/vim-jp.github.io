@@ -137,19 +137,19 @@ br.clear {
  clear: both;
 }
 
-#link dt {
+.linkList dt {
  margin: 0 0 0.8em;
  width: 7.5em;
  border-left: solid 8px #aaa;
  padding-left: 5px;
  white-space: nowrap;
 }
-#link dt a {
+.linkList dt a {
  color: #0000aa;
  font-weight: bold;
 }
-#link dd {
- margin-bottom: 1em;
+.linkList dd {
+ margin: 0 0 1em 0.5em;
 }
 
 #about span a {
@@ -181,7 +181,7 @@ br.clear {
 }
 
 #starting_vim dd {
-  margin: 0 0 0 13px;
+  margin: 0 0 0 0.5em;
 }
 
 #starting_vim ul {
