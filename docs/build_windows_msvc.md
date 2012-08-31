@@ -25,7 +25,7 @@ VisualStudio10が既にインストールされている前提で説明します
 >     nmake -f Make_mvc.mak GUI=yes IME=yes MBYTE=yes
 >       ICONV=yes PERL=C:\strawberry\perl DYNAMIC_PERL=yes
 >       PERL_VER=512 PYTHON=c:\python27 DYNAMIC_PYTHON=yes
->       PYTHON_VER=27 RUBY=c:\ruby192 DYNAMIC_RUBY=yes RUBY_VER=191
+>       PYTHON_VER=27 RUBY=c:\ruby193 DYNAMIC_RUBY=yes RUBY_VER=19
 >       RUBY_VER_LONG=1.9.1 CSCOPE=yes MSVCVER=6.0 NETBEANS=yes
 >       DEBUG=no
 > 
