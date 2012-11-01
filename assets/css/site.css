@@ -273,4 +273,10 @@ div#VimdocJaSearch {
   color: red;
 }
 
+.entry-list {
+  padding-left: 7em;
+  text-indent: -7em;
+}
+
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
