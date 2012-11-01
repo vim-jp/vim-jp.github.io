@@ -263,5 +263,14 @@ div#VimdocJaSearch {
   color: red;
 }
 
+.news a, .news a:link {
+  color: red;
+}
+.news a:active, .news a:hover {
+  color: red;
+}
+.news a:visited {
+  color: red;
+}
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
