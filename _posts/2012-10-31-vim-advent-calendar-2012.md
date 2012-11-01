@@ -8,16 +8,16 @@ title: Vim Advent Calendar 2012 の参加者募集
 
 詳しくは以下の URL を参照下さい。
 
-* http://blog.64p.org/entry/20081216/1229387324
-* http://d.hatena.ne.jp/tt_clown/20111110/advent_calendar_2011_jp
+* [技術的アドベントカレンダーの有用性について - tokuhirom's blog.](http://blog.64p.org/entry/20081216/1229387324)
+* [Advent Calendar 2011 (jp) 開催予定リスト - Life like a clown](http://d.hatena.ne.jp/tt_clown/20111110/advent_calendar_2011_jp)
 
 また昨年の Vim Advent Calendar 2011 は大盛況で、定員オーバーながら完走し終えました。
 
-* http://vim-jp.org/blog/2012/01/10/vim_advent_calendar.html
+* [vim-jp &raquo; Vim Advent Calendar 2011](http://vim-jp.org/blog/2012/01/10/vim_advent_calendar.html)
 
 今年も 12/1 より、Vim Advent Calendar 2012 が始まります。応募される方は以下の URL から登録して下さい。
 
-* http://atnd.org/events/33746
+* [Vim Advent Calendar 2012 : ATND](http://atnd.org/events/33746)
 
 参加される方には以下をお願いします。
 
