@@ -294,5 +294,8 @@ h2 {
   color: #555555;
   border-bottom: 2px solid #ddd;
 }
+h2>a {
+  text-decoration: none;
+}
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
