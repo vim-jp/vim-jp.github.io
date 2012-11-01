@@ -257,4 +257,11 @@ div#VimdocJaSearch {
   vertical-align: baseline !important;
 }
 
+.news {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
