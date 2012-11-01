@@ -274,6 +274,7 @@ div#VimdocJaSearch {
 }
 
 .entry-list {
+  list-style-type: none;
   padding-left: 7em;
   text-indent: -7em;
 }
