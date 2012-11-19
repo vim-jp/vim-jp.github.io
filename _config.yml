@@ -50,6 +50,10 @@ downloads:
     title: Windows 64ビット
     version: 7.3.715
     info: +kaoriya, 14MB ZIP
+  vim73win:
+    title: Windows 32ビット/64ビット
+    version: 7.3.715
+    info: +kaoriya, 14MB ZIP
   vim73mac:
     title: MacOSX 10.7/10.8
     version: 7.3.633
