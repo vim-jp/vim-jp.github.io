@@ -3,6 +3,9 @@ layout: default
 permalink: /
 title: Vimのユーザと開発者を結ぶコミュニティサイト
 ---
+<div class="news">
+	NEWS: <a href="http://vim-jp.org/reading-vimrc/">vimrc読書会 毎週開催中！</a>
+</div>
 <div class="posts">
 <div>
 	<img class="entry-logo" src="/assets/images/vim2-128.png" alt="Image of vim-jp" />
@@ -17,31 +20,31 @@ title: Vimのユーザと開発者を結ぶコミュニティサイト
 <a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/large/{{ site.base-url | escape }}" class="hatena-bookmark-icon" alt="Hatena Bookmark"/></a>
 
 <h2>コンテンツ</h2>
-<ul>
+<ul class="entry-list">
     <li>&raquo;&nbsp;<a href="/docs/how_to_write_patches.html">パッチの書き方</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/how_to_write_patches.html" alt="Hatena Bookmark"/></li>
     <li>&raquo;&nbsp;<a href="/docs/build_windows_msvc.html">VisualStudio10を使ってのビルド方法</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_msvc.html" alt="Hatena Bookmark"/></li>
     <li>&raquo;&nbsp;<a href="/docs/build_windows_mingw.html">MinGWを使ってのビルド方法</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_mingw.html" alt="Hatena Bookmark"/></li>
     <li>&raquo;&nbsp;<a href="/docs/install_windows.html">Windowsへのインストール方法</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/install_windows.html" alt="Hatena Bookmark"/></li>
 		<li>&raquo;&nbsp;<a href="/docs/binary.html">バイナリーを配布しているサイトの紹介</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/binary.html" alt="Hatena Bookmark"/></li>
 </ul>
-<ul>
+<ul class="entry-list">
 	<li>&raquo;&nbsp;<a href="/docs/books/vim-technique-bible/corrigenda.html">Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表</a></li>
 </ul>
 
 <h2>月刊Vimマガジン</h2>
-<ul>
+<ul class="entry-list">
 {% for post in site.categories.vimmagazine limit: 10 %}
-  <li><span>{{ post.date | date_to_string }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
+  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
 {% endfor %}
 </ul>
 
 <h2>ブログ</h2>
-<ul>
+<ul class="entry-list">
 {% for post in site.categories.blog limit: 10 %}
-  <li><span>{{ post.date | date_to_string }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
+  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
 {% endfor %}
 </ul>
-
+<br />
 <a href="pages.html">全記事一覧はこちら</a><br />
 <br />
 <br />

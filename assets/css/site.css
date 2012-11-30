@@ -1,6 +1,6 @@
 body {
   padding: 1em;
-  font-family: verdana, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000;
 }
 
@@ -46,7 +46,7 @@ img {
 
 ol, ul, li {
   font-size: 1.0em;
-  line-height: 1.2em;
+  line-height: 1.3em;
   margin-top: 0.2em;
   margin-bottom: 0.1em;
 }
@@ -97,6 +97,10 @@ form textarea {
   background: #eee;
   padding: 10px;
   margin-bottom: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
 }
 
 #footer {
@@ -255,6 +259,43 @@ div#VimdocJaSearch {
 /* @override */
 .fb_iframe_widget iframe {
   vertical-align: baseline !important;
+}
+
+.news {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+.news a, .news a:link {
+  color: red;
+}
+.news a:active, .news a:hover {
+  color: red;
+}
+.news a:visited {
+  color: red;
+}
+
+.entry-list {
+  list-style-type: none;
+  padding-left: 7em;
+  text-indent: -7em;
+}
+
+h1>a, h1>a:visited {
+  color: #454545;
+  text-decoration: none;
+}
+h1>a:active, h1>a:hover {
+  color: #777777;
+}
+h2 {
+  color: #555555;
+  border-bottom: 2px solid #ddd;
+}
+h2>a {
+  text-decoration: none;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
