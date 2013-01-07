@@ -11,21 +11,21 @@ Windows向けには[KaoriYa](http://www.kaoriya.net/)からバイナリパッケ
 > [![KaoriYa](http://www.kaoriya.net/logo.png)](http://www.kaoriya.net/software/vim)
 
 
-1. ダウンロード
+1.  ダウンロード
 
     Windows 32bit版、Windows 64bit版のどちらかをダウンロードします。
 
-2. 解凍
+2.  解凍
 
     圧縮ファイル解凍ツールを使って展開します。
     [Common Archivers Library - 統合アーカイバ・プロジェクト](http://www.madobe.net/archiver/main.html)などからzipを解凍出来るツールをインストールします。
 
-3. 配置
+3.  配置
 
     フォルダ構成をそのまま希望の場所に移動します。
     `C:\Program Files`等にインストールしても良いですが、後々問題とならない様`C:\vim`等スペースを含まないディレクトリに格納した方が良いでしょう。
 
-4. パスを通す
+4.  パスを通す
 
     マイコンピュータのプロパティから詳細設定を開き、環境変数の設定画面を開きます。
     ユーザの環境変数欄でPATH環境変数に保存したフォルダを追加します。
