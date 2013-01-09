@@ -122,6 +122,7 @@ a:visited {
 }
 
 code {
+ margin: 1px;
  padding: 3px;
  line-height: 1.4em;
  border: solid 1px #ccc;
