@@ -51,7 +51,7 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
 
         $ ./configure --with-features=huge --enable-gui=gnome2
           --enable-perlinterp --enable-pythoninterp
-          --enable-python3interp --enable-ruby-interp
+          --enable-python3interp --enable-rubyinterp
           --enable-fail-if-missing
         $ make
 
