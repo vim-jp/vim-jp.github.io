@@ -53,7 +53,7 @@ ol, ul, li {
 
 p {
   font-size: 1.0em;
-  line-height: 1.2em;
+  line-height: 1.5em;
   margin: 1.2em 0em 1.2em 0em;
 }
 
@@ -122,7 +122,8 @@ a:visited {
 }
 
 code {
- padding: 3px;
+ margin: 1px;
+ padding: 2px;
  line-height: 1.4em;
  border: solid 1px #ccc;
 }

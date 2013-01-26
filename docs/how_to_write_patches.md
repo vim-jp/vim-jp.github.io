@@ -11,7 +11,7 @@ title: パッチの書き方
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
-	hg clone https://vim.googlecode.com/hg/ vim
+    hg clone https://vim.googlecode.com/hg/ vim
 
 次に修正内容に対応するブランチを作成します。
 
@@ -36,7 +36,7 @@ title: パッチの書き方
 全ての修正が完了したらパッチを作りましょう。最終的には全修正を一連のパッチファイルとしてメーリングリストに投げます。
 
     hg diff -r default:fix-quickfix-on-windows >
-	  fix-quickfix-on-windows.diff
+      fix-quickfix-on-windows.diff
 
 *※実際は1行*
 

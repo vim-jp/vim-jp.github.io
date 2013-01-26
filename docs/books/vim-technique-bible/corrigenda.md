@@ -358,7 +358,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 れています。neocomplcacheをインストールさえすれば、特に他のプラグインをインストールする必要が
 ありません。
 >
-> 追記：neocomplcache Ver.7移行では、スニペット機能が標準添付ではありません。
+> 追記：neocomplcache Ver.7以降では、スニペット機能が標準添付ではありません。
 > 別配布(https://github.com/Shougo/neocomplcache-snippets-complete)となっているため、各自でインストールする必要があります。
 > 再追記：最新版では、neocomplcache-snippets-complete は neosnippet となりました。
 > neocomplcache-snippets-complete はまだリポジトリが残っていますが、使用すると警告メッセージが出ます。
