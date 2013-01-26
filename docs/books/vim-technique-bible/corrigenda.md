@@ -139,10 +139,10 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 
 # 6-5 APIドキュメントを参照する
 * P.194
-  * alc ソースは最新版では削除されました。詳しくは [こちら]<http://d.hatena.ne.jp/thinca/20120512/1336758552>。
+  * alc ソースは最新版では削除されました。詳しくは [こちら](http://d.hatena.ne.jp/thinca/20120512/1336758552)。
   * 以下のソースが追加されました。
     * rfc
-    * webdict ([紹介]<http://d.hatena.ne.jp/thinca/20120512/1336761779>)
+    * webdict [紹介](http://d.hatena.ne.jp/thinca/20120512/1336761779)
 
 * P.195 コマンドライン補完
 
