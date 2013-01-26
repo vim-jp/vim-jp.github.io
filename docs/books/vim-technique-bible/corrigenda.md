@@ -22,7 +22,7 @@ title: Vimテクニックバイブル 作業効率をカイゼンする150の技
 
 ※：正誤表というより、補足情報です。
 
-https://github.com/Shougo/vimfiler
+<https://github.com/Shougo/vimfiler>
 
 現在、私のvimfilerリポジトリにて、vimfiler Ver.3が開発中です。
 vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形で再設計をされています。
@@ -139,10 +139,10 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 
 # 6-5 APIドキュメントを参照する
 * P.194
-  * alc ソースは最新版では削除されました。詳しくは [こちら](http://d.hatena.ne.jp/thinca/20120512/1336758552)。
+  * alc ソースは最新版では削除されました。詳しくは [こちら]<http://d.hatena.ne.jp/thinca/20120512/1336758552>。
   * 以下のソースが追加されました。
     * rfc
-    * webdict ([紹介](http://d.hatena.ne.jp/thinca/20120512/1336761779))
+    * webdict ([紹介]<http://d.hatena.ne.jp/thinca/20120512/1336761779>)
 
 * P.195 コマンドライン補完
 
@@ -238,7 +238,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 ※：間違いではありませんが、こちらのURLの方が望ましいだろう、ということで。
 
 > 誤：https://github.com/jakobi/script-archive/tree/master/vim/ <br />
-> 正：https://raw.github.com/jakobi/script-archive/master/vim/pipe.vim <br />
+> 正：<https://raw.github.com/jakobi/script-archive/master/vim/pipe.vim> <br />
 
 <hr />
 
@@ -359,10 +359,10 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 ありません。
 >
 > 追記：neocomplcache Ver.7以降では、スニペット機能が標準添付ではありません。
-> 別配布(https://github.com/Shougo/neocomplcache-snippets-complete)となっているため、各自でインストールする必要があります。
+> 別配布(<https://github.com/Shougo/neocomplcache-snippets-complete>)となっているため、各自でインストールする必要があります。
 > 再追記：最新版では、neocomplcache-snippets-complete は neosnippet となりました。
 > neocomplcache-snippets-complete はまだリポジトリが残っていますが、使用すると警告メッセージが出ます。
-> neosnippet に(https://github.com/Shougo/neosnippet)に移行することを推奨します。
+> neosnippet に(<https://github.com/Shougo/neosnippet>)に移行することを推奨します。
 > ちなみに、neosnippet では neocomplcache に対する依存を排除しています。
 
 # 10-5 unite.vimを本格的にカスタマイズする
