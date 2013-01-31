@@ -57,7 +57,7 @@ title: Vim Magazine 1 月号
 - [7.3.793 : (after 7.3.792) new :substutite behavior is not tested](http://code.google.com/p/vim/source/detail?r=fdbded463fdcc861630b3ea61b9654374847231a)
 - [7.3.794 : tiny build fails](http://code.google.com/p/vim/source/detail?r=9867f92c9b9fb082ee6daca816f859b53ed8e58b)
 - [7.3.795 : MzScheme does not build with tiny features](http://code.google.com/p/vim/source/detail?r=17a312ba38a0b606cfd64d82ed2ebc844828085f)
-- [7.3.796 : "/\[^\\n\]" does match at a line break](http://code.google.com/p/vim/source/detail?r=2c12c4e2fae8db60fbdf58b34c8b73eacdc32665)
+- [7.3.796 : "/\[&#94;\\n\]" does match at a line break](http://code.google.com/p/vim/source/detail?r=2c12c4e2fae8db60fbdf58b34c8b73eacdc32665)
 - [7.3.797 : (after 7.3.792) compiler warning for size_t to int conversion](http://code.google.com/p/vim/source/detail?r=0cbea05f19c73c01dbd0f04378a65ab7de6719e7)
 
 ## 新着スクリプト
