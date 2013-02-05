@@ -88,7 +88,7 @@ form textarea {
 }
 
 .entry {
-  padding-right: 280px;
+  padding-right: 290px;
 }
 
 .links>div {
@@ -298,6 +298,16 @@ h2 {
 }
 h2>a {
   text-decoration: none;
+}
+
+#disqus_thread {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px #aaa solid;
+
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
