@@ -4,6 +4,7 @@ title: パッチの書き方
 ---
 
 *追記*
+
 > mercurialでテンポラリなブランチを作るのであれば、branchよりも[mercurial queue](http://mercurial.selenic.com/wiki/JapaneseMqExtension)もしくは[bookmark](http://mercurial.selenic.com/wiki/Bookmarks)を使った方が良いとのご意見を頂きました。
 
 ここでは既に、コンパイル環境や[Mercurial](http://mercurial.selenic.com/)が使える状態になっている事を前提とします。
