@@ -12,6 +12,7 @@ VisualStudio10が既にインストールされている前提で説明します
 3.  ソース取得
 
     コマンドプロンプトから以下を実行します。
+
         hg clone https://vim.googlecode.com/hg/ vim
 
 4.  コンパイル
