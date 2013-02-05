@@ -77,11 +77,14 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 * P.92 リスト6
 
 > 誤： <br />
+> 
 >      :%s/&\(amp;\)\@!/\&/g
 >      :%s/&\(lt;\)\@!/\&/g
 >      :%s/&\(gt;\)\@!/\&/g
 >      :%s/&\(quot;\)\@!/\&/g
+>
 > 正： <br />
+> 
 >      :%s/&\(amp;\|lt;\|gt;\|quot;\)\@!/\&/g
 
 <hr />
@@ -155,6 +158,7 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 * P.202
 
 > 誤：リスト1
+> 
 >     if has('win32') || has('win64')
 >       let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
 >       let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
@@ -164,6 +168,7 @@ vimfiler Ver.3はp.358にもあるように、unite.vim Ver.3に依存する形�
 >     endif
 >
 > 正：リスト1
+> 
 >     if has('win32') || has('win64')
 >       let g:errormarker_erroricon = expand('~/.vim/signs/err.bmp')
 >       let g:errormarker_warningicon = expand('~/.vim/signs/warn.bmp')
@@ -320,13 +325,13 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 * P.329
 
 > クイックマッチ
-> g:neocomplcache_enable_quick_matchオプションをオンにした場合、-記号を入力すると、
+> g:neocomplcache\_enable\_quick\_matchオプションをオンにした場合、-記号を入力すると、
 > 補完候補の横に英数字が出てくるので、それを入力することによって、簡単に候補を選択できます。
 >
 > neocomplcacheのクイックマッチ機能はneocomplcache Ver.6.2で廃止されました。
 >
 > さらに追記：ただし、neocomplcache最新版とunite.vimの最新版をインストールしている場合、
-> &lt;Plug&gt;(neocomplcache_start_unite_quick_match)のマッピングで同等のことができます。
+> &lt;Plug&gt;(neocomplcache\_start\_unite\_quick\_match)のマッピングで同等のことができます。
 
 <hr />
 
@@ -334,15 +339,15 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 
 * P.333
 
-> g:neocomplcache_plugin_disable
+> g:neocomplcache\_plugin\_disable
 >
-> 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache_source_disableという名前になっています。
+> 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache\_source\_disableという名前になっています。
 
 * P.334
 
-> g:neocomplcache_plugin_completion_length
+> g:neocomplcache\_plugin\_completion\_length
 >
-> 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache_source_completion_lengthという名前になっています。
+> 追記：neocomplcache Ver.7以降では、この変数はg:neocomplcache\_source\_completion\_lengthという名前になっています。
 
 <hr />
 
@@ -354,7 +359,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 >
 > 追記：Ver.7以降ではスニペット補完するsourceが標準添付でなくなりました。
 
-> neocomplcacheのスニペット機能は標準添付のsnippets_complete sourceにより実現さ
+> neocomplcacheのスニペット機能は標準添付のsnippets\_complete sourceにより実現さ
 れています。neocomplcacheをインストールさえすれば、特に他のプラグインをインストールする必要が
 ありません。
 >
@@ -398,7 +403,7 @@ iexeではそれを自動的に処理しているため、Windows環境はiexe�
 >例ではbuffer-nameで分岐させていますが、前述の通りbuffer-nameには自動的にpost fixが付いてしまうので、
 >unite.vim Ver.3以降ではうまく動作しません。
 >新しいunite.vimでは
->if l:unite.buffer_name ==# 'grep@1'
+>if l:unite.buffer\_name ==# 'grep@1'
 >とするか、
->if l:unite.profile_name ==# 'grep'
->とします。ただし、profile_nameが実装されているのはunite.vim Ver.3.1以降です。
+>if l:unite.profile\_name ==# 'grep'
+>とします。ただし、profile\_nameが実装されているのはunite.vim Ver.3.1以降です。
