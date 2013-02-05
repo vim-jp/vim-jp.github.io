@@ -64,6 +64,7 @@ li > p {
 pre {
   font-family: monospace;
   font-size: 1.4em;
+  overflow: auto;
 }
 
 tt {
