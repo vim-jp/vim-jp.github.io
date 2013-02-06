@@ -136,9 +136,13 @@ pre {
  background-color: black;
  padding: 0.5em;
 }
+
 .entry-logo {
- float: left;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
+
 br.clear {
  clear: both;
 }
