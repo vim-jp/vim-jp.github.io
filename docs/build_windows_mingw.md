@@ -17,6 +17,15 @@ title: MinGWを使ってのビルド方法
 
         hg clone https://vim.googlecode.com/hg/ vim
 
+    `hg clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
+
+        hg pull
+        hg update
+
+    あるいは2つをまとめて、以下のコマンドでもOKです。
+
+        hg pull -u
+
 4.  コンパイル
 
     `vim/src`フォルダに移動し以下のコマンドを実行します。
