@@ -283,10 +283,15 @@ div#VimdocJaSearch {
   color: red;
 }
 
-.entry-list {
+ul.entry-list li {
   list-style-type: none;
   padding-left: 7em;
   text-indent: -7em;
+  font-weight: bold;
+}
+
+ul.entry-list div {
+  margin: 1em;
 }
 
 h1>a, h1>a:visited {
