@@ -20,7 +20,7 @@ title: Vimのユーザと開発者を結ぶコミュニティサイト
 <h2>ブログ</h2>
 <ul class="entry-list">
 {% for post in site.categories.blog limit: 10 %}
-  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
+  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ post.url }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></li>
 	<div>
 		{{ post.content | strip_html | truncatewords: 10 }}
 	</div>
