@@ -319,4 +319,8 @@ h2>a {
   border-radius: 8px;
 }
 
+iframe.twitter-timeline {
+  width: 100%;
+}
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
