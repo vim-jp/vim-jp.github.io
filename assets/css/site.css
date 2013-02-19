@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 1.2em 0em 1.2em 0em;
   font-weight: bold;
 }
@@ -174,7 +174,7 @@ br.clear {
  * For starting_vim area.
  */
 
-#starting_vim h2 {
+div.links > div > h2 {
   margin: 0.5em 0em;
 }
 
@@ -285,13 +285,15 @@ div#VimdocJaSearch {
 
 ul.entry-list li {
   list-style-type: none;
-  padding-left: 7em;
-  text-indent: -7em;
   font-weight: bold;
 }
 
 ul.entry-list div {
   margin: 1em;
+}
+
+ul.entry-list {
+  padding-left: 1em;
 }
 
 h1>a, h1>a:visited {
@@ -301,10 +303,12 @@ h1>a, h1>a:visited {
 h1>a:active, h1>a:hover {
   color: #777777;
 }
+
 h2 {
   color: #555555;
   border-bottom: 2px solid #ddd;
 }
+
 h2>a {
   text-decoration: none;
 }
@@ -321,6 +325,10 @@ h2>a {
 
 iframe.twitter-timeline {
   width: 100%;
+}
+
+ul#patches-list {
+  padding-left: 1.5em;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
