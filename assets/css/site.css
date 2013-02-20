@@ -309,8 +309,7 @@ ul.entry-list2 > li > div.entry-head > div.entry-label {
   float: left;
 }
 ul.entry-list2 > li > div.entry-head > div.entry-title {
-  float: left;
-  min-width: 0;
+  padding-left: 6em;
 }
 ul.entry-list2 > li > div.entry-digest {
   clear: both;
