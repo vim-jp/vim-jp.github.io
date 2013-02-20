@@ -1,28 +1,23 @@
 ---
-layout: default
-title: 全ページ一覧
+# vim:set ts=2 sts=2 sw=2 noet:
+layout: disqus
+title: 全記事一覧
 ---
 <div class="posts">
-<h2>全記事一覧</h2>
-<ul class="entry-list">
+<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+<ul class="entry-list2">
 {% for post in site.posts %}
-    <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></li>
+<li>
+<div class="entry-head">
+	<div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
+	<div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></div>
+</div>
+<div class="entry-digest">{{ post.content | strip_html | truncatewords: 10 }}</div>
+</li>
 {% endfor %}
 </ul>
 </div>
-<br class="clear" />
-<a href="/">もどる</a>
-<br />
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = 'vim-jp';
-var disqus_url='{{ site.base-url | escape }}{{ page.url | escape }}';
-var disqus_title='vim-jp &raquo; {{ page.title }}';
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<div>
+	<p><a href="/">もどる</a></p>
+</div>

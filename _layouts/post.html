@@ -1,12 +1,13 @@
 ---
-layout: default
+# vim:set ts=2 sts=2 sw=2 noet:
+layout: disqus
 ---
 <div class="post">
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
 Posted at <span>{{ page.date | date: "%Y/%m/%d" }}</span><br />
 <div class="fb-like" data-href="{{ site.base-url }}{{ page.url }}" data-layout="button_count"></div>
 <div class="g-plusone" data-href="{{ site.base-url }}{{ page.url }}" data-size="medium"></div>
-<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ page.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/large/{{ site.base-url | escape }}{{ page.url | escape }}" class="hatena-bookmark-icon" /></a>
+<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ page.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/large/{{ site.base-url | escape }}{{ page.url | escape }}" class="hatena-bookmark-icon" alt="Hatena Bookmark"/></a>
 <br />
 <br />
 {{ content }}
@@ -14,16 +15,3 @@ Posted at <span>{{ page.date | date: "%Y/%m/%d" }}</span><br />
 <br />
 <a href="/">もどる</a>
 <br />
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = 'vim-jp';
-var disqus_url='{{ site.base-url | escape }}{{ page.url | escape }}';
-var disqus_title='vim-jp &raquo; {{ page.title }}';
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
