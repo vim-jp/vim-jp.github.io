@@ -16,48 +16,45 @@ title: Vimのユーザと開発者を結ぶコミュニティサイト
 <div class="g-plusone" data-href="{{ site.base-url }}/" data-size="medium"></div>
 <a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/large/{{ site.base-url | escape }}" class="hatena-bookmark-icon" alt="Hatena Bookmark"/></a>
 
-<br clear="all" />
-
 <h2>ブログ</h2>
 <ul class="entry-list2">
 {% for post in site.categories.blog limit: 5 %}
-
 <li>
 <div class="entry-head">
-  <div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
-  <div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></div>
+	<div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
+	<div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></div>
 </div>
-<div class="entry-digest">
-  {{ post.content | strip_html | truncatewords: 10 }}
-</div>
+<div class="entry-digest">{{ post.content | strip_html | truncatewords: 10 }}</div>
 </li>
-
 {% endfor %}
 </ul>
 <p><a href="pages.html">全記事一覧はこちら</a></p>
 
 <h2>月刊Vimマガジン</h2>
-<ul class="entry-list">
+<ul class="entry-list2">
 {% for post in site.categories.vimmagazine limit: 5 %}
-  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></li>
-	<div>
-		{{ post.content | strip_html | truncatewords: 10 }}
-	</div>
+<li>
+<div class="entry-head">
+	<div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
+	<div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></div>
+</div>
+<div class="entry-digest">{{ post.content | strip_html | truncatewords: 10 }}</div>
+</li>
 {% endfor %}
 </ul>
 <p><a href="magazines.html">バックナンバーはこちら</a></p>
 
 <h2>読み物</h2>
-<ul class="entry-list">
-    <li>&raquo;&nbsp;<a href="/docs/how_to_write_patches.html">パッチの書き方</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/how_to_write_patches.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/how_to_write_patches.html" alt="Hatena Bookmark"/></a></li>
-    <li>&raquo;&nbsp;<a href="/docs/build_windows_msvc.html">VisualStudio10を使ってのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_windows_msvc.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_msvc.html" alt="Hatena Bookmark"/></a></li>
-    <li>&raquo;&nbsp;<a href="/docs/build_windows_mingw.html">MinGWを使ってのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_windows_mingw.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_mingw.html" alt="Hatena Bookmark"/></a></li>
-    <li>&raquo;&nbsp;<a href="/docs/build_linux.html">Linuxでのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_linux.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_linux.html" alt="Hatena Bookmark"/></a></li>
-    <li>&raquo;&nbsp;<a href="/docs/install_windows.html">Windowsへのインストール方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/install_windows.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/install_windows.html" alt="Hatena Bookmark"/></a></li>
-		<li>&raquo;&nbsp;<a href="/docs/binary.html">バイナリーを配布しているサイトの紹介</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/binary.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/binary.html" alt="Hatena Bookmark"/></a></li>
-		<li>&raquo;&nbsp;<a href="/tips/list.html">Vim に関するTips</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/tips/list.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/tips/list.html" alt="Hatena Bookmark"/></a></li>
+<ul class="entry-list2">
+	<li>&raquo;&nbsp;<a href="/docs/how_to_write_patches.html">パッチの書き方</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/how_to_write_patches.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/how_to_write_patches.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/docs/build_windows_msvc.html">VisualStudio10を使ってのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_windows_msvc.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_msvc.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/docs/build_windows_mingw.html">MinGWを使ってのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_windows_mingw.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_windows_mingw.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/docs/build_linux.html">Linuxでのビルド方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/build_linux.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/build_linux.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/docs/install_windows.html">Windowsへのインストール方法</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/install_windows.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/install_windows.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/docs/binary.html">バイナリーを配布しているサイトの紹介</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/docs/binary.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/docs/binary.html" alt="Hatena Bookmark"/></a></li>
+	<li>&raquo;&nbsp;<a href="/tips/list.html">Vim に関するTips</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}/tips/list.html"><img src="http://b.hatena.ne.jp/entry/image/http://vim-jp.org/tips/list.html" alt="Hatena Bookmark"/></a></li>
 </ul>
-<ul class="entry-list">
+<ul class="entry-list2">
 	<li>&raquo;&nbsp;<a href="/docs/books/vim-technique-bible/corrigenda.html">Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表</a></li>
 </ul>
 <br />
