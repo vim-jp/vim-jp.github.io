@@ -19,12 +19,19 @@ title: Vimのユーザと開発者を結ぶコミュニティサイト
 <br clear="all" />
 
 <h2>ブログ</h2>
-<ul class="entry-list">
+<ul class="entry-list2">
 {% for post in site.categories.blog limit: 5 %}
-  <li><span>{{ post.date | date: "%Y/%m/%d" }}</span>&nbsp;&raquo;&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></li>
-	<div>
-		{{ post.content | strip_html | truncatewords: 10 }}
-	</div>
+
+<li>
+<div class="entry-head">
+  <div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
+  <div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ post.url | escape }}"><img src="http://b.hatena.ne.jp/entry/image/{{ site.base-url | escape }}{{ post.url | escape }}" alt="Hatena Bookmark"/></a></div>
+</div>
+<div class="entry-digest">
+  {{ post.content | strip_html | truncatewords: 10 }}
+</div>
+</li>
+
 {% endfor %}
 </ul>
 <p><a href="pages.html">全記事一覧はこちら</a></p>

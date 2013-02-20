@@ -296,6 +296,27 @@ ul.entry-list {
   padding-left: 1em;
 }
 
+ul.entry-list2 {
+  padding-left: 1em;
+}
+ul.entry-list2 > li {
+  list-style-type: none;
+}
+ul.entry-list2 > li > div.entry-head {
+  font-weight: bold;
+}
+ul.entry-list2 > li > div.entry-head > div.entry-label {
+  float: left;
+}
+ul.entry-list2 > li > div.entry-head > div.entry-title {
+  float: left;
+  min-width: 0;
+}
+ul.entry-list2 > li > div.entry-digest {
+  clear: both;
+  margin: 0.5em 1em 1em 1em;
+}
+
 h1>a, h1>a:visited {
   color: #454545;
   text-decoration: none;
