@@ -329,7 +329,7 @@ h2 {
 }
 
 div.posts h2 {
-  clear: all;
+  clear: both;
 }
 
 h2>a {
