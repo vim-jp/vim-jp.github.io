@@ -24,7 +24,7 @@
       if (!result.error) {
         $.each(result.feed.entries, function() {
           $('<li/>').append(
-            $('<a/>').attr({'href', this.link, 'target': '_blank'}).text("Patch " + this.title)
+            $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
           ).append($('<br/>').append($('<span/>').text(this.content))).appendTo('#patches-list')
           container.appendChild(li);
         });
