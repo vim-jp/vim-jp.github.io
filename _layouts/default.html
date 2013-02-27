@@ -25,7 +25,7 @@
         $.each(result.feed.entries, function() {
           $('<li/>').append(
             $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
-          ).append($('<br/>').append($('<span/>').text(this.content))).appendTo('#patches-list');
+          ).append($('<br/>')).append($('<span/>').text(this.content)).appendTo('#patches-list');
         });
       }
     });
