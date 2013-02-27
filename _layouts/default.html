@@ -20,21 +20,14 @@
   google.setOnLoadCallback(function() {
     // feeds
     var feed = new google.feeds.Feed("http://vim-jp.appspot.com/patches/");
-		feed.load(function(result) {
+    feed.load(function(result) {
       if (!result.error) {
-        var container = document.getElementById("patches-list");
-        for (var i = 0; i < result.feed.entries.length; i++) {
-          var entry = result.feed.entries[i];
-          var li = document.createElement("li");
-					var link = document.createElement("a");
-					link.appendChild(document.createTextNode("Patch " + entry.title));
-					link.setAttribute('href', entry.link);
-					link.setAttribute('target', '_blank');
-					li.appendChild(link);
-					li.appendChild(document.createElement("br"));
-          li.appendChild(document.createTextNode(entry.content));
+        $.each(result.feed.entries, function() {
+          $('<li/>').append(
+            $('<a/>').attr({'href', this.link, 'target': '_blank'}).text("Patch " + entry.title)
+          ).append($('<br/>').append($('<span/>').text(this.content))).appendTo('#patches-list')
           container.appendChild(li);
-        }
+        });
       }
     });
 
