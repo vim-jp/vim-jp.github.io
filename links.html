@@ -65,7 +65,7 @@ $(function() {
       if (twitter) {
         var twitter_url = 'https://twitter.com/' + twitter;
         var twitter_img = 'http://api.twitter.com/1/users/profile_image/' + twitter + '.png&size=mini';
-        ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img, 'float': 'left'})));
+        ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img, 'float': 'left'}).css('width', '48px')));
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text(twitter_url)));
       }
       if (github) {
