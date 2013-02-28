@@ -1,4 +1,11 @@
 // vim:set ts=8 sts=2 sw=2 tw=0 et:
+function escape(str) {
+  return str.replace('&', '&amp;')
+            .replace('<', '&lt;')
+            .replace('>', '&gt;')
+            .replace('"', '&quot;')
+            .replace("'", '&#x27;');
+}
 
 google.load("visualization", "1");
 $(function() {
@@ -34,7 +41,9 @@ $(function() {
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', website).text(website)));
       }
       if (description) {
-        ul.append($('<li/>').addClass('desc').text(description))
+        var link = escape(description).replace(/((http|https):\/\/[\x21-\x7e]+)/gi, '<a href="$1">$1</a>');
+
+        ul.append($('<li/>').addClass('desc').html(link))
       }
       div.append(ul).appendTo('#vimmers-container');
     }
