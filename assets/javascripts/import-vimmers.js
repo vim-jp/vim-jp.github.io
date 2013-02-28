@@ -43,7 +43,7 @@ $(function() {
       if (description) {
         var link = escape(description).replace(/((http|https):\/\/[\x21-\x7e]+)/gi, '<a href="$1">$1</a>');
 
-        ul.append($('<li/>').addClass('desc').html(link))
+        ul.append($('<li/>').addClass('desc').html(link));
       }
       div.append(ul).appendTo('#vimmers-container');
     }
