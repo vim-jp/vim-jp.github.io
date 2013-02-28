@@ -371,7 +371,8 @@ div.persons {
 }
 .persons div.person {
   display: inline-block;
-  width: 256px;
+  min-width: 256px;
+  max-width: 256px;
   border: 1px solid #aaa;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -403,15 +404,12 @@ div.persons {
   margin-bottom: 2px;
 }
 .persons .person li.name {
-  display: block;
-  vertical-align: middle;
+  white-space: nowrap;
 }
-.persons .person li.name:after {
-  content: "";
+.persons .person li.clear {
   clear: both;
   height: 0;
   display: block;
-  visibility: hidden;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */

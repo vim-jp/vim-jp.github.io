@@ -23,8 +23,9 @@ $(function() {
         var twitter_url = 'https://twitter.com/' + twitter;
         var twitter_img = 'http://api.twitter.com/1/users/profile_image/' + twitter + '.png&size=mini';
         ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img})));
-        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text(twitter_url)));
+        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text('@' + twitter)));
       }
+      ul.append($('<li/>').addClass('clear'));
       if (github) {
         var github_url = 'https://github.com/' + github;
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', github_url).text(github_url)));
