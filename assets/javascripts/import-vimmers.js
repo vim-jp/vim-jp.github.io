@@ -1,14 +1,34 @@
 // vim:set ts=8 sts=2 sw=2 tw=0 et:
-function escape(str) {
-  return str.replace('&', '&amp;')
-            .replace('<', '&lt;')
-            .replace('>', '&gt;')
-            .replace('"', '&quot;')
-            .replace("'", '&#x27;');
-}
 
 google.load("visualization", "1");
 $(function() {
+
+  function escapeHTML(str) {
+    return str.replace('&', '&amp;')
+      .replace('<', '&lt;')
+      .replace('>', '&gt;')
+      .replace('"', '&quot;')
+      .replace("'", '&apos;');
+  }
+
+  function to_jsonml(s) {
+    var ml = [];
+    var re = /(?:http|https):\/\/[\x21-\x7e]+/i;
+    while (s.length > 0) {
+      if (s.match(re)) {
+        ml.push(
+          RegExp.leftContext,
+          [ 'a', { 'href': RegExp.lastMatch }, RegExp.lastMatch ]
+        );
+        s = RegExp.rightContext;
+      } else {
+        ml.push(s);
+        s = '';
+      }
+    }
+    return ml;
+  }
+
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=0AvP2GcrHKTfudEdwWm85ajZtd0ltZjRUcVFPWHpzWHc&gid=0&pub=1');
   query.send(function(response) {
     if(response.isError()) {
@@ -57,11 +77,8 @@ $(function() {
       }
 
       if (description) {
-        /* FIXME: adapt to JsonML.
-        var link = escape(description).replace(
-            /((http|https):\/\/[\x21-\x7e]+)/gi, '<a href="$1">$1</a>');
-         */
-        items.push([ 'li', { 'class': 'desc' }, description ]);
+        items.push([ 'li', { 'class': 'desc' } ]
+            .concat(to_jsonml(escapeHTML(description))));
       }
 
       $.jqml([
