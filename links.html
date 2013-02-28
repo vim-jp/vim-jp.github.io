@@ -69,8 +69,8 @@ $(function() {
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text(twitter_url)));
       }
       if (github) {
-        github = 'https://github.com/' + github;
-        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', website).text(website)));
+        var github_url = 'https://github.com/' + github;
+        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', github_url).text(github_url)));
       }
       if (website) {
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', website).text(website)));
