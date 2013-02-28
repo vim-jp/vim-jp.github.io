@@ -354,4 +354,60 @@ ul#patches-list {
   padding-left: 1.5em;
 }
 
+/*
+ * for persons
+ */
+
+.persons:after {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+  visibility: hidden;
+}
+.persons li.person {
+  list-style-type: none;
+  display: block;
+  float: left;
+  width: 256px;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 6px;
+  padding: 6px;
+}
+.persons .person ul {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.persons .person ul > li {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.persons .person .faceicon img {
+  margin-right: 0.5em;
+}
+.persons .person li.link {
+  margin-left: 1em;
+  white-space: nowrap;
+}
+.persons .person li.faceicon {
+  float: left;
+}
+.persons .person li.name:after {
+  content: "";
+  clear: both;
+  height: 0;
+  display: block;
+  visibility: hidden;
+}
+.persons .person li.name {
+  display: block;
+  vertical-align: middle;
+  height: 100%;
+}
+
 /* vim:set ts=8 sts=2 sw=2 noet: */
