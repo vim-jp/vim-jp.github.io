@@ -16,7 +16,7 @@ title: Vim Magazine 2 月号
 ## 今月の新機能
 
 - 7.3.826 : `:version` の出力が見やすくなりました。
-- 7.3.834 : if_ruby が Ruby 2.0 に対応しました。
+- 7.3.834 : if\_ruby が Ruby 2.0 に対応しました。
 - 7.3.836 : Cygwin 版でクリップボードが使えるようになりました。
 
 ## リリース情報
@@ -69,7 +69,7 @@ title: Vim Magazine 2 月号
 
 ## 新着スクリプト
 
-- [sunny : Color scheme for __terminal__ vim](http://www.vim.org/scripts/script.php?script_id=4419)
+- [sunny : Color scheme for \_\_terminal\_\_ vim](http://www.vim.org/scripts/script.php?script_id=4419)
 - [Fold License : A vim plugin to hide the annoyng license at the top of each file](http://www.vim.org/scripts/script.php?script_id=4420)
 - [texlog.vim : Syntax highlighting and folding for TeX/LaTeX log files](http://www.vim.org/scripts/script.php?script_id=4421)
 - [msbuild.vba : Vim plugin for MSBuild project support](http://www.vim.org/scripts/script.php?script_id=4422)
@@ -89,17 +89,17 @@ title: Vim Magazine 2 月号
 - [psearch.vim : Quick access to search results](http://www.vim.org/scripts/script.php?script_id=4436)
 - [redif.vim : Syntax highlighting for ReDIF format used by RePEc](http://www.vim.org/scripts/script.php?script_id=4437)
 - [rythm.vim : Rythm template engine plugin](http://www.vim.org/scripts/script.php?script_id=4438)
-- [Dev_Delight : This Color-Scheme provides a very Elegant Display with Minimal Eye-Strain](http://www.vim.org/scripts/script.php?script_id=4439)
+- [Dev\_Delight : This Color-Scheme provides a very Elegant Display with Minimal Eye-Strain](http://www.vim.org/scripts/script.php?script_id=4439)
 - [Flake8-vim : Automatic syntax checker for Python, bundled with pep8, pyflakes and mccabe.](http://www.vim.org/scripts/script.php?script_id=4440)
 - [QuickFixCurrentNumber : Locate the quickfix item at the cursor position.](http://www.vim.org/scripts/script.php?script_id=4449)
-- [ag.vim : Use ag, the_silver_searcher (better than ack, which is better than grep)](http://www.vim.org/scripts/script.php?script_id=4450)
+- [ag.vim : Use ag, the\_silver\_searcher (better than ack, which is better than grep)](http://www.vim.org/scripts/script.php?script_id=4450)
 - [pry : Pry/Vim Integration](http://www.vim.org/scripts/script.php?script_id=4451)
 - [vim-javascript : New maintained version of vim-javascript](http://www.vim.org/scripts/script.php?script_id=4452)
 - [play.vim : Play! framework plugin for Vim](http://www.vim.org/scripts/script.php?script_id=4453)
 - [vim-vimlparser : VimL parser](http://www.vim.org/scripts/script.php?script_id=4454)
 - [rbenv.vim : Minimal rbenv support](http://www.vim.org/scripts/script.php?script_id=4455)
 - [vgdb : visual gdb in vim](http://www.vim.org/scripts/script.php?script_id=4456)
-- [convert_case.vim : Convert Case ](http://www.vim.org/scripts/script.php?script_id=4457)
+- [convert\_case.vim : Convert Case ](http://www.vim.org/scripts/script.php?script_id=4457)
 
 ## 月間ダウンロードランキング
 
@@ -130,8 +130,8 @@ Open : 145 (+13) | Closed : 176 (+7)
 - [Issue #311 : mklink すると .vimrc が読み込まれない?](https://github.com/vim-jp/issues/issues/311)
 - [Issue #312 : 日本語メニューのスクリプトでグローバル変数が定義されている](https://github.com/vim-jp/issues/issues/312)
 - [Issue #313 : 先行先読否定がCP932で正しく動作していない](https://github.com/vim-jp/issues/issues/313)
-- [Issue #314 : Make_cyg.mak を Make_ming.mak と統合したい](https://github.com/vim-jp/issues/issues/314)
-- [Issue #315 : if_ruby が ruby2.0 でビルド出来ない。](https://github.com/vim-jp/issues/issues/315)
+- [Issue #314 : Make\_cyg.mak を Make\_ming.mak と統合したい](https://github.com/vim-jp/issues/issues/314)
+- [Issue #315 : if\_ruby が ruby2.0 でビルド出来ない。](https://github.com/vim-jp/issues/issues/315)
 - [Issue #316 : toml-vim 作って](https://github.com/vim-jp/issues/issues/316)
 - [Issue #317 : scala シンタックス](https://github.com/vim-jp/issues/issues/317)
 - [Issue #318 : INSTALLpc.txtの改行コードを\<CR>\<LF>に](https://github.com/vim-jp/issues/issues/318)
