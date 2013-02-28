@@ -369,7 +369,7 @@ div.persons {
   visibility: hidden;
 }
 .persons div.person {
-  display: block;
+  display: inline-block;
   width: 256px;
   border: 1px solid #aaa;
   -webkit-border-radius: 4px;
