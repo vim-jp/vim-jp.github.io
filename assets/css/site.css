@@ -360,6 +360,7 @@ ul#patches-list {
 
 div.persons {
   padding-left: 1em;
+  height: auto;
 }
 .persons:after {
   content: "";

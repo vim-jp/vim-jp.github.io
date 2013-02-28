@@ -1,5 +1,5 @@
 ---
-# vim:set ts=2 sts=2 sw=2 noet:
+# vim:set ts=2 sts=2 sw=2 et:
 layout: disqus
 title: リンク集
 ---
@@ -80,12 +80,11 @@ $(function() {
       }
       div.append(ul).appendTo('#container');
     }
+    $('#container').masonry({
+      isAnimated: true,
+      isResizable: true
+    });
   });
-  $('#container').masonry({
-    isAnimated: true,
-    isResizable: true
-  }).css('height', 'auto');
-	$('#disqus_thread').hide();
 });
 
 </script>
