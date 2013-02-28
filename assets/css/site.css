@@ -389,15 +389,22 @@ div.persons {
   padding: 0px;
   margin: 0px;
 }
-.persons .person .faceicon img {
-  margin-right: 0.5em;
-}
 .persons .person li.link {
   margin-left: 1em;
   white-space: nowrap;
 }
-.persons .person li.faceicon {
+.persons .person .faceicon {
   float: left;
+}
+.persons .person .faceicon img {
+  width: 48px;
+  height: 48px;
+  margin-right: 0.5em;
+  margin-bottom: 2px;
+}
+.persons .person li.name {
+  display: block;
+  vertical-align: middle;
 }
 .persons .person li.name:after {
   content: "";
@@ -405,11 +412,6 @@ div.persons {
   height: 0;
   display: block;
   visibility: hidden;
-}
-.persons .person li.name {
-  display: block;
-  height: 52px;
-  vertical-align: middle;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */

@@ -35,7 +35,7 @@ title: リンク集
 </dl>
 
 <h2>その他</h2>
-<div class="persons" id="container">
+<div class="persons" id="vimmers-container">
 </div>
 
 </div>
@@ -65,7 +65,7 @@ $(function() {
       if (twitter) {
         var twitter_url = 'https://twitter.com/' + twitter;
         var twitter_img = 'http://api.twitter.com/1/users/profile_image/' + twitter + '.png&size=mini';
-        ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img, 'float': 'left'}).css('width', '48px')));
+        ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img})));
         ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text(twitter_url)));
       }
       if (github) {
@@ -78,9 +78,9 @@ $(function() {
       if (description) {
         ul.append($('<li/>').addClass('desc').text(description))
       }
-      div.append(ul).appendTo('#container');
+      div.append(ul).appendTo('#vimmers-container');
     }
-    $('#container').masonry({
+    $('#vimmers-container').masonry({
       isAnimated: true,
       isResizable: true
     });
