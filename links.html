@@ -82,8 +82,9 @@ $(function() {
     }
   });
   $('#container').masonry({
-    isAnimated: true
-  });
+    isAnimated: true,
+    isResizable: true
+  }).css('height', 'auto');
 	$('#disqus_thread').hide();
 });
 
