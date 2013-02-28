@@ -358,6 +358,9 @@ ul#patches-list {
  * for persons
  */
 
+ul.persons {
+  padding-left: 1em;
+}
 .persons:after {
   content: "";
   clear: both;
@@ -403,11 +406,6 @@ ul#patches-list {
   height: 0;
   display: block;
   visibility: hidden;
-}
-.persons .person li.name {
-  display: block;
-  vertical-align: middle;
-  height: 100%;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
