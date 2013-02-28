@@ -109,3 +109,17 @@ title: リンク集
 </dl>
 
 </div>
+
+<script>
+$(function() {
+    $('dl a:contains("https://twitter.com/")').each(function() {
+        $(this).parent().wrap('<div/>').prepend(
+            $('<img/>').attr({
+                'src': 'http://api.twitter.com/1/users/profile_image/' + $(this).text().replace(/.*\//, '') + '.png&size=mini',
+                'float': 'left',
+            }).css('margin', '2px')
+        );
+    });
+});
+
+</script>
