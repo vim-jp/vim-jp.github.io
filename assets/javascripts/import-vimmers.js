@@ -16,36 +16,58 @@ $(function() {
     }
     var data = response.getDataTable();
     for (var row = 0; row < data.getNumberOfRows(); row++) {
-      var div = $('<div/>').addClass('person');
-      var ul = $('<ul/>');
       var name    = data.getFormattedValue(row, 1);
       var twitter = data.getFormattedValue(row, 2);
       var github  = data.getFormattedValue(row, 3);
       var website = data.getFormattedValue(row, 4);
       var description = data.getFormattedValue(row, 5);
 
-      // TODO: vaildation
-      ul.append($('<li/>').addClass('name').text(name));
+      var items = [];
+
+      items.push([ 'li', { 'class': 'name' }, name ]);
       if (twitter) {
         var twitter_url = 'https://twitter.com/' + twitter;
-        var twitter_img = 'http://api.twitter.com/1/users/profile_image/' + twitter + '.png&size=mini';
-        ul.prepend($('<li/>').addClass('faceicon').append($('<img/>').attr({'src': twitter_img})));
-        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', twitter_url).text('@' + twitter)));
+        var twitter_img = 'http://api.twitter.com/1/users/profile_image/'
+            + twitter + '.png&size=mini';
+        items.unshift([
+          'li', { 'class': 'faceicon' },
+          [ 'img', { 'src': twitter_img } ]
+        ]);
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': twitter_url }, '@' + twitter ]
+        ]);
       }
-      ul.append($('<li/>').addClass('clear'));
+
+      items.push([ 'li', { 'class': 'clear' } ]);
+
       if (github) {
         var github_url = 'https://github.com/' + github;
-        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', github_url).text(github_url)));
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': github_url }, github_url ]
+        ]);
       }
-      if (website) {
-        ul.append($('<li/>').addClass('link').append($('<a/>').attr('href', website).text(website)));
-      }
-      if (description) {
-        var link = escape(description).replace(/((http|https):\/\/[\x21-\x7e]+)/gi, '<a href="$1">$1</a>');
 
-        ul.append($('<li/>').addClass('desc').html(link));
+      if (website) {
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': website }, website ]
+        ]);
       }
-      div.append(ul).appendTo('#vimmers-container');
+
+      if (description) {
+        /* FIXME: adapt to JsonML.
+        var link = escape(description).replace(
+            /((http|https):\/\/[\x21-\x7e]+)/gi, '<a href="$1">$1</a>');
+         */
+        items.push([ 'li', { 'class': 'desc' }, description ]);
+      }
+
+      $.jqml([
+        'div', { 'class': 'person', },
+        [ 'ul' ].concat(items)
+      ]).appendTo('#vimmers-container');
     }
     $('#vimmers-container').masonry({
       isAnimated: true,
