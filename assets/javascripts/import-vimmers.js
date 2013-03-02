@@ -35,12 +35,19 @@ $(function() {
       return;
     }
     var data = response.getDataTable();
+    var colNames = (function() {
+      var colNames = {};
+      for (var i = 0, max = data.getNumberOfColumns(); i < max; i++) {
+        colNames[data.getColumnLabel(i)] = i;
+      }
+      return colNames;
+    })();
     for (var row = 0; row < data.getNumberOfRows(); row++) {
-      var name    = data.getFormattedValue(row, 1);
-      var twitter = data.getFormattedValue(row, 2);
-      var github  = data.getFormattedValue(row, 3);
-      var website = data.getFormattedValue(row, 4);
-      var description = data.getFormattedValue(row, 5);
+      var name    = data.getFormattedValue(row, colNames['Name']);
+      var twitter = data.getFormattedValue(row, colNames['Twitter Account']);
+      var github  = data.getFormattedValue(row, colNames['Github Account']);
+      var website = data.getFormattedValue(row, colNames['Website URL']);
+      var description = data.getFormattedValue(row, colNames['Description']);
 
       var items = [];
 
