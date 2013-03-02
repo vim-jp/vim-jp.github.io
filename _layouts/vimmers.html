@@ -1,0 +1,83 @@
+---
+# vim:set ts=2 sts=2 sw=2 noet:
+---
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>vim-jp &raquo; {{ page.title }}</title>
+<link rel="stylesheet" href="/assets/css/site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://vim-jp.org/rss.xml" />
+<link rel="canonical" href="{{ site.base-url }}{{ page.url }}" />
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- 日本語マニュアル検索用 -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load("feeds", "1", {language : "ja"});
+  google.load("search", "1", {language : "ja"});
+  google.setOnLoadCallback(function() {
+    // feeds
+    var feed = new google.feeds.Feed("http://vim-jp.appspot.com/patches/");
+    feed.load(function(result) {
+      if (!result.error) {
+        $.each(result.feed.entries, function() {
+          $('<li/>').append(
+            $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
+          ).append($('<br/>')).append($('<span/>').text(this.contentSnippet)).appendTo('#patches-list');
+        });
+      }
+    });
+
+    // search
+    var customSearchControl = new google.search.CustomSearchControl("001325159752250591701:65aunpq8rlg");
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.enableSearchboxOnly("http://www.google.com/cse?cx=001325159752250591701:65aunpq8rlg");
+    customSearchControl.draw('VimdocJaSearch', options);
+  }, true);
+</script>
+</head>
+<body>
+
+<!-- for facebook like button -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="header">
+		<h1><a href="/">vim-jp &raquo; Vimのユーザと開発者を結ぶコミュニティサイト</a></h1>
+	</div>
+	<div class="body">
+		<div id="content">
+			<div class="entry">
+			{{ content }}
+
+<!-- disqus widget -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'vim-jp';
+var disqus_url='{{ site.base-url | escape }}{{ page.url | escape }}';
+var disqus_title='vim-jp &raquo; {{ page.title }}';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			</div>
+		</div>
+		<br class="clear" />
+		<div id="footer">
+			<p>Powered by <a href="http://github.com/">github</a>. vim-jp.org is licensed under a <a href="http://creativecommons.org/licenses/by/2.1/jp/">Creative Commons License</a>.
+		</div>
+	</div>
+</body>
