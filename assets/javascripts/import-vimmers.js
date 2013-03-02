@@ -46,6 +46,7 @@ $(function() {
       var name    = data.getFormattedValue(row, colNames['Name']);
       var twitter = data.getFormattedValue(row, colNames['Twitter Account']);
       var github  = data.getFormattedValue(row, colNames['Github Account']);
+      var vimorg  = data.getFormattedValue(row, colNames['www.vim.org']);
       var website = data.getFormattedValue(row, colNames['Website URL']);
       var description = data.getFormattedValue(row, colNames['Description']);
 
@@ -73,6 +74,14 @@ $(function() {
         items.push([
           'li', { 'class': 'link' },
           [ 'a', { 'href': github_url }, github_url ]
+        ]);
+      }
+
+      if (vimorg) {
+        var vimorg_url = 'http://www.vim.org/account/profile.php?user_id=' + vimorg;
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': vimorg_url }, vimorg_url ]
         ]);
       }
 
