@@ -42,6 +42,8 @@ $(function() {
       }
       return colNames;
     })();
+
+    $('#vimmers-container').empty();
     for (var row = 0; row < data.getNumberOfRows(); row++) {
       var name        = data.getFormattedValue(row, colNames['Name']);
       var shortname   = data.getFormattedValue(row, colNames['Short Name']);
@@ -123,10 +125,10 @@ $(function() {
         ]);
       }
 
-      $('#vimmers-container').empty().append($.jqml([
+      $.jqml([
         'div', { 'class': 'person', },
         [ 'ul' ].concat(items)
-      ]));
+      ]).appendTo('#vimmers-container');
     }
     $('#vimmers-container').masonry({
       isAnimated: true,
