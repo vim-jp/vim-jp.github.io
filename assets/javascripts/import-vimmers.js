@@ -77,16 +77,18 @@ $(function() {
       }
 
       if (facebook) {
+        var facebook_url = 'https://www.facebook.com/' + facebook;
         items.push([
           'li', { 'class': 'link' },
-          [ 'a', { 'href': facebook }, [ 'img', { 'src': '/assets/images/icon-facebook.png', 'title': 'Facebook' } ] ]
+          [ 'a', { 'href': facebook_url }, [ 'img', { 'src': '/assets/images/icon-facebook.png', 'title': 'Facebook' } ] ]
         ]);
       }
 
       if (googleplus) {
+        var googleplus_url = 'https://plus.google.com/' + googleplus
         items.push([
           'li', { 'class': 'link' },
-          [ 'a', { 'href': googleplus }, [ 'img', { 'src': '/assets/images/icon-googleplus.png', 'title': 'Google+' } ] ]
+          [ 'a', { 'href': googleplus_url }, [ 'img', { 'src': '/assets/images/icon-googleplus.png', 'title': 'Google+' } ] ]
         ]);
       }
 
