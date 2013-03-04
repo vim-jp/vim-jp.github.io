@@ -412,5 +412,8 @@ div.persons {
   height: 0;
   display: block;
 }
+#vimmers-container .ajax-loading {
+  text-align: center;
+}
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
