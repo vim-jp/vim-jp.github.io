@@ -74,6 +74,17 @@ $(function() {
 
       if (github) {
         var github_url = 'https://github.com/' + github;
+        if (!image) {
+          items.unshift([
+            'li', { 'class': 'faceicon ' },
+            [ 'img', { 'src': '/assets/images/icon-loading.gif', 'class': github } ]
+          ]);
+          (function(github) {
+            $.getJSON('https://api.github.com/users/' + github, function(data) {
+              $('img.' + github).attr('src', data.avatar_url);
+            });
+          })(github);
+        }
         items.push([
           'li', { 'class': 'link' },
           [ 'a', { 'href': github_url }, [ 'img', { 'src': '/assets/images/icon-github.png', 'title': 'GitHub' } ] ]
