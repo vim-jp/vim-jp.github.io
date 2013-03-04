@@ -80,7 +80,7 @@ $(function() {
             [ 'img', { 'src': '/assets/images/icon-loading.gif', 'class': github } ]
           ]);
           (function(github) {
-            $.getJSON('https://api.github.com/users/' + github, function(data) {
+            $.getJSON('https://api.github.com/users/' + github + '?callback=?', function(data) {
               $('img.' + github).attr('src', data.avatar_url);
             });
           })(github);
