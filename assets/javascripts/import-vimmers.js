@@ -44,6 +44,7 @@ $(function() {
     })();
     for (var row = 0; row < data.getNumberOfRows(); row++) {
       var name        = data.getFormattedValue(row, colNames['Name']);
+      var shortname   = data.getFormattedValue(row, colNames['Short Name']);
       var image       = data.getFormattedValue(row, colNames['Image']);
       var twitter     = data.getFormattedValue(row, colNames['Twitter Account']);
       var github      = data.getFormattedValue(row, colNames['Github Account']);
@@ -55,7 +56,8 @@ $(function() {
 
       var items = [];
 
-      items.push([ 'li', { 'class': 'name' }, name ]);
+      items.push([ 'li', { 'class': 'name' }, name + (shortname ? ' (' + shortname + ')' : '') ]);
+
       if (twitter) {
         var twitter_url = 'https://twitter.com/' + twitter;
         if (!image) {
