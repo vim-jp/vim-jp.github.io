@@ -43,12 +43,14 @@ $(function() {
       return colNames;
     })();
     for (var row = 0; row < data.getNumberOfRows(); row++) {
-      var name    = data.getFormattedValue(row, colNames['Name']);
-      var image   = data.getFormattedValue(row, colNames['Image']);
-      var twitter = data.getFormattedValue(row, colNames['Twitter Account']);
-      var github  = data.getFormattedValue(row, colNames['Github Account']);
-      var vimorg  = data.getFormattedValue(row, colNames['www.vim.org']);
-      var website = data.getFormattedValue(row, colNames['Website URL']);
+      var name        = data.getFormattedValue(row, colNames['Name']);
+      var image       = data.getFormattedValue(row, colNames['Image']);
+      var twitter     = data.getFormattedValue(row, colNames['Twitter Account']);
+      var github      = data.getFormattedValue(row, colNames['Github Account']);
+      var facebook    = data.getFormattedValue(row, colNames['Facebook']);
+      var googleplus  = data.getFormattedValue(row, colNames['Google+']);
+      var vimorg      = data.getFormattedValue(row, colNames['www.vim.org']);
+      var website     = data.getFormattedValue(row, colNames['Website URL']);
       var description = data.getFormattedValue(row, colNames['Description']);
 
       var items = [];
@@ -71,6 +73,20 @@ $(function() {
         items.push([
           'li', { 'class': 'link' },
           [ 'a', { 'href': github_url }, [ 'img', { 'src': '/assets/images/icon-github.png', 'title': 'GitHub' } ] ]
+        ]);
+      }
+
+      if (facebook) {
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': facebook }, [ 'img', { 'src': '/assets/images/icon-facebook.png', 'title': 'Facebook' } ] ]
+        ]);
+      }
+
+      if (googleplus) {
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': googleplus }, [ 'img', { 'src': '/assets/images/icon-googleplus.png', 'title': 'Google+' } ] ]
         ]);
       }
 
