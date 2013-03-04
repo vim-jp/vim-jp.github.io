@@ -383,6 +383,7 @@ div.persons {
 .persons .person ul {
   padding: 0px;
   margin: 0px;
+  min-height: 50px;
   overflow: hidden;
 }
 .persons .person ul > li {
