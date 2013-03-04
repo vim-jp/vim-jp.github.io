@@ -45,7 +45,7 @@ $(function() {
       rows.push(i);
     }
     for (var i = 1; i < max - 1; ++i) {
-      var n = Math.floor((max - i - 1) * Math.random()) + i;
+      var n = Math.floor((max - i) * Math.random()) + i;
       if (n != i) {
         var tmp = rows[i];
         rows[i] = rows[n];
