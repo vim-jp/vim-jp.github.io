@@ -39,6 +39,22 @@ $(function() {
     return ml;
   }
 
+  function shuffleNumbers(max) {
+    var rows = [];
+    for (var i = 0; i < max; ++i) {
+      rows.push(i);
+    }
+    for (var i = 1; i < max - 1; ++i) {
+      var n = Math.floor((max - i - 1) * Math.random()) + i;
+      if (n != i) {
+        var tmp = rows[i];
+        rows[i] = rows[n];
+        rows[n] = tmp;
+      }
+    }
+    return rows;
+  }
+
   var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=0AvP2GcrHKTfudEdwWm85ajZtd0ltZjRUcVFPWHpzWHc&gid=0&pub=1');
   query.send(function(response) {
     if(response.isError()) {
@@ -54,17 +70,20 @@ $(function() {
     })();
 
     $('#vimmers-container').empty();
-    for (var row = 0; row < data.getNumberOfRows(); row++) {
-      var name        = data.getFormattedValue(row, colNames['Name']);
-      var shortname   = data.getFormattedValue(row, colNames['Short Name']);
-      var image       = data.getFormattedValue(row, colNames['Image']);
-      var twitter     = data.getFormattedValue(row, colNames['Twitter Account']);
-      var github      = data.getFormattedValue(row, colNames['Github Account']);
-      var facebook    = data.getFormattedValue(row, colNames['Facebook']);
-      var googleplus  = data.getFormattedValue(row, colNames['Google+']);
-      var vimorg      = data.getFormattedValue(row, colNames['www.vim.org']);
-      var website     = data.getFormattedValue(row, colNames['Website URL']);
-      var description = data.getFormattedValue(row, colNames['Description']);
+    var rowMax = data.getNumberOfRows();
+    var shuffledRows = shuffleNumbers(rowMax);
+    for (var row = 0; row < rowMax; row++) {
+      var r = shuffledRows[row];
+      var name        = data.getFormattedValue(r, colNames['Name']);
+      var shortname   = data.getFormattedValue(r, colNames['Short Name']);
+      var image       = data.getFormattedValue(r, colNames['Image']);
+      var twitter     = data.getFormattedValue(r, colNames['Twitter Account']);
+      var github      = data.getFormattedValue(r, colNames['Github Account']);
+      var facebook    = data.getFormattedValue(r, colNames['Facebook']);
+      var googleplus  = data.getFormattedValue(r, colNames['Google+']);
+      var vimorg      = data.getFormattedValue(r, colNames['www.vim.org']);
+      var website     = data.getFormattedValue(r, colNames['Website URL']);
+      var description = data.getFormattedValue(r, colNames['Description']);
 
       var items = [];
 
