@@ -13,7 +13,17 @@ $(function() {
 
   function to_jsonml(s) {
     var ml = [];
-    var re = /(?:http|https):\/\/[\x21-\x7e]+/i;
+    var re = /\n/;
+    while (s.length > 0) {
+      if (s.match(re)) {
+        ml.push(RegExp.leftContext, [ 'br' ]);
+        s = RegExp.rightContext;
+      } else {
+        ml.push(s);
+        s = '';
+      }
+    }
+    re = /(?:http|https):\/\/[\x21-\x7e]+/i;
     while (s.length > 0) {
       if (s.match(re)) {
         ml.push(
