@@ -123,10 +123,10 @@ $(function() {
         ]);
       }
 
-      $.jqml([
+      $('#vimmers-container').empty().append($.jqml([
         'div', { 'class': 'person', },
         [ 'ul' ].concat(items)
-      ]).appendTo('#vimmers-container');
+      ]));
     }
     $('#vimmers-container').masonry({
       isAnimated: true,
