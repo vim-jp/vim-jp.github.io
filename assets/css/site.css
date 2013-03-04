@@ -391,7 +391,8 @@ div.persons {
   margin: 0px;
 }
 .persons .person li.link {
-  margin-left: 1em;
+  display: inline;
+  margin-left: 4px;
   white-space: nowrap;
 }
 .persons .person .faceicon {

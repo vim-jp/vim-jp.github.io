@@ -62,17 +62,22 @@ $(function() {
         }
         items.push([
           'li', { 'class': 'link' },
-          [ 'a', { 'href': twitter_url }, '@' + twitter ]
+          [ 'a', { 'href': twitter_url }, [ 'img', { 'src': '/assets/images/icon-twitter.png', 'title': 'Twitter' } ] ]
         ]);
       }
-
-      items.push([ 'li', { 'class': 'clear' } ]);
 
       if (github) {
         var github_url = 'https://github.com/' + github;
         items.push([
           'li', { 'class': 'link' },
-          [ 'a', { 'href': github_url }, github_url ]
+          [ 'a', { 'href': github_url }, [ 'img', { 'src': '/assets/images/icon-github.png', 'title': 'GitHub' } ] ]
+        ]);
+      }
+
+      if (website) {
+        items.push([
+          'li', { 'class': 'link' },
+          [ 'a', { 'href': website }, [ 'img', { 'src': '/assets/images/icon-website.png', 'title': 'WebSite' } ] ]
         ]);
       }
 
@@ -80,16 +85,11 @@ $(function() {
         var vimorg_url = 'http://www.vim.org/account/profile.php?user_id=' + vimorg;
         items.push([
           'li', { 'class': 'link' },
-          [ 'a', { 'href': vimorg_url }, vimorg_url ]
+          [ 'a', { 'href': vimorg_url }, [ 'img', { 'src': '/assets/images/icon-vim.png', 'title': 'Vim' } ] ]
         ]);
       }
 
-      if (website) {
-        items.push([
-          'li', { 'class': 'link' },
-          [ 'a', { 'href': website }, website ]
-        ]);
-      }
+      items.push([ 'li', { 'class': 'clear' } ]);
 
       if (description) {
         items.push([ 'li', { 'class': 'desc' } ]
