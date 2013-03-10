@@ -18,11 +18,9 @@ layout: post
 category: release
 title: #{rel['title']} #{rel['version']} リリース
 ---
+## #{rel['title']} #{rel['version']} がリリースされました。
 
-#{rel['title']} #{rel['version']} がリリースされました。
--------------------------------------------------------
-
-#{rel['info']}
+> #{rel['info']}
 EOS
   }
   puts <<"EOS"
