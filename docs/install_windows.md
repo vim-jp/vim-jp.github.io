@@ -8,7 +8,7 @@ title: Windowsへのインストール方法
 `ftp://ftp.vim.org`でも配布されていますが、大きなバージョンアップのタイミングでしかリリースされません。
 Windows向けには[KaoriYa](http://www.kaoriya.net/)からバイナリパッケージが配布されています。
 
-> [![KaoriYa](http://www.kaoriya.net/logo.png)](http://www.kaoriya.net/software/vim)
+> [![KaoriYa](http://www.kaoriya.net/assets/images/header-logo.png)](http://www.kaoriya.net/software/vim)
 
 
 1.  ダウンロード
