@@ -15,6 +15,9 @@ pygments:    true
 markdown:    redcarpet
 permalink:   date
 
+redcarpet:
+  extensions: ["tables", "autolink"]  
+
 maruku:
   use_tex:    false
   use_divs:   false
