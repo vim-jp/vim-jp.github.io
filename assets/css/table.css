@@ -1,0 +1,129 @@
+#content table {
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  border-spacing: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+#content table th,
+#content table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+
+#content table th {
+  font-weight: bold;
+}
+
+#content table thead th {
+  vertical-align: bottom;
+}
+
+#content table caption + thead tr:first-child th,
+#content table caption + thead tr:first-child td,
+#content table colgroup + thead tr:first-child th,
+#content table colgroup + thead tr:first-child td,
+#content table thead:first-child tr:first-child th,
+#content table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+#content table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+#content table table {
+  background-color: #ffffff;
+}
+
+#content table caption + thead tr:first-child th,
+#content table caption + tbody tr:first-child th,
+#content table caption + tbody tr:first-child td,
+#content table colgroup + thead tr:first-child th,
+#content table colgroup + tbody tr:first-child th,
+#content table colgroup + tbody tr:first-child td,
+#content table thead:first-child tr:first-child th,
+#content table tbody:first-child tr:first-child th,
+#content table tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+#content table thead:first-child tr:first-child > th:first-child,
+#content table tbody:first-child tr:first-child > td:first-child,
+#content table tbody:first-child tr:first-child > th:first-child {
+  -webkit-border-top-left-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+          border-top-left-radius: 4px;
+}
+
+#content table thead:first-child tr:first-child > th:last-child,
+#content table tbody:first-child tr:first-child > td:last-child,
+#content table tbody:first-child tr:first-child > th:last-child {
+  -webkit-border-top-right-radius: 4px;
+      -moz-border-radius-topright: 4px;
+          border-top-right-radius: 4px;
+}
+
+#content table thead:last-child tr:last-child > th:first-child,
+#content table tbody:last-child tr:last-child > td:first-child,
+#content table tbody:last-child tr:last-child > th:first-child,
+#content table tfoot:last-child tr:last-child > td:first-child,
+#content table tfoot:last-child tr:last-child > th:first-child {
+  -webkit-border-bottom-left-radius: 4px;
+      -moz-border-radius-bottomleft: 4px;
+          border-bottom-left-radius: 4px;
+}
+
+#content table thead:last-child tr:last-child > th:last-child,
+#content table tbody:last-child tr:last-child > td:last-child,
+#content table tbody:last-child tr:last-child > th:last-child,
+#content table tfoot:last-child tr:last-child > td:last-child,
+#content table tfoot:last-child tr:last-child > th:last-child {
+  -webkit-border-bottom-right-radius: 4px;
+      -moz-border-radius-bottomright: 4px;
+          border-bottom-right-radius: 4px;
+}
+
+#content table tfoot + tbody:last-child tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 0;
+      -moz-border-radius-bottomleft: 0;
+          border-bottom-left-radius: 0;
+}
+
+#content table tfoot + tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+          border-bottom-right-radius: 0;
+}
+
+#content table caption + thead tr:first-child th:first-child,
+#content table caption + tbody tr:first-child td:first-child,
+#content table colgroup + thead tr:first-child th:first-child,
+#content table colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+          border-top-left-radius: 4px;
+}
+
+#content table caption + thead tr:first-child th:last-child,
+#content table caption + tbody tr:first-child td:last-child,
+#content table colgroup + thead tr:first-child th:last-child,
+#content table colgroup + tbody tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 4px;
+      -moz-border-radius-topright: 4px;
+          border-top-right-radius: 4px;
+}
+
+/* vim:set ts=8 sts=2 sw=2 noet: */
