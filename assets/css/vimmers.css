@@ -1,0 +1,53 @@
+/* vim:set ts=8 sts=2 sw=2 noet: */
+
+.vimmers-controls {
+  display: block;
+  text-align:center;
+  margin: 18px auto 6px;
+  padding: 0;
+}
+
+.vimmers-controls li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 12px;
+}
+
+.vimmers-controls li > a,
+.vimmers-controls li > a:link,
+.vimmers-controls li > a:visited {
+  display: block;
+
+  padding: 0.3em 2em;
+  border: 2px solid black;
+  background-color: #50bb50;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#50bb50), to(#80cc66));
+  background-image: -moz-linear-gradient(#50bb50, #80cc66);
+  background-image: -o-linear-gradient(#50bb50, #80cc66);
+  background-image: linear-gradient(#50bb50, #80cc66);
+  filter: progid:DxImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FF50BB50,EndColorStr=#FF80CC66);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box; 
+  -webkit-border-radius: 0.5em; 
+  -moz-border-radius: 0.5em; 
+  border-radius: 0.5em; 
+
+  cursor:pointer;
+  text-decoration: none; 
+  font-weight: bold;
+  color: #fff; 
+}
+
+.vimmers-controls li > a:hover,
+.vimmers-controls li > a:focus,
+.vimmers-controls li > a:active {
+  border-color: #30b372;
+  border-bottom-color: #2aa065;
+  background-color: #70dd70;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70dd70), to(#80cc66));
+  background-image: -moz-linear-gradient(#70dd70, #80cc66);
+  background-image: -o-linear-gradient(#70dd70, #80cc66);
+  background-image: linear-gradient(#70dd70, #80cc66);
+  filter: progid:DxImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,StartColorStr=#FF70DD70,EndColorStr=#FF80CC66);
+}
