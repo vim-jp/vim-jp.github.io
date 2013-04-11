@@ -40,7 +40,9 @@ Windowsユーザであれば[Visual Studioでのコンパイル方法](http://vi
 
 もし、修正中に元のソースコードが変更された場合は、次のコマンドでリポジトリを同期させます。
 
-    $ hg pull --mq
+    $ hg qpop -a
+    $ hg pull -u
+    $ hg qpush -a
 
 全ての修正が完了したらパッチファイルを作りましょう。最終的には全修正を一連のパッチファイルとしてメーリングリストに投げます。
 
@@ -71,3 +73,10 @@ Vimでは基本的にバグ修正が優先して取り込まれ、新機能の�
 
 ※：ここで紹介しているMercurial Queueは[quilt](http://savannah.nongnu.org/projects/quilt)と呼ばれるパッチ管理ソフトウェアのコマンド体系をベースにしています。
 Mercurial Queueの使い方を勉強するときには、まずquiltについて学んでおくと理解が早いでしょう。
+
+* 参考資料：
+- [Mercurial Queues エクステンション](http://mercurial.selenic.com/wiki/JapaneseMqExtension)
+- [Mercurial MQ について](http://d.hatena.ne.jp/dayflower/20090520/1242794877)
+- [12 Managing change with Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch12.html#x105-26500012)
+- [13 Advanced uses of Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch13.html#x108-30000013)
+
