@@ -20,7 +20,7 @@ Windowsユーザであれば[Visual Studioでのコンパイル方法](http://vi
     [extensions]
     mq=
 
-次に修正内容に対応するパッチを作成します。ちなみに、Mercurial Queueの各コマンドはqで始まるので覚えておくとよいです。
+次に修正内容に対応するパッチを作成します。
 今回はパッチ名を`010-fix-quickfix-on-windows.patch`としました。
 
     $ hg qnew 010-fix-quickfix-on-windows.patch
@@ -48,8 +48,6 @@ Windowsユーザであれば[Visual Studioでのコンパイル方法](http://vi
 全ての修正が完了したらパッチファイルを作りましょう。最終的には全修正を一連のパッチファイルとしてメーリングリストに投げます。
 
     $ hg qdiff > fix-quickfix-on-windows.diff
-
-*※実際は1行*
 
 これで作成したパッチの差分ファイルが作成出来るので、メーリングリスト[vim\_dev](https://groups.google.com/forum/#!forum/vim_dev)に添付ファイルを付けるか本文に貼り付けてメールを投げます。
 メールの冒頭で
