@@ -1,0 +1,16 @@
+---
+---
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+
+{% for p in site.pages %}<url>
+  <loc>{{ site.base-url | append: p.url | xml_escape }}</loc>
+  <lastmod>{{ site.time | date: '%Y-%m-%dT%H:%M:%S+09:00' }}</lastmod>
+</url>{% endfor %}
+
+{% for p in site.posts %}<url>
+  <loc>{{ site.base-url | append: p.url | xml_escape }}</loc>
+  <lastmod>{{ p.date | date: '%Y-%m-%dT%H:%M:%S+09:00' }}</lastmod>
+</url>{% endfor %}
+
+</urlset>
