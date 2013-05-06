@@ -16,8 +16,7 @@ markdown:    redcarpet
 permalink:   date
 
 redcarpet:
-  extensions: ["tables", "autolink"]  
-
+  extensions: ["tables",  "autolink",  "strikethrough",  "superscript"]
 maruku:
   use_tex:    false
   use_divs:   false
