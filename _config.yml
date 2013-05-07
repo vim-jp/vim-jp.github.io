@@ -1,7 +1,5 @@
 encoding: utf-8
 safe:        false
-auto:        false
-server:      false
 server_port: 4000
 base-url:    http://vim-jp.org
 
@@ -42,7 +40,8 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
-exclude: scripts
+exclude:
+  - 'scripts'
 
 downloads:
   vim73w32:
