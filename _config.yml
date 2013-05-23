@@ -1,6 +1,5 @@
 encoding: utf-8
 safe:        false
-server_port: 4000
 base-url:    http://vim-jp.org
 
 source:      .
