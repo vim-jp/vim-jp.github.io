@@ -34,15 +34,17 @@ Windowsユーザであれば[Visual Studioでのコンパイル方法](http://vi
 [:help coding-style](http://vim-jp.org/vimdoc-ja/develop.html#coding-style)にコーディング規約が書かれてあります。
 また[:help develop.txt](http://vim-jp.org/vimdoc-ja/develop.html)にはVimの開発に関する事項が書かれています。一度目を通すといいでしょう。
 
+すでに用意されているパッチをソースファイルに適用するなら、以下のようなコマンドを実行します。
+
+    $ patch -p1 -u < something.patch
+
 ソースファイルを修正したらパッチを更新しましょう。
 
     $ hg qrefresh
 
 もし、修正中に元のソースコードが変更された場合は、次のコマンドでリポジトリを同期させます。
 
-    $ hg qpop -a
-    $ hg pull -u
-    $ hg qpush -a
+    $ hg qpop -a; hg pull -u; hg qpush -a
 
 全ての修正が完了したらパッチファイルを作りましょう。最終的には全修正を一連のパッチファイルとしてメーリングリストに投げます。
 
