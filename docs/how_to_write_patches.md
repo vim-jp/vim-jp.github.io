@@ -36,7 +36,7 @@ Windowsユーザであれば[Visual Studioでのコンパイル方法](http://vi
 
 すでに用意されているパッチをソースファイルに適用するなら、以下のようなコマンドを実行します。
 
-    $ patch -p1 -u < something.patch
+    $ patch -p1 < something.patch
 
 ソースファイルを修正したらパッチを更新しましょう。
 
