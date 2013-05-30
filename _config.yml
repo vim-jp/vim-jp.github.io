@@ -1,8 +1,5 @@
 encoding: utf-8
 safe:        false
-auto:        false
-server:      false
-server_port: 4000
 base-url:    http://vim-jp.org
 
 source:      .
@@ -16,8 +13,7 @@ markdown:    redcarpet
 permalink:   date
 
 redcarpet:
-  extensions: ["tables", "autolink"]  
-
+  extensions: ["tables",  "autolink",  "strikethrough",  "superscript"]
 maruku:
   use_tex:    false
   use_divs:   false
@@ -43,20 +39,21 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
-exclude: scripts
+exclude:
+  - 'scripts'
 
 downloads:
   vim73w32:
     title: Windows 32ビット
-    version: 7.3.875
+    version: 7.3.969
     info: +kaoriya, 14MB ZIP
   vim73w64:
     title: Windows 64ビット
-    version: 7.3.875
+    version: 7.3.969
     info: +kaoriya, 14MB ZIP
   vim73win:
     title: Windows 32ビット/64ビット
-    version: 7.3.875
+    version: 7.3.969
     info: +kaoriya, 14MB ZIP
   vim73mac:
     title: MacOSX 10.7/10.8
