@@ -86,7 +86,7 @@ def vimpatch_all()
   tag2rev = vimhg_tags()
   readme = httpget(VIMPATCH_README_URL).entity.force_encoding("UTF-8")
   for line in readme.split(/\r\n|\r|\n/)
-    m = line.match(/^\s*(?#size)(\d+)  (?#version)(\d\.\d\.\d{3})  (?#summary)(.*)$/)
+    m = line.match(/^\s*(?#size)(\d+)  (?#version)(\d\.\d\.\d{3,4})  (?#summary)(.*)$/)
     if !m
       next
     end
@@ -108,8 +108,22 @@ def vimpatch_all()
     end
     items << e
   end
-  items.sort_by!{|e| e["version"]}
+  items.sort!{|a,b| cmp_version(a["version"], b["version"])}
   return items
+end
+
+
+def cmp_version(a, b)
+  a_major, a_minor, a_patchlevel = a.split(".").map{|x| x.to_i}
+  b_major, b_minor, b_patchlevel = b.split(".").map{|x| x.to_i}
+  if a_major != b_major
+    return a_major <=> b_major
+  elsif a_minor != b_minor
+    return a_minor <=> b_minor
+  elsif a_patchlevel != b_patchlevel
+    return a_patchlevel <=> b_patchlevel
+  end
+  return 0
 end
 
 
@@ -287,7 +301,7 @@ def cmd_generate(args)
   puts "## リリース情報"
   puts ""
   for e in vimpatches
-    if e["version"] <= state["vim"]["version"]
+    if cmp_version(e["version"], state["vim"]["version"]) <= 0
       next
     end
     summary = "#{e["version"]} : #{e["summary"]}"
