@@ -71,6 +71,7 @@ $(function() {
     var description = getter('Description');
 
     var items = [];
+    var ready_hooks = [];
 
     items.push([ 'li', { 'class': 'name' }, name + (shortname ? ' \u0028' + shortname + '\u0029' : '') ]);
 
@@ -88,16 +89,18 @@ $(function() {
 
     if (github) {
       var github_url = 'https://github.com/' + github;
+      var gh_id = 'github-id-' + github;
       if (!image) {
         items.unshift([
           'li', { 'class': 'faceicon ' },
-          [ 'img', { 'src': '/assets/images/icon-loading.gif', 'class': github } ]
+          [ 'img', { 'src': '/assets/images/icon-loading.gif', 'id': gh_id } ]
         ]);
-        (function(github) {
+        // Register gh-icon loader to "ready_hooks".
+        ready_hooks.push(function(element) {
           $.getJSON('https://api.github.com/users/' + github + '?callback=?', function(res) {
-            $('img.' + github).attr('src', res.data.avatar_url);
+            element.find('img#' + gh_id).attr('src', res.data.avatar_url);
           });
-        })(github);
+        });
       }
       items.push([
         'li', { 'class': 'link' },
@@ -150,10 +153,18 @@ $(function() {
       ]);
     }
 
-    return $.jqml([
+    var element = $.jqml([
       'div', { 'class': 'person', },
       [ 'ul' ].concat(items)
     ]);
+    // Fire all "ready_hooks" events.
+    element.ready(function() {
+      for (var i = 0, max = ready_hooks.length; i < max; ++i) {
+        ready_hooks[i](element);
+      }
+    })
+
+    return element;
   }
 
   function refreshVimmers(first) {
