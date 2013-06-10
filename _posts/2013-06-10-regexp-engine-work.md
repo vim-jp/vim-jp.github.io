@@ -5,7 +5,7 @@ title: Regexp engine work
 ---
 この記事は、Bram Moolenaar氏が開発者メーリングリスト vim\_dev にポストしたメールの翻訳文です。
 
-https://groups.google.com/d/msg/vim\_dev/YOnT1yHMHUI/uugIVzc2D9AJ
+https://groups.google.com/d/msg/vim_dev/YOnT1yHMHUI/uugIVzc2D9AJ
 
 --
 
