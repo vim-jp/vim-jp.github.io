@@ -31,7 +31,7 @@ title: vim-jpで開発中のパッチを紹介
 
 
 * make config 修正
-  - 作者：shirosaki
+  - 作者：k-takata
   - [パッチ URL](https://bitbucket.org/k_takata/vim-cygwin-linux-mq/src/e09a74f02fcef2177998f6cee829fa99112cd89f/fix-make-config.patch)
   - [Issue](https://github.com/vim-jp/issues/issues/280)
   - 現在の状況：開発中
