@@ -6,18 +6,13 @@ title: vim-jpで開発中のパッチを紹介
 以下はvim-jpで現在開発中のパッチです。興味のあるパッチがあれば、ぜひテストや議論に協力をよろしくおねがいします。
 
 1. 開発中のパッチ
+[開発中のパッチ一覧](https://github.com/vim-jp/issues/issues?labels=status%2Fpatched&page=1&state=open)
 
 * UTF-8環境での印刷文字化け解消
   - 作者：k-takata
   - [パッチ URL](https://bitbucket.org/k\_takata/vim-win32-mq/src/a11f5ea38acf24f121fbb55f88181ecfebd2591a/fix-windows-printing.patch?at=default)
   - [Issue](https://github.com/vim-jp/issues/issues/408)
   - 現在の状況：開発中
-
-* ポップアップの絞り込み時の再描画改善
-  - 作者：Shougo `->` mattn
-  - [パッチ URL](https://gist.github.com/Shougo/5743202)
-  - [Issue](https://github.com/vim-jp/issues/issues/401)
-  - 現在の状況：ほぼ完成、vim\_devへの投稿予定
 
 * UNIX 環境における LuaJIT 対応
   - 作者：shirosaki
@@ -56,4 +51,13 @@ title: vim-jpで開発中のパッチを紹介
   - 現在の状況：開発中？　議論が途中で止まっている
 
 2. 完成したパッチ
+[完成したパッチ一覧](https://github.com/vim-jp/issues/issues?labels=status%2Fsent+patch&page=1&state=open)
+
+* ポップアップの絞り込み時の再描画改善
+  - 作者：Shougo `->` mattn
+  - [パッチ URL](https://gist.github.com/Shougo/5743202)
+  - [Issue](https://github.com/vim-jp/issues/issues/401)
+  - [投稿](https://groups.google.com/d/msg/vim_dev/kFmrNmdnpSs/GMCMHodLflEJ)
+  - 現在の状況：vim\_devへの投稿済み
+
 
