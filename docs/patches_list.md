@@ -11,7 +11,7 @@ title: vim-jpで開発中のパッチを紹介
 
 * UTF-8環境での印刷文字化け解消
   - 作者：k-takata
-  - [パッチ URL](https://bitbucket.org/k\_takata/vim-win32-mq/src/a11f5ea38acf24f121fbb55f88181ecfebd2591a/fix-windows-printing.patch?at=default)
+  - [パッチ URL](https://bitbucket.org/k_takata/vim-win32-mq/src/tip/fix-windows-printing.patch?at=default)
   - [Issue](https://github.com/vim-jp/issues/issues/408)
   - 現在の状況：開発中
 
@@ -32,7 +32,7 @@ title: vim-jpで開発中のパッチを紹介
 
 * make config 修正
   - 作者：k-takata
-  - [パッチ URL](https://bitbucket.org/k_takata/vim-cygwin-linux-mq/src/e09a74f02fcef2177998f6cee829fa99112cd89f/fix-make-config.patch)
+  - [パッチ URL](https://bitbucket.org/k_takata/vim-cygwin-linux-mq/src/tip/fix-make-config.patch)
   - [Issue](https://github.com/vim-jp/issues/issues/280)
   - 現在の状況：開発中
 
