@@ -78,7 +78,7 @@ $(function() {
     if (twitter) {
       var twitter_url = 'https://twitter.com/' + twitter;
       if (!image) {
-        image = 'http://api.twitter.com/1/users/profile_image/'
+        image = 'http://api.twitter.com/1.1/users/profile_image/'
           + twitter + '.png&size=mini';
       }
       items.push([
