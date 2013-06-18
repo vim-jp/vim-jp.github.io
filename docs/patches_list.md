@@ -9,13 +9,6 @@ title: vim-jpで開発中のパッチを紹介
 [開発中のパッチ一覧](https://github.com/vim-jp/issues/issues?labels=status%2Fpatched&page=1&state=open)
 
 
-* UTF-8環境での印刷文字化け解消
-  - 作者：k-takata
-  - [パッチ URL](https://bitbucket.org/k_takata/vim-win32-mq/src/tip/fix-windows-printing.patch?at=default)
-  - [Issue](https://github.com/vim-jp/issues/issues/408)
-  - 現在の状況：開発中
-
-
 * UNIX 環境における LuaJIT 対応
   - 作者：shirosaki
   - [パッチ URL](https://gist.github.com/shirosaki/5663617)
@@ -28,13 +21,6 @@ title: vim-jpで開発中のパッチを紹介
   - [パッチ URL](https://gist.github.com/k-takata/5018169)
   - [Issue](https://github.com/vim-jp/issues/issues/314)
   - 現在の状況：開発中、修正案を議論している段階
-
-
-* make config 修正
-  - 作者：k-takata
-  - [パッチ URL](https://bitbucket.org/k_takata/vim-cygwin-linux-mq/src/tip/fix-make-config.patch)
-  - [Issue](https://github.com/vim-jp/issues/issues/280)
-  - 現在の状況：開発中
 
 
 * switchbuf 挙動修正
