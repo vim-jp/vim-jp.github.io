@@ -1,6 +1,5 @@
 // vim:set ts=8 sts=2 sw=2 tw=0 et:
 
-google.load("visualization", "1");
 $(function() {
 
   var elementCache = [];
@@ -59,16 +58,16 @@ $(function() {
   }
 
   function toElement(getter) {
-    var name        = getter('Name');
-    var shortname   = getter('Short Name');
-    var image       = getter('Image');
-    var twitter     = getter('Twitter Account');
-    var github      = getter('Github Account');
-    var facebook    = getter('Facebook');
-    var googleplus  = getter('Google+');
-    var vimorg      = getter('www.vim.org');
-    var website     = getter('Website URL');
-    var description = getter('Description');
+    var name        = getter('name');
+    var shortname   = getter('short_name');
+    var image       = getter('logo');
+    var twitter     = getter('twitter');
+    var github      = getter('github');
+    var facebook    = getter('facebook');
+    var googleplus  = getter('googleplus');
+    var vimorg      = getter('vimorg');
+    var website     = getter('website');
+    var description = getter('description');
 
     var items = [];
     var ready_hooks = [];
@@ -188,28 +187,14 @@ $(function() {
 
   function loadVimmers(end_cb) {
     elementCache = [];
-    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=0AvP2GcrHKTfudEdwWm85ajZtd0ltZjRUcVFPWHpzWHc&gid=0&pub=1');
-    query.send(function(response) {
-      if(response.isError()) {
-        return;
-      }
-      var data = response.getDataTable();
-      var colNames = (function() {
-        var colNames = {};
-        for (var i = 0, max = data.getNumberOfColumns(); i < max; i++) {
-          colNames[data.getColumnLabel(i)] = i;
-        }
-        return colNames;
-      })();
-
+    $.getJSON("/vimmers/vimmers.json", function(data) {
       $('#vimmers-container').empty();
-      var rowMax = data.getNumberOfRows();
-      for (var row = 0; row < rowMax; row++) {
+      $.each(data, function(n, e) {
         var element = toElement(function(name) {
-          return data.getFormattedValue(row, colNames[name]);
+          return e[name];
         });
         elementCache.push(element);
-      }
+      });
       refreshVimmers(true);
       if (end_cb) {
         end_cb();
