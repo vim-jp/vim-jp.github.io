@@ -58,16 +58,17 @@ $(function() {
   }
 
   function toElement(getter) {
-    var name        = getter('name');
-    var shortname   = getter('short_name');
-    var image       = getter('logo');
-    var twitter     = getter('twitter');
-    var github      = getter('github');
-    var facebook    = getter('facebook');
-    var googleplus  = getter('googleplus');
-    var vimorg      = getter('vimorg');
-    var website     = getter('website');
-    var description = getter('description');
+    var name         = getter('name');
+    var shortname    = getter('short_name');
+    var image        = getter('logo');
+    var twitter      = getter('twitter');
+    var twitter_icon = getter('twitter_icon');
+    var github       = getter('github');
+    var facebook     = getter('facebook');
+    var googleplus   = getter('googleplus');
+    var vimorg       = getter('vimorg');
+    var website      = getter('website');
+    var description  = getter('description');
 
     var items = [];
     var ready_hooks = [];
@@ -76,9 +77,8 @@ $(function() {
 
     if (twitter) {
       var twitter_url = 'https://twitter.com/' + twitter;
-      if (!image) {
-        image = 'http://api.twitter.com/1.1/users/profile_image/'
-          + twitter + '.png&size=mini';
+      if (!image && twitter_icon) {
+        image = twitter_icon
       }
       items.push([
         'li', { 'class': 'link' },
