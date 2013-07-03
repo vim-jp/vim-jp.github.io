@@ -187,7 +187,7 @@ $(function() {
 
   function loadVimmers(end_cb) {
     elementCache = [];
-    $.getJSON("/vimmers/vimmers.json", function(data) {
+    $.getJSON("vimmers.json", function(data) {
       $('#vimmers-container').empty();
       $.each(data, function(n, e) {
         var element = toElement(function(name) {
