@@ -187,19 +187,17 @@ $(function() {
 
   function loadVimmers(end_cb) {
     elementCache = [];
-    $.getScript("vimmers.js", function() {
-      $('#vimmers-container').empty();
-      $.each(vimmers, function(n, e) {
-        var element = toElement(function(name) {
-          return e[name];
-        });
-        elementCache.push(element);
+    $('#vimmers-container').empty();
+    $.each(vimmers, function(n, e) {
+      var element = toElement(function(name) {
+        return e[name];
       });
-      refreshVimmers(true);
-      if (end_cb) {
-        end_cb();
-      }
+      elementCache.push(element);
     });
+    refreshVimmers(true);
+    if (end_cb) {
+      end_cb();
+    }
   }
 
   loadVimmers(function() {
