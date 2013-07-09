@@ -188,8 +188,8 @@ $(function() {
   function loadVimmers(end_cb) {
     elementCache = [];
     $('#vimmers-container').empty();
-    $.getScript("vimmers.js", function() {
-      $.each(vimmers, function(n, e) {
+    $.getJSON("http://jsonp.ap01.aws.af.cm/?url=https://raw.github.com/vim-jp/vim-jp.github.com/master/vimmers/vimmers.json&callback=?", function(data) {
+      $.each(data, function(n, e) {
         var element = toElement(function(name) {
           return e[name];
         });
