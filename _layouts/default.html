@@ -21,7 +21,7 @@
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
     // feeds
-    var feed = new google.feeds.Feed("http://vim-jp.appspot.com/patches/");
+    var feed = new google.feeds.Feed("http://mattn.tonic-water.com/vim-jp-patches/");
     feed.load(function(result) {
       if (!result.error) {
         $.each(result.feed.entries, function() {
