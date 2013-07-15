@@ -5,7 +5,7 @@ require 'yaml'
 
 root = File::expand_path("#{File::dirname(__FILE__)}/..")
 
-commit_hashes = ["7bf9665fd74fe399874bd783c508f37da161026", "0d83ffed5358bf8b3b07d81347f753813ad9a1c5"]
+commit_hashes = ["0d83ffed5358bf8b3b07d81347f753813ad9a1c5", "7bf9665fd74fe399874bd783c508f37da161026"]
 diff = ""
 commit_hashes.each do |hash|
     diff += `git diff #{hash}^..#{hash}`
@@ -13,7 +13,6 @@ end
 
 entries = []
 while diff.size != 0
-# _posts/2011-09-22-how_to_write_patches.md b/_posts/2011-09-22-how_to_write_patches.md
   if /^diff --git a\/(.+?\.md)/ =~ diff
     path = $+
     rest = $'
@@ -60,8 +59,11 @@ entries.each do |entry|
   entry[:header]["layout"] = "redirect"
   entry[:header]["title"] = "redirect to " + entry[:header]["title"]
   new_path = entry[:path].gsub(/(\d{4}-\d{2}-\d{2}-)(.+)$/, '\1redirect_to_\2')
-  entry[:header]["redirect-to"] = entry[:path].gsub(/.+(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/, "/#{entry[:new_category]}/\\1/\\2/\\3/\\4.html")
   entry[:header]["permalink"] = entry[:path].gsub(/.+(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/, "/#{entry[:old_category].nil? ? "" : "#{entry[:old_category]}/"}\\1/\\2/\\3/\\4.html")
+  entry[:header]["redirect-to"] = entry[:path].gsub(/.+(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/, "/#{entry[:new_category]}/\\1/\\2/\\3/\\4.html")
+  while File.exist?("#{root}/#{new_path}")
+    new_path.gsub!(/([^.])\.(md)/, "\\1_hop.md")
+  end
   open("#{root}/#{new_path}", "w") do |f|
     f.write("---\n")
     entry[:header].each do |key, value|
