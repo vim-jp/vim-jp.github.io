@@ -43,18 +43,18 @@ exclude:
   - 'scripts'
 
 downloads:
-  vim73w32:
+  vim74w32:
     title: Windows 32ビット
-    version: 7.3.1314
+    version: '7.4'
     info: +kaoriya, 14MB ZIP
-  vim73w64:
+  vim74w64:
     title: Windows 64ビット
-    version: 7.3.1314
-    info: +kaoriya, 14MB ZIP
-  vim73win:
+    version: '7.4'
+    info: +kaoriya, 15MB ZIP
+  vim74win:
     title: Windows 32ビット/64ビット
-    version: 7.3.1314
-    info: +kaoriya, 14MB ZIP
+    version: '7.4'
+    info: +kaoriya, 14/15MB ZIP
   vim74mac:
     title: MacOSX 10.7/10.8
     version: 7.4a.009
