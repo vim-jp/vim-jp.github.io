@@ -42,7 +42,6 @@ kramdown:
 exclude:
   - 'scripts'
   - 'Gemfile'
-  - 'github-pages.gemspec'
 
 downloads:
   vim74w32:
