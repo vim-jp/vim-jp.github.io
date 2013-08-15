@@ -41,6 +41,7 @@ kramdown:
 
 exclude:
   - 'scripts'
+  - 'Gemfile'
 
 downloads:
   vim74w32:
