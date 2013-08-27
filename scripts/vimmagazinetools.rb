@@ -77,6 +77,9 @@ def mdescape(s)
   s = s.gsub("[", "\\[")
   s = s.gsub("]", "\\]")
   s = s.gsub("`", "\\`")
+  s = s.gsub("_", "&#x5f;")
+  s = s.gsub("^", "&#x5e;")
+  s = s.gsub("*", "&#x2a;")
   return s
 end
 
