@@ -9,8 +9,8 @@ require 'optparse'
 require 'date'
 
 
-VIMPATCH_URL = "http://ftp.vim.org/pub/vim/patches/7.3/%s"
-VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/7.3/README"
+VIMPATCH_URL = "http://ftp.vim.org/pub/vim/patches/7.4/%s"
+VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/7.4/README"
 VIMSCRIPT_URL = "http://www.vim.org/scripts/script.php?script_id=%s"
 VIMSCRIPT_LIST_URL = "http://www.vim.org/scripts/script_search_results.php?&show_me=99999"
 VIMHG_COMMIT_URL = "http://code.google.com/p/vim/source/detail?r=%s"
