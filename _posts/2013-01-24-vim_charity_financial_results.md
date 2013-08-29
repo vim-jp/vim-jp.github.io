@@ -6,7 +6,7 @@ title: Vim チャリティー決算報告
 
 # Vim チャリティー決算報告
 
-[vim_announce: Vim charity financial results](https://groups.google.com/d/topic/vim_announce/mdAkpS1cZqY/discussion) の無断翻訳です。
+[vim\_announce: Vim charity financial results](https://groups.google.com/d/topic/vim_announce/mdAkpS1cZqY/discussion) の無断翻訳です。
 
 -----
 

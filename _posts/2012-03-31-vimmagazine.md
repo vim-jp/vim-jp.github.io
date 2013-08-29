@@ -9,7 +9,7 @@ title: Vim Magazine 3 月号
 
 ## 話題
 
-### [vim_dev: Google summer of code mentor](http://groups.google.com/group/vim_dev/browse_thread/thread/5e806ba0ecfb0283)
+### [vim\_dev: Google summer of code mentor](http://groups.google.com/group/vim_dev/browse_thread/thread/5e806ba0ecfb0283)
 
 Google Summer of Code への参加に向けて準備が進められています。小規模でや
 りたいとのことで生徒の募集は 3 人程度になりそうです。
@@ -18,7 +18,7 @@ Google Summer of Code への参加に向けて準備が進められています�
 ## リリース情報
 
 - [7.3.465 : cannot get file name with newline from glob()](http://code.google.com/p/vim/source/detail?r=d1096a4e96bdd5bfc0ce2f1aaddcbff1475c69ad)
-- [7.3.466 : ml_get error when replacing several selected lines](http://code.google.com/p/vim/source/detail?r=df9c7798b5e2c022310cd12e199c9de8d866aa39)
+- [7.3.466 : ml\_get error when replacing several selected lines](http://code.google.com/p/vim/source/detail?r=df9c7798b5e2c022310cd12e199c9de8d866aa39)
 - [7.3.467 : cursor position wrong at command line when using input method](http://code.google.com/p/vim/source/detail?r=276d58e9265cfee76c04bc5450681090900a16f4)
 - [7.3.468 : for some compilers the error file is not easily readable](http://code.google.com/p/vim/source/detail?r=38a1357304234dcea96f96019abf0f3e5ae290ab)
 - [7.3.469 : compiler warning for unused argument](http://code.google.com/p/vim/source/detail?r=e61c3b09ae86a8a448ad2d028df6fa6b9778666b)
@@ -72,7 +72,7 @@ Open : 111 (+3) | Closed : 70 (+4)
 - [Issue #177 : DLLを複数環境で共有していると問題が発生するかもしれないケースについて考える](https://github.com/vim-jp/issues/issues/177)
 - [Issue #178 : pathogen, vundle, neobundleを利用したとき、インストールしたプラグインが読み込まれない](https://github.com/vim-jp/issues/issues/178)
 - [Issue #179 : There is not the way to set executed external command encoding.](https://github.com/vim-jp/issues/issues/179)
-- [Issue #180 : mingwでif_perlのビルドに失敗する](https://github.com/vim-jp/issues/issues/180)
+- [Issue #180 : mingwでif\_perlのビルドに失敗する](https://github.com/vim-jp/issues/issues/180)
 - [Issue #181 : タスクバーが上部にある場合にウィンドウ位置が不正になる](https://github.com/vim-jp/issues/issues/181)
 
 

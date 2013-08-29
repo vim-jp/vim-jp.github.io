@@ -17,21 +17,8 @@
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
-  google.load("feeds", "1", {language : "ja"});
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
-    // feeds
-    var feed = new google.feeds.Feed("http://vim-jp.herokuapp.com/patches/");
-    feed.load(function(result) {
-      if (!result.error) {
-        $.each(result.feed.entries, function() {
-          $('<li/>').append(
-            $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
-          ).append($('<br/>')).append($('<span/>').text(this.contentSnippet)).appendTo('#patches-list');
-        });
-      }
-    });
-
     // search
     var customSearchControl = new google.search.CustomSearchControl("001325159752250591701:65aunpq8rlg");
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
@@ -39,6 +26,14 @@
     options.enableSearchboxOnly("http://www.google.com/cse?cx=001325159752250591701:65aunpq8rlg");
     customSearchControl.draw('VimdocJaSearch', options);
   }, true);
+
+  $.getJSON("http://vim-jp.herokuapp.com/patches/json?callback=?", function(items) {
+    $.each(items, function() {
+      $('<li/>').append(
+        $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
+      ).append($('<br/>')).append($('<span/>').text(this.description)).appendTo('#patches-list');
+    });
+  });
 </script>
 </head>
 <body>
@@ -69,13 +64,13 @@
 					<dt>バイナリーダウンロード</dt>
 					<dd>
 					<ul>
-						<li><a href="http://files.kaoriya.net/goto/vim73w32"
-							class="download_button"><span>{{site.downloads.vim73w32.title}}</span><br />
-							<span class="info">({{ site.downloads.vim73w32.version }}, {{ site.downloads.vim73w32.info }})</span>
+						<li><a href="http://files.kaoriya.net/goto/vim74w32"
+							class="download_button"><span>{{site.downloads.vim74w32.title}}</span><br />
+							<span class="info">({{ site.downloads.vim74w32.version }}, {{ site.downloads.vim74w32.info }})</span>
 						</a></li>
-						<li><a href="http://files.kaoriya.net/goto/vim73w64"
-							class="download_button"><span>{{site.downloads.vim73w64.title}}</span><br />
-							<span class="info">({{ site.downloads.vim73w64.version }}, {{ site.downloads.vim73w64.info }})</span>
+						<li><a href="http://files.kaoriya.net/goto/vim74w64"
+							class="download_button"><span>{{site.downloads.vim74w64.title}}</span><br />
+							<span class="info">({{ site.downloads.vim74w64.version }}, {{ site.downloads.vim74w64.info }})</span>
 						</a></li>
 						<li><a href="http://files.kaoriya.net/goto/vim74mac"
 							class="download_button"><span>{{site.downloads.vim74mac.title}}</span><br />

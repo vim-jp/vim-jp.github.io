@@ -9,13 +9,6 @@ title: vim-jpで開発中のパッチを紹介
 [開発中のパッチ一覧](https://github.com/vim-jp/issues/issues?labels=status%2Fpatched&page=1&state=open)
 
 
-* UNIX 環境における LuaJIT 対応
-  - 作者：shirosaki
-  - [パッチ URL](https://gist.github.com/shirosaki/5663617)
-  - [Issue](https://github.com/vim-jp/issues/issues/348)
-  - 現在の状況：ほぼ完成、vim\_devへの投稿予定
-
-
 * Make\_cyg.mak/Make\_ming.mak 統合
   - 作者：k-takata
   - [パッチ URL](https://gist.github.com/k-takata/5018169)

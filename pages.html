@@ -7,7 +7,9 @@ title: 全記事一覧
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
 <ul class="entry-list2">
 {% for post in site.posts %}
-{% include listitem-entry.html %}
+	{% if post.layout != 'redirect' %}
+		{% include listitem-entry.html %}
+	{% endif %}
 {% endfor %}
 </ul>
 </div>
