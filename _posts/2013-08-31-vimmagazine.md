@@ -26,11 +26,12 @@ title: Vim Magazine 8 月号
 
   今あつい国、なごやで Vim の勉強をします! 9月7日(土) 名古屋
 
-- [2013 Emacs/Vim温泉（希望調査）](http://connpass.com/event/2773/)
+- <del>[2013 Emacs/Vim温泉（希望調査）](http://connpass.com/event/2773/)</del>
+  [2013 Emacs/Vim温泉（本登録）](http://connpass.com/event/3233/)
 
   Emacs/Vimなど、エディタを肴にリゾートしてみます。
   何かを作ってみたり、発表してみたり、ただ単に観光したり温泉入るなど、何でも良し。
-  九重・湯布院周辺 9月か10月頃
+  九重・湯布院周辺 9月21日(土)-9月23日(月) ※日程調整中
 
 - [Vim Advent Calendar 2012](http://atnd.org/events/33746)
 
