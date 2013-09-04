@@ -10,9 +10,31 @@
 <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://vim-jp.org/rss.xml" />
 <link rel="canonical" href="{{ site.base-url }}{{ page.url }}" />
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	(function(doc, script) {
+		window.___gcfg = {lang: 'ja'};
+		//Async Social Buttons
+		var js,
+	fjs = doc.getElementsByTagName(script)[0],
+	add = function(url, id) {
+		if (doc.getElementById(id)) {return;}
+		js = doc.createElement(script);
+		js.src = url;
+		id && (js.id = id);
+		fjs.parentNode.insertBefore(js, fjs);
+	};
+
+	// Twitter SDK
+	add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+	// Google+ button
+	add('//apis.google.com/js/plusone.js');
+	// Facebook SDK
+	add('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'facebook-jssdk');
+	// Hatena
+	add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
+	}(document, 'script'));
+</script>
 
 <!-- 日本語マニュアル検索用 -->
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
@@ -41,13 +63,6 @@
 
 <!-- for facebook like button -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 	<div class="header">
 		<h1><a href="/">vim-jp &raquo; Vimのユーザと開発者を結ぶコミュニティサイト</a></h1>
