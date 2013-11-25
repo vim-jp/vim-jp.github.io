@@ -13,7 +13,7 @@ markdown:    redcarpet
 permalink:   date
 
 redcarpet:
-  extensions: ["tables",  "autolink",  "strikethrough",  "superscript"]
+  extensions: ["tables", "autolink", "strikethrough", "superscript"]
 maruku:
   use_tex:    false
   use_divs:   false
@@ -25,12 +25,12 @@ rdiscount:
   extensions: []
 
 kramdown:
-  auto_ids: true,
+  auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
+
   coderay:
     coderay_wrap: div
     coderay_line_numbers: inline
