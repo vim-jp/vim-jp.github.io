@@ -118,7 +118,6 @@ title: Vim Magazine 11 月号
 - [RPN : Vim RPN calculator](http://www.vim.org/scripts/script.php?script_id=4781)
 - [v2ex : v2ex for vim.](http://www.vim.org/scripts/script.php?script_id=4782)
 - [npm.vim : Run NPM commands in Vim.](http://www.vim.org/scripts/script.php?script_id=4783)
-- [Online Tshirt Design Tool : 150+ live installations across the globe in Custom Web 2 Print Development](http://www.vim.org/scripts/script.php?script_id=4784)
 
 ## 月間ダウンロードランキング
 
