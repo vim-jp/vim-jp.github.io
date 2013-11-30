@@ -11,5 +11,5 @@ vim の作者 Bram Moolenaar 氏は「ここ10年程、syntax/cpp.vim のメン�
 
 [https://github.com/vim-jp/cpp-vim](https://github.com/vim-jp/cpp-vim)
 
-Bram Moolenaar 氏からも快い返事を頂きました。今後は C++ のノウハウを持った日本の vim ユーザ皆さんからのご意見を頂戴しながら syntax/cpp.vim のメンテナンスを行ってまいります。
+Bram Moolenaar 氏からも快い返事を頂きました。今後は C++ のノウハウを持った日本の vim ユーザー皆さんからのご意見を頂戴しながら syntax/cpp.vim のメンテナンスを行ってまいります。
 ひとまず上記リポジトリには C++0x/C++11 がサポートされた物が入っておりますが、メンテナとなる事でリポジトリの構成は変更させて頂く可能性があります。ご了承下さい。

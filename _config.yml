@@ -13,7 +13,7 @@ markdown:    redcarpet
 permalink:   date
 
 redcarpet:
-  extensions: ["tables",  "autolink",  "strikethrough",  "superscript"]
+  extensions: ["tables", "autolink", "strikethrough", "superscript"]
 maruku:
   use_tex:    false
   use_divs:   false
@@ -25,12 +25,12 @@ rdiscount:
   extensions: []
 
 kramdown:
-  auto_ids: true,
+  auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
+
   coderay:
     coderay_wrap: div
     coderay_line_numbers: inline
@@ -46,17 +46,17 @@ exclude:
 downloads:
   vim74w32:
     title: Windows 32ビット
-    version: '7.4.051'
+    version: '7.4.092'
     info: +kaoriya, 14MB ZIP
   vim74w64:
     title: Windows 64ビット
-    version: '7.4.051'
+    version: '7.4.092'
     info: +kaoriya, 15MB ZIP
   vim74win:
     title: Windows 32ビット/64ビット
-    version: '7.4.051'
+    version: '7.4.092'
     info: +kaoriya, 14/15MB ZIP
   vim74mac:
     title: MacOSX 10.7/10.8
-    version: '7.4.22'
+    version: '7.4.103'
     info: +macvim-kaoriya, 11MB

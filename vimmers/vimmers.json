@@ -479,7 +479,7 @@
         "created_at": "2013/03/11 23:30:00", 
         "description": "", 
         "facebook": "", 
-        "github": "", 
+        "github": "wiredool", 
         "googleplus": "", 
         "logo": "", 
         "name": "wiredool", 
@@ -535,7 +535,7 @@
         "created_at": "2013/03/11 23:30:00", 
         "description": "", 
         "facebook": "", 
-        "github": "", 
+        "github": "syotaro", 
         "googleplus": "", 
         "logo": "", 
         "name": "Syotaro.Yamamoto", 
@@ -543,7 +543,7 @@
         "twitter": "syootaro", 
         "twitter_icon": "https://si0.twimg.com/profile_images/752135544/2619337_3399674106.jpg", 
         "vimorg": "", 
-        "website": "http://blog.wflow.jp/"
+        "website": "http://www.gcnote.jp/"
     }, 
     {
         "created_at": "2013/03/11 23:30:00", 
@@ -703,7 +703,7 @@
         "created_at": "2013/03/11 23:30:00", 
         "description": "", 
         "facebook": "", 
-        "github": "", 
+        "github": "sonots", 
         "googleplus": "", 
         "logo": "", 
         "name": "SEO Naotoshi", 
@@ -1207,7 +1207,7 @@
         "created_at": "2013/03/11 23:30:00", 
         "description": "", 
         "facebook": "", 
-        "github": "", 
+        "github": "hecomi", 
         "googleplus": "", 
         "logo": "", 
         "name": "hecomi", 
@@ -1423,9 +1423,9 @@
         "name": "たいちょ", 
         "short_name": "", 
         "twitter": "alpaca_taichou", 
-        "twitter_icon": "https://si0.twimg.com/profile_images/3535598967/c8a825494c2d5c0a7e6b8ca252c36e16.jpeg", 
+        "twitter_icon": "https://pbs.twimg.com/profile_images/378800000701612309/08dfc98e9591a3a60c001a1462474cd4.jpeg", 
         "vimorg": "", 
-        "website": ""
+        "website": "http://alpaca-tc.github.io/"
     }, 
     {
         "created_at": "2013/05/05 18:20:00", 
@@ -1473,7 +1473,7 @@
         "created_at": "2013/05/05 18:20:00", 
         "description": "", 
         "facebook": "", 
-        "github": "", 
+        "github": "KamunagiChiduru", 
         "googleplus": "", 
         "logo": "", 
         "name": "神薙ちづる", 
@@ -1748,5 +1748,19 @@
         "twitter_icon": "https://si0.twimg.com/profile_images/1709460331/uta4.jpg", 
         "vimorg": "", 
         "website": "http://d.hatena.ne.jp/itchyny/"
+    },
+    {
+        "created_at": "2013/11/24 09:10:00", 
+        "description": "", 
+        "facebook": "", 
+        "github": "t9md", 
+        "googleplus": "", 
+        "logo": "", 
+        "name": "t9md", 
+        "short_name": "", 
+        "twitter": "t9md", 
+        "twitter_icon": "https://pbs.twimg.com/profile_images/1105504252/2f598ae3c2e76412c49889a21188dbb2.jpeg", 
+        "vimorg": "27773", 
+        "website": "http://d.hatena.ne.jp/t9md/"
     }
 ]
