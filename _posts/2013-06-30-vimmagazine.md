@@ -22,6 +22,8 @@ title: Vim Magazine 6 月号
 
 - 7.3.1129: `:syntime` が追加されました。
 
+- 7.3.1164: `screenattr({row}, {col})` と `screenchar({row}, {col})` が追加されました。
+
 - 7.3.1248: `imactivatefunc` と `imstatusfunc` が追加されました。
 
 ## リリース情報
