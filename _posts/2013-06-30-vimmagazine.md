@@ -18,6 +18,12 @@ title: Vim Magazine 6 月号
   何かを作ってみたり、発表してみたり、ただ単に観光したり温泉入るなど、何でも良し。
   九重・湯布院周辺 9月か10月頃
 
+## 今月の新機能
+
+- 7.3.1129: `:syntime` が追加されました。
+
+- 7.3.1248: `imactivatefunc` と `imstatusfunc` が追加されました。
+
 ## リリース情報
 
 - [7.3.1079 : test 87 fails](http://code.google.com/p/vim/source/detail?r=bce2051173f01564805158ff669255359953fcad)
