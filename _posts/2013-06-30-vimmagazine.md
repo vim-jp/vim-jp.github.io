@@ -26,6 +26,8 @@ title: Vim Magazine 6 月号
 
 - 7.3.1248: `imactivatefunc` と `imstatusfunc` が追加されました。
 
+- 7.3.1261: `:map-nowait` が追加されました。
+
 ## リリース情報
 
 - [7.3.1079 : test 87 fails](http://code.google.com/p/vim/source/detail?r=bce2051173f01564805158ff669255359953fcad)
