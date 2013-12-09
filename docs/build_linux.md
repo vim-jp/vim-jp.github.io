@@ -15,7 +15,7 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
 
         $ sudo apt-get install mercurial gettext libncurses5-dev
 
-    GVim (GTK2-GNOME GUI版)をビルドするには以下も追加で必要です。
+    GVim (GTK2-GNOME GUI版)をビルドするには以下も追加で必要です。 Unity 版の Ubuntu を利用する場合は、GNOME GUI よりも GTK2 GUI の方が推奨されます。
 
         $ sudo apt-get install libxmu-dev libgnomeui-dev
 
@@ -24,6 +24,14 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
     Perl, Python2,3, Ruby拡張を使うには以下も追加で必要です。
 
         $ sudo apt-get install libperl-dev python-dev python3-dev ruby-dev
+
+    Lua拡張を使うには以下も追加で必要です。
+
+        $ sudo apt-get install liblua5.2-dev
+
+    LuaJITのLua拡張を使うには以下も追加で必要です。
+
+        $ sudo apt-get install luajit libluajit-5.1
 
     ソースコードを修正する場合は、以下のパッケージも必要になることがあります。
 
@@ -52,15 +60,33 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
           --enable-fail-if-missing
         $ make
 
-    ※`./configure`の行は実際は1行  
-    ※GTK2 GUI版の場合は`--enable-gui=gnome2`の代わりに、`--enable-gui=gtk2`を指定  
-    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション  
+    ※`./configure`の行は実際は1行
+    ※GTK2 GUI版の場合は`--enable-gui=gnome2`の代わりに、`--enable-gui=gtk2`を指定
+    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション
 
     もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
 
         $ ./configure --with-features=huge --enable-gui=gnome2
           --enable-perlinterp --enable-pythoninterp
           --enable-python3interp --enable-rubyinterp
+          --enable-fail-if-missing
+        $ make
+
+    もしLua拡張を合わせて有効化する場合は以下の様に指定します。
+
+        $ ./configure --with-features=huge --enable-gui=gnome2
+          --enable-perlinterp --enable-pythoninterp
+          --enable-python3interp --enable-rubyinterp
+          --enable-luainterp
+          --enable-fail-if-missing
+        $ make
+
+    もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に指定します。
+
+        $ ./configure --with-features=huge --enable-gui=gnome2
+          --enable-perlinterp --enable-pythoninterp
+          --enable-python3interp --enable-rubyinterp
+          --enable-luainterp --with-luajit
           --enable-fail-if-missing
         $ make
 
