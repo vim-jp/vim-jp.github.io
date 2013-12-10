@@ -60,9 +60,9 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
           --enable-fail-if-missing
         $ make
 
-    ※`./configure`の行は実際は1行
-    ※GTK2 GUI版の場合は`--enable-gui=gnome2`の代わりに、`--enable-gui=gtk2`を指定
-    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション
+    ※`./configure`の行は実際は1行  
+    ※GTK2 GUI版の場合は`--enable-gui=gnome2`の代わりに、`--enable-gui=gtk2`を指定  
+    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション  
 
     もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
 
