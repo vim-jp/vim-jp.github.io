@@ -14,10 +14,13 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
     パッケージを個別にインストールするには以下を実行します。
 
         $ sudo apt-get install mercurial gettext libncurses5-dev
+          libacl1-dev libgpm-dev
+
+    ※実際は1行
 
     GVim (GTK2-GNOME GUI版)をビルドするには以下も追加で必要です。 Unity 版の Ubuntu を利用する場合は、GNOME GUI よりも GTK2 GUI の方が推奨されます。
 
-        $ sudo apt-get install libxmu-dev libgnomeui-dev
+        $ sudo apt-get install libxmu-dev libgnomeui-dev libxpm-dev
 
     ※GTK2 GUI版の場合は`libgnomeui-dev`の代わりに、`libgtk2.0-dev`を指定。
 
@@ -27,7 +30,7 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
 
     Lua拡張を使うには以下も追加で必要です。
 
-        $ sudo apt-get install liblua5.2-dev
+        $ sudo apt-get install lua5.2 liblua5.2-dev
 
     LuaJITのLua拡張を使うには以下も追加で必要です。
 
@@ -81,7 +84,7 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
           --enable-fail-if-missing
         $ make
 
-    もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に指定します。
+    もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に指定します。(上記に加えて`--with-luajit`を指定している点に注意)
 
         $ ./configure --with-features=huge --enable-gui=gnome2
           --enable-perlinterp --enable-pythoninterp
