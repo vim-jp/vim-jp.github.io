@@ -42,6 +42,7 @@ kramdown:
 exclude:
   - 'scripts'
   - 'Gemfile'
+  - 'README.md'
 
 downloads:
   vim74w32:
