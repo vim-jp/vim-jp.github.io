@@ -58,6 +58,6 @@ downloads:
     version: '7.4.092'
     info: +kaoriya, 14/15MB ZIP
   vim74mac:
-    title: MacOSX 10.7/10.8
-    version: '7.4.103'
+    title: OS X 10.8/10.9
+    version: '7.4.131'
     info: +macvim-kaoriya, 11MB
