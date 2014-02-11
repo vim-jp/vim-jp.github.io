@@ -1790,5 +1790,19 @@
         "twitter_icon": "https://pbs.twimg.com/profile_images/378800000598480259/bc52c5f2664337347be1b293fe2cc5ec.png", 
         "vimorg": "", 
         "website": "http://blog.zoncoen.net/"
+    },
+    {
+        "created_at": "2014/02/11 09:15:00",
+        "description": "", 
+        "facebook": "", 
+        "github": "kapsy", 
+        "googleplus": "", 
+        "logo": "", 
+        "name": "Michael Petrie", 
+        "short_name": "", 
+        "twitter": "kapsy1312", 
+        "twitter_icon": "https://pbs.twimg.com/profile_images/420200825634299904/WZ2zqsu7.jpeg", 
+        "vimorg": "", 
+        "website": ""
     }
 ]
