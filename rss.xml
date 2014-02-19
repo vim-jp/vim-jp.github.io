@@ -6,9 +6,8 @@ layout: nil
   <channel>
     <title>vim-jp</title>
     <link>{{ site.base-url | xml_escape }}</link>
-    <link rel="self" type="application/rss+xml" href="{{ site.base-url | xml_escape }}{{ page.url | xml_escape}}" />
     <link rel="shortcut icon" herf="{{ site.base-url }}/favicon.ico" />
-    <description>{{ 'vim-jp &raquo; Vimのユーザーと開発者を結ぶコミュニティサイト' | xml_escape }}</description>
+    <description>vim-jp &raquo; Vimのユーザーと開発者を結ぶコミュニティサイト</description>
     <pubDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</pubDate>
     <lastBuildDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</lastBuildDate>
     {% for post in site.posts limit: 25 %}
