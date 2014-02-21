@@ -4,13 +4,18 @@ layout: nil
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vim-jp</title>
+    <title>Vim-jp</title>
     <link>{{ site.base-url | xml_escape }}</link>
-    <atom:link rel="self" type="application/rss+xml" href="{{ site.base-url | xml_escape }}{{ page.url | xml_escape}}" />
-    <atom:link rel="shortcut icon" herf="{{ site.base-url }}/favicon.ico" />
     <description>{{ 'vim-jp » Vimのユーザーと開発者を結ぶコミュニティサイト' | xml_escape }}</description>
     <pubDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</pubDate>
     <lastBuildDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</lastBuildDate>
+    <image>
+      <url>{{ site.base-url | xml_escape }}/assets/images/vim2-32.png</url>
+      <title>Image of vim-jp</title>
+      <link>{{ site.base-url | xml_escape }}</link>
+      <width>32</width>
+      <height>32</heaight>
+    </image>
     {% for post in site.posts limit: 25 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
