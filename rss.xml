@@ -14,7 +14,7 @@ layout: nil
       <title>Image of vim-jp</title>
       <link>{{ site.base-url | xml_escape }}</link>
       <width>32</width>
-      <height>32</heaight>
+      <height>32</height>
     </image>
     {% for post in site.posts limit: 25 %}
     <item>
