@@ -6,12 +6,13 @@ layout: nil
   <channel>
     <title>Vim-jp</title>
     <link>{{ site.base-url | xml_escape }}</link>
+    <atom:link rel="self" type="application/rss+xml" href="{{ site.base-url | xml_escape }}{{ page.url | xml_escape}}" />
     <description>{{ 'vim-jp » Vimのユーザーと開発者を結ぶコミュニティサイト' | xml_escape }}</description>
     <pubDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</pubDate>
     <lastBuildDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</lastBuildDate>
     <image>
       <url>{{ site.base-url | xml_escape }}/assets/images/vim2-32.png</url>
-      <title>Image of vim-jp</title>
+      <title>Vim-jp</title>
       <link>{{ site.base-url | xml_escape }}</link>
       <width>32</width>
       <height>32</height>
