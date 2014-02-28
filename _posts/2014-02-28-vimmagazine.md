@@ -18,7 +18,7 @@ title: Vim Magazine 2 月号
 
 - [Vimプラグイン読書会 第4回](http://haya14busa.github.io/reading-vimplugin/)
 
-  [vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。 3月8日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
+  [vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。 3月15日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
 
 ## 今月の新機能
 
