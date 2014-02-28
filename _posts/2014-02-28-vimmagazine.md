@@ -16,6 +16,10 @@ title: Vim Magazine 2 月号
 
   若い女性に大人気と噂のVimについて便利します 3月21日(金) 東京
 
+## 今月の新機能
+
+- 7.4.191: ファイル名修飾子`:S`が追加されました。
+
 ## リリース情報
 
 - [7.4.161 : crash in Python exception handling](http://code.google.com/p/vim/source/detail?r=91f3908748c29b0e8e759ac4cdafc95e536eab9a)
