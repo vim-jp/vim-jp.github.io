@@ -25,6 +25,12 @@ title: Vim Magazine 11 月号
 
   - 7.4.057: `byteidxcomp({expr}, {nr})` が追加されました。
 
+  - 7.4.073: `undolevels` オプションがglobal-localになりました。
+
+  - 7.4.079: `v:hlsearch` が追加されました。
+
+  - 7.4.083: `:keeppatterns` が追加されました。
+
   - 7.4.089: 'spelllang' オプションに "cjk" フラグが追加されました。スペルチェック有効時に日本語がスペルエラーとして表示されるのを防ぎます。
 
 

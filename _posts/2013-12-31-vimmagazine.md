@@ -81,7 +81,7 @@ title: Vim Magazine 12 月号
 
 Open : 187 (+10) | Closed : 320 (+6)
 
-- [Issue #492 : Issue #492 : :h mode()@enIssue #492 : `:h mode()@en内にtypo。（表記が統一されていない。）](https://github.com/vim-jp/issues/issues/492)
+- [Issue #492 : `:h mode()@en`内にtypo。（表記が統一されていない。）](https://github.com/vim-jp/issues/issues/492)
 - [Issue #493 : maparg()が実際に返すDictionaryとhelpに違いがある](https://github.com/vim-jp/issues/issues/493)
 - [Issue #494 : Windowsコンソール版でCTRL-&#x5e;が効かない。](https://github.com/vim-jp/issues/issues/494)
 - [Issue #495 : pastetoggleした時にstatuslineが評価されない](https://github.com/vim-jp/issues/issues/495)

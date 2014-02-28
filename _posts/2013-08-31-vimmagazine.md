@@ -151,5 +151,5 @@ Open : 175 (+4) | Closed : 290 (+12)
 - [Issue #462 : autoload関数のテストを追加する](https://github.com/vim-jp/issues/issues/462)
 - [Issue #463 : コマンドラインモードでのレジスタ内容挿入コマンドのバリエーションを増やそうぜ！](https://github.com/vim-jp/issues/issues/463)
 - [Issue #464 : FileType イベントでpeditを開くと、閉じるときに落ちる](https://github.com/vim-jp/issues/issues/464)
-- [Issue #465 : ユーザ定義コマンドの引数がレジスタ扱いされたsyntaxになっている](https://github.com/vim-jp/issues/issues/465)
+- [Issue #465 : ユーザー定義コマンドの引数がレジスタ扱いされたsyntaxになっている](https://github.com/vim-jp/issues/issues/465)
 
