@@ -16,7 +16,7 @@ title: Vim Magazine 2 月号
 
   若い女性に大人気と噂のVimについて便利します 3月21日(金) 東京
 
-- [Vimプラグイン読書会](http://haya14busa.github.io/reading-vimplugin/)
+- [Vimプラグイン読書会 第4回](http://haya14busa.github.io/reading-vimplugin/)
 
   [vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。 3月8日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
 
