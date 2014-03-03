@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 1 月号
 ---
 
-# Vim Magazine 1 月号
-
 ## 話題
 
 - [momonga.vim #3](http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5)

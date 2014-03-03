@@ -4,9 +4,6 @@ category: vimmagazine
 title: Vim Magazine 3 月号
 ---
 
-# Vim Magazine 3 月号
-
-
 ## 話題
 
 ### [vim\_dev: Google summer of code mentor](http://groups.google.com/group/vim_dev/browse_thread/thread/5e806ba0ecfb0283)

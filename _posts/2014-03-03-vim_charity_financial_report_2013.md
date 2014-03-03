@@ -4,8 +4,6 @@ category: blog
 title: Vim チャリティー決算報告 2013
 ---
 
-# Vim チャリティー決算報告 2013
-
 [vim\_announce: Vim charity: financial report 2013](https://groups.google.com/forum/?hl=ja#!topic/vim_announce/nw2dI4Go-U0) の無断翻訳です。
 
 -----

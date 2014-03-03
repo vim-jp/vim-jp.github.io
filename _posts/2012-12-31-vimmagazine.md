@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 12 月号
 ---
 
-# Vim Magazine 12 月号
-
 ## 話題
 
 - [Vim Advent Calendar 2012](http://atnd.org/events/33746)

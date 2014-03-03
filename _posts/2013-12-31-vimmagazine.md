@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 12 月号
 ---
 
-# Vim Magazine 12 月号
-
 ## リリース情報
 
 - [7.4.111 : memory leak in Python OptionsAssItem](http://code.google.com/p/vim/source/detail?r=3fbda56bb2008e2459951f3ad0258ff0500ba07c)

@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 2 月号
 ---
 
-# Vim Magazine 2 月号
-
 ## 話題
 
 - [Neovim 登場](http://neovim.org/)

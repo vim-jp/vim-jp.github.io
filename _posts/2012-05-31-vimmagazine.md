@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 5 月号
 ---
 
-# Vim Magazine 5 月号
-
 ## 話題
 
 - [Does it still make sense to have per-file/-type maintainers?](https://groups.google.com/d/msg/vim_dev/XGz56RXff3g/jg45fddQx70J)

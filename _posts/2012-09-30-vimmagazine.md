@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 9 月号
 ---
 
-# Vim Magazine 9 月号
-
 ## 話題
 
 - [マンガで分かる！Vimの使い方 1 「Vimって何？」 - ナレッジエース](http://n.blueblack.net/articles/2012-08-29_01_vim_comic_01_what_is_vim/)

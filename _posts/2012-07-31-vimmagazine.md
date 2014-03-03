@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 7 月号
 ---
 
-# Vim Magazine 7 月号
-
 ## 話題
 
 - [TokyoVim#9](http://partake.in/events/e9b0a88d-0a3a-4579-9691-764739a72833)

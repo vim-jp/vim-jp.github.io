@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 4 月号
 ---
 
-# Vim Magazine 4 月号
-
 ## 話題
 
 - [jscomplete-vim - hogehoge @teramako](http://d.hatena.ne.jp/teramako/20120405/p1)
