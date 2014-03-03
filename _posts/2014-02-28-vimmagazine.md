@@ -8,7 +8,7 @@ title: Vim Magazine 2 月号
 
 - [Neovim 登場](http://neovim.org/)
 
-  Vim をフォークした新しいプロジェクト、 Neovim が登場しました。20 年以上に渡って開発されてきた Vim の古いコードベース、古い開発体制を改め、開発を加速させようという試み。 リファクタリングによってメンテナンス性を高め、新機能追加やプラグイン作成を容易にし、コミュニティによる開発を目標としています。発起人の Thiago de Arruda さんが <https://www.bountysource.com/fundraisers/539-neovim-first-iteration> でプロジェクトの開発資金を募集しています。
+  Vim をフォークした新しいプロジェクト、 Neovim が登場しました。20 年以上にわたって開発されてきた Vim の古いコードベース、古い開発体制を改め、開発を加速させようという試み。 リファクタリングによってメンテナンス性を高め、新機能追加やプラグイン作成を容易にし、コミュニティによる開発を目標としています。発起人の Thiago de Arruda さんが <https://www.bountysource.com/fundraisers/539-neovim-first-iteration> でプロジェクトの開発資金を募集しています。
 
 - [momonga.vim #3](http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5)
 
