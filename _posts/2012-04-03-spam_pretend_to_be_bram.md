@@ -4,8 +4,6 @@ category: blog
 title: Spam pretend to be Bram
 ---
 
-# Spam pretend to be Bram
-
 Vim開発者メーリングリスト vim\_dev に数日前から Vim の作者 Bram Moolenaar 氏を装う SPAM が現れ、仕事を勧誘するメールを流し始めています。
 Bram Moolenaar 氏本人も「このメールは私ではない」と言っている通り、虚実の勧誘です。間違っても勧誘メールに返信しないよう気を付けて下さい。
 
