@@ -5,7 +5,7 @@ title: MinGWを使ってのビルド方法
 
 1.  MinGWのインストール
 
-    [MinGW | Minimalist GNU for Windows](http://www.mingw.org/)からお使いのコンピュータにあったコンパイラをダウンロードしてインストールします。
+    [MinGW | Minimalist GNU for Windows](http://www.mingw.org/)からお使いのコンピューターにあったコンパイラをダウンロードしてインストールします。
 
 2.  Mercurialのインストール
 
