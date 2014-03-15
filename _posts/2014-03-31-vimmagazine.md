@@ -10,6 +10,11 @@ title: Vim Magazine 3 月号
 
   4月5日(土) 神奈川
 
+- [Vimプラグイン読書会 第5回](http://haya14busa.github.io/reading-vimplugin/)
+
+  Vim scriptでリスト、文字列、辞書の効率的かつ汎用的な扱い方を学ぶために、[vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。
+  4月12日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
+
 ## 今月の新機能
 
 - 7.4.201 : オプション `'lispwords'` が global-local になりました。
