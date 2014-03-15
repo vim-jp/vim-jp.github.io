@@ -67,11 +67,6 @@ pre {
   overflow: auto;
 }
 
-tt {
-  font-family: monospace;
-  font-size: 1.4em;
-}
-
 strong, b {
   font-weight: bold;
 }
@@ -114,9 +109,11 @@ form textarea {
 
 a, a:link {
   color: #6699cc;
+  text-decoration: none;
 }
 a:active, a:hover {
   color: #669933;
+  text-decoration: underline;
 }
 a:visited {
   color: #8899aa;
@@ -275,9 +272,11 @@ div#VimdocJaSearch {
 
 .news a, .news a:link {
   color: red;
+  text-decoration: none;
 }
 .news a:active, .news a:hover {
   color: red;
+  text-decoration: underline;
 }
 .news a:visited {
   color: red;
@@ -321,6 +320,7 @@ h1>a, h1>a:visited {
 }
 h1>a:active, h1>a:hover {
   color: #777777;
+  text-decoration: none;
 }
 
 h2 {
