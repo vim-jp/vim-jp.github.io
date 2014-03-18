@@ -8,7 +8,11 @@ title: Vim Magazine 3 月号
 
 - [Yokohama.vim #5](http://atnd.org/events/48511)
 
-  4月5日(土) 神奈川
+  約1年ぶりの開催です。 4月5日(土) 神奈川
+
+- [TokyoVim #18](http://connpass.com/event/5658/)
+
+  Vimに関する何かをやる会です。 4月12日(土) 東京
 
 - [Vimプラグイン読書会 第5回](http://haya14busa.github.io/reading-vimplugin/)
 
