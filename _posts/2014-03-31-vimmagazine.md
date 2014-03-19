@@ -10,7 +10,7 @@ title: Vim Magazine 3 月号
 
   約1年ぶりの開催です。 4月5日(土) 神奈川
 
-- [TokyoVim #18](http://connpass.com/event/5658/)
+- [TokyoVim#18](http://connpass.com/event/5658/)
 
   Vimに関する何かをやる会です。 4月12日(土) 東京
 
