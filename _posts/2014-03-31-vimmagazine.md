@@ -19,6 +19,11 @@ title: Vim Magazine 3 月号
   Vim scriptでリスト、文字列、辞書の効率的かつ汎用的な扱い方を学ぶために、[vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。
   4月12日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
 
+- [第2回 Sapporo.vim](http://atnd.org/events/49000)
+
+  Sapporo.vimは札幌でVimに興味がある！Vimが好きだ！ という方が対象の勉強会です。 皆さんでVimVimしましょう。
+  5月25日(日) 札幌
+
 ## 今月の新機能
 
 - 7.4.201 : オプション `'lispwords'` が global-local になりました。
