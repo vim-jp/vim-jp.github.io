@@ -28,5 +28,6 @@ title: Vim Magazine 3 月号
 
 - 7.4.201 : オプション `'lispwords'` が global-local になりました。
 - 7.4.204 : マルチバイト文字に map 出来るようになりました。
-- 7.4.213 : `:noswapfile` が追加されました。 
+- 7.4.213 : `:noswapfile` が追加されました。
+- 7.4.218 : `uniq()` 関数が追加されました。
 
