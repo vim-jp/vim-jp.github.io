@@ -8,6 +8,9 @@ title: パッチの書き方
 Vimはバージョン管理ツールとしてMercurialを採用しているおかげで、簡単にパッチを作成し管理することができます。
 ここではパッチの作成方法について学びましょう。
 
+最近、www.vim.org のページに[Vim development](http://www.vim.org/develop.php)という記事ができました。
+こちらは英語ですが、手順がよくまとまっているため、英語を苦にしない人はこちらを参照するとよいでしょう。
+
 まず前提条件として、あなたのPCではコンパイル環境が整備されており、[Mercurial](http://mercurial.selenic.com/)が使える状態になっているとします。
 Windowsユーザーであれば[Visual Studioでのコンパイル方法](http://vim-jp.org/docs/build_windows_msvc.html)もしくは[MinGWでのコンパイル方法](http://vim-jp.org/docs/build_windows_mingw.html)も参照して下さい。
 
@@ -82,4 +85,4 @@ Mercurial Queueの使い方を勉強するときには、まずquiltについて
 - [Mercurial MQ について](http://d.hatena.ne.jp/dayflower/20090520/1242794877)
 - [12 Managing change with Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch12.html#x105-26500012)
 - [13 Advanced uses of Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch13.html#x108-30000013)
-
+- [Vim development](http://www.vim.org/develop.php)
