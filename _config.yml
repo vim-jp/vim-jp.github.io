@@ -47,15 +47,15 @@ exclude:
 downloads:
   vim74w32:
     title: Windows 32ビット
-    version: '7.4.161'
+    version: '7.4.227'
     info: +kaoriya, 14MB ZIP
   vim74w64:
     title: Windows 64ビット
-    version: '7.4.161'
+    version: '7.4.227'
     info: +kaoriya, 15MB ZIP
   vim74win:
     title: Windows 32ビット/64ビット
-    version: '7.4.161'
+    version: '7.4.227'
     info: +kaoriya, 14/15MB ZIP
   vim74mac:
     title: OS X 10.8/10.9
