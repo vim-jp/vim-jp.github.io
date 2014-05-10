@@ -1,59 +1,26 @@
 ---
 # vim:set ts=2 sts=2 sw=2 noet:
 ---
-<!doctype html>
-<head>
-<meta charset="UTF-8">
-<title>vim-jp &raquo; {{ page.title }}</title>
-<link rel="stylesheet" href="/assets/css/site.css" type="text/css" />
-<link rel="stylesheet" href="/assets/css/vimmers.css" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://vim-jp.org/rss.xml" />
-<link rel="canonical" href="{{ site.base-url }}{{ page.url }}" />
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
-<!-- for facebook like button -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <title>vim-jp &raquo; {{ page.title }}</title>
 
-	<div class="header">
-		<h1><a href="/">vim-jp &raquo; Vimのユーザーと開発者を結ぶコミュニティサイト</a></h1>
-	</div>
-	<div class="body">
-		<div id="content">
-			<div class="entry-wide">
-			{{ content }}
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://vim-jp.org/rss.xml">
+    <link rel="canonical" href="{{ site.base-url }}{{ page.url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<!-- disqus widget -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-var disqus_shortname = 'vim-jp';
-var disqus_url='{{ site.base-url | escape }}{{ page.url | escape }}';
-var disqus_title='vim-jp &raquo; {{ page.title }}';
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <link rel="stylesheet" href="http://necolas.github.com/normalize.css/3.0.1/normalize.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,400">
+    <link rel="stylesheet" href="/assets/css/vimmers.css" type="text/css">
+  </head>
+  <body>
+    {{ content }}
 
-			</div>
-		</div>
-		<br class="clear" />
-		<div id="footer">
-			<p>Powered by <a href="http://github.com/">github</a>. vim-jp.org is licensed under a <a href="http://creativecommons.org/licenses/by/2.1/jp/">Creative Commons License</a>.
-		</div>
-	</div>
-</body>
+    <script src="/assets/javascripts/vimmers.js"></script>
+  </body>
+</html>
