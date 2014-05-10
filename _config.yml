@@ -64,3 +64,4 @@ downloads:
 
 gems:
   - jemoji
+  - jekyll-sitemap
