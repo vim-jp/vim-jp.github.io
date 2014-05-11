@@ -64,6 +64,60 @@ main {
   }
 }
 
+@media (min-width: 82rem) {
+  main {
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 102rem) {
+  main {
+    max-width: 100rem;
+  }
+}
+
+@media (min-width: 122rem) {
+  main {
+    max-width: 120rem;
+  }
+}
+
+@media (min-width: 142rem) {
+  main {
+    max-width: 140rem;
+  }
+}
+
+@media (min-width: 162rem) {
+  main {
+    max-width: 160rem;
+  }
+}
+
+@media (min-width: 182rem) {
+  main {
+    max-width: 180rem;
+  }
+}
+
+@media (min-width: 202rem) {
+  main {
+    max-width: 200rem;
+  }
+}
+
+@media (min-width: 222rem) {
+  main {
+    max-width: 220rem;
+  }
+}
+
+@media (min-width: 242rem) {
+  main {
+    max-width: 240rem;
+  }
+}
+
 main:before,
 main:after {
   display: table;
