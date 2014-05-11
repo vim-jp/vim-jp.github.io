@@ -112,7 +112,7 @@ main:after {
 .vimmer h1 {
   margin: 1rem auto 0;
   overflow: hidden;
-  font-size: 1.25em;
+  font-size: 125%;
   font-weight: normal;
   white-space: nowrap;
 }
