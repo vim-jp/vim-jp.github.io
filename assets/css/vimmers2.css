@@ -1,0 +1,300 @@
+/* vim:set ts=8 sts=2 sw=2 noet: */
+
+body {
+  margin: 0;
+  color: #333;
+  background-color: #ecf0f1;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #27ae60;
+}
+
+header {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 58rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 4rem 0 0;
+  font-size: 400%;
+  font-weight: 100;
+}
+
+@media (min-width: 38rem) {
+  header h1 {
+    font-size: 600%;
+  }
+}
+
+@media (min-width: 58rem) {
+  header h1 {
+    font-size: 800%;
+  }
+}
+
+header h1 em {
+  color: #27ae60;
+  font-style: normal;
+}
+
+header p {
+  line-height: 1.5;
+}
+
+main {
+  margin: 2rem auto;
+  max-width: 20rem;
+  zoom: 1;
+}
+
+@media (min-width: 42rem) {
+  main {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  main {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 82rem) {
+  main {
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 102rem) {
+  main {
+    max-width: 100rem;
+  }
+}
+
+@media (min-width: 122rem) {
+  main {
+    max-width: 120rem;
+  }
+}
+
+@media (min-width: 142rem) {
+  main {
+    max-width: 140rem;
+  }
+}
+
+@media (min-width: 162rem) {
+  main {
+    max-width: 160rem;
+  }
+}
+
+@media (min-width: 182rem) {
+  main {
+    max-width: 180rem;
+  }
+}
+
+@media (min-width: 202rem) {
+  main {
+    max-width: 200rem;
+  }
+}
+
+@media (min-width: 222rem) {
+  main {
+    max-width: 220rem;
+  }
+}
+
+@media (min-width: 242rem) {
+  main {
+    max-width: 240rem;
+  }
+}
+
+main:before,
+main:after {
+  display: table;
+  content: "";
+}
+
+main:after {
+  clear: both;
+}
+
+.message {
+  text-align: center;
+}
+
+.grid {
+  padding: 1rem;
+  box-sizing: border-box;
+  float: left;
+  width: 20rem;
+}
+
+.vimmer {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.grid:nth-child(4n+1) .vimmer {
+  background-color: #e74c3c;
+}
+
+.grid:nth-child(4n+2) .vimmer {
+  background-color: #2ecc71;
+}
+
+.grid:nth-child(4n+3) .vimmer {
+  background-color: #e67e22;
+}
+
+.grid:nth-child(4n+4) .vimmer {
+  background-color: #3498db;
+}
+
+.vimmer h1 {
+  margin: 1rem auto 0;
+  overflow: hidden;
+  font-size: 125%;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.vimmer h1:after {
+  margin: 1rem auto 0;
+  border-top: 0.125rem solid;
+  display: block;
+  width: 4.722rem;
+  height: 0;
+  content: "";
+}
+
+.avatar {
+  margin: 2rem auto;
+  width: 7.64rem;
+  height: 7.64em;
+}
+
+.avatar img {
+  border-radius: 51%;
+  width: 100%;
+  height: 100%;
+  vertical-align: text-bottom;
+}
+
+.elsewhere {
+  margin: 1rem auto;
+  padding-left: 0;
+  display: table;
+}
+
+.elsewhere li {
+  padding: 0 0.25rem;
+  display: table-cell;
+  width: 1.806rem;
+  height: 1.806rem;
+}
+
+.elsewhere li a {
+  border-radius: 51%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: -1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  -webkit-transition: 0.3s all ease-in;
+  transition: 0.3s all ease-in;
+}
+
+.grid:nth-child(4n+1) .elsewhere li a {
+  background-color: #c0392b;
+}
+
+.grid:nth-child(4n+2) .elsewhere li a {
+  background-color: #27ae60;
+}
+
+.grid:nth-child(4n+3) .elsewhere li a {
+  background-color: #d35400;
+}
+
+.grid:nth-child(4n+4) .elsewhere li a {
+  background-color: #2980b9;
+}
+
+.elsewhere li a:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: 0.1s all ease-in;
+  transition: 0.1s all ease-in;
+}
+
+.svg .twitter {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M492.255%20109.456c-17.384%207.711-36.069%2012.921-55.676%2015.264%2020.011-11.997%2035.384-30.994%2042.623-53.632-18.733%2011.111-39.478%2019.177-61.561%2023.524-17.681-18.841-42.876-30.612-70.759-30.612-53.535%200-96.942%2043.402-96.942%2096.938%200%207.598.857%2014.997%202.51%2022.092-80.567-4.042-151.999-42.637-199.81-101.287-8.345%2014.317-13.126%2030.971-13.126%2048.737%200%2033.633%2017.114%2063.305%2043.127%2080.688-15.891-.503-30.84-4.864-43.908-12.125-.009.404-.009.808-.009%201.219%200%2046.968%2033.416%2086.147%2077.762%2095.055-8.133%202.215-16.698%203.401-25.539%203.401-6.247%200-12.32-.609-18.24-1.74%2012.336%2038.511%2048.137%2066.541%2090.558%2067.32-33.177%2026.003-74.976%2041.501-120.395%2041.501-7.825%200-15.542-.46-23.125-1.356%2042.901%2027.504%2093.857%2043.556%20148.602%2043.556%20178.309%200%20275.819-147.716%20275.819-275.821%200-4.203-.097-8.382-.283-12.54%2018.943-13.67%2035.377-30.742%2048.373-50.183%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .twitter {
+  background-image: url("/assets/images/icon2-twitter.png");
+}
+
+.svg .github {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M512%20250v-2c-42.158-8.427-85.827-9.087-112-8%204.299-15.487%206-32.128%206-52%200-28.5-10.611-52.651-28-70%203.038-9.805%207.15-30.123-4-58%200%200-19.504-7.772-64%2022-17.43-4.355-35.422-6-54-6-20.441%200-42.736%202.717-62%208-45.917-31.315-66-24-66-24-13.231%2033.077-4.485%2055.918-2%2062-15.551%2016.779-26%2039.741-26%2066%200%2019.824%202.486%2036.543%208%2052-26.396-.96-67.346-.127-108%208v2c40.899-8.177%2083.765-8.993%20110-8%201.215%203.2%202.482%207%204%2010-25.944.836-71.545%204.027-114%2016l2%202c42.79-12.061%2086.308-15.214%20112-16%2015.501%2028.886%2045.631%2046.141%20100%2052-7.717%205.184-14.81%2015.089-18%2030-10.516%205.028-44.028%2016.342-64-18%200%200-10.6-20.4-32-22%200%200-21.326.75-2%2014%200%200%2014.416%205.411%2024%2030%20.298%200%2011.67%2043.456%2072%2030v42c-.298%200%20.052%2014.894-14%2020%200%200-8.945%206.812%200%2010%20.032%200%2038%203.917%2038-28v-48c.339%200-1.206-17.488%208-24v76c-.37%200-.42%2018.977-10%2026%200%200-6.051%2011.188%208%208%200%200%2026.722-4.719%2028-36v-78h8v78c1.276%2031.281%2028%2036%2028%2036%2014.047%203.188%208-8%208-8-9.961-7.023-10-26-10-26v-76c9.54%207.163%208%2024%208%2024v48c.044%2031.918%2038%2028%2038%2028%208.937-3.188%200-10%200-10-14.361-5.106-14-20-14-20v-62c.31-24.147-10.054-37.25-20-44%2057.983-5.748%2085.179-22.919%2098-52%2025.398.698%2070.281%203.671%20114%2016l2-2c-43.469-12.257-90.345-15.253-116-16%201.215-2.938%203.058-6.857%204-10%2041.325.509%2078.074%201.154%20112%208z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .github {
+  background-image: url("/assets/images/icon2-github.png");
+}
+
+.svg .facebook {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M350.912%2071.615c-10.38-2.221-20.216-4.034-29.507-5.439-9.292-1.405-19.4-2.13-30.323-2.176-31.819.136-54.799%207.479-68.941%2022.028-14.142%2014.55-21.077%2035.49-20.804%2062.822v39.705h-40.249v64.181h40.249v195.263h78.323v-195.263h57.11l5.439-64.181h-62.55v-31.003c-.453-8.793.861-15.682%203.943-20.669%203.082-4.986%2010.651-7.524%2022.708-7.615%204.816.023%2010.413.386%2016.793%201.088%206.379.703%2012.385%201.609%2018.017%202.72z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .facebook {
+  background-image: url("/assets/images/icon2-facebook.png");
+}
+
+.svg .googleplus {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M208%2064v144h-144v96h144v144h96v-144h144v-96h-144v-144z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .googleplus {
+  background-image: url("/assets/images/icon2-googleplus.png");
+}
+
+.svg .vimorg {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M70.813%2081.156l-6.813%207.375v26.688l6.25%206.25h17.063v303.5l10.188%205.875h35.188l127.594-130.844-1.219%203.375a1.386%201.386%200%200%200%20.313%201.438l4.594%204.563a1.386%201.386%200%200%200%20.969.375h18.438a1.386%201.386%200%200%200%201-.375l4.813-4.844a1.386%201.386%200%200%200%20.344-.594l5.125-17.625a1.386%201.386%200%200%200-.344-1.344l-3.969-3.969a1.386%201.386%200%200%200-1-.406h-10.156l162.906-167.094v-24.969l-6.813-6.813h-136.813l-6.813%206.25v26.688l7.375%207.938h21l-127.156%20125.469v-125.469h14.75l6.531-7.938v-25.281l-8.25-8.219h-135.094zm167.563%20246.563a1.386%201.386%200%200%200-.125.031%201.386%201.386%200%200%200-1.063%201l-2.281%209.063a1.386%201.386%200%200%200%201.344%201.719h10.844l-26.906%2076.813a1.386%201.386%200%200%200%201.313%201.844h39.156a1.386%201.386%200%200%200%201.344-.969l2.563-8.25a1.386%201.386%200%200%200-1.344-1.781h-8.844l26.625-77.625a1.386%201.386%200%200%200-1.313-1.813h-41.156a1.386%201.386%200%200%200-.156-.031zm124.625.281a1.386%201.386%200%200%200-.125.031%201.386%201.386%200%200%200-.781.438l-8.156%209.219h-12.969l-8.625-8.969a1.386%201.386%200%200%200-1-.406h-30.938a1.386%201.386%200%200%200-1.281.906l-2.844%208.5a1.386%201.386%200%200%200%201.281%201.813h8.281l-25.781%2075.969a1.386%201.386%200%200%200%201.313%201.844h32.938a1.386%201.386%200%200%200%201.313-.906l2.531-7.438a1.386%201.386%200%200%200-1.313-1.813h-5.75l16.438-51.75h29.75l-18.75%2060.094a1.386%201.386%200%200%200%201.313%201.813h31.813a1.386%201.386%200%200%200%201.25-.844l2.844-6.813a1.386%201.386%200%200%200-1.25-1.906h-5.781l16.719-52.625h28.313l-19.031%2060.375a1.386%201.386%200%200%200%201.344%201.813h34.906a1.386%201.386%200%200%200%201.313-.875l2.844-7.406a1.386%201.386%200%200%200-1.313-1.875h-6.906l21.031-68.313a1.386%201.386%200%200%200-.219-1.281l-6.531-8.781a1.386%201.386%200%200%200-1.125-.5h-24.969a1.386%201.386%200%200%200-1.031.406l-7.844%208.656h-13.781l-8.156-8.938a1.386%201.386%200%200%200-1-.406h-20.125a1.386%201.386%200%200%200-.156-.031z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .vimorg {
+  background-image: url("/assets/images/icon2-vimorg.png");
+}
+
+.svg .website {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22512%22%20height%3D%22512%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M256%2064l-192%20192h48v192h96v-168h96v168h96v-192h48z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.no-svg .website {
+  background-image: url("/assets/images/icon2-website.png");
+}
+
+footer {
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  max-width: 58rem;
+  text-align: center;
+}
