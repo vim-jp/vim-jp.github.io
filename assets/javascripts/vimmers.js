@@ -20,6 +20,7 @@ function loadVimmers(data) {
   var vimmers = document.createElement('div');
 
   data.forEach(function (d) {
+    var icon = d.logo;
     var twitter = d.twitter;
     var iconTwitter = d.twitter_icon;
     var github = d.github;
@@ -28,7 +29,6 @@ function loadVimmers(data) {
     var vimorg = d.vimorg;
     var website = d.website;
     var description = d.description;
-    var icon = '';
     var links = [];
 
     var grid = document.createElement('div');
