@@ -23,7 +23,7 @@ title: vim-jpについて
 <p>vim-jp は以下のメンバにより運営しています。</p>
 <ul>
 {% for member in site.github.organization_members %}
-<li>{{ member }}</li>
+<li><a href="{{ member.html_url }}">{{ member.login }}</a></li>
 {% endfor %}
 </ul>
 
