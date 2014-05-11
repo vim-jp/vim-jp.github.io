@@ -13,9 +13,13 @@ function loadVimmers(data) {
     return array;
   }
 
+  var bram = data.shift();
+  data = shuffleArray(data);
+  data.unshift(bram);
+
   var vimmers = document.createElement('div');
 
-  shuffleArray(data).forEach(function (d) {
+  data.forEach(function (d) {
     var twitter = d.twitter;
     var iconTwitter = d.twitter_icon;
     var github = d.github;
