@@ -9,7 +9,7 @@ title: Vim Magazine 4 月号
 - [Vimプラグイン読書会 第6回](http://haya14busa.github.io/reading-vimplugin/)
 
   vim-textobj-userとvim-operator-userを使った自作テキストオブジェクトとオペレーターを作成できるようになるために、[kana/vim-textobj-indent](https://github.com/kana/vim-textobj-indent)と[kana/vim-operator-replace](https://github.com/kana/vim-operator-replace)を読みます。
-  5月10日(土) 21:00~ [LingrのVim部屋](http://lingr.com/room/vim)にて
+  5月24日(土) 21:00~ [LingrのVim部屋](http://lingr.com/room/vim)にて
 
 - [第2回 Sapporo.vim](http://atnd.org/events/49000)
 
