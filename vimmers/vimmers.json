@@ -499,7 +499,7 @@
     "name": "さっちゃん",
     "short_name": "",
     "twitter": "ne_sachirou",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/444111931230527490/ascEyDlU.jpeg",
+    "twitter_icon": "http://twitter.com/api/users/profile_image/ne_sachirou?size=original",
     "vimorg": "",
     "website": "http://c4se.hatenablog.com/"
   },
@@ -863,7 +863,7 @@
     "name": "thleap",
     "short_name": "",
     "twitter": "thleap",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/448286621893283840/yQwDQbkb.png",
+    "twitter_icon": "http://twitter.com/api/users/profile_image/thleap?size=original",
     "vimorg": "",
     "website": "http://chroma.hatenablog.com/"
   },
@@ -1157,7 +1157,7 @@
     "name": "もぷり",
     "short_name": "",
     "twitter": "Mopp_jp",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/456108249108840448/p7F3rkp_.png",
+    "twitter_icon": "http://twitter.com/api/users/profile_image/Mopp_jp?size=original",
     "vimorg": "",
     "website": "http://ac-mopp.blogspot.jp/"
   },
@@ -1213,7 +1213,7 @@
     "name": "hecomi",
     "short_name": "",
     "twitter": "hecomi",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/465432496016867328/iDgGo2K5.png",
+    "twitter_icon": "http://twitter.com/api/users/profile_image/hecomi?size=original",
     "vimorg": "",
     "website": "http://d.hatena.ne.jp/hecomi/"
   },
