@@ -21,7 +21,7 @@ title: Vim Magazine 5 月号
 - [Aizu.vim #2](http://atnd.org/events/51752)
 
   Aizuの夏、Vimの夏
-  6月22日(土)
+  6月22日(日) 福島
 
 - [Osaka.vim #1](http://osaka-vim.connpass.com/event/6491/)
 
