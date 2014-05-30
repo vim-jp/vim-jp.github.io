@@ -17,6 +17,11 @@ title: Vim Magazine 5 月号
   Vimに関する何かをやる会です。
   6月14日(土) 東京
 
+- [Vimプラグイン読書会 第7回](http://haya14busa.github.io/reading-vimplugin/)
+
+  [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)を読みます。
+  6月21日(土) 21:00~ [LingrのVim部屋](http://lingr.com/room/vim)にて
+
 - [Aizu.vim #2](http://atnd.org/events/51752)
 
   Aizuの夏、Vimの夏
