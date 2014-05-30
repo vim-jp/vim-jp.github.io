@@ -6,7 +6,6 @@ title: Vim Magazine 5 月号
 
 ## 話題
 
-
 - [momonga.vim #4](http://connpass.com/event/6108/)
 
   Vimをします（かなり）。
