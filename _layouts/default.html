@@ -17,11 +17,10 @@
 	(function(doc, script) {
 		window.___gcfg = {lang: 'ja'};
 		//Async Social Buttons
-		var js,
-		fjs = doc.getElementsByTagName(script)[0],
-		add = function(url, id) {
+		var fjs = doc.getElementsByTagName(script)[0];
+		var add = function(url, id) {
 			if (doc.getElementById(id)) {return;}
-			js = doc.createElement(script);
+			var js = doc.createElement(script);
 			js.src = url;
 			id && (js.id = id);
 			fjs.parentNode.insertBefore(js, fjs);
