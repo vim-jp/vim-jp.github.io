@@ -40,7 +40,7 @@
 <!-- 日本語マニュアル検索用 -->
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
     // search
@@ -57,6 +57,13 @@
         $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
       ).append($('<br/>')).append($('<span/>').text(this.description)).appendTo('#patches-list');
     });
+  });
+</script>
+<script type="text/javascript" src="/assets/javascripts/mousetrap.min.js"></script>
+<script type="text/javascript">
+  Mousetrap.bind("I space h a t e space V i m enter", function(e) {
+    console.log(e);
+    window.location = "http://www.gnu.org/software/emacs/";
   });
 </script>
 </head>
