@@ -4,17 +4,24 @@ category: vimmagazine
 title: Vim Magazine 2 月号
 ---
 
-# Vim Magazine 2 月号
-
 ## 話題
 
 - [Neovim 登場](http://neovim.org/)
 
-  Vim をフォークした新しいプロジェクト、 Neovim が登場しました。20 年以上に渡って開発されてきた Vim の古いコードベース、古い開発体制を改め、開発を加速させようという試み。 リファクタリングによってメンテナンス性を高め、新機能追加やプラグイン作成を容易にし、コミュニティによる開発を目標としています。発起人の Thiago de Arruda さんが <https://www.bountysource.com/fundraisers/539-neovim-first-iteration> でプロジェクトの開発資金を募集しています。
+  Vim をフォークした新しいプロジェクト、 Neovim が登場しました。20 年以上にわたって開発されてきた Vim の古いコードベース、古い開発体制を改め、開発を加速させようという試み。 リファクタリングによってメンテナンス性を高め、新機能追加やプラグイン作成を容易にし、コミュニティによる開発を目標としています。発起人の Thiago de Arruda さんが <https://www.bountysource.com/fundraisers/539-neovim-first-iteration> でプロジェクトの開発資金を募集しています。
 
 - [momonga.vim #3](http://partake.in/events/52a7b249-5183-4f1a-9e4f-22c1f0e436a5)
 
   若い女性に大人気と噂のVimについて便利します 3月21日(金) 東京
+
+- [Vimプラグイン読書会 第4回](http://haya14busa.github.io/reading-vimplugin/)
+
+  プラグインマネージャの仕組みを理解するために、[tpope/vim-pathogen](https://github.com/tpope/vim-pathogen)を読みます。
+  3月15日(土) 21:00~ [LingrのVim部屋](http://lingr.com/room/vim)にて
+
+## 今月の新機能
+
+- 7.4.191: ファイル名修飾子`:S`が追加されました。
 
 ## リリース情報
 

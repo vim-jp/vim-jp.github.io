@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 5 月号
 ---
 
-# Vim Magazine 5 月号
-
 ## Vim 7.4 のリリース予定が発表されました。
 
 [vim\_announce: Plans for Vim 7.4](https://groups.google.com/d/msg/vim_announce/ZWWgK9aXQ2Y/IMObY8lBFm0J)

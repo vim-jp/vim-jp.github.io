@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 9 月号
 ---
 
-# Vim Magazine 9 月号
-
 ## 話題
 
 - [momonga.vim #2](http://partake.in/events/55ef537f-07fb-4e36-8f27-666f7925a4d7)

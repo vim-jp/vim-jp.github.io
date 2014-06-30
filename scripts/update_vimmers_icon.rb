@@ -23,4 +23,4 @@ vimmers.each do |x|
   warn x['twitter_icon']
 end
 
-puts vimmers.to_json
+puts JSON.pretty_generate(vimmers)

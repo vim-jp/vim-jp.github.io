@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 8 月号
 ---
 
-# Vim Magazine 8 月号
-
 ## 話題
 
 - [Vim 7.4 released!](https://groups.google.com/d/msg/vim_announce/knOQ_t_H5to/STMi8d25ii8J)

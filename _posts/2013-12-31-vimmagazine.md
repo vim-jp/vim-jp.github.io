@@ -4,7 +4,9 @@ category: vimmagazine
 title: Vim Magazine 12 月号
 ---
 
-# Vim Magazine 12 月号
+## 今月の新機能
+
+- 7.4.122 : Windowsで `enc=utf-8` の時、マルチバイト文字が外部コマンドに正しく渡されるようになりました。
 
 ## リリース情報
 

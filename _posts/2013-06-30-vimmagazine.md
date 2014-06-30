@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 6 月号
 ---
 
-# Vim Magazine 6 月号
-
 ## 話題
 
 - [Vim Advent Calendar 2012](http://atnd.org/events/33746)
@@ -24,7 +22,7 @@ title: Vim Magazine 6 月号
 
 - 7.3.1164: `screenattr({row}, {col})` と `screenchar({row}, {col})` が追加されました。
 
-- 7.3.1248: `imactivatefunc`、`imstatusfunc` オプションが追加されました。
+- 7.3.1248: `'imactivatefunc'`、`'imstatusfunc'` オプションが追加されました。
 
 - 7.3.1261: `:map-nowait` が追加されました。
 

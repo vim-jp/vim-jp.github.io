@@ -17,7 +17,7 @@ title: Vim Magazine 3 月号
 - [Vimプラグイン読書会 第5回](http://haya14busa.github.io/reading-vimplugin/)
 
   Vim scriptでリスト、文字列、辞書の効率的かつ汎用的な扱い方を学ぶために、[vim-jp/vital.vim](https://github.com/vim-jp/vital.vim)のData.List, Data.String, Data.Dictionaryあたりを読みます。
-  4月12日(土) 21:00~ [LingrのVim部屋](lingr.com/room/vim)にて
+  4月12日(土) 21:00~ [LingrのVim部屋](http://lingr.com/room/vim)にて
 
 - [第2回 Sapporo.vim](http://atnd.org/events/49000)
 

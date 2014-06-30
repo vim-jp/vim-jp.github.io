@@ -4,8 +4,6 @@ category: vimmagazine
 title: Vim Magazine 7 月号
 ---
 
-# Vim Magazine 7 月号
-
 ## 話題
 
 - [Vim 7.4b ready for beta testing](https://groups.google.com/d/msg/vim_announce/KMZwjhMmNys/7DBxBv77pTMJ)

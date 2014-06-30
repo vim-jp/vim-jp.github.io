@@ -17,31 +17,30 @@
 	(function(doc, script) {
 		window.___gcfg = {lang: 'ja'};
 		//Async Social Buttons
-		var js,
-	fjs = doc.getElementsByTagName(script)[0],
-	add = function(url, id) {
-		if (doc.getElementById(id)) {return;}
-		js = doc.createElement(script);
-		js.src = url;
-		id && (js.id = id);
-		fjs.parentNode.insertBefore(js, fjs);
-	};
+		var fjs = doc.getElementsByTagName(script)[0];
+		var add = function(url, id) {
+			if (doc.getElementById(id)) {return;}
+			var js = doc.createElement(script);
+			js.src = url;
+			id && (js.id = id);
+			fjs.parentNode.insertBefore(js, fjs);
+		};
 
-	// Twitter SDK
-	add('//platform.twitter.com/widgets.js', 'twitter-wjs');
-	// Google+ button
-	add('//apis.google.com/js/plusone.js');
-	// Facebook SDK
-	add('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'facebook-jssdk');
-	// Hatena
-	add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
-	}(document, 'script'));
+		// Twitter SDK
+		add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+		// Google+ button
+		add('//apis.google.com/js/plusone.js');
+		// Facebook SDK
+		add('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'facebook-jssdk');
+		// Hatena
+		add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
+	})(document, 'script');
 </script>
 
 <!-- 日本語マニュアル検索用 -->
 <link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
     // search
@@ -58,6 +57,13 @@
         $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
       ).append($('<br/>')).append($('<span/>').text(this.description)).appendTo('#patches-list');
     });
+  });
+</script>
+<script type="text/javascript" src="/assets/javascripts/mousetrap.min.js"></script>
+<script type="text/javascript">
+  Mousetrap.bind("I space h a t e space V i m enter", function(e) {
+    console.log(e);
+    window.location = "http://www.gnu.org/software/emacs/";
   });
 </script>
 </head>
@@ -103,8 +109,12 @@
 					</dd>
 					<dt><a href="http://github.com/vim-jp/issues/issues">Issues</a></dt>
 					<dd>日本語で問題報告できるITS(Issue Tracker System)。</dd>
+					<dt><a href="http://vim-jp.org/reading-vimrc">vimrc読書会</a></dt>
+					<dd>毎週誰かのvimrcを読み合わせします。</dd>
+					<dt><a href="http://vim-jp.org/vim-users-jp">vim-users-jp</a></dt>
+					<dd>vim-users-jpの過去記事を掲載しています。</dd>
 					<dt><a href="/links.html">リンク集</a></dt>
-					<dd>もっとVimの情報をゲットしよう! <a href="/vimmers/">Vimmers</a> を見てみよう!</dd>
+					<dd>もっとVimの情報をゲットしよう! <a href="/vimmers2/">Vimmers2</a> (<a href="/vimmers/">旧版</a>)を見てみよう!</dd>
 				</dl>
 			</div>
 			<div id="link" class="linkList">
