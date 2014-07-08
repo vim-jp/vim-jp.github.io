@@ -28,7 +28,7 @@ Vim scriptの基本文法
 
 - [Vimスクリプトリファレンス &mdash; 名無しのvim使い](http://nanasi.jp/code.html)
 - [Vimスクリプト基礎文法最速マスター - 永遠に未完成](http://d.hatena.ne.jp/thinca/20100201/1265009821)
-- [Big Sky :: モテる男のVim Script短期集中講座](http://mattn.kaoriya.net/software/vim/20111202085236.htm)
+- [Big Sky :: モテる男のVim script短期集中講座](http://mattn.kaoriya.net/software/vim/20111202085236.htm)
 - [Learn Vimscript the Hard Way](http://learnvimscriptthehardway.stevelosh.com)
 
 実際にVim scriptを書いてみましょう

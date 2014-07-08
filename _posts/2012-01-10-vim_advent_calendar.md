@@ -22,7 +22,7 @@ Vimに関する記事をVim Hacker達が繰り広げる「Vim Advent Calendar」
 <tr>
 	<td>12/02(金)</td>
 	<td>@mattn_jp</td>
-	<td><a href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">モテる男のVim Script短期集中講座</a></td>
+	<td><a href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">モテる男のVim script短期集中講座</a></td>
 </tr>
 <tr>
 	<td>12/03(土)</td>
