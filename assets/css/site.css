@@ -111,10 +111,12 @@ a, a:link {
   color: #6699cc;
   text-decoration: none;
 }
+
 a:active, a:hover {
   color: #669933;
   text-decoration: underline;
 }
+
 a:visited {
   color: #8899aa;
 }
@@ -125,11 +127,13 @@ code {
  line-height: 1.4em;
  border: solid 1px #ccc;
 }
+
 pre>code {
  border: 0px;
  margin: 0px;
  padding: 0px;
 }
+
 pre {
  color: white;
  background-color: black;
@@ -153,10 +157,12 @@ br.clear {
  padding-left: 5px;
  white-space: nowrap;
 }
+
 .linkList dt a {
  color: #0000aa;
  font-weight: bold;
 }
+
 .linkList dd {
  margin: 0 0 1em 0.5em;
 }
@@ -276,10 +282,12 @@ div#VimdocJaSearch {
   color: red;
   text-decoration: none;
 }
+
 .news a:active, .news a:hover {
   color: red;
   text-decoration: underline;
 }
+
 .news a:visited {
   color: red;
 }
@@ -300,16 +308,20 @@ ul.entry-list {
 ul.entry-list2 {
   padding-left: 1em;
 }
+
 ul.entry-list2 > li {
   list-style-type: none;
   font-weight: bold;
 }
+
 ul.entry-list2 > li > div.entry-head > div.entry-label {
   float: left;
 }
+
 ul.entry-list2 > li > div.entry-head > div.entry-title {
   padding-left: 6em;
 }
+
 ul.entry-list2 > li > div.entry-digest {
   clear: both;
   margin: 0.5em 1em 1em 1em;
@@ -320,6 +332,7 @@ h1>a, h1>a:visited {
   color: #454545;
   text-decoration: none;
 }
+
 h1>a:active, h1>a:hover {
   color: #777777;
   text-decoration: none;
@@ -364,6 +377,7 @@ div.persons {
   padding-left: 1em;
   height: auto;
 }
+
 .persons:after {
   content: "";
   clear: both;
@@ -371,6 +385,7 @@ div.persons {
   display: block;
   visibility: hidden;
 }
+
 .persons div.person {
   display: inline-block;
   min-width: 256px;
@@ -382,41 +397,53 @@ div.persons {
   margin: 6px;
   padding: 6px;
 }
+
 .persons .person ul {
   padding: 0px;
   margin: 0px;
   min-height: 50px;
   overflow: hidden;
 }
+
 .persons .person ul > li {
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
+
 .persons .person li.link {
   display: inline;
   margin-left: 4px;
   white-space: nowrap;
 }
+
 .persons .person .faceicon {
   float: left;
 }
+
 .persons .person .faceicon img {
   width: 48px;
   height: 48px;
   margin-right: 0.5em;
   margin-bottom: 2px;
 }
+
 .persons .person li.name {
   white-space: nowrap;
 }
+
 .persons .person li.clear {
   clear: both;
   height: 0;
   display: block;
 }
+
 #vimmers-container .ajax-loading {
   text-align: center;
+}
+
+.fb_iframe_widget {
+  overflow: hidden;
 }
 
 /* vim:set ts=8 sts=2 sw=2 noet: */
