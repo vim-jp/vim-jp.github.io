@@ -14,6 +14,8 @@ title: CtrlP is not die
 
 [ctrlp.vim ÷ home](http://ctrlpvim.github.io/ctrlp.vim/)
 
-[ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
+開発リポジトリは以下の URL になります。
+
+[https://github.com/ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
 本記事の筆者 mattn も contributor として開発に参加しますので、機能要望などあれば日本語でも構いませんので TwitterID「@mattn\_jp」や GitHub ID「mattn」にメンション下さい。
