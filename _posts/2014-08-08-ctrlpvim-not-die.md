@@ -3,11 +3,16 @@ layout: post
 category: blog
 title: CtrlP is not die
 ---
+
+![CtrlP](http://ctrlpvim.github.io/ctrlp.vim/images/ctrlp.png)
+
 バッファやファイル等、色んなコンテンツを選択出来る Vim プラグインとして海外では不動の人気を得ていた ctrlp.vim ですが、最近開発が停滞しており一部のユーザから開発継続が望まれていました。
 
 [https://github.com/kien/ctrlp.vim/issues/591](Are you looking for a new maintainer? - Issue #591 - kien/ctrlp.vim)
 
 作者の kien 氏に連絡が取れない事もあり、Chris Corbyn 氏が主体となって fork という形で開発を継続する事となりました。
+
+[http://ctrlpvim.github.io/ctrlp.vim/](ctrlp.vim ÷ home)
 
 [https://github.com/ctrlpvim/ctrlp.vim](ctrlpvim/ctrlp.vim)
 
