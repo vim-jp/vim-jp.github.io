@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: CtrlP is not die
+title: CtrlP does not die
 ---
 
 ![CtrlP](http://ctrlpvim.github.io/ctrlp.vim/images/ctrlp.png)
