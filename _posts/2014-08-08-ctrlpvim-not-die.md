@@ -18,4 +18,4 @@ title: CtrlP is not die
 
 [https://github.com/ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
-本記事の筆者 mattn も contributor として開発に参加しますので、機能要望などあれば日本語でも構いませんので TwitterID「@mattn\_jp」や GitHub ID「mattn」にメンション下さい。
+本記事の筆者 mattn も contributor として開発に参加しますので、機能要望などあれば日本語でも構いませんので TwitterID「[@mattn\_jp](https://twitter.com/mattn_jp)」や GitHub ID「[mattn](https://github.com/mattn)」にメンション下さい。
