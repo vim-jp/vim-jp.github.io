@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: ctrlpvim not die
+title: CtrlP is not die
 ---
 バッファやファイル等、色んなコンテンツを選択出来る Vim プラグインとして海外では不動の人気を得ていた ctrlp.vim ですが、最近開発が停滞しており一部のユーザから開発継続が望まれていました。
 
