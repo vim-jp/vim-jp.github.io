@@ -1,6 +1,6 @@
 - page: 23
   line: 5
-  erratum: ￥ 記号
+  erratum: ￥ (半角円記号)
   correction: ＼ (半角バックスラッシュ)
   excuse: >-
     表中は組版フォントの関係でバックスラッシュは使えないはずだったが、
