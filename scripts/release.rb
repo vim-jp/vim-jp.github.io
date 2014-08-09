@@ -10,7 +10,7 @@ conf = YAML.load_file("#{root}/_config.yml")
 if !ARGV.empty? && conf['downloads'].has_key?(ARGV[0])
   rel = conf['downloads'][ARGV[0]]
   ver = rel['version'].gsub(/\s/, '')
-  file = "_posts/#{Date.today.to_s}-#{ARGV[0]}-#{ver}.md"
+  file = "_posts/release/#{Date.today.to_s}-#{ARGV[0]}-#{ver}.md"
   open("#{root}/#{file}", "wb") {|f|
     f.puts <<"EOS"
 ---
