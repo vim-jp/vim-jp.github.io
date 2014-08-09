@@ -1,0 +1,16 @@
+- page: 23
+  line: 5
+  erratum: ￥ 記号
+  correction: ＼ (半角バックスラッシュ)
+  excuse: >-
+    表中は組版フォントの関係でバックスラッシュは使えないはずだったが、
+    訂正を入れた箇所はなぜかバックスラッシュになったが、それに気づかず。
+    だったら全部バックスラッシュにすれば良かった…
+
+- page: 67
+  line: 4
+  erratum: set tabvar()
+  correction: settabvar()
+  excuse: >-
+    set と tabvar の間にスペースが入っていた。
+    まさか切れているとは考えもしなかった。
