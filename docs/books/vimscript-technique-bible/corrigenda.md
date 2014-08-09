@@ -3,6 +3,8 @@ layout: docs
 title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤表
 ---
 
+## 正誤表
+
 <table>
 <tr>
   <th>ページ、行数</th>
@@ -19,3 +21,8 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 </tr>
 {% endfor %}
 </table>
+
+## 関連ツイート
+
+<!-- Twitter widget: "Vim script" OR Vimスク本 OR #Vimスク本 -->
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%22Vim+script%22+OR+Vim%E3%82%B9%E3%82%AF%E6%9C%AC+OR+%23Vim%E3%82%B9%E3%82%AF%E6%9C%AC" data-widget-id="497924456598097920">"Vim script" OR Vimスク本 OR #Vimスク本 に関するツイート</a>
