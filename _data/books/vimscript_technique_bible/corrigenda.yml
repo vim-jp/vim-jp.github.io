@@ -8,6 +8,13 @@
     別の誤植に訂正を入れた箇所はなぜかバックスラッシュになっていた。
     でもそれに気がつかず…だったら全部バックスラッシュにすれば良かった。
 
+- page: 52
+  line: 3
+  erratum: 「number」にはマッチしません。
+  correction: 「beautiful」にはマッチしません。
+  excuse: >-
+    途中で単語を変更した際の修正漏れです。
+
 - page: 67
   line: 4
   erratum: set tabvar()
