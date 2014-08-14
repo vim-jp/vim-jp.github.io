@@ -24,7 +24,7 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 
 ## <a name="normal-index"><a>索引について
 
-[@yrntrlmnmntさん](https://twitter.com/yrntrlmnmnt) が普通の索引の印刷データを作って公開してくれました。
+[@yrntrlmnmntさん](https://twitter.com/yrntrlmnmnt) が [普通の索引の印刷データ](http://vim-jp.org/docs/books/vimscript-technique-bible/corrigenda.html#normal-index) を作って公開してくれました。
 
 <blockquote class="twitter-tweet" lang="ja"><p>Ｖｉｍ　ｓｃｒｉｐｔテクニックバイブルを読んでプラグイン（紙）を作ってみた&#10;※アルファベット順の索引 <a href="http://t.co/3t4f3kIzoc">pic.twitter.com/3t4f3kIzoc</a></p>&mdash; あなたの天然記念物／アナログ師（自称） (@yrntrlmnmnt) <a href="https://twitter.com/yrntrlmnmnt/statuses/499879383675326465">2014, 8月 14</a></blockquote>
 
