@@ -22,6 +22,14 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 {% endfor %}
 </table>
 
+## <a name="normal-index"><a>索引について
+
+[@yrntrlmnmntさん](https://twitter.com/yrntrlmnmnt) が普通の索引の印刷データを作って公開してくれました。
+
+<blockquote class="twitter-tweet" lang="ja"><p>Ｖｉｍ　ｓｃｒｉｐｔテクニックバイブルを読んでプラグイン（紙）を作ってみた&#10;※アルファベット順の索引 <a href="http://t.co/3t4f3kIzoc">pic.twitter.com/3t4f3kIzoc</a></p>&mdash; あなたの天然記念物／アナログ師（自称） (@yrntrlmnmnt) <a href="https://twitter.com/yrntrlmnmnt/statuses/499879383675326465">2014, 8月 14</a></blockquote>
+
+必要な方は [google docs](https://docs.google.com/file/d/0B95Afy1gzPwjbHlKVldJNHVSd0k/edit) で印刷するか、XLSをダウンロードして印刷してご利用ください。
+
 ## 関連ツイート
 
 <!-- Twitter widget: "Vim script" OR Vimスク本 OR #Vimスク本 -->
