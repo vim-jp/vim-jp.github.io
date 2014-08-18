@@ -5,7 +5,7 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 
 ## 正誤表
 
-<table>
+<table class="vstb-corrigenda">
 <tr>
   <th>ページ、行数</th>
   <th>誤</th>
@@ -15,8 +15,8 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 {% for item in site.data.books.vimscript_technique_bible.corrigenda %}
 <tr>
   <td><nobr>{{item.page}}ページ</nobr>{% if item.line %} <nobr>{{item.line}}行目{% endif %}</nobr></td>
-  <td><nobr>{{item.erratum}}</nobr></td>
-  <td><nobr>{{item.correction}}</nobr></td>
+  <td>{{item.erratum}}</td>
+  <td>{{item.correction}}</td>
   <td>{{item.excuse}}</td>
 </tr>
 {% endfor %}

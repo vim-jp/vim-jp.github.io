@@ -1,0 +1,21 @@
+// vim:set sts=2 sw=2 tw=0 et:
+
+#content {
+  float: inherit;
+  clear: inherit;
+  margin: 0;
+}
+
+.entry {
+  padding-right: 0;
+}
+
+.links {
+  margin-top: 16px;
+
+  > div {
+    float: inherit;
+    clear: inherit;
+    width: inherit;
+  }
+}
