@@ -30,6 +30,12 @@ title: Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤�
 
 必要な方は [google docs](https://docs.google.com/file/d/0B95Afy1gzPwjbHlKVldJNHVSd0k/edit) で印刷するか、XLSをダウンロードして印刷してご利用ください。
 
+## <a name="normal-index"><a>Vim界隈(Vimスク本を含む)における「プラグイン」や「スクリプトファイル」などの用語についての補足文
+
+[@yrntrlmnmntさん](https://twitter.com/yrntrlmnmnt) より、「Chapter5 Vim スクリプトを公開しよう」の各種用語が分かりにくいという指摘を頂いたので、執筆者の一人である [@kaoriyaさん](https://twitter.com/kaoriya) が [補足の文章](https://gist.github.com/koron/d2bc314e4087ca1a9a9e) を公開してくれました。
+
+用語が分かりにくいと思った場合は参照してください。
+
 ## 関連ツイート
 
 <!-- Twitter widget: "Vim script" OR Vimスク本 OR #Vimスク本 -->
