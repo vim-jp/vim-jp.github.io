@@ -32,6 +32,13 @@
     range() は 0 開始でした。
     出力を修正しても良かったですが、これでもつじつま合うので簡単に直せるこちらで。
 
+- page: 192
+  line: 18
+  erratum: '*sweep_truetrail-interface*'
+  correction: '*sweep_trail-interface*'
+  excuse: >-
+    なぜか入った typo。
+
 - page: 313
   line: 1
   erratum: 索引
