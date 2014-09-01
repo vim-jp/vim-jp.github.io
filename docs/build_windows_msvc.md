@@ -49,3 +49,8 @@ VisualStudio10が既にインストールされている前提で説明します
     ※実際は1行  
     必要に応じてビルド前に`vcvarsall.bat`や`vcvars32.bat`等を実行しておいて下さい。
 
+    VC11以降を使う場合は、`SDK_INCLUDE_DIR` で `Win32.mak` があるディレクトリを指定する必要があります。例:
+
+        "SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include"
+
+    Vim 7.4.393以降で使えるようになったDirectWriteを有効にするには、`DIRECTX=yes` を指定する必要があります。
