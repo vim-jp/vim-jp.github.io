@@ -1,10 +1,10 @@
 ---
 layout: post
 category: blog
-title: vim-go-extra
+title: vim-go-extra を公開致します。
 ---
-golang がオフィシャル配布物として提供していた misc/vim という vim プラグインがリポジトリから削除されました。
-先日から vim-jp ではそのコピーを `go-vim` というリポジトリ名で公開しておりましたが、本日 `vim-go-extra` という名称に変更致しました。
+golang オフィシャル配布物として提供されてきた misc/vim という vim プラグインが、開発対象から外すという理由により先日リポジトリから削除されました。
+その変更を受けて vim-jp ではそのコピーを `go-vim` というリポジトリ名で公開しておりましたが、本日それを `vim-go-extra` という名称に変更致しました。
 以下これまでの流れ。
 
 * golang オフィシャルリポジトリから misc/vim が削除される
