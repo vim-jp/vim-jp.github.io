@@ -9,10 +9,10 @@ golang オフィシャル配布物として提供されてきた misc/vim とい
 
 * golang オフィシャルリポジトリから misc/vim が削除される
 * vim-jp が go-vim として misc/vim のコピーを配布
-* Google が [vim-ft-go](https://github/google/vim-ft-go) というリポジトリで misc/vim の一部を公開する
+* Google が [vim-ft-go](https://github.com/google/vim-ft-go) というリポジトリで misc/vim の一部を公開する
 * vim 本体リポジトリに vim-ft-go がマージされる
 
-[vim-ft-go](https://github/google/vim-ft-go) には misc/vim の一部のみが含まれています。misc/vim からは以下のコマンドが削除されました。
+[vim-ft-go](https://github.com/google/vim-ft-go) には misc/vim の一部のみが含まれています。misc/vim からは以下のコマンドが削除されました。
 
 * `:Godoc` コマンド
 * `:Fmt` コマンド
