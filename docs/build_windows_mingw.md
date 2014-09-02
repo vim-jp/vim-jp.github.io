@@ -52,3 +52,4 @@ title: MinGWを使ってのビルド方法
 
     Vim 7.4.393以降で使えるようになったDirectWriteを有効にするには、MinGWの派生版である[MinGW-w64](http://mingw-w64.sourceforge.net/)を使ってコンパイルする必要があります。
     32bit版は `DIRECTX=yes ARCH=i686`、64bit版は `DIRECTX=yes ARCH=x86-64` を指定する必要があります。
+    なお、DirectWriteを有効にすると、デフォルトでは実行時に libstdc++-6.dll, libgcc\_s\_sjlj-1.dll が必要となりますが、`STATIC_STDCPLUS=yes` を指定することでこれらのライブラリをスタティックリンクすることが出来ます。
