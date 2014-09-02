@@ -31,5 +31,5 @@ vim-go-extra の位置づけは以下の通りです。
 * ファイル保存時等に自動で `:Fmt` したりする様な動作はユーザが混乱するのでデフォルトとしない
 
 上記のポリシーで公開してまいります。なお、gocode、godef、lint コマンドがインストール済みの状態であれば、各コマンドに付属されている vim プラグインが vimrc の変更無しに使える様になっています。
-また vim の最新版を使えない方は、Google が提供する [vim-ft-go](https://github/google/vim-ft-go) と vim-jp が提供する [vim-go-extra](https://github.com/vim-jp/vim-go-extra) を両方をインストールしてお使い下さい。
+また vim の最新版を使えない方は、Google が提供する [vim-ft-go](https://github.com/google/vim-ft-go) と vim-jp が提供する [vim-go-extra](https://github.com/vim-jp/vim-go-extra) を両方をインストールしてお使い下さい。
 何か問題が発生した際には、上記 vim-go-extra の issues までご連絡下さい。
