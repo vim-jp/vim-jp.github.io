@@ -1,0 +1,53 @@
+- page: 23
+  line: 5
+  erratum: ￥ (半角円記号)
+  correction: ＼ (半角バックスラッシュ)
+  excuse: >-
+    表1.1内で￥と＼が統一されていない、という意味。
+    表は組版フォントの関係でバックスラッシュは使えないはずだったが、
+    別の誤植に訂正を入れた箇所はなぜかバックスラッシュになっていた。
+    でもそれに気がつかず…だったら全部バックスラッシュにすれば良かった。
+
+- page: 52
+  line: 3
+  erratum: 「number」にはマッチしません。
+  correction: 「beautiful」にはマッチしません。
+  excuse: >-
+    途中で単語を変更した際の修正漏れです。
+
+- page: 67
+  line: 4
+  erratum: set tabvar()
+  correction: settabvar()
+  excuse: >-
+    set と tabvar の間にスペースが入っていた。
+    まさか切れているとは考えもしなかった。
+
+- page: 74
+  line: 8
+  erratum: range(10)
+  correction: range(1, 10)
+  excuse: >-
+    リスト内の最初の行。
+    range() は 0 開始でした。
+    出力を修正しても良かったですが、これでもつじつま合うので簡単に直せるこちらで。
+
+- page: 192
+  line: 18
+  erratum: '*sweep_truetrail-interface*'
+  correction: '*sweep_trail-interface*'
+  excuse: >-
+    なぜか入った typo。
+
+- page: 313
+  line: 1
+  erratum: 索引
+  correction: 逆引き索引/単語集
+  excuse: >-
+    以降のヘッダー部分の訂正。
+    本書の索引はカテゴライズされています。
+    これは通読してカテゴリーを頭に叩き込んだ上で、
+    気になった項目を探し出す用途を想定しました。
+    そのため、いわゆる普通の本の
+    「予め単語だけがわかっているが、その意味を知りたい」
+    という用途での利用はし難くなっています。
