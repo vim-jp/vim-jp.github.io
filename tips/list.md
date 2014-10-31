@@ -16,9 +16,9 @@ title: Vim に関するTipsなどを紹介
 
 	SEGVした際にgdbでトレースする方法
 
-- [Vim Script初学者向けtips](./start_vimscript.html)
+- [Vim script初学者向けtips](./start_vimscript.html)
 
-	Vim Script初学者向けのドキュメントやブログ記事へのリンク情報
+	Vim script初学者向けのドキュメントやブログ記事へのリンク情報
 
 - [if_pythonに関するtips](./if_python.html)
 

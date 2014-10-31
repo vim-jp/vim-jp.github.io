@@ -1,0 +1,52 @@
+---
+# vim:set ts=2 sts=2 sw=2 et:
+layout: vimmers
+title: Vimmers (with RactiveJS)
+---
+<div>
+<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+
+<p>
+Vim はこのような人たちに使われたり、イジられたり、イジメられたり、作られたりしています。Vimmer として掲載されても良いよ、この方を掲載してよ、という要望は <a href="https://github.com/vim-jp/vim-jp.github.com/issues/79">vim-jp</a> までご連絡ください。<br />
+<a href="/vimmers2/">カラフルでモダンになったバージョン</a>も是非どうぞ！
+</p>
+
+<div id="vimmers-body" class="vimmers-body"></div>
+
+<script id="vimmers-template" type="text/ractive">
+
+<ul class='vimmers-controls'>
+  <li><a on-click='shuffle'>Shuffle!</a></li>
+  <li><a on-click='showAll'>Show All!</a></li>
+</ul>
+
+<div class='persons' id='vimmers-container'>
+{{"{{#each persons"}}}}
+  <div class='person'>
+  <ul>
+    <li class='faceicon'><img src='{{"{{.face_icon_url"}}}}'></li>
+    <li class='name'>{{"{{.name"}}}}{{"{{#if .shortName"}}}} ({{"{{.shortName"}}}}){{"{{/if"}}}}</li>
+    {{"{{#each .links"}}}}
+    <li class='link'>
+      <a href='{{"{{.url"}}}}'>
+        <img src='{{"{{.icon_url"}}}}' title='{{"{{.title"}}}}'>
+      </a>
+    </li>
+    {{"{{/each"}}}}
+    <li class='clear'></li>
+    <li class='desc'>{{"{{.desc"}}}}</li>
+  </ul>
+  </div>
+{{"{{else"}}}}
+  <div class='ajax-loading'><img src='/assets/images/ajax-loader.gif' title='loading...' /></div>
+{{"{{/each"}}}}
+</div>
+</script>
+
+<script src="/assets/javascripts/underscore-min.js"/></script>
+<script src="/assets/javascripts/ractive.js"/></script>
+<script src="/assets/javascripts/jquery.masonry.min.js"></script>
+
+<script src="main2.js"/></script>
+
+</div>

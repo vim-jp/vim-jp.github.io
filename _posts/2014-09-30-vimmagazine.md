@@ -13,8 +13,11 @@ title: Vim Magazine 9 月号
 ## 今月の新機能
 
   - 7.4.434: gettabvar() でスコープ変数が取れるようになりました。
+  - 7.4.447: IGNOREEXTRA フラグが追加されました。(spell関連)
   - 7.4.449: `:helpclose` コマンドが追加されました。
+  - 7.4.450: +cmd 引数が関連のあるコマンドに追加されました。
   - 7.4.456: 'backupcopy' オプションが global-local になりました。バッファごとに設定を変更できるようになります。
+  - 7.4.459: MS-Windows: Vim のアイコンを変更できるようになりました。
 
 ## リリース情報
 
@@ -46,6 +49,7 @@ title: Vim Magazine 9 月号
 - [7.4.456 : 'backupcopy' is global, can't set a local value](http://code.google.com/p/vim/source/detail?r=54194bd6ed607aa0cec07d8a27d4794573eabba9)
 - [7.4.457 : cannot recognize getchar() returning K&#x5f;CURSORHOLD](http://code.google.com/p/vim/source/detail?r=96761b6789f61a8dee1551b7cea98e669fb90fb3)
 - [7.4.458 : issue 252: Cursor moves in a zero-height window](http://code.google.com/p/vim/source/detail?r=fe1827921d50cb59ac680ea13e3f9103cd9db660)
+- [7.4.459 : Can't change the icon after building Vim.](http://code.google.com/p/vim/source/detail?r=7816c24ff8907c9f24a9e35992a4d5f3cc9dbc7e)
 - [7.4.460 : (after 7.4.454) can't build without the quickfix feature](http://code.google.com/p/vim/source/detail?r=d5eba03293a6193a1b462822800641b820252ce3)
 - [7.4.461 : MS-Windows: When collate is on the number of copies is too high](http://code.google.com/p/vim/source/detail?r=4eba2bdb26f2be61bfdb1f635c0ed65f4bc35b0b)
 - [7.4.462 : Setting the local value of 'backupcopy' empty gives an error](http://code.google.com/p/vim/source/detail?r=c0d93d67572b2d4161d0c5a5ab09477d6447ff49)
