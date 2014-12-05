@@ -11,6 +11,6 @@ vim74win:
   version: '7.4.475'
   info: +kaoriya, 14/15MB ZIP
 vim74mac:
-  title: OS X 10.8/10.9
-  version: '7.4.383'
-  info: +macvim-kaoriya, 11MB
+  title: OS X 10.8/9/10
+  version: '7.4.527'
+  info: +macvim-kaoriya, 12MB
