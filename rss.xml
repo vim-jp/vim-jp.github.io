@@ -3,7 +3,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vim-jp</title>
+    <title>vim-jp</title>
     <link>{{ site.base-url | xml_escape }}</link>
     <atom:link rel="self" type="application/rss+xml" href="{{ site.base-url | xml_escape }}{{ page.url | xml_escape}}" />
     <link rel="shortcut icon" herf="{{ site.base-url }}/favicon.ico" />
@@ -12,7 +12,7 @@
     <lastBuildDate>{{ site.time | date: '%a, %d %b %Y %H:%M:%S +0900' }}</lastBuildDate>
     <image>
       <url>{{ site.base-url | xml_escape }}/assets/images/vim2-32.png</url>
-      <title>Vim-jp</title>
+      <title>vim-jp</title>
       <link>{{ site.base-url | xml_escape }}</link>
       <width>32</width>
       <height>32</height>
