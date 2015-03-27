@@ -11,14 +11,15 @@ https://groups.google.com/forum/#!topic/vim_dev/Io5A_Zir--k
 -----
 Google Code がシャットダウンする事になったので、我々は Vim のリポジトリの
 為の新しい場所を必要としている。
-多くのユーザーが各々の意見、そして github がより良いという意見を出した。
+多くのユーザーが各々の意見を出し、github を推す声が多いようだ。
 
-不便という程の話では無いが、Mercurial から git へ移行するという意味に
-なる為、ある意味では不便となり、ある意味では不便では無くなる。
-そして幾らかは便利になるだろう。
+これには不都合もあり、というのも、github へ移行するということは
+Mercurial から git へ移行するということだからだ。
+これが気に入る人もいるだろうし、そうでない人もいるだろう。
+しばらくかけて慣れる必要があるだろう。
 私は個人的には Mercurial コマンドの方が好きだ。使い方がより明確だからだ。
 君たちは Mercurial コマンドから git への置き換え方法を見つける事が出来る。
-例) https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone 
+例) https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone
 
 この手法がちゃんと動作しているのかを確かめる為に、私は SNAPSHOT という形で
 リポジトリを作った。我々はマイグレーション確認をする事が出来る。
