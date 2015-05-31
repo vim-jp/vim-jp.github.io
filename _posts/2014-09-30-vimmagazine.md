@@ -10,6 +10,10 @@ title: Vim Magazine 9 月号
 
   名作RPG『Rogue Clone II』が Vim に移植されました。
 
+- [Osaka.vim #3](http://osaka-vim.connpass.com/event/9119/)
+
+  待ちに待った第三回です。 今回はもくもく会のみになります。 10月25日(土) 大阪
+
 ## 今月の新機能
 
   - 7.4.434: gettabvar() でスコープ変数が取れるようになりました。
