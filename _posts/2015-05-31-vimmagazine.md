@@ -4,6 +4,12 @@ category: vimmagazine
 title: Vim Magazine 5 月号
 ---
 
+## 話題
+
+- [Osaka.vim #4](http://osaka-vim.connpass.com/event/15553/)
+
+  お久しぶりです。待ちに待った第四回です。 今回はもくもく会になります。 6月27日(土) 大阪
+
 ## リリース情報
 
 - [7.4.713 : wrong condition for #ifdef](http://code.google.com/p/vim/source/detail?r=56e121fd109b2fcd19121b3d3295f9dca75f8aac)
