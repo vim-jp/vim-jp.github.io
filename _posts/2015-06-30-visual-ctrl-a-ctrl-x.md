@@ -8,7 +8,7 @@ Vim をお使いの方であれば、数字の上で CTRL-A や CTRL-X を押す
 
 [Patch 7.4.754](https://groups.google.com/forum/#!topic/vim_dev/5u4nnnUbA70) により Visual モードで選択している数字を一括でインクリメント/デクリメント出来る様になりました。
 
-ビジュアル選択した状態で `<CTRL-A>` や `<CTRL-X>` をタイプすると選択範囲内の数値が一括でインクリメント/デクリメント出来ます。もちろん `20<CTRL-A>` で一気に20インクリメントする事も出来ます。
+もちろん `20<CTRL-A>` で一気に20インクリメントする事も出来ます。
 
 ![](http://vim-jp.org/assets/images/visual-ctrl-a-ctrl-x.gif)
 
