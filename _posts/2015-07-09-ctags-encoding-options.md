@@ -20,7 +20,7 @@ tags ファイルにはシンボル、定義されているファイル、定義
 $ ctags --input-encoding=utf-8 --input-encoding-java=cp932 --input-encoding-javascript=euc-jp -R .
 ```
 
-といった具合に全体の encoding と言語個別のエンコーディングを分けて指定したり `--output-encoding=cp932` といった様に tags ファイルのエンコーディングを指定出来る様になっています。Shift_JIS でしか判定出来ないテキストエディタでも正しく動作出来る様になります。(--output-encoding のデフォルト値は utf-8 です)
+この様に全体の encoding と言語個別のエンコーディングを分けて指定したり `--output-encoding=cp932` といった様に tags ファイルのエンコーディングを指定出来る様になっています。tags ファイルを Shift_JIS でしか判定出来ないテキストエディタでも正しく動作出来る様になります。(--output-encoding のデフォルト値は utf-8 です)
 その際 tags ファイルには
 
 ```
@@ -29,7 +29,7 @@ $ ctags --input-encoding=utf-8 --input-encoding-java=cp932 --input-encoding-java
 
 という、tags ファイル自身のエンコーディング名も出力されますので、各テキストエディタではこの文字列を判断して tags ファイルのエンコーディングを判定して頂く事になります。
 
-`~/.ctags` に以下の様に書いておくと毎回していしなくても良くなります。
+`~/.ctags` に以下の様に書いておくと毎回この長いオプションを指定しなくても良くなります。
 
 ```
 --sort=yes
@@ -40,3 +40,5 @@ $ ctags --input-encoding=utf-8 --input-encoding-java=cp932 --input-encoding-java
 ```
 
 vim においてはこの `TAG_FILE_ENCODING` は既に取り込まれており、バージョン6以上の vim であれば問題なく使用出来ます。
+
+なお、この修正によりソースコード上でシンボル自身がマルチバイトになり得るプログラミング言語(golang 等)のタグも正しく扱える様になります。
