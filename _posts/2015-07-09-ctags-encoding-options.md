@@ -14,7 +14,7 @@ tags ファイルにはシンボル、定義されているファイル、定義
 
 ところが日本を含む幾らかの国ではソースコード内にマルチバイト文字のコメントを書く習慣があり、ctags がこのマルチバイトのコメントをそのまま tags ファイルに書きだしていた為、いざテキストエディタがタグジャンプをしようとした際にテキストエディタのエンコーディングとタグ文字列のエンコーディングに相違が発生してしまいます。またリポジトリに異なるエンコーディングのファイルが複数含まれるといった事もあり得ます。例えば C# は UTF-8 で、Java は Shift_JIS でといった様に。
 
-この tags ファイルのエンコーディングを統一的に指定出来る様にすべく、vim-jp では [universal-ctags](https://ctags.io/) に対するパッチを作成し、[pull-request](https://github.com/universal-ctags/ctags/pull/419) しました。昨日そのパッチがマージされ、公式として入力ファイルと出力する tags ファイルのエンコーディングが指定出来る様になりました。
+この tags ファイルのエンコーディングを統一的に指定出来る様にすべく、vim-jp では [universal-ctags](https://ctags.io/) に対するパッチを作成し、[pull-request](https://github.com/universal-ctags/ctags/pull/419) しました。昨日そのパッチがマージされ、公式として入力ファイルのエンコーディングと出力する tags ファイルのエンコーディングが指定出来る様になりました。
 
 ```
 $ ctags --input-encoding=utf-8 --input-encoding-java=cp932 --input-encoding-javascript=euc-jp -R .
