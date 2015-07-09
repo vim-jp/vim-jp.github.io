@@ -33,10 +33,10 @@ $ ctags --input-encoding=utf-8 --input-encoding-java=cp932 --input-encoding-java
 
 ```
 --sort=yes
---encoding=utf8
---encoding-c=sjis
---encoding-vim=utf8
---encoding-go=utf8
+--input-encoding=utf-8
+--input-encoding-c=sjis
+--input-encoding-vim=utf-8
+--input-encoding-go=utf-8
 ```
 
 vim においてはこの `TAG_FILE_ENCODING` は既に取り込まれており、バージョン6以上の vim であれば問題なく使用出来ます。
