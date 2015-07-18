@@ -1,3 +1,11 @@
+vim74w32:
+  title: Windows 32ビット
+  version: '7.4.763'
+  info: +kaoriya, 14MB ZIP
+vim74w64:
+  title: Windows 64ビット
+  version: '7.4.763'
+  info: +kaoriya, 15MB ZIP
 vim74win:
   title: Windows 32ビット/64ビット
   version: '7.4.788'
