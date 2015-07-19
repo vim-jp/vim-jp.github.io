@@ -1,12 +1,4 @@
-vim74w32:
-  title: Windows 32ビット
-  version: '7.4.788'
-  info: +kaoriya, 14MB ZIP
-vim74w64:
-  title: Windows 64ビット
-  version: '7.4.788'
-  info: +kaoriya, 15MB ZIP
-vim74win:
+vim74win: &vim74win
   title: Windows 32ビット/64ビット
   version: '7.4.788'
   info: +kaoriya, 14/15MB ZIP
@@ -14,3 +6,12 @@ vim74mac:
   title: OS X 10.8/9/10
   version: '7.4.769'
   info: +macvim-kaoriya, 14MB DMG
+
+vim74w32:
+  <<: *vim74win
+  title: Windows 32ビット
+  info: +kaoriya, 14MB ZIP
+vim74w64:
+  <<: *vim74win
+  title: Windows 64ビット
+  info: +kaoriya, 15MB ZIP
