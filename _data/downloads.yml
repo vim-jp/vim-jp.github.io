@@ -1,6 +1,6 @@
 vim74win: &vim74win
   title: Windows 32ビット/64ビット
-  version: '7.4.788'
+  version: '7.4.798'
   info: +kaoriya, 14/15MB ZIP
 vim74mac:
   title: OS X 10.8/9/10
