@@ -21,4 +21,5 @@ Hello Vim users,
 Google Code の Vim プロジェクトは "project moved" 状態になりました。ほとんどのものは Github の同じページにリダイレクトされるはずです。少なくとも issue に対しては機能しています。
 
 Happy Vimming!
+
 ---
