@@ -18,7 +18,7 @@ else
 end
 vimmers.each do |x|
   if !x['twitter'].empty?
-    x['twitter_icon'] = Net::HTTP::Proxy(proxy_host, proxy_port).get_response(URI.parse("http://api.dan.co.jp/twicon/#{x['twitter']}"))["location"]
+    x['twitter_icon'] = Net::HTTP::Proxy(proxy_host, proxy_port).get_response(URI.parse("http://www.paper-glasses.com/api/twipi/#{x['twitter']}/original"))["location"]
   end
   warn x['twitter_icon']
 end

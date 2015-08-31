@@ -25,7 +25,7 @@ EOS
   puts <<"EOS"
 Wrote: #{file}
 You should do:
-  git add #{file}'
+  git add #{file}
   git commit
 EOS
 else

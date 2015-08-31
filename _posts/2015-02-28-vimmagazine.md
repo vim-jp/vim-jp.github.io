@@ -4,6 +4,16 @@ category: vimmagazine
 title: Vim Magazine 2 月号
 ---
 
+## 話題
+
+- [TokyoVim#24](http://tokyovim.connpass.com/event/12389/)
+
+  Vimに関する何かをやる会です。 3月21日(土) 東京
+
+## 今月の新機能
+
+- 7.4.627: "xn" termcap 機能がサポートされました。
+
 ## リリース情報
 
 - [7.4.609 : the garbage collector can run out of stack space](http://code.google.com/p/vim/source/detail?r=38add5a3d617109be3be5e4c0d0b7a32ab2a2e00)

@@ -4,6 +4,10 @@ category: vimmagazine
 title: Vim Magazine 12 月号
 ---
 
+## 今月の新機能
+
+- 7.4.542: `:command` コマンドに範囲指定の種類を指定する `-addr` 引数が追加されました。
+
 ## リリース情報
 
 - [7.4.538 : tests fail with small features plus Python](http://code.google.com/p/vim/source/detail?r=3421b24e419c935f3914a4bf7eb6d3b1de3d618f)

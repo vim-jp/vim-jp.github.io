@@ -43,6 +43,7 @@ exclude:
   - 'scripts'
   - 'Gemfile'
   - 'README.md'
+  - 'vendor'
 
 gems:
   - jemoji
