@@ -8,6 +8,10 @@ title: Vim Magazine 8 月号
 
 - Vim の開発リポジトリが Google Code から [Github](https://github.com/vim/vim) に移動しました。
 
+## 今月の新機能
+
+- 7.4.813 : getcharsearch()、setcharsearch() 関数が追加されました。
+
 ## リリース情報
 
 - [7.4.804 : Xxd doesn't have a license notice](https://github.com/vim/vim/commit/43fe32900c12fea5f9e15ee94ac850e95ec73188)
