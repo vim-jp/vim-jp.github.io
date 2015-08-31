@@ -24,6 +24,8 @@ title: Vim Magazine 7 月号
 - 7.4.775 : 'completeopt' オプションに "noinsert", "noselect" が追加されました。
 - 7.4.785 : 'fixendofline' オプションが追加されました。
 - 7.4.786 : OptionSet イベントが追加されました。
+- 7.4.791 : :ls コマンドにバッファの種類を指定する引数が追加されました。
+- 7.4.792 : matchadd() 関数で conceal の定義ができるようになりました。
 - 7.4.793 : 'belloff' オプションが追加されました。
 
 ## リリース情報
