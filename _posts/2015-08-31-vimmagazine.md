@@ -8,6 +8,10 @@ title: Vim Magazine 8 月号
 
 - Vim の開発リポジトリが Google Code から [Github](https://github.com/vim/vim) に移動しました。
 
+- [vim-jp/issues: レポジトリの変更についての報告](https://github.com/vim-jp/issues/issues/761)
+
+    Vim が Github に移動したので vim-jp のリポジトリミラーは削除される予定です。
+
 - [Big Sky :: Software Design に Vim の Tech記事「Vim の細道」を連載します。](http://mattn.kaoriya.net/software/vim/20150820112724.html)
 
     [Software Design](http://gihyo.jp/magazine/SD)誌の 10 月号から mattn さんによる「Vim の細道」の連載が始まります。9 月 18 日 (金) 発売。
