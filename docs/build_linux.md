@@ -13,7 +13,7 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
 
     パッケージを個別にインストールするには以下を実行します。
 
-        $ sudo apt-get install mercurial gettext libncurses5-dev
+        $ sudo apt-get install git gettext libncurses5-dev
           libacl1-dev libgpm-dev
 
     ※実際は1行
@@ -44,20 +44,20 @@ Ubuntu 12.04 LTSを使った場合のビルド方法を説明します。
 
     以下のコマンドを実行します。
 
-        $ hg clone https://vim.googlecode.com/hg/ vim
+        $ git clone https://github.com/vim/vim.git
 
-    `hg clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
+    `git clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
 
-        $ hg pull
-        $ hg update
+        $ git fetch
+        $ git merge
 
-    あるいは2つをまとめて、以下のコマンドでもOKです。
+    ローカルでの変更がない場合、あるいは2つをまとめて以下のコマンドでもOKです。
 
-        $ hg pull -u
+        $ git pull
 
-    特定のバージョンを指定して取得する場合は、`-r` オプションを指定します。
+    特定のバージョンを指定して取得する場合は、以下のコマンドを実行します。
 
-        $ hg update -r v7-4-393
+        $ git checkout v7.4.393
 
 3.  コンパイル
 
