@@ -16,7 +16,7 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
-    $ hg clone https://vim.googlecode.com/hg/ vim
+    $ hg clone https://bitbucket.org/vim-mirror/vim
 
 今回の手順では [Mercurial Queue](http://mercurial.selenic.com/wiki/JapaneseMqExtension)を利用するので、あらかじめ機能を有効化しておきましょう。
 
@@ -34,8 +34,8 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
     $ vim os_win32.c
 
 この際コーディングスタイルは既存のものに合わせるようにしましょう。
-[:help coding-style](http://vim-jp.org/vimdoc-ja/develop.html#coding-style)にコーディング規約が書かれてあります。
-また[:help develop.txt](http://vim-jp.org/vimdoc-ja/develop.html)にはVimの開発に関する事項が書かれています。一度目を通すといいでしょう。
+[`:help coding-style`](http://vim-jp.org/vimdoc-ja/develop.html#coding-style)にコーディング規約が書かれてあります。
+また[`:help develop.txt`](http://vim-jp.org/vimdoc-ja/develop.html)にはVimの開発に関する事項が書かれています。一度目を通すといいでしょう。
 
 すでに用意されているパッチをソースファイルに適用するなら、以下のようなコマンドを実行します。
 
@@ -64,7 +64,7 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 なおパッチファイルにはパッチ作成者の名前が記されますが、基本的には実名が相応しいと以前Bram氏が言っていました。
 
 レビューが完了しBram氏からのOKが出たら、あとはパッチが取り込まれたVimがリリースされるまで待ちます。
-いつパッチが取り込まれるかは不定期なので分かりません。すぐに取り込まれる場合もありますし、[todo.txt](https://code.google.com/p/vim/source/browse/runtime/doc/todo.txt)に追加されて数ヶ月あるいは数年待たされる場合もあります。ひたすら待ちましょう。
+いつパッチが取り込まれるかは不定期なので分かりません。すぐに取り込まれる場合もありますし、[todo.txt](https://github.com/vim/vim/blob/master/runtime/doc/todo.txt)に追加されて数ヶ月あるいは数年待たされる場合もあります。ひたすら待ちましょう。
 Vimでは基本的にバグ修正が優先して取り込まれ、新機能の追加は後回しにされる傾向が強いです。
 特に巨大な変更の場合、パッチの取り込みがマイナーリリース時点まで保留されることもあります。
 
