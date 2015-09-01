@@ -20,13 +20,13 @@ title: Vim Magazine 10 月号
 
 ## リリース情報
 
-- [7.4.046 : can't use Tcl 8.6](http://code.google.com/p/vim/source/detail?r=68056d414f09fccb39219d7fde77fa06769ffa3b)
-- [7.4.047 : input() does not work in a function invoked by a mapping](http://code.google.com/p/vim/source/detail?r=c21b2f52f1dd003d860e3b574602ed3fdc2b4f1c)
-- [7.4.048 : recent clang version complains about -fno-strength-reduce](http://code.google.com/p/vim/source/detail?r=31c9acfeda8f1b84d51a480c1efbb56f384e76b1)
-- [7.4.049 : in Ex mode substitute prompt is wrong with line numbers](http://code.google.com/p/vim/source/detail?r=15c1b8a20da6d650ee3ed0e73c2e3832093b60dd)
-- [7.4.050 : "gn" may select too much when there are two matching lines](http://code.google.com/p/vim/source/detail?r=eb33cadafcabfc9cb3fc0741e169e84cafec11f8)
-- [7.4.051 : syntax highlighting a Yaml file causes a crash](http://code.google.com/p/vim/source/detail?r=e7a2f217a385e6aebfddc4d29182924ac017d262)
-- [7.4.052 : cursor may end up in the wrong position when auto-formatting](http://code.google.com/p/vim/source/detail?r=b9c1c1f4cda9b82a2e703feec441d865b4722d56)
+- [7.4.046 : can't use Tcl 8.6](https://github.com/vim/vim/commit/0b4db6b6e58077c4bb5b1dc3fd30a04ce019e0f0)
+- [7.4.047 : input() does not work in a function invoked by a mapping](https://github.com/vim/vim/commit/35a7c681bce136b6993c1c6f6e2fdf3e3667791d)
+- [7.4.048 : recent clang version complains about -fno-strength-reduce](https://github.com/vim/vim/commit/0c6ccfdb62f233963ca2bd05092b94a0b855fcee)
+- [7.4.049 : in Ex mode substitute prompt is wrong with line numbers](https://github.com/vim/vim/commit/3eead7c227e96f416e62214a3529ad1e8b1c8421)
+- [7.4.050 : "gn" may select too much when there are two matching lines](https://github.com/vim/vim/commit/4c7cb6b88446fef3660bceaf465419b3c3958f54)
+- [7.4.051 : syntax highlighting a Yaml file causes a crash](https://github.com/vim/vim/commit/a951e35478fd78d6d3cd970842502fb76c377df9)
+- [7.4.052 : cursor may end up in the wrong position when auto-formatting](https://github.com/vim/vim/commit/2c019c8696ca56d1a9d1bb10fd1411bad14df0c6)
 
 ## 新着スクリプト
 

@@ -14,22 +14,22 @@ Google Summer of Code への参加に向けて準備が進められています�
 
 ## リリース情報
 
-- [7.3.465 : cannot get file name with newline from glob()](http://code.google.com/p/vim/source/detail?r=d1096a4e96bdd5bfc0ce2f1aaddcbff1475c69ad)
-- [7.3.466 : ml\_get error when replacing several selected lines](http://code.google.com/p/vim/source/detail?r=df9c7798b5e2c022310cd12e199c9de8d866aa39)
-- [7.3.467 : cursor position wrong at command line when using input method](http://code.google.com/p/vim/source/detail?r=276d58e9265cfee76c04bc5450681090900a16f4)
-- [7.3.468 : for some compilers the error file is not easily readable](http://code.google.com/p/vim/source/detail?r=38a1357304234dcea96f96019abf0f3e5ae290ab)
-- [7.3.469 : compiler warning for unused argument](http://code.google.com/p/vim/source/detail?r=e61c3b09ae86a8a448ad2d028df6fa6b9778666b)
-- [7.3.470 : test 62 fails when compiled without GUI and X11](http://code.google.com/p/vim/source/detail?r=636e4db6e2075bd22640cfc8229af62059f8ffe0)
-- [7.3.471 : can't abort listing placed signs](http://code.google.com/p/vim/source/detail?r=3465a9e7758850684d18a9bb11ac033efdcd1755)
-- [7.3.472 : crash when using ":redraw" in a BufEnter autocmd](http://code.google.com/p/vim/source/detail?r=8332129d9ae8f11f8ecb9f016e5292c6582bbb4e)
-- [7.3.473 : 'cursorbind' does not work correctly with 'virtualedit' "all"](http://code.google.com/p/vim/source/detail?r=7f1bce9c9b79d4ebbf798d6122612934d55d70d9)
-- [7.3.474 : gcc 4 build with Perl fails](http://code.google.com/p/vim/source/detail?r=7613c9ab083f3e9262be5a21fe086921b757da4c)
-- [7.3.475 : in terminal with few colors omnicomplete menu is hard to see](http://code.google.com/p/vim/source/detail?r=36160830a5e8d0e3b4174aa7d98363623468b77c)
-- [7.3.476 : backspacing in a Visual block selection causes problems.](http://code.google.com/p/vim/source/detail?r=fb2c5a51dac7f1dbce6a0f35808927ac206c7f47)
-- [7.3.477 : scrolling back at the more prompt shows the wrong text](http://code.google.com/p/vim/source/detail?r=62dc0d69ab11d5b5a67c6139a0dd3e2618d2c2a1)
-- [7.3.478 : memory leak when the ':rv!' command reads a dict or list](http://code.google.com/p/vim/source/detail?r=754db405921292fc57dbdaa85e62af333dce5912)
-- [7.3.479 : 'cursorline' line number highlighting can't be set separately](http://code.google.com/p/vim/source/detail?r=3db4282d5e6bb74a5c1094f35a81472d5a98f313)
-- [7.3.480 : when using ":qa" priority of changed buffers could be better](http://code.google.com/p/vim/source/detail?r=b35844f3eb49bb84101fdb276e3e69b0b8f7813f)
+- [7.3.465 : cannot get file name with newline from glob()](https://github.com/vim/vim/commit/146e9c38866248ff92f6109c536bbe79744256f5)
+- [7.3.466 : ml\_get error when replacing several selected lines](https://github.com/vim/vim/commit/9e98edfe8f8503a3ea84da714bbb5ef37364199e)
+- [7.3.467 : cursor position wrong at command line when using input method](https://github.com/vim/vim/commit/917ba89f7f787873cbfc9ce2e8a20b948843f0ae)
+- [7.3.468 : for some compilers the error file is not easily readable](https://github.com/vim/vim/commit/8ec1f8523b309aa9eb52e2854fc9a4b9559ebe80)
+- [7.3.469 : compiler warning for unused argument](https://github.com/vim/vim/commit/5fbe6993903ed3e8d7c288b337c1b0eaf2e14bd8)
+- [7.3.470 : test 62 fails when compiled without GUI and X11](https://github.com/vim/vim/commit/7c578d3c3f501c0dd86c48aad6816a6ce6e3fc77)
+- [7.3.471 : can't abort listing placed signs](https://github.com/vim/vim/commit/1c0b03e857c3f0eb9201f1046150a63866ebe49e)
+- [7.3.472 : crash when using ":redraw" in a BufEnter autocmd](https://github.com/vim/vim/commit/5ad15df9ce49f0b7adeac2c8387319d6f309bd5f)
+- [7.3.473 : 'cursorbind' does not work correctly with 'virtualedit' "all"](https://github.com/vim/vim/commit/1ea69b7077fe26466210bd00bb20c35be84cca40)
+- [7.3.474 : gcc 4 build with Perl fails](https://github.com/vim/vim/commit/dfba6b64495d389c9aec04f050ca7cbab01c0438)
+- [7.3.475 : in terminal with few colors omnicomplete menu is hard to see](https://github.com/vim/vim/commit/5d3a8038b6a59e6f1b219f27ec77d6067e643ac1)
+- [7.3.476 : backspacing in a Visual block selection causes problems.](https://github.com/vim/vim/commit/5e4b9e9ff8ebd337875f918078170ebbad03be9a)
+- [7.3.477 : scrolling back at the more prompt shows the wrong text](https://github.com/vim/vim/commit/12b0290d42efe9b6cf93f2903f12d76a100c60cb)
+- [7.3.478 : memory leak when the ':rv!' command reads a dict or list](https://github.com/vim/vim/commit/507cc8acf1175d7d15abc004ace214dfeffc031c)
+- [7.3.479 : 'cursorline' line number highlighting can't be set separately](https://github.com/vim/vim/commit/06ca513e2c25e2e2f63580f7d3d741236e17a19e)
+- [7.3.480 : when using ":qa" priority of changed buffers could be better](https://github.com/vim/vim/commit/970a1b82ecb74f4b89f5da71333d04ef27bbf075)
 
 
 ## 新着スクリプト
