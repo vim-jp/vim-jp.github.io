@@ -20,7 +20,7 @@ vnoremap <c-x> <c-x>gv
 ```
 *Windows だと `vunmap <C-X>` が必要*
 
-この様に vimrc に書いておけば連続で `<CTRL-A>`, `<CTRL-X>` をタイプする事も出来ます。詳しくは `:help v_CTRL-A` を参照下さい。
+この様に vimrc に書いておけば連続で `<CTRL-A>`, `<CTRL-X>` をタイプする事も出来ます。詳しくは [`:help v_CTRL-A`](http://vim-jp.org/vimdoc-ja/change.html#v_CTRL-A) を参照下さい。
 
 また `g<C-A>` と `g<C-X>` を使う事で簡単に連番を付与する事が出来るようになりました。
 
@@ -40,4 +40,4 @@ vnoremap <c-x> <c-x>gv
 4.
 ```
 
-一気に連番が出来上がりました。便利ですね。詳しくは `:help v_g_CTRL-A` を参照下さい。
+一気に連番が出来上がりました。便利ですね。詳しくは [`:help v_g_CTRL-A`](http://vim-jp.org/vimdoc-ja/change.html#v_g_CTRL-A) を参照下さい。

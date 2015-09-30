@@ -5,30 +5,30 @@ title: VisualStudio10を使ってのビルド方法
 
 VisualStudio10が既にインストールされている前提で説明します。
 
-2.  Mercurialのインストール
+1.  Gitのインストール
 
-    [Mercurial SCM](http://mercurial.selenic.com/)からMercurialをインストールします。
+    [Git](https://git-scm.com/)からGitをインストールします。
 
-3.  ソース取得
+2.  ソース取得
 
     コマンドプロンプトから以下を実行します。
 
-        hg clone https://vim.googlecode.com/hg/ vim
+        git clone https://github.com/vim/vim.git
 
-    `hg clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
+    `git clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
 
-        hg pull
-        hg update
+        git fetch
+        git merge
 
-    あるいは2つをまとめて、以下のコマンドでもOKです。
+    ローカルでの変更がない場合、あるいは2つをまとめて以下のコマンドでもOKです。
 
-        hg pull -u
+        git pull
 
-    特定のバージョンを指定して取得する場合は、`-r` オプションを指定します。
+    特定のバージョンを指定して取得する場合は、以下のコマンドを実行します。
 
-        hg update -r v7-4-393
+        git checkout v7.4.393
 
-4.  コンパイル
+3.  コンパイル
 
     `vim/src`フォルダに移動し以下のコマンドを実行します。
 

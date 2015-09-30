@@ -37,4 +37,4 @@ Linux上でVimからPython2とPython3を同時に使いたい場合
 なおKaoriya版Vimでは問題なくPython2とPython3が同時に利用できるようです。
 
 - [Windowsについて](http://www.kaoriya.net/blog/2013/01/30)
-- [MacVim Kaoriya](https://code.google.com/p/macvim-kaoriya/wiki/Readme#+perl_/_+python_/_+python3_/_+ruby)
+- [MacVim Kaoriya](https://github.com/splhack/macvim-kaoriya/wiki/Readme#perl--python--python3--ruby--lua)
