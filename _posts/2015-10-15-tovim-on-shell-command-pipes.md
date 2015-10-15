@@ -21,6 +21,8 @@ rm $TOVIMTMP
 $ firstcommand | tovim | othercommand
 ```
 
+![](/assets/images/post-tovim.gif)
+
 ただし reddit のトピック上に掲載されたスクリプトでは vim を異常終了させた場合、たとえば `:cquit` させた場合にコマンドパイプを中断出来ない問題があります。`set -e` を付け、かつ `trap` によりテンポラリファイルを削除する必要があるでしょう。
 
 ```sh
