@@ -3,8 +3,8 @@ vim74win: &vim74win
   version: '7.4.884'
   info: +kaoriya, 14/15MB ZIP
 vim74mac:
-  title: OS X 10.8/9/10
-  version: '7.4.769'
+  title: OS X 10.9/10/11
+  version: '7.4.922'
   info: +macvim-kaoriya, 14MB DMG
 
 vim74w32:
