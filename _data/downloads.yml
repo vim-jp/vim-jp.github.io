@@ -6,7 +6,7 @@ vim74mac: &vim74mac
   title: OS X 10.9/10/11
   version: '7.4.922'
   info: +macvim-kaoriya, 14MB DMG
-  url: http://files.kaoriya.net/goto/vim74mac
+  url: https://github.com/splhack/macvim-kaoriya/releases/latest 
 
 vim74w32: &vim74w32
   <<: *vim74win
