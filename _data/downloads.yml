@@ -2,16 +2,24 @@ vim74win: &vim74win
   title: Windows 32ビット/64ビット
   version: '7.4.884'
   info: +kaoriya, 14/15MB ZIP
-vim74mac:
-  title: OS X 10.8/9/10
-  version: '7.4.769'
+vim74mac: &vim74mac
+  title: OS X 10.9/10/11
+  version: '7.4.930'
   info: +macvim-kaoriya, 14MB DMG
+  url: https://github.com/splhack/macvim-kaoriya/releases/latest 
 
-vim74w32:
+vim74w32: &vim74w32
   <<: *vim74win
   title: Windows 32ビット
   info: +kaoriya, 14MB ZIP
-vim74w64:
+  url: http://files.kaoriya.net/goto/vim74w32
+vim74w64: &vim74w64
   <<: *vim74win
   title: Windows 64ビット
   info: +kaoriya, 15MB ZIP
+  url: http://files.kaoriya.net/goto/vim74w64
+
+list:
+  - *vim74w32
+  - *vim74w64
+  - *vim74mac

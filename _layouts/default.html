@@ -90,18 +90,10 @@
 					<dt>バイナリーダウンロード</dt>
 					<dd>
 					<ul>
-						<li><a href="http://files.kaoriya.net/goto/vim74w32"
-							class="download_button"><span>{{site.data.downloads.vim74w32.title}}</span><br />
-							<span class="info">({{ site.data.downloads.vim74w32.version }}, {{ site.data.downloads.vim74w32.info }})</span>
-						</a></li>
-						<li><a href="http://files.kaoriya.net/goto/vim74w64"
-							class="download_button"><span>{{site.data.downloads.vim74w64.title}}</span><br />
-							<span class="info">({{ site.data.downloads.vim74w64.version }}, {{ site.data.downloads.vim74w64.info }})</span>
-						</a></li>
-						<li><a href="http://files.kaoriya.net/goto/vim74mac"
-							class="download_button"><span>{{site.data.downloads.vim74mac.title}}</span><br />
-							<span class="info">({{ site.data.downloads.vim74mac.version }}, {{ site.data.downloads.vim74mac.info }})</span>
-						</a></li>
+						{% for t in site.data.downloads.list %}
+						<li><a href="{{t.url}}" class="download_button">{{t.title}}</span><br />
+							<span class="info">({{t.version}}, {{t.info}})</span></a></li>
+						{% endfor %}
 					</ul>
 					</dd>
 					<dt><a href="http://vim-jp.org/vimdoc-ja">日本語マニュアル</a></dt>
