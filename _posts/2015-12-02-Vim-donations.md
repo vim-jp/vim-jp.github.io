@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: "vim_announce: Vim 献金"
+title: "vim_announce: Vim への寄付金"
 ---
 
 [vim_announce: Vim donations](https://groups.google.com/d/msg/vim_announce/c6qJ2aTmwvA/tix0ZhcGCgAJ) の勝手訳です。
