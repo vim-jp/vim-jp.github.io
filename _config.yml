@@ -48,3 +48,5 @@ exclude:
 gems:
   - jemoji
   - jekyll-sitemap
+
+hotkeys: true
