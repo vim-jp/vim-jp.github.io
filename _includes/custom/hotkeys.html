@@ -1,0 +1,35 @@
+<!--<script type="text/javascript" src="https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>-->
+<script type="text/javascript" src="/assets/javascripts/jquery.hotkeys.js"></script>
+<script>
+$(function(){
+	$(document).bind('keydown', 'j', function(){      
+		$(".move:focus").closest('li').next().find('a.move').focus();   
+	})
+});
+
+$(function(){
+	$(document).bind('keydown', 'k', function(){      
+		$(".move:focus").closest('li').prev().find('a.move').focus();   
+	})
+});
+
+//$(function(){
+//	$(document).bind('keydown', 'g', function(){      
+//		document.location.href = '#';
+//	})
+//});
+//
+//$(function(){
+//	$(document).bind('keydown', 'Shift+g', function(){      
+//		document.location.href = '#footer';
+//	})
+//});
+
+$('.move').click(function() {
+    this.focus();
+});
+
+$(function() {
+    $('#first').focus();
+});
+</script>
