@@ -49,4 +49,4 @@ gems:
   - jemoji
   - jekyll-sitemap
 
-hotkeys: false
+hotkeys: true
