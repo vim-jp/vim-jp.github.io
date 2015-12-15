@@ -1,9 +1,15 @@
 <!--<script type="text/javascript" src="https://raw.githubusercontent.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>-->
 <script type="text/javascript" src="/assets/javascripts/jquery.hotkeys.js"></script>
 <script>
-$(function(){
+var num = 0;
+$(function() {
 	$(document).bind('keydown', 'j', function(){      
+	if(num == 1){
 		$(".move:focus").closest('li').next().find('a.move').focus();   
+	} else {
+		$('#first').focus();
+		num = 1;
+	}
 	})
 });
 
@@ -27,9 +33,5 @@ $(function(){
 
 $('.move').click(function() {
     this.focus();
-});
-
-$(function() {
-    $('#first').focus();
 });
 </script>
