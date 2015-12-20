@@ -13,12 +13,6 @@ permalink:   date
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "superscript"]
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
 
 exclude:
   - 'scripts'
