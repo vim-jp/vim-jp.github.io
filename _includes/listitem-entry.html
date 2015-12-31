@@ -1,7 +1,9 @@
 <li>
+<a href="{{ post.url }}" class="move">
 <div class="entry-head">
-	<div class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</div>
-        <div class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a>&nbsp;{% assign hatena-url = post.url %}{% include hatena.html %}</div>
+	<span class="entry-label">{{ post.date | date: "%Y/%m/%d" }}&nbsp;&raquo;&nbsp;</span>
+	<span class="entry-title">{{ post.title }}&nbsp;{% assign hatena-url = post.url %}{% include hatena.html %}</span>
 </div>
+</a>
 <div class="entry-digest">{{ post.content | strip_html | truncate: 100 }}</div>
 </li>

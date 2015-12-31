@@ -18,37 +18,33 @@ title: Vimのユーザーと開発者を結ぶコミュニティサイト
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="vim_jp" data-lang="ja">ツイート</a>
 <a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" /></a>
 
-<h2>ブログ</h2>
 <ul class="entry-list2">
-{% for post in site.categories.blog limit: 5 %}
-{% include listitem-entry.html %}
-{% endfor %}
-</ul>
-<p><a href="pages.html">全記事一覧はこちら</a></p>
 
-<h2>月刊Vimマガジン</h2>
-<ul class="entry-list2">
-{% for post in site.categories.vimmagazine limit: 5 %}
-{% include listitem-entry.html %}
-{% endfor %}
-</ul>
-<p><a href="magazines.html">バックナンバーはこちら</a></p>
+	<li> <a id="first" href="pages.html" class='move'><h2>ブログ</h2></a> </li>
+	{% for post in site.categories.blog limit: 5 %}
+	{% include listitem-entry.html %}
+	{% endfor %}
+	<li> <a href="pages.html" class="move">全記事一覧はこちら</a> </li>
 
-<h2>読み物</h2>
-<ul class="entry-list2">
-	<li>&raquo;&nbsp;<a href="/docs/how_to_write_patches.html">パッチの書き方</a>&nbsp;{% assign hatena-url = '/docs/how_to_write_patches.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/patches_list.html">パッチリスト</a>&nbsp;{% assign hatena-url = '/docs/patches_list.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/build_windows_msvc.html">VisualStudio10を使ってのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_windows_msvc.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/build_windows_mingw.html">MinGWを使ってのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_windows_mingw.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/build_linux.html">Linuxでのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_linux.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/install_windows.html">Windowsへのインストール方法</a>&nbsp;{% assign hatena-url = '/docs/install_windows.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/docs/binary.html">バイナリーを配布しているサイトの紹介</a>&nbsp;{% assign hatena-url = '/docs/binary.html' %}{% include hatena.html %}</li>
-	<li>&raquo;&nbsp;<a href="/tips/list.html">Vim に関するTips</a>&nbsp;{% assign hatena-url = '/tips/list.html' %}{% include hatena.html %}</li>
+	<li> <a href="magazines.html" class="move"><h2>月刊Vimマガジン</h2></a> </li>
+	{% for post in site.categories.vimmagazine limit: 5 %}
+	{% include listitem-entry.html %}
+	{% endfor %}
+	<li> <a href="magazines.html" class="move">バックナンバーはこちら</a> </li>
+
+	<li> <a href="links.html" class="move"><h2>読み物</h2></a> </li>
+	<li>&raquo;&nbsp;<a href="/docs/how_to_write_patches.html" class="move">パッチの書き方</a>&nbsp;{% assign hatena-url = '/docs/how_to_write_patches.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/patches_list.html" class="move">パッチリスト</a>&nbsp;{% assign hatena-url = '/docs/patches_list.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/build_windows_msvc.html" class="move">VisualStudio10を使ってのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_windows_msvc.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/build_windows_mingw.html" class="move">MinGWを使ってのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_windows_mingw.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/build_linux.html" class="move">Linuxでのビルド方法</a>&nbsp;{% assign hatena-url = '/docs/build_linux.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/install_windows.html" class="move">Windowsへのインストール方法</a>&nbsp;{% assign hatena-url = '/docs/install_windows.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/binary.html" class="move">バイナリーを配布しているサイトの紹介</a>&nbsp;{% assign hatena-url = '/docs/binary.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/tips/list.html" class="move">Vim に関するTips</a>&nbsp;{% assign hatena-url = '/tips/list.html' %}{% include hatena.html %}</li>
+	<li>&raquo;&nbsp;<a href="/docs/books/vim-technique-bible/corrigenda.html" class="move">Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表</a></li>
+	<li>&raquo;&nbsp;<a href="/docs/books/vimscript-technique-bible/corrigenda.html" class="move">Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤表</a></li>
 </ul>
-<ul class="entry-list2">
-	<li>&raquo;&nbsp;<a href="/docs/books/vim-technique-bible/corrigenda.html">Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表</a></li>
-	<li>&raquo;&nbsp;<a href="/docs/books/vimscript-technique-bible/corrigenda.html">Vim scriptテクニックバイブル ～Vim使いの魔法の杖 正誤表</a></li>
-</ul>
+
 <br />
 
 {% include twitter-widget.html %}

@@ -1,0 +1,20 @@
+<script type="text/javascript" src="/assets/javascripts/jquery.hotkeys.js"></script>
+<script>
+$(function() {
+  var first = true;
+
+  $(document).bind('keydown', 'j', function(){
+    if (first) { first = false; $('#first').focus(); return; }
+    $(".move:focus").closest('li').next().find('a.move').focus();
+  })
+
+  $(document).bind('keydown', 'k', function(){      
+    if (first) { first = false; $('#first').focus(); return; }
+    $(".move:focus").closest('li').prev().find('a.move').focus();
+  })
+
+  $('.move').click(function() {
+    this.focus();
+  });
+});
+</script>
