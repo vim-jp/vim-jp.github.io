@@ -6,6 +6,7 @@ title: Vim Magazine 12 月号
 
 ## 今月の新機能
 
+- 7.4.945: `assertEqual()`, `assertFalse()`, `assertTrue()` 関数が `assert_equal()`, `assert_false()`, `assert_true()` に変更されました。
 - 7.4.951: `sort()` 関数に 'N' フラグが追加されました。
 - 7.4.984: `search()` 関数に 'z' フラグが追加されました。
 
