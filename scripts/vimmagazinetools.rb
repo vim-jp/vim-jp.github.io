@@ -13,10 +13,10 @@ VIMPATCH_URL = "http://ftp.vim.org/pub/vim/patches/7.4/%s"
 VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/7.4/README"
 VIMSCRIPT_URL = "http://www.vim.org/scripts/script.php?script_id=%s"
 VIMSCRIPT_LIST_URL = "http://www.vim.org/scripts/script_search_results.php?&show_me=99999"
-VIMHG_COMMIT_URL = "http://code.google.com/p/vim/source/detail?r=%s"
-VIMHG_TAGS_URL = "http://vim.googlecode.com/hg/.hgtags"
+VIM_GITHUB_COMMIT_URL = "https://github.com/vim/vim/commit/%s"
 GITHUBAPI_ISSUE_LIST_URL = "https://api.github.com/repos/%s/%s/issues"
 GITHUBAPI_ISSUE_URL = "https://api.github.com/repos/%s/%s/issues/%s"
+GITHUBAPI_TAG_LIST_URL = "https://api.github.com/repos/vim/vim/git/refs/tags"
 
 
 def count_if(seq, &cond)
@@ -86,7 +86,7 @@ end
 
 def vimpatch_all()
   items = []
-  tag2rev = vimhg_tags()
+  tag2sha = github_git_tags("vim", "vim")
   readme = httpget(VIMPATCH_README_URL).entity.force_encoding("UTF-8")
   for line in readme.split(/\r\n|\r|\n/)
     m = line.match(/^\s*(?#size)(\d+)  (?#version)(\d\.\d\.\d{3,4})  (?#summary)(.*)$/)
@@ -99,14 +99,14 @@ def vimpatch_all()
     e["summary"] = m[3]
     # e["url"] = sprintf(VIMPATCH_URL, e["version"])
     major, minor, patchlevel = e["version"].split(".")
-    tag = "v#{major}-#{minor}-#{patchlevel}"
+    tag = "v#{major}.#{minor}.#{patchlevel}"
     e["tag"] = tag
-    if tag2rev.has_key?(tag)
-      e["revision"] = tag2rev[tag]
-      e["url"] = sprintf(VIMHG_COMMIT_URL, e["revision"])
+    if tag2sha.has_key?(tag)
+      e["sha"] = tag2sha[tag]
+      e["url"] = sprintf(VIM_GITHUB_COMMIT_URL, e["sha"])
     else
       # tag is missing
-      e["revision"] = ""
+      e["sha"] = ""
       e["url"] = ""
     end
     items << e
@@ -127,17 +127,6 @@ def cmp_version(a, b)
     return a_patchlevel <=> b_patchlevel
   end
   return 0
-end
-
-
-def vimhg_tags()
-  hgtags = httpget(VIMHG_TAGS_URL).entity.force_encoding("UTF-8")
-  tags = {}
-  for line in hgtags.split(/\r\n|\r|\n/)
-    rev, tag = line.split()
-    tags[tag] = rev
-  end
-  return tags
 end
 
 
@@ -218,6 +207,18 @@ def githubissue_all(user, repo)
   items = items + githubissue_getallpages(url + "&state=closed")
   items.sort_by!{|e| e["number"]}
   return items
+end
+
+
+def github_git_tags(user, repo)
+  url = sprintf(GITHUBAPI_TAG_LIST_URL, user, repo)
+  refs = JSON.load(httpget(url).entity.force_encoding("UTF-8"))
+  tags = {}
+  for ref in refs
+    _refs, _tags, tag = ref["ref"].split(/\//)
+    tags[tag] = ref["object"]["sha"]
+  end
+  return tags
 end
 
 
