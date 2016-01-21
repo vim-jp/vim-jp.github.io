@@ -50,11 +50,11 @@ title: MinGWを使ってのビルド方法
 
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
           PERL=c:/mingw64/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
-            PERLEXE=c:/msys64/mingw64/bin/perl.exe
+            PERLEXE=c:/msys64/mingw64/bin/perl.exe ^
             PERLLIB=c:/msys64/mingw64/lib/perl5/core_perl ^
-          PYTHON=c:/msys64/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27
+          PYTHON=c:/msys64/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
             PYTHON_HOME=c:/msys64/mingw64 ^
-            PYTHONINC=-Ic:/msys64/mingw64/include/python2.7 \
+            PYTHONINC=-Ic:/msys64/mingw64/include/python2.7 ^
             DYNAMIC_PYTHON_DLL=libpython2.7.dll ^
           RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
           CSCOPE=yes NETBEANS=yes ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
