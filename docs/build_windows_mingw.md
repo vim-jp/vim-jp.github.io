@@ -59,8 +59,9 @@ title: MinGWを使ってのビルド方法
           RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
           CSCOPE=yes NETBEANS=yes ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
 
-    * 複数行に跨るのでバッチファイルに記載して実行して下さい。
-    * ARCH は i686 または x86-64 を指定して下さい。
+    注意1) 複数行に跨るのでバッチファイルに記載して実行して下さい。
+
+    注意2) ARCH は i686 または x86-64 を指定して下さい。
 
     Vim 7.4.393以降で使えるようになったDirectWriteを有効にするには、MinGWの派生版である[MinGW-w64](http://mingw-w64.sourceforge.net/)を使ってコンパイルする必要があります。
     32bit版は `DIRECTX=yes ARCH=i686`、64bit版は `DIRECTX=yes ARCH=x86-64` を指定する必要があります。
