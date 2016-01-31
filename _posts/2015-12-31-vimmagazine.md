@@ -6,12 +6,12 @@ title: Vim Magazine 12 月号
 
 ## 今月の新機能
 
-- 7.4.944: `assert_equal()`, `assert_false()`, `assert_true()` 関数が追加されました。
+- 7.4.945: `assertEqual()`, `assertFalse()`, `assertTrue()` 関数が `assert_equal()`, `assert_false()`, `assert_true()` に変更されました。
 - 7.4.951: `sort()` 関数に 'N' フラグが追加されました。
+- 7.4.984: `search()` 関数に 'z' フラグが追加されました。
 
 ## リリース情報
 
-- [7.4.944 : writing tests for Vim script is hard](https://github.com/vim/vim/commit/43345546ae63710441f066648b8485fb545b3801)
 - [7.4.945 : (after 7.4.944) new style testing is incomplete](https://github.com/vim/vim/commit/683fa185a4b4ed7595e5942901548b8239ed5cdb)
 - [7.4.946 : (after 7.4.945) missing changes in source file](https://github.com/vim/vim/commit/bbfbaf9741deebb9f1ed790885bd571c4cbce17a)
 - [7.4.947 : test&#x5f;listchars fails with MingW](https://github.com/vim/vim/commit/5311c02f25eed8f34e8a80becb98e86264f371c3)
