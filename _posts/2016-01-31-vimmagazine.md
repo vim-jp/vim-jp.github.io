@@ -18,6 +18,10 @@ title: Vim Magazine 1 月号
 
     mattn さんの連載記事。
 
+- [TokyoVim#26](http://tokyovim.connpass.com/event/25809/)
+
+    Vimに関する何かをやる会です。 2月20日(土) 東京
+
 
 ## 今月の新機能
 
