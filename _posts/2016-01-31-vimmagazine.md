@@ -31,7 +31,7 @@ title: Vim Magazine 1 月号
 - 7.4.1143: `:sort` コマンドと `sort()` 関数が浮動小数点数に対応しました。
 - 7.4.1145: デフォルトのビルド構成が `huge` になりました。
 - 7.4.1150: `feedkeys()` 関数に `x` フラグが追加されました。
-- 7.4.1154: `jsonencode()、`jsondecode()` 関数と `v:false`、`v:true`、`v:null`、`v:none` が追加されました。
+- 7.4.1154: `jsonencode()`、`jsondecode()` 関数と `v:false`、`v:true`、`v:null`、`v:none` が追加されました。
 - 7.4.1191: `connect()`、`disconnect()`、`sendexpr()`、`sendraw()` 関数が追加されました。
 
 ## リリース情報
