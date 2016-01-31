@@ -14,6 +14,11 @@ title: Vim Magazine 1 月号
 
     [backspace.fm](http://backspace.fm/) で Vim-side が始まりました。
 
+- [Software Design 2016年2月号: Vimの細道【5】Vimで何でも読み書きする](http://gihyo.jp/magazine/SD/archive/2016/201602)
+
+    mattn さんの連載記事。
+
+
 ## 今月の新機能
 
 - 7.4.1005: `:smile` コマンドが追加されました。
