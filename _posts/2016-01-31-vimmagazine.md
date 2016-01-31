@@ -10,6 +10,10 @@ title: Vim Magazine 1 月号
 
     mattn さんのインタビュー記事。
 
+- [Vim-side #001: Vimはじめました](http://backspace.fm/episode/v001/)
+
+    [backspace.fm](http://backspace.fm/) で Vim-side が始まりました。
+
 ## 今月の新機能
 
 - 7.4.1005: `:smile` コマンドが追加されました。
