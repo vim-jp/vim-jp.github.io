@@ -4,6 +4,7 @@ category: vimmagazine
 title: Vim Magazine 1 月号
 ---
 
+
 ## 話題
 
 - [How I Vim - Yasuhiro Matsumoto, a.k.a. mattn](http://howivim.com/2015/mattn/)
@@ -17,10 +18,6 @@ title: Vim Magazine 1 月号
 - [Software Design 2016年2月号: Vimの細道【5】Vimで何でも読み書きする](http://gihyo.jp/magazine/SD/archive/2016/201602)
 
     mattn さんの連載記事。
-
-- [TokyoVim#26](http://tokyovim.connpass.com/event/25809/)
-
-    Vimに関する何かをやる会です。 2月20日(土) 東京
 
 
 ## 今月の新機能
@@ -318,4 +315,5 @@ Open : 237 (-5) | Closed : 574 (+14)
 - [Issue #809 : vim.exe で channel が有効にならない](https://github.com/vim-jp/issues/issues/809)
 - [Issue #810 : let v:\['errors'\] = 123 | call assert&#x5f;equal(1,2)でSEGVする](https://github.com/vim-jp/issues/issues/810)
 - [Issue #811 : ヘルプのtype()でtypo](https://github.com/vim-jp/issues/issues/811)
+
 

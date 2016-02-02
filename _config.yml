@@ -50,3 +50,9 @@ gems:
   - jekyll-sitemap
 
 hotkeys: true
+
+comment: true
+permalink: /:categories/:year/:month/:day/:title
+
+disqus: true
+
