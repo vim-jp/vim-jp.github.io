@@ -1,9 +1,11 @@
 ---
 # vim:set ts=2 sts=2 sw=2 noet:
-layout: disqus
+layout: default
 ---
+<article>
 <div class="post">
-<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+	<h2><a href="{{ page.url }}" class="permalink">{{ page.title }}</a></h2>
+
 Posted at <span>{{ page.date | date: "%Y/%m/%d" }}</span><br />
 <div class="fb-like" data-href="{{ site.base-url }}{{ page.url }}" data-layout="button_count"></div>
 <div class="g-plusone" data-href="{{ site.base-url }}{{ page.url }}" data-size="medium"></div>
@@ -11,8 +13,20 @@ Posted at <span>{{ page.date | date: "%Y/%m/%d" }}</span><br />
 <a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ page.url | escape }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" /></a>
 <br />
 <br />
+
 {{ content }}
+
 </div>
 <br />
 <a href="/">もどる</a>
 <br />
+
+{% if site.disqus == true %}
+	{% include custom/disqus.html %}
+{% endif %}
+
+{% if site.comment == true %}
+	{% include custom/comment.html %}
+{% endif %}
+
+</article>
