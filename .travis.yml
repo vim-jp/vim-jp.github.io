@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.0.0
+  - 2.2.4
 before_script: "bundle show"
 script: "bundle exec jekyll build"
 after_script: "find _site -type f"
