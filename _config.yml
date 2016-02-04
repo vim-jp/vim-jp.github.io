@@ -8,6 +8,7 @@ exclude:
   - 'Gemfile'
   - 'README.md'
   - 'vendor'
+# デフォルトと同じだが「utf-8で記事を書こう」という宣言的な意味合で残した。
 encoding: utf-8
 
 ### Filtering Content
@@ -19,8 +20,8 @@ gems:
   - jekyll-sitemap
 
 ### Outputting
-# default と同じだが、万が一デフォルトが変わってしまうと記事のURLが変わってしま
-# いクリティカルなので、明示的に指定した。
+# デフォルトと同じだが、万が一デフォルトが変わってしまうと記事のURLが変わってし
+# まいクリティカルなので、明示的に指定した。
 permalink: date
 
 ### Markdown Processors
