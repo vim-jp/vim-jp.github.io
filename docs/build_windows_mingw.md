@@ -34,21 +34,34 @@ title: MinGWを使ってのビルド方法
 
     `vim/src`フォルダに移動し以下のコマンドを実行します。
 
-        mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes
+        mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ^
           ICONV=yes DEBUG=no
-
-    ※実際は1行
 
     もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
 
-        mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes
-          ICONV=yes PERL=C:\strawberry\perl DYNAMIC_PERL=yes
-          PERL_VER=512 PYTHON=c:\python27 DYNAMIC_PYTHON=yes
-          PYTHON_VER=27 RUBY=c:\ruby193 DYNAMIC_RUBY=yes RUBY_VER=19
-          RUBY_VER_LONG=1.9.1 CSCOPE=yes NETBEANS=yes
-          DEBUG=no
+        mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
+          PERL=C:\strawberry\perl DYNAMIC_PERL=yes PERL_VER=512 ^
+          PYTHON=c:\python27 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
+          RUBY=c:\ruby193 DYNAMIC_RUBY=yes RUBY_VER=19 ^
+          RUBY_VER_LONG=1.9.1 CSCOPE=yes NETBEANS=yes ^
+          ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
 
-    ※実際は1行
+    msys2 付属の perl/python/ruby を使ってビルドする場合は以下の様に指定します。
+
+        mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
+          PERL=c:/mingw64/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
+            PERLEXE=c:/msys64/mingw64/bin/perl.exe ^
+            PERLLIB=c:/msys64/mingw64/lib/perl5/core_perl ^
+          PYTHON=c:/msys64/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
+            PYTHON_HOME=c:/msys64/mingw64 ^
+            PYTHONINC=-Ic:/msys64/mingw64/include/python2.7 ^
+            DYNAMIC_PYTHON_DLL=libpython2.7.dll ^
+          RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
+          CSCOPE=yes NETBEANS=yes ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
+
+    注意1) 複数行に跨るのでバッチファイルに記載して実行して下さい。
+
+    注意2) ARCH は i686 または x86-64 を指定して下さい。
 
     Vim 7.4.393以降で使えるようになったDirectWriteを有効にするには、MinGWの派生版である[MinGW-w64](http://mingw-w64.sourceforge.net/)を使ってコンパイルする必要があります。
     32bit版は `DIRECTX=yes ARCH=i686`、64bit版は `DIRECTX=yes ARCH=x86-64` を指定する必要があります。
