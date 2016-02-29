@@ -96,7 +96,7 @@ title: Vim Magazine 2 月号
 - [7.4.1266 : a BufAdd autocommand may cause an ml&#x5f;get error](https://github.com/vim/vim/commit/ab9fc7e0cf22bcee119b62d3433cac60f405e645)
 - [7.4.1267 : easy to miss handling all types of variables](https://github.com/vim/vim/commit/a03f23351588f04276469cd7742b7ec655bb604b)
 - [7.4.1268 : waittime is used as seconds instead of milliseconds](https://github.com/vim/vim/commit/26dfc41335ef47fe765643148ae980be388084ec)
-- [7.4.1269 : encoding {'key':v:none} to JSON doesn't give an error](https://github.com/vim/vim/commit/4f8b8faec31a934920a723053e8dcf47b6fac08c)
+- [7.4.1269 : encoding {'key': v:none} to JSON doesn't give an error](https://github.com/vim/vim/commit/4f8b8faec31a934920a723053e8dcf47b6fac08c)
 - [7.4.1270 : warnings for missing values in switch](https://github.com/vim/vim/commit/81e7a9c3fb37cad46c8f04a5ce871fb06819a371)
 - [7.4.1271 : assert&#x5f;false(v:false) reports an error](https://github.com/vim/vim/commit/3712792637516aea7acf76a11533be1066952820)
 - [7.4.1272 : using future enum value](https://github.com/vim/vim/commit/1701481c53f4e6756038c9c00d51d491a8f42c65)
