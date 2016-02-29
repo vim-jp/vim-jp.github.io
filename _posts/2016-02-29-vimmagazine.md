@@ -29,7 +29,7 @@ title: Vim Magazine 2 月号
 - 7.4.1274: `job_start()`, `job_status()`, `job_stop()` 関数が追加されました。
 - 7.4.1279: `jsencode()`, `jsdecode()` 関数が追加されました。
 - 7.4.1300: `disable_char_avail_for_testing()` 関数が追加されました。
-- 7.4.1304: json 関係の関数が js_ プリフィクス付きの名前に変更されました。
+- 7.4.1304: `jsonencode()`, `jsondecode()`, `jsencode()`, `jsdecode()` 関数が `json_encode()`, `json_decode()`, `js_encode()`, `js_decode()` に名称変更されました。
 - 7.4.1310: `ch_logfile()` 関数が追加されました。
 - 7.4.1364: Win16 コードが削除されました。
 - 7.4.1372: `ch_read()`, `ch_readraw()` 関数が追加されました。
