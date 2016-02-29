@@ -1,10 +1,10 @@
 vim74win: &vim74win
   title: Windows 32ビット/64ビット
-  version: '7.4.1161'
+  version: '7.4.1444'
   info: +kaoriya, 15/16MB ZIP
 vim74mac: &vim74mac
   title: OS X 10.9/10/11
-  version: '7.4.1147'
+  version: '7.4.1265'
   info: +macvim-kaoriya, 14MB DMG
   url: https://github.com/splhack/macvim-kaoriya/releases/latest 
 

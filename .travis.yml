@@ -1,6 +1,7 @@
 language: ruby
 rvm:
-  - 2.0.0
+  # RubyInstallerで提供される最新版を、指定・利用の目安としている
+  - 2.2.4
 before_script: "bundle show"
 script: "bundle exec jekyll build"
 after_script: "find _site -type f"

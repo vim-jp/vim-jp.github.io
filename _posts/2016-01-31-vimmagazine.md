@@ -10,6 +10,19 @@ title: Vim Magazine 1 月号
 
     mattn さんのインタビュー記事。
 
+- [Vim-side #001: Vimはじめました](http://backspace.fm/episode/v001/)
+
+    [backspace.fm](http://backspace.fm/) で Vim-side が始まりました。
+
+- [Software Design 2016年2月号: Vimの細道【5】Vimで何でも読み書きする](http://gihyo.jp/magazine/SD/archive/2016/201602)
+
+    mattn さんの連載記事。
+
+- [TokyoVim#26](http://tokyovim.connpass.com/event/25809/)
+
+    Vimに関する何かをやる会です。 2月20日(土) 東京
+
+
 ## 今月の新機能
 
 - 7.4.1005: `:smile` コマンドが追加されました。
@@ -31,7 +44,7 @@ title: Vim Magazine 1 月号
 - 7.4.1143: `:sort` コマンドと `sort()` 関数が浮動小数点数に対応しました。
 - 7.4.1145: デフォルトのビルド構成が `huge` になりました。
 - 7.4.1150: `feedkeys()` 関数に `x` フラグが追加されました。
-- 7.4.1154: `jsonencode()、`jsondecode()` 関数と `v:false`、`v:true`、`v:null`、`v:none` が追加されました。
+- 7.4.1154: `jsonencode()`、`jsondecode()` 関数と `v:false`、`v:true`、`v:null`、`v:none` が追加されました。
 - 7.4.1191: `connect()`、`disconnect()`、`sendexpr()`、`sendraw()` 関数が追加されました。
 
 ## リリース情報

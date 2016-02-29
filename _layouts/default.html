@@ -57,7 +57,7 @@
     $.each(items, function() {
       $('<li/>').append(
         $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
-      ).append($('<br/>')).append($('<span/>').text(this.description)).appendTo('#patches-list');
+      ).append($('<br/>')).append($('<span/>').text(this.description.replace(/^patch\s+\S+\n/, ''))).appendTo('#patches-list');
     });
   });
 </script>
