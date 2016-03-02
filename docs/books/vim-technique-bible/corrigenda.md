@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: Vimテクニックバイブル 作業効率をカイゼンする150の技 正誤表
+disqus: true
+
 ---
 # 1-2 project.vimを使いやすくする
 * P.26 「インストール・設定」を差し替えます。<br />

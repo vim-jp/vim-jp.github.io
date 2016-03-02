@@ -86,6 +86,9 @@
 		<div id="content">
 			<div class="entry">
 			{{ content }}
+			{% if page.disqus %}
+				{% include disqus.html %}
+			{% endif %}
 			</div>
 		</div>
 		<div class="links">
