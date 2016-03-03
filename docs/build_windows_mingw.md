@@ -5,8 +5,7 @@ title: MinGWを使ってのビルド方法
 
 1.  msys2 のインストール
 
-    以前は Windows 上の gcc コンパイラをインストールする為に [MinGW \| Minimalist GNU for Windows](http://www.mingw.org/) をダウンロードしましたが、最近は msys2 を使うのが一般的です。
-    以下で msys2 がインストール済みで gcc コンパイラが動作する前提で記述します。
+    以前は Windows 上の gcc コンパイラをインストールする為に [MinGW \| Minimalist GNU for Windows](http://www.mingw.org/) をダウンロードしましたが、最近は <a href="https://msys2.github.io/">msys2</a> を使うのが一般的です。以下は msys2 がインストール済みでかつ gcc コンパイラが動作する前提で記述しています。
 
 2.  Gitのインストール
 
