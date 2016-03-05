@@ -16,10 +16,13 @@ if !ARGV.empty? and rel = conf[ARGV[0]]
 layout: post
 category: release
 title: #{rel['title']} #{rel['version']} リリース
+
 ---
 ## #{rel['title']} #{rel['version']} がリリースされました。
 
 > #{rel['info']}
+
+ページ右のボタンよりダウンロードしてください。
 EOS
   }
   puts <<"EOS"
