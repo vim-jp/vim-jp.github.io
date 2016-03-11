@@ -14,7 +14,7 @@ title: Vim Magazine 2 月号
 
     tyru さんのインタビュー記事。
 
-- [Software Design 2016年3月号: Vimの細道【6】mapを極める者がVimを制す](http://gihyo.jp/magazine/SD/archive/2016/2016)
+- [Software Design 2016年3月号: Vimの細道【6】mapを極める者がVimを制す](http://gihyo.jp/magazine/SD/archive/2016/201603)
 
     mattn さんの連載記事。
 
