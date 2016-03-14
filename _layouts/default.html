@@ -10,11 +10,11 @@
 <link rel="stylesheet" href="/assets/css/table.css" type="text/css" />
 <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
 <link rel="stylesheet" href="/css/default.css" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS" href="//vim-jp.org/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://vim-jp.org/rss.xml" />
 <link rel="canonical" href="{{ site.base-url }}{{ page.url }}" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	(function(doc, script) {
 		window.___gcfg = {lang: 'ja'};
@@ -40,8 +40,8 @@
 </script>
 
 <!-- 日本語マニュアル検索用 -->
-<link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" />
-<script src="//www.google.com/jsapi" type="text/javascript"></script>
+<link rel="stylesheet" href="http://www.google.com/cse/style/look/default.css" type="text/css" />
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
   google.load("search", "1", {language : "ja"});
   google.setOnLoadCallback(function() {
@@ -53,7 +53,7 @@
     customSearchControl.draw('VimdocJaSearch', options);
   }, true);
 
-  $.getJSON("//vim-jp.herokuapp.com/patches/json?callback=?", function(items) {
+  $.getJSON("http://vim-jp.herokuapp.com/patches/json?callback=?", function(items) {
     $.each(items, function() {
       $('<li/>').append(
         $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
@@ -65,7 +65,7 @@
 <script type="text/javascript">
   Mousetrap.bind("I space h a t e space V i m enter", function(e) {
     console.log(e);
-    window.location = "//www.gnu.org/software/emacs/";
+    window.location = "http://www.gnu.org/software/emacs/";
   });
 </script>
 </head>
@@ -101,16 +101,16 @@
 						{% endfor %}
 					</ul>
 					</dd>
-					<dt><a href="//vim-jp.org/vimdoc-ja">日本語マニュアル</a></dt>
+					<dt><a href="http://vim-jp.org/vimdoc-ja">日本語マニュアル</a></dt>
 					<dd>
 					<div id="VimdocJaSearch"></div>
 					<div>検索もできます。</div>
 					</dd>
-					<dt><a href="//github.com/vim-jp/issues/issues">Issues</a></dt>
+					<dt><a href="http://github.com/vim-jp/issues/issues">Issues</a></dt>
 					<dd>日本語で問題報告できるITS(Issue Tracker System)。</dd>
-					<dt><a href="//vim-jp.org/reading-vimrc">vimrc読書会</a></dt>
+					<dt><a href="http://vim-jp.org/reading-vimrc">vimrc読書会</a></dt>
 					<dd>毎週誰かのvimrcを読み合わせします。</dd>
-					<dt><a href="//vim-jp.org/vim-users-jp">vim-users-jp</a></dt>
+					<dt><a href="http://vim-jp.org/vim-users-jp">vim-users-jp</a></dt>
 					<dd>vim-users-jpの過去記事を掲載しています。</dd>
 					<dt><a href="/links.html">リンク集</a></dt>
 					<dd>もっとVimの情報をゲットしよう! <a href="/vimmers2/">Vimmers2</a> (<a href="/vimmers/">旧版</a>)を見てみよう!</dd>
