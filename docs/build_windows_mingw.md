@@ -49,31 +49,31 @@ title: MinGWを使ってのビルド方法
     msys2 付属の perl/python/ruby を使ってビルドする場合は以下の様に指定します。
 
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
-          PERL=c:/mingw64/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
-            PERLEXE=c:/msys64/mingw64/bin/perl.exe ^
-            PERLLIB=c:/msys64/mingw64/lib/perl5/core_perl ^
-          PYTHON=c:/msys64/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
-            PYTHON_HOME=c:/msys64/mingw64 ^
-            PYTHONINC=-Ic:/msys64/mingw64/include/python2.7 ^
+          PERL=c:/msys2/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
+            PERLEXE=c:/msys2/mingw64/bin/perl.exe ^
+            PERLLIB=c:/msys2/mingw64/lib/perl5/core_perl ^
+          PYTHON=c:/msys2/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
+            PYTHON_HOME=c:/msys2/mingw64 ^
+            PYTHONINC=-Ic:/msys2/mingw64/include/python2.7 ^
             DYNAMIC_PYTHON_DLL=libpython2.7.dll ^
-          RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
+          RUBY=c:/msys2/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
           CSCOPE=yes NETBEANS=yes ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
 
     Python3 も足したいのであれば
 
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
-          PERL=c:/mingw64/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
-            PERLEXE=c:/msys64/mingw64/bin/perl.exe ^
-            PERLLIB=c:/msys64/mingw64/lib/perl5/core_perl ^
-          PYTHON=c:/msys64/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
-            PYTHON_HOME=c:/msys64/mingw64 ^
-            PYTHONINC=-Ic:/msys64/mingw64/include/python2.7 ^
+          PERL=c:/msys2/mingw64 DYNAMIC_PERL=yes PERL_VER=522 ^
+            PERLEXE=c:/msys2/mingw64/bin/perl.exe ^
+            PERLLIB=c:/msys2/mingw64/lib/perl5/core_perl ^
+          PYTHON=c:/msys2/mingw64 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
+            PYTHON_HOME=c:/msys2/mingw64 ^
+            PYTHONINC=-Ic:/msys2/mingw64/include/python2.7 ^
             DYNAMIC_PYTHON_DLL=libpython2.7.dll ^
-          PYTHON3=c:/msys64/mingw64 DYNAMIC_PYTHON3=yes PYTHON3_VER=35 ^
-            PYTHON3_HOME=c:/msys64/mingw64/ ^
-            PYTHON3INC=-Ic:/msys64/mingw64/include/python3.5m ^
+          PYTHON3=c:/msys2/mingw64 DYNAMIC_PYTHON3=yes PYTHON3_VER=35 ^
+            PYTHON3_HOME=c:/msys2/mingw64/ ^
+            PYTHON3INC=-Ic:/msys2/mingw64/include/python3.5m ^
             DYNAMIC_PYTHON3_DLL=libpython3.5m.dll ^
-          RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
+          RUBY=c:/msys2/mingw64 DYNAMIC_RUBY=yes RUBY_VER=22 RUBY_VER_LONG=2.2.0 ^
           CSCOPE=yes NETBEANS=yes ARCH=x86-64 STATIC_STDCPLUS=yes DEBUG=no
 
     注意1) 複数行に跨るのでバッチファイルに記載して実行して下さい。
