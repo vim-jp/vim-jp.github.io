@@ -8,8 +8,6 @@ title: Patch 7.4.1577 の使用にご注意ください
 
 安定したVimを使いたいのならば、7.4.1576 以前か 1639 以降のバージョンを使ってください。
 
-<span style='color:red;'>**また現在 Arch Linux と Gentoo では問題のあるバージョンがリリースされてしまっています。**</span>
-
 ## 詳細
 
 [Patch 7.4.1559][1] において Vim script に partial argument と言う新機能が実装されました。
