@@ -24,35 +24,35 @@ call Cb("zzz")
 
 現在は修正パッチがリリースされ正しく動作する様に復旧出来ましたが、復旧に至るまでに多くのパッチをリリースする必要がありました。
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1577
+<http://ftp.vim.org/vim/patches/7.4/7.4.1577>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1578
+<http://ftp.vim.org/vim/patches/7.4/7.4.1578>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1580
+<http://ftp.vim.org/vim/patches/7.4/7.4.1580>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1581
+<http://ftp.vim.org/vim/patches/7.4/7.4.1581>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1582
+<http://ftp.vim.org/vim/patches/7.4/7.4.1582>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1585
+<http://ftp.vim.org/vim/patches/7.4/7.4.1585>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1586
+<http://ftp.vim.org/vim/patches/7.4/7.4.1586>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1589
+<http://ftp.vim.org/vim/patches/7.4/7.4.1589>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1597
+<http://ftp.vim.org/vim/patches/7.4/7.4.1597>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1605
+<http://ftp.vim.org/vim/patches/7.4/7.4.1605>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1606
+<http://ftp.vim.org/vim/patches/7.4/7.4.1606>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1607
+<http://ftp.vim.org/vim/patches/7.4/7.4.1607>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1608
+<http://ftp.vim.org/vim/patches/7.4/7.4.1608>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1638
+<http://ftp.vim.org/vim/patches/7.4/7.4.1638>
 
-http://ftp.vim.org/vim/patches/7.4/7.4.1639
+<http://ftp.vim.org/vim/patches/7.4/7.4.1639>
 
 この 1577 から 1639 までの Vim では多くの Vim plugin が動作しない可能性があります。また著名な Vim plugin へ誤動作の問い合わせが幾つかあったと見られています。 
 
