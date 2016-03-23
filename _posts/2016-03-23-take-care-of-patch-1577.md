@@ -26,8 +26,6 @@ call Cb("zzz")
 
 <http://ftp.vim.org/vim/patches/7.4/7.4.1577>
 
-<http://ftp.vim.org/vim/patches/7.4/7.4.1578>
-
 <http://ftp.vim.org/vim/patches/7.4/7.4.1580>
 
 <http://ftp.vim.org/vim/patches/7.4/7.4.1581>
