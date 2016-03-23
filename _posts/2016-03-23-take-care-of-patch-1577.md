@@ -18,6 +18,7 @@ endfunction
 let Cb = function('MyFunc', ["foo", "bar"])
 
 call Cb("zzz")
+" foo bar zzz
 ```
 
 関数 MyFunc の呼び出し引数を関数リファレンス Cb にホールドする事でカリー化を実現する為の物ですが、この実装に際してバグが混入し多くの Vim plugin が動作しなくなってしまいました。
