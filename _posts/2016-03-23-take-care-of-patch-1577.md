@@ -84,3 +84,5 @@ Vim script を正常に利用するには、7.4.1576 以前か 7.4.1639 以降�
 ## Arch Linux と Gentoo のリリース状況について
 
 <span style='color:red;'>**現在 Arch Linux では 7.4.1584、Gentoo (Portage) では 7.4.1583 とそれぞれ問題のあるバージョンがリリースされてしまっています。バージョンを固定するかソースコードからビルドして回避してください。**</span>
+
+<span style='color:red;'>追記: Arch Linux では日本時刻の 2016/03/24 03:48:23 に 7.4.1639 がリリースされたようです。</span>
