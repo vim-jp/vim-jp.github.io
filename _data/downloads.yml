@@ -12,12 +12,12 @@ vim74w32: &vim74w32
   <<: *vim74win
   title: Windows 32ビット
   info: +kaoriya, 15MB ZIP
-  url: http://files.kaoriya.net/goto/vim74w32
+  url: https://github.com/koron/vim-kaoriya/releases/download/v7.4.1655-20160326/vim74-kaoriya-win32-20160326.zip
 vim74w64: &vim74w64
   <<: *vim74win
   title: Windows 64ビット
   info: +kaoriya, 16MB ZIP
-  url: http://files.kaoriya.net/goto/vim74w64
+  url: https://github.com/koron/vim-kaoriya/releases/download/v7.4.1655-20160326/vim74-kaoriya-win64-20160326.zip
 
 list:
   - *vim74w32
