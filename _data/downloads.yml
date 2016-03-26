@@ -6,18 +6,18 @@ vim74mac: &vim74mac
   title: OS X 10.9/10/11
   version: '7.4.1537'
   info: +macvim-kaoriya, 14MB DMG
-  url: https://github.com/splhack/macvim-kaoriya/releases/latest 
+  url: http://vim-jp.org/redirects/splhack/macvim-kaoriya/latest/
 
 vim74w32: &vim74w32
   <<: *vim74win
   title: Windows 32ビット
   info: +kaoriya, 15MB ZIP
-  url: https://github.com/koron/vim-kaoriya/releases/download/v7.4.1655-20160326/vim74-kaoriya-win32-20160326.zip
+  url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win32/
 vim74w64: &vim74w64
   <<: *vim74win
   title: Windows 64ビット
   info: +kaoriya, 16MB ZIP
-  url: https://github.com/koron/vim-kaoriya/releases/download/v7.4.1655-20160326/vim74-kaoriya-win64-20160326.zip
+  url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win64/
 
 list:
   - *vim74w32
