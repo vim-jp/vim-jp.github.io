@@ -4,7 +4,7 @@ vim74win: &vim74win
   info: +kaoriya, 15/16MB ZIP
 vim74mac: &vim74mac
   title: OS X 10.9/10/11
-  version: '7.4.1537'
+  version: '7.4.1655'
   info: +macvim-kaoriya, 14MB DMG
   url: http://vim-jp.org/redirects/splhack/macvim-kaoriya/latest/
 
