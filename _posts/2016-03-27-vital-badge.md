@@ -6,7 +6,7 @@ title: vital.vim にバッジが出来ました。
 
 vim-jp では vital.vim という Vim script から使える汎用ライブラリを公開しています。とても簡単に使えるため、多くのアプリケーションでも使用されています。
 
-https://github.com/vim-jp/vital.vim
+<https://github.com/vim-jp/vital.vim>
 
 この度、vital.vim にバッジが出来ました。
 
