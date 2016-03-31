@@ -316,6 +316,6 @@ Open : 237 (-5) | Closed : 574 (+14)
 - [Issue #807 : 翻訳有効時 intro 内の幾つかのメッセージが決して表示されない](https://github.com/vim-jp/issues/issues/807)
 - [Issue #808 : エクスプローラのコンテキストメニューの項目が日本語表示されない](https://github.com/vim-jp/issues/issues/808)
 - [Issue #809 : vim.exe で channel が有効にならない](https://github.com/vim-jp/issues/issues/809)
-- [Issue #810 : `let v:\['errors'\] = 123 | call assert&#x5f;equal(1,2)`でSEGVする](https://github.com/vim-jp/issues/issues/810)
+- [Issue #810 : `let v:['errors'] = 123 | call assert_equal(1,2)`でSEGVする](https://github.com/vim-jp/issues/issues/810)
 - [Issue #811 : ヘルプのtype()でtypo](https://github.com/vim-jp/issues/issues/811)
 
