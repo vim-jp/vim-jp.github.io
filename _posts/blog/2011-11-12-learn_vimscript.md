@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: Learn Vim script
+redirect_from:
+  - /2011/11/12/learn_vimscript.html
+
 ---
 
 Vim scriptは他の言語と比べ癖があり、Vimの仕様と直結している為、他の言語と同等の機能が無かったり、もしくはやり方が異なったりするものも中にはあります。

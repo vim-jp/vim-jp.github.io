@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: 好きなVim scriptは何ですか？
+redirect_from:
+  - /2011/09/20/favorite_vimscript.html
+
 ---
 
 突然ですが、アンケート。
