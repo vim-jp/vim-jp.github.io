@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: Vim チャリティー決算報告
+redirect_from:
+  - /2012/03/21/vim_charity_financial_results.html
+
 ---
 
 [vim\_announce: Vim charity financial results](http://groups.google.com/group/vim_announce/browse_thread/thread/e5da82d3cb48005b) の無断翻訳です。
