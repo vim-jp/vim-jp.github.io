@@ -2,6 +2,9 @@
 layout: post
 category: vimmagazine
 title: Vim Magazine 4 月号
+redirect_from:
+  - /blog/2012/04/30/vimmagazine.html
+
 ---
 
 ## 話題

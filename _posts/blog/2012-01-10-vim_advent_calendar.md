@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: Vim Advent Calendar 2011
+redirect_from:
+  - /2012/01/10/vim_advent_calendar.html
+
 ---
 
 Vimに関する記事をVim Hacker達が繰り広げる「Vim Advent Calendar」が行われました。Advent Calendarについては[昨年のまとめ記事](http://gihyo.jp/news/info/2010/12/0102)を参照して下さい。

@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: プラグイン製作者様へのお願いとプラグイン利用者様への注意喚起
+redirect_from:
+  - /2011/11/25/dubious_script.html
+
 ---
 
 先日vim使用者の為のメーリングリスト、「vim\_use」にて、とあるVim scriptが疑わしいので注意喚起した方が良いのでは無いかとの報告がありました。
