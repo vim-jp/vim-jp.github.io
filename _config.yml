@@ -18,6 +18,7 @@ future: true
 gems:
   - jemoji
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 ### Outputting
 # デフォルトと同じだが、万が一デフォルトが変わってしまうと記事のURLが変わってし

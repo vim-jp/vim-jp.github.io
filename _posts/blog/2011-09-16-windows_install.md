@@ -2,6 +2,9 @@
 layout: post
 category: blog
 title: Windowsへのインストール方法とビルド方法
+redirect_from:
+  - /2011/09/16/windows_install.html
+
 ---
 Windowsへのインストール方法についての記事を作成しました。
 
