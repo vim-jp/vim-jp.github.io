@@ -2,6 +2,7 @@
 layout: vimmagazine
 category: vimmagazine
 title: Vim Magazine 2016 年 4 月号
+
 ---
 
 ## 話題
