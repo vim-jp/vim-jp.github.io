@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vimのパッチの書き方
 redirect_from:

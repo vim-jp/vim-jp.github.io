@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Windowsへのインストール方法とビルド方法
 redirect_from:

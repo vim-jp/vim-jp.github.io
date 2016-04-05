@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vim 20 周年
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vim チャリティープロジェクト現地訪問報告
 ---

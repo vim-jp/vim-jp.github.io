@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: 好きなVim scriptは何ですか？
 redirect_from:

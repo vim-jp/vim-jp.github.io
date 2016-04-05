@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: syntax/cpp.vim のメンテナンスを vim-jp で行う事になりました。
 ---

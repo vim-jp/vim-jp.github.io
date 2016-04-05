@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: "vim_announce: Vim を Google Code から Github に移動しています。"
 ---

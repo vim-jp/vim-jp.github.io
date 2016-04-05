@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vim Advent Calendar 2012 の参加者募集
 ---

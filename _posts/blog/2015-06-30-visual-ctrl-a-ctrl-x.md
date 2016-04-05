@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Visual モード時の CTRL-A/CTRL-X について
 ---
