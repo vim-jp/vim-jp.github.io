@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vimテクニックバイブル 作業効率をカイゼンする150の技
 redirect_from:

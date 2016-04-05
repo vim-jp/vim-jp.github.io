@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: undo の永続化って知ってる？
 ---

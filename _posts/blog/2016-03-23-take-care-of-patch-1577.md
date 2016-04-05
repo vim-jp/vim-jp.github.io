@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Patch 7.4.1577 の使用にご注意ください
 ---

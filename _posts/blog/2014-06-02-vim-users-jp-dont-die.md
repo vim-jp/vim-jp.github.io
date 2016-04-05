@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: vim-users.jpの過去記事を掲載します
 ---

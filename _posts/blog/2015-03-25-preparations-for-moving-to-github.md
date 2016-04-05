@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: github への移行準備
 ---

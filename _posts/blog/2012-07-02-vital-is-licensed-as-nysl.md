@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: vital.vim のライセンスを決定しました。
 ---
