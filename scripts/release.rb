@@ -13,7 +13,7 @@ if !ARGV.empty? and rel = conf[ARGV[0]]
   open("#{root}/#{file}", "wb") {|f|
     f.puts <<"EOS"
 ---
-layout: post
+layout: release
 category: release
 title: #{rel['title']} #{rel['version']} リリース
 
