@@ -1,0 +1,11 @@
+.sns-badges {
+  display: inline-block;
+  min-height: 20px;
+
+  > .twitter-share-button,
+  > .hatena-bookmark-buttons,
+  > .fb-like,
+  > .g-plusone {
+    display: inline-block;
+  }
+}
