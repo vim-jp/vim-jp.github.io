@@ -7,6 +7,10 @@ title: Vim Magazine 2016 年 4 月号
 
 ## 話題
 
+- [Software Design: コード編集の高速化からGitHub連携までVim［実戦］投入](http://gihyo.jp/magazine/SD/archive/2016/201605)
+
+    mattn さん、rhysd さん、thinca さん、tyru さん、ujihisa さんによる Vim 特集記事。
+
 ## 今月の新機能
 
 - 7.4.1703: `assert_notmatch()`、`assert_notequal()` 関数が追加されました。
