@@ -15,4 +15,7 @@ title: Vim Magazine 2016 年 4 月号
 
 - 7.4.1703: `assert_notmatch()`、`assert_notequal()` 関数が追加されました。
 - 7.4.1707: 辞書のキーに空文字列を使えるようになりました。
+- 7.4.1727: `garbagecollect_for_testing()` 関数が追加されました。
+- 7.4.1730: `strgetchar()`、`strcharpart()` 関数が追加されました。
+- 7.4.1735: `:messages` コマンドに count と clear 引数が追加されました。
 
