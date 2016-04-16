@@ -11,6 +11,10 @@ title: Vim Magazine 2016 年 4 月号
 
     mattn さん、rhysd さん、thinca さん、tyru さん、ujihisa さんによる Vim 特集記事。
 
+- [New version of Vim will be reLeased](http://www.slideshare.net/cohama/2016-0415-nlnagoyavim8)
+
+    [cohama](https://twitter.com/c0hama/status/721248879446917120) さんによる [NLNagoya](http://llnagoya.connpass.com/event/25541/) での発表資料 on 2015/04/15
+
 ## 今月の新機能
 
 - 7.4.1703: `assert_notmatch()`、`assert_notequal()` 関数が追加されました。
