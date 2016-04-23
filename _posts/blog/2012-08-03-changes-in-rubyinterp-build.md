@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Windows上でruby拡張を有効にする際のビルド方法が変更されました。
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: vim-go-extra を公開致します。
 ---

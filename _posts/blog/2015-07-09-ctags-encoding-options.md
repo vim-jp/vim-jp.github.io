@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: ctags にソースコードのエンコーディングを指定出来るオプションが追加されました。
 ---

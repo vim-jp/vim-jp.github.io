@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Vim の作者 Bram Moolenaar への 10 の質問
 ---

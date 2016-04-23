@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Regexp engine work
 ---

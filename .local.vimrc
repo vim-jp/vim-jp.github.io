@@ -8,10 +8,10 @@ function! s:new_entry()
   if len(title) == 0
     return
   endif
-  exec "e" printf("%s/_posts/%s-%s.md", s:basedir, strftime("%Y-%m-%d"), substitute(title, '\s', '-', 'g'))
+  exec "e" printf("%s/_posts/blog/%s-%s.md", s:basedir, strftime("%Y-%m-%d"), substitute(title, '\s', '-', 'g'))
   call setline(1, [
   \ '---',
-  \ 'layout: post',
+  \ 'layout: blog',
   \ 'category: blog',
   \ 'title: ' . title,
   \ '---',

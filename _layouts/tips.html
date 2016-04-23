@@ -3,10 +3,7 @@ layout: default
 ---
 <div class="post">
 <h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
-<div class="fb-like" data-href="{{ site.base-url }}{{ page.url }}" data-layout="button_count"></div>
-<div class="g-plusone" data-href="{{ site.base-url }}{{ page.url }}" data-size="medium"></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="vim_jp" data-lang="ja">ツイート</a>
-<a href="http://b.hatena.ne.jp/entry/{{ site.base-url | escape }}{{ page.url | escape }}" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" /></a>
+{% include sns-badges.html %}
 <br />
 {{ content }}
 </div>

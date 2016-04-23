@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: シェルのコマンド入出力パイプをvimで編集
 ---

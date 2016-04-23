@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: Spam pretend to be Bram
 redirect_from:

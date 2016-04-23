@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 category: blog
 title: vital.vim を vim-jp に移転しました。
 ---
