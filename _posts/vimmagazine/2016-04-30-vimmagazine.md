@@ -24,4 +24,4 @@ title: Vim Magazine 2016 年 4 月号
 - 7.4.1735: `:messages` コマンドに count と clear 引数が追加されました。
 - 7.4.1758: `feedkeys()` に "!" フラグが追加されました。
 - 7.4.1770: `'guicolors'` オプションが追加されました。
-
+- 7.4.1799: `'guicolors'` は `'termguicolors'` オプションへ名称が変更になりました。
