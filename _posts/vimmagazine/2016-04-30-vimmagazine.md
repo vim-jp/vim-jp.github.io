@@ -102,7 +102,7 @@ title: Vim Magazine 2016 年 4 月号
 - [7.4.1761 : Coverity complains about ignoring return value](https://github.com/vim/vim/commit/8ed43916dbea4ccedcc84d271e292abbf658b9c5)
 - [7.4.1762 : Coverity: useless assignments](https://github.com/vim/vim/commit/268a06ce901d2c780304e0395028e3c2f60ec755)
 - [7.4.1763 : Coverity: useless assignment](https://github.com/vim/vim/commit/ba53435144f46eaaa53c63a62e748b3feee9742c)
-- [7.4.1764 : C++ style comment]()
+- 7.4.1764 : C++ style comment (included 7.4.1765)
 - [7.4.1765 : undo options are not together in the options window](https://github.com/vim/vim/commit/4694a17d1ec08382f996990a7fac1ac60197ec81)
 - [7.4.1766 : building instructions for MS-Windows are outdated](https://github.com/vim/vim/commit/02cfac85b4e4b038bb2df6962699fa93a42c7eb1)
 - [7.4.1767 : when installing on a GTK system the icon cache is not updated](https://github.com/vim/vim/commit/4adfaabfe7e07da9546b45130cad0d266ba48611)
