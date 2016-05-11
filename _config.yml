@@ -37,3 +37,6 @@ kramdown:
 base-url: http://vim-jp.org
 
 hotkeys: true
+
+twitter:
+  username: vim_jp
