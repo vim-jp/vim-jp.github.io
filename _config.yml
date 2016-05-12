@@ -19,6 +19,7 @@ gems:
   - jemoji
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 ### Outputting
 # デフォルトと同じだが、万が一デフォルトが変わってしまうと記事のURLが変わってし
@@ -36,3 +37,6 @@ kramdown:
 base-url: http://vim-jp.org
 
 hotkeys: true
+
+twitter:
+  username: vim_jp
