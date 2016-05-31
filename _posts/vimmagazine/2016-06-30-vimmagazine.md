@@ -1,0 +1,10 @@
+---
+layout: vimmagazine
+category: vimmagazine
+title: Vim Magazine 2016 年 6 月号
+
+---
+
+## 話題
+
+## 今月の新機能
