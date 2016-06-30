@@ -10,6 +10,7 @@ title: Vim Magazine 2016 年 6 月号
 *   [netupvim 1.0 リリース](http://www.kaoriya.net/blog/2016/06/06/) 最新版は [1.1](https://github.com/koron/netupvim/releases/tag/v1.1) であることに注意してください
 *   [Software Design 2016年7月号 Vimの細道【9】カーソルを自在に操る](http://gihyo.jp/magazine/SD/archive/2016/201607)
 *   [なぜAtomはVimを置き換えられないのか](https://yakst.com/ja/posts/3985)
+*   [Osaka.vim #7](http://osaka-vim.connpass.com/event/32702/) 7/2(土) 大阪
 
 ## 今月の新機能
 
