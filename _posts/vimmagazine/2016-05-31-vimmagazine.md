@@ -88,7 +88,7 @@ title: Vim Magazine 2016 年 5 月号
 - [vim-stackoverflow : A tiny plugin for searching Stackoverflow from VIM editor ](http://www.vim.org/scripts/script.php?script_id=5384)
 - [vim-freemarker : Freemarker syntax and functions](http://www.vim.org/scripts/script.php?script_id=5385)
 - [vim-logreview : plugin to help log reviews and navigation ](http://www.vim.org/scripts/script.php?script_id=5386)
-- [definition.vim : Jump to the last place where \[command|function|mapping\] was set](http://www.vim.org/scripts/script.php?script_id=5387)
+- [definition.vim : Jump to the last place where \[command\|function\|mapping\] was set](http://www.vim.org/scripts/script.php?script_id=5387)
 - [Solarized 8 : Optimized Solarized colorschemes. Best served with true-color terminals!](http://www.vim.org/scripts/script.php?script_id=5388)
 - [RougherExp : Changes your search expression into rougher regexp.](http://www.vim.org/scripts/script.php?script_id=5389)
 - [tortus.vim : Dark (grey on black) color scheme based on on torte.vim and motus.vim.](http://www.vim.org/scripts/script.php?script_id=5390)
