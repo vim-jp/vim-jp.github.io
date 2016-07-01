@@ -16,9 +16,12 @@ title: vimrc読書会が4周年を迎えます
 
 開催場所も [Lingr][4] から [Gitter][5] へ移動し、github アカウントでの参加が可能になり、より参加しやすくなりました。少しでも興味があれば是非とも [参加][5] してみてください。 [ROM][6] での参加も大歓迎です。
 
+また、[読みたい vimrc のリクエスト][7] も随時受け付けています。長く開催されてきたことも考慮し、今後は過去に読まれた vimrc であってもリクエストを受け付けます。過去に読まれた有名人の vimrc や、昔とは一味違うあなた自身の vimrc などのリクエストなど、是非リクエストしてみてください。
+
 [1]: http://vim-jp.org/reading-vimrc/
 [2]: http://vim-jp.org/reading-vimrc/archive/index.html
 [3]: http://vim-jp.org/reading-vimrc/archive/001.html
 [4]: http://lingr.com/room/vim
 [5]: https://gitter.im/vim-jp/reading-vimrc
 [6]: https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%89%E3%82%AA%E3%83%B3%E3%83%AA%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC
+[7]: https://github.com/vim-jp/reading-vimrc/wiki/Request
