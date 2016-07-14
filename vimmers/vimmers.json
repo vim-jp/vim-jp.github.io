@@ -121,7 +121,7 @@
     "name": "tyru",
     "short_name": "",
     "twitter": "_tyru_",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/672858344227397632/_w4EKi6g_400x400.jpg",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/716604835328438272/4sZOAwSL_400x400.jpg",
     "vimorg": "16618",
     "website": "http://d.hatena.ne.jp/tyru/"
   },
@@ -135,7 +135,7 @@
     "name": "Kana Natsuno",
     "short_name": "",
     "twitter": "kana1",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/700853406714372096/_Dmk9PS9_400x400.jpg",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/748204006250450944/Yjnr-Kfj_400x400.jpg",
     "vimorg": "13595",
     "website": "http://whileimautomaton.net/"
   },
@@ -499,7 +499,7 @@
     "name": "さっちゃん",
     "short_name": "",
     "twitter": "ne_sachirou",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/680894463506436098/nUQNdyRO_400x400.png",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/751441890877116421/1qV_a2nT_400x400.jpg",
     "vimorg": "",
     "website": "http://c4se.hatenablog.com/"
   },
@@ -513,7 +513,7 @@
     "name": "papix",
     "short_name": "",
     "twitter": "__papix__",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/596297145994481664/KWANlRTk_400x400.png",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/743137474638057472/NInoU_Xq_400x400.jpg",
     "vimorg": "",
     "website": "http://blog.papix.net/"
   },
@@ -583,7 +583,7 @@
     "name": "りんだん",
     "short_name": "",
     "twitter": "Linda_pp",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/3626384430/3a64cf406665c1940d68ab737003605c_400x400.jpeg",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/736944193059229697/cjVzDlPe_400x400.jpg",
     "vimorg": "63247",
     "website": "http://rhysd.hatenablog.com/"
   },
@@ -779,7 +779,7 @@
     "name": "ふかやつ",
     "short_name": "",
     "twitter": "fukayatsu",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/691761222539149314/pMILgoH5_400x400.jpg",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/713241038589190144/FZm7alC0_400x400.jpg",
     "vimorg": "",
     "website": "http://fukayatsu.github.com/"
   },
@@ -1213,7 +1213,7 @@
     "name": "hecomi",
     "short_name": "",
     "twitter": "hecomi",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/698183115810959360/rbf0spVD_400x400.png",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/753435504897503232/jM0oxeFS_400x400.png",
     "vimorg": "",
     "website": "http://d.hatena.ne.jp/hecomi/"
   },
@@ -1395,7 +1395,7 @@
     "name": "テラまこ",
     "short_name": "",
     "twitter": "teramako",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/378800000100152221/f2417a55ea8e09ce7442e80f2bbb015e_400x400.png",
+    "twitter_icon": "https://abs.twimg.com/sticky/default_profile_images/default_profile_5_400x400.png",
     "vimorg": "",
     "website": "http://d.hatena.ne.jp/teramako/"
   },
@@ -1409,7 +1409,7 @@
     "name": "aoisensi",
     "short_name": "",
     "twitter": "aoisensi",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/3563572889/ef4660cd681bfc01f5a282ccc06fc2fd_400x400.png",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/739258053883625472/3WaGyvGu_400x400.jpg",
     "vimorg": "",
     "website": "http://aoisensi.info/"
   },
@@ -1703,7 +1703,7 @@
     "name": "Christopher Sexton",
     "short_name": "",
     "twitter": "crsexton",
-    "twitter_icon": "https://pbs.twimg.com/profile_images/447179082321494016/jhw5FGpW_400x400.jpeg",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/723515693707210752/DNZxDHbD_400x400.jpg",
     "vimorg": "",
     "website": "http://www.codeography.com/"
   },
@@ -1832,5 +1832,19 @@
     "twitter_icon": "https://pbs.twimg.com/profile_images/3094969262/7480b7a5ca106380b61019e82123353f_400x400.png",
     "vimorg": "",
     "website": ""
+  },
+  {
+    "created_at": "2016/07/14 14:43:11",
+    "description": "",
+    "facebook": "",
+    "github": "wikimatze",
+    "googleplus": "https://plus.google.com/+wikimatzede",
+    "logo": "",
+    "name": "wikimatze",
+    "short_name": "",
+    "twitter": "wikimatze",
+    "twitter_icon": "https://pbs.twimg.com/profile_images/478095113655042048/AL9arPXH_400x400.jpeg",
+    "vimorg": "http://www.vim.org/account/profile.php?user_id=39846",
+    "website": "http://wikimatze.de"
   }
 ]
