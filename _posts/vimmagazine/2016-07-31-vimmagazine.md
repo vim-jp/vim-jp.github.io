@@ -46,7 +46,7 @@ title: Vim Magazine 2016 年 7 月号
 *   7.4.2119: lambda内で外側のスコープの変数をキャプチャできるようになりました。
 *   7.4.2120: ユーザー関数に `closure` を指定できるようになりました。
 *   7.4.2121: lambda と closure のサポートを `+lambda` で確認できるようになりました。
-*   [パッチ番号なし](travis+osx): Travis CI で OSX のテストを実行するようになりました。
+*   [パッチ番号なし][travis+osx]: Travis CI で OSX のテストを実行するようになりました。
 
 [travis+osx]:https://github.com/vim/vim/commit/b20617b0b0d15523961618717d6cd2195674c363
 [sd201608]:http://gihyo.jp/magazine/SD/archive/2016/201608
