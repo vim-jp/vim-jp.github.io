@@ -8,6 +8,18 @@ title: Vim Magazine 2016 年 7 月号
 ## 話題
 
 *   [Osaka.vim #7](http://osaka-vim.connpass.com/event/32702/) 7/2(土) 大阪 が開催されました
+*   [Software Design 2016年8月号 Vimの細道【10】 Vimからgitを使い倒す by mattn][sd201608]
+*   [Vim の地味だけどよく使う設定](http://note103.hateblo.jp/entry/2016/07/06/114746)
+*   [vimでソースを追うときの小技](http://qiita.com/masaharu-suizu/items/2e2fed71bf4074d05713)
+*   [sudoを付けずにVimでルート権限のファイルを編集してしまった時](http://qiita.com/shishamo_dev/items/ab722c53301b95ccfac1)
+*   [Vim v.s. Emacsをフローチャートで表現](http://rcmdnk.github.io/blog/2016/07/21/computer-vim-emacs/) - 編者注:フローチャートというのは誤った用語だと思われます
+*   [VimとGitの効率的なコラボレーションの仕方](http://myenigma.hatenablog.com/entry/2016/07/10/084048)
+*   [Vim-Pokemon ～あなたが Vim で開いているファイルに潜んでいるポケモン～](http://d.hatena.ne.jp/heavenshell/20160715/1468606360)
+*   [Vimのおすすめプラグイン23個とその設定](http://post.simplie.jp/posts/56)
+*   [VimのmapleaderにMacのCommandを割り当てたい](http://ja.stackoverflow.com/q/27794/208)
+*   [vimのヤンクがmacのクリップボードに保存されない](https://teratail.com/questions/41191)
+*   [DockerとWebSocketを使って、vimの設定をブラウザで即体感できるサービスを作った](http://mosuke5.hateblo.jp/entry/2015/07/19/135844)
+*   [tmux 起動でvimなどがおかしくなった時の対処法](http://kirin.hatenadiary.jp/entry/2016/07/16/150206)
 
 ## 今月の新機能
 
@@ -34,3 +46,5 @@ title: Vim Magazine 2016 年 7 月号
 *   7.4.2119: lambda内で外側のスコープの変数をキャプチャできるようになりました。
 *   7.4.2120: ユーザー関数に `closure` を指定できるようになりました。
 *   7.4.2121: lambda と closure のサポートを `+lambda` で確認できるようになりました。
+
+[sd201608]:http://gihyo.jp/magazine/SD/archive/2016/201608
