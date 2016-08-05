@@ -3,6 +3,6 @@ port 4000
 
 before_build {
   run 'rbenv versions'
-  run 'rbenv local 2.2.5'
+  run 'rbenv local ruby-2.2.5'
   run 'bundle install --path vendor --binstubs'
 }
