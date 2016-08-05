@@ -1,4 +1,4 @@
-serve 'jekyll serve'
+serve 'bundle exec jekyll serve'
 port 4000
 
 before_build {
