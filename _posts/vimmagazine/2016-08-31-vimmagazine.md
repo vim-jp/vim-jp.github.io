@@ -19,7 +19,6 @@ title: Vim Magazine 2016 年 8 月号
 *   7.4.2201: `'signcolumn'` が追加されました。
 *   7.4.2204: `getbufinfo()`, `getwininfo()`, `gettabinfo()` が追加されました。
 *   7.4.2213: ハイライトグループ `EndOfBuffer` が追加されました。
-
 *   7.4.2215: `getwininfo()` で `'buftype'` が `"quickfix"` の場合の種別(`loclist` or `quickfix`)が判別できるようになりました。
 *   7.4.2220: `printf()` が `%s` で文字列以外の引数も出力できるようになりました。
 *   7.4.2221: `printf()` が `%b` と `%B` で2進数形式をサポートしました。
