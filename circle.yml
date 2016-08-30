@@ -1,0 +1,11 @@
+general:
+  artifacts:
+    - "_site"
+
+test:
+  pre:
+    - bundle show
+  override:
+    - bundle exec jekyll build
+  post:
+    - find _site -type f
