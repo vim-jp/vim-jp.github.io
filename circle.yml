@@ -1,11 +1,7 @@
-general:
-  artifacts:
-    - "_site"
-
 test:
   pre:
     - bundle show
   override:
-    - bundle exec jekyll build
+    - bundle exec jekyll build -d $CIRCLE_ARTIFACTS
   post:
-    - find _site -type f
+    - find $CIRCLE_ARTIFACTS -type f
