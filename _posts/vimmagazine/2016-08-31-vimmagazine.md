@@ -7,7 +7,9 @@ title: Vim Magazine 2016 年 8 月号
 
 ## 話題
 
-*   VimConf 2016 (11/05開催予定) の発表者が募集されました。
+*   VimConf 2016 (11/05開催予定) の[開催概要](http://vimconf.vim-jp.org/2016/)が発表されています。
+    *   [発表者募集中](https://github.com/vim-jp/vimconf/issues/104)です。[LTスピーカーも募集](https://github.com/vim-jp/vimconf/issues/105)しています。
+    *   [スケジュールが公開](http://vimconf.vim-jp.org/2016/schedule/)されています。
 
 ## 今月の新機能
 
