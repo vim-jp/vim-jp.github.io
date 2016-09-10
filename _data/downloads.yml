@@ -1,7 +1,7 @@
 vim74win: &vim74win
   title: Windows 32ビット/64ビット
-  version: '7.4.1944'
-  info: +kaoriya, 15.4/16.1MB ZIP
+  version: '7.4.2358'
+  info: +kaoriya, 15.6/16.3MB ZIP
 vim74mac: &vim74mac
   title: OS X 10.9/10/11
   version: '7.4.2275'
@@ -11,12 +11,12 @@ vim74mac: &vim74mac
 vim74w32: &vim74w32
   <<: *vim74win
   title: Windows 32ビット
-  info: +kaoriya, 15.4MB ZIP
+  info: +kaoriya, 15.6MB ZIP
   url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win32/
 vim74w64: &vim74w64
   <<: *vim74win
   title: Windows 64ビット
-  info: +kaoriya, 16.1MB ZIP
+  info: +kaoriya, 16.3MB ZIP
   url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win64/
 
 list:
