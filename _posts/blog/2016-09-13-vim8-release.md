@@ -121,8 +121,20 @@ echo Bar(6)
 
 [Visual モード時の CTRL-A/CTRL-X について](http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html)
 
+## defaults.vim
+
+Vim のオプションの幾らかには多くのユーザが期待しない規定値が使われてきました。`nocompatible` オプションを含む新しいユーザにとって親切な規定値が defaults.vim としてロードされます。
+
+この規定値を無効にするには vimrc に以下を追加して下さい。
+
+```
+let g:skip_defaults_vim = 1
+```
+
+どのオプションの規定値が変更されたかについては patch 7.4.2111 の内容を参照するか、defaults.vim のスクリプトの中身を参照して下さい。
+
 その他、数えきれないほどのバグが修正されています。vim-jp からも多くのコントリビュータが誕生しました。vim-dev で活躍する開発者の方々に感謝します。
 
 ぜひ新しくなった Vim を試してみて下さい。そして何か問題を見つけたらぜひ vim-jp に[報告](https://github.com/vim-jp/issues)頂き、一緒に Vim を良くして行きましょう。
 
-Happy Vim Life
+Happy Vim Life!
