@@ -4,7 +4,7 @@ category: blog
 title: Vim 8.0 released
 
 ---
-昨日 9/13、前バージョンから10年の歳月を経て Vim の最新版である Vim 8.0 がリリースされました。
+9/13、前バージョンから10年の歳月を経て Vim の最新版である Vim 8.0 がリリースされました。
 
 Vim 8.0 の大きな変更点としては、まず多くのバグ修正が上げられます。7.4 に存在した数多くの問題が修正されています。
 
@@ -12,7 +12,7 @@ Vim 8.0 の大きな変更点としては、まず多くのバグ修正が上げ
 
 ## チャネルによる非同期 I/O のサポート (Channel)
 
-バックグラウンドプロセスと非同期にメッセージを交換できる仕組みを実装しました。JSON で通信するサーバと対話する事も出来ます。
+バックグラウンドプロセスと非同期にメッセージを交換できる仕組みが実装されました。JSON で通信するサーバと対話する事も出来ます。
 
 詳しくは `:help channel` を参照して下さい。
 
@@ -36,7 +36,7 @@ let tempTimer = timer_start(4000, 'CheckTemp')
 
 ## パーシャル (Partial)
 
-Vim には元々、関数リファレンスが実装されていますが、引数および辞書を保持した状態で関数を参照できます。
+Vim には元々、関数リファレンスが実装されていますが、引数の一部またはself辞書を保持した状態で関数を参照できます。
 
 上記のタイマーの例を使う場合、下記のコードでは CheckTemp 関数の第一引数に任意の引数を割り当てられます。
 
@@ -48,7 +48,7 @@ let tempTimer = timer_start(4000, function('CheckTemp', ['out']))
 
 ## ラムダ (Lambda)、クロージャ (Closure)
 
-これまで sort 関数や filter 関数に関数を指定したい場合は、別途名前付きの関数を用意しなければなりませんでしたが、Lambda を指定できる様になりました。
+これまで sort に比較関数を指定したり filter に適用関数に指定する場合は、別途名前付きの関数を用意しなければなりませんでしたが、Lambda を指定できる様になりました。
 
 ```vim
 call filter(mylist, {idx, val -> val > 20})
@@ -97,7 +97,6 @@ echo Bar(6)
 
 詳しくは `:help breakindent` を参照して下さい。
 
-
 ## Windows での DirectX サポート (Windows: DirectX support)
 
 `renderoptions` オプションが追加され、DirectX (DirectWrite) により文字が描画できる様になりました。
@@ -116,6 +115,8 @@ echo Bar(6)
 
 [Visual モード時の CTRL-A/CTRL-X について](http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html)
 
-その他、数えきれないほどのバグが修正されています。vim-dev で活躍する開発者の方々に感謝します。
+その他、数えきれないほどのバグが修正されています。vim-jp からも多くのコントリビュータが誕生しました。vim-dev で活躍する開発者の方々に感謝します。
+
+ぜひ新しくなった Vim を試してみて下さい。そして何か問題を見つけたらぜひ vim-jp に[報告](https://github.com/vim-jp/issues)頂き、一緒に Vim を良くして行きましょう。
 
 Happy Vim Life
