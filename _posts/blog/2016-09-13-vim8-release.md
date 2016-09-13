@@ -1,134 +1,172 @@
 ---
 layout: blog
 category: blog
-title: Vim 8.0 released
-
+title: Vim 8.0 released!
 ---
-2016-09-13、前メジャーバージョンから10年、Vim 7.4 からは3年の歳月を経て Vim の最新版である Vim 8.0 がリリースされました。
 
-Vim 8.0 の大きな変更点としては、まず多くのバグ修正が上げられます。7.4 に存在した数多くの問題が修正されています。
+Vim 8.0 がリリースされました。
 
-また以下の素晴らしい機能拡張も行われました。
+以下勝手訳。
 
-## チャネルによる非同期 I/O のサポート (Channel)
+----------------------------------------------------------------------
 
-バックグラウンドプロセスと非同期にメッセージを交換できる仕組みが実装されました。JSON で通信するサーバと対話する事も出来ます。
+[Vim 8.0 released!](https://groups.google.com/d/msg/vim_announce/EKTuhjF3ET0/cP1JQcZ4AwAJ)
 
-詳しくは `:help channel` を参照して下さい。
+Hello Vim users!
 
-## ジョブ (Job)
 
-これまで外部コマンドを実行する際にブロックしていましたが、ジョブ機能の追加により非同期にコマンドを実行する事ができる様になりました。また channel 機能を使って標準入出力を経由し、非同期にメッセージを交換できます。
+告知:  Vim (Vi IMproved) version 8.0
 
-詳しくは `:help job` を参照して下さい。
 
-## タイマー (Timer)
+10年間に渡るVimの最初のメジャーリリースです。興味深い新機能、多くの小さな改善、たくさんのバグ修正が含まれています。
 
-非同期にタイマーを実行できます。
+新機能は:
 
-```vim
-let tempTimer = timer_start(4000, 'CheckTemp')
-```
+- 非同期 I/O サポート, channels, JSON
+- Jobs
+- Timers
+- Partials, Lambdas and Closures
+- Packages
+- New style testing
+- Viminfo merged by timestamp
+- GTK+ 3 サポート
+- MS-Windows DirectX サポート
 
-この例では 4000 ミリ秒後に CheckTemp 関数が実行されます。繰り返し実行する場合には、第3引数に repeat オプションを付与します。
+Vim 8.0 をインストールしたら、次のコマンドで Vim 7.4 からの変更点を確認できます:
 
-```vim
-let tempTimer = timer_start(4000, 'CheckTemp', {'repeat': -1})
-```
+    :help version8
 
-repeat に3を指定すると3回実行され、-1 を指定すると永遠に実行されます。
+またはオンラインで見られます:
 
-詳しくは `:help timer` を参照して下さい。
+<https://raw.githubusercontent.com/vim/vim/master/runtime/doc/version8.txt>
 
-## パーシャル (Partial)
 
-Vim には元々、関数リファレンスが実装されていますが、引数の一部またはself辞書を保持した状態で関数を参照できます。
+感謝の気持ちはこちらへ
+----------------------
 
-上記のタイマーの例を使う場合、下記のコードでは CheckTemp 関数の第一引数に任意の引数を割り当てられます。
+もし Vim を気に入ってくれたなら、ウガンダ南部の貧しい子供たちを助けてあげてください: <http://iccf-holland.org>
 
-```vim
-let tempTimer = timer_start(4000, function('CheckTemp', ['out']))
-```
 
-詳しくは `:help Partial` を参照して下さい。
+入手方法
+--------
 
-## ラムダ (Lambda)、クロージャ (Closure)
+最新の Vim を入手するには Git を使うのがおすすめです。 要約:
 
-これまで sort に比較関数を指定したり filter に適用関数に指定する場合は、別途名前付きの関数を用意しなければなりませんでしたが、Lambda を指定できる様になりました。
+    git clone https://github.com/vim/vim.git
 
-```vim
-call filter(mylist, {idx, val -> val > 20})
-```
+詳しい情報はこちら: <http://www.vim.org/git.php>
 
-また Lambda ではスコープ内変数が参照できるので Closure として振る舞えます。
+MS-Windows 用のインストーラが用意されています:
 
-```vim
-function Foo(arg)
-  let i = 3
-  return {x -> x + i - a:arg}
-endfunction
-let Bar = Foo(4)
-echo Bar(6)
-```
+<ftp://ftp.vim.org/pub/vim/pc/gvim80.exe>
 
-詳しくは `:help lambda` および `:help closure` を参照して下さい。
+どのシステムでどのファイルをダウンロードすればいいかはこちらを見てください:
 
-## パッケージ (Packages)
+<http://www.vim.org/download.php>
 
-近年では多くの Vim プラグインがディレクトリ単位で配布されているため、簡単に追加と削除が行える仕組みが追加されました。
+ミラーサイトの一覧はこちら:
+<http://www.vim.org/mirrors.php>
 
-詳しくは `:help packages` を参照して下さい。
 
-## 新しいスタイルのテスト (New Style Tests)
+ダウンロード可能なファイル:
 
-これは Vim 開発者の為の機能ですが、これまでは体系だったテストフレームワークが提供されてこなかった為に可読性の低いテストが行われてきました。Vim 8.0 では テスト専用の API が用意され、より可読性の高いテストが実施されます。
+UNIX:
 
-詳しくは `:help test-functions` を参照して下さい。
+sources + runtime files, bzip2 compressed:
 
-## ウィンドウID (Window IDs)
+<ftp://ftp.vim.org/pub/vim/unix/vim-8.0.tar.bz2>
 
-これまでのウィンドウ管理は、オープンしたりクローズしたり、移動を行うと番号が変更される数値の体系で管理されてきました。新しい API によりユニークなIDが付与される様になります。
+その他:
 
-詳しくは `:help win_getid()` および `:help win_id2win()` を参照して下さい。
+HTML に変換されたヘルプファイル:
 
-## タイムスタンプを使用した Viminfo (Viminfo uses timestamp)
+<ftp://ftp.vim.org/pub/vim/doc/vim80html.zip>
 
-これまでの viminfo は最終の変更のみが書き込まれていましたが、タイムスタンプを用いて直近の幾らかのアイテムが保存される様になりました。
+MS-WINDOWS 全部入り:
 
-詳しくは `:help viminfo-timestamp` を参照して下さい。
+セルフインストーラ。すべてのランタイムファイルを含む。ダイナミックロード版:
 
-## インデントを付けて折り返し (Wrapping lines with indent)
+<ftp://ftp.vim.org/pub/vim/pc/gvim80.exe>
 
-`breakindent` オプションにより折り返された行にインデントが付けられる様になりました。
+MS-WINDOWS 個別ファイル:
 
-詳しくは `:help breakindent` を参照して下さい。
+ランタイムファイル:
 
-## Windows での DirectX サポート (Windows: DirectX support)
+<ftp://ftp.vim.org/pub/vim/pc/vim80rt.zip>
 
-`renderoptions` オプションが追加され、DirectX (DirectWrite) により文字が描画できる様になりました。
+Windows 95/98/NT/2000/XP/7 の GUI バイナリ:
 
-詳しくは `:help renderoptions` を参照して下さい。
+<ftp://ftp.vim.org/pub/vim/pc/gvim80.zip>
 
-## GTK+ 3 サポート (GTK+ 3 support)
+OLE サポート付きの GUI バイナリ:
 
-挙動の異なりにより多くの技術的な障壁がありましたが、GTK+ 3 での動作が GTK+ 2 同等となりました。configure を実行時に GTK+ 2 と GTK+ 3 が両方入っている場合には未だ GTK+ 2 が選択されます。詳しくは src/Makefile を参照して下さい。
+<ftp://ftp.vim.org/pub/vim/pc/gvim80ole.zip>
 
-その他の詳細は `:help gui-x11-compiling` を参照して下さい。
+Windows NT/2000/XP/7 のコンソール版:
 
-## ビジュアル選択時の CTRL-A/CTRL-X 
+<ftp://ftp.vim.org/pub/vim/pc/vim80w32.zip>
 
-こちらは vim-jp の記事を参照して下さい。
+PC 用ソース (CR-LF改行):
 
-[Visual モード時の CTRL-A/CTRL-X について](http://vim-jp.org/blog/2015/06/30/visual-ctrl-a-ctrl-x.html)
+<ftp://ftp.vim.org/pub/vim/pc/vim80src.zip>
 
-## defaults.vim
+デバッグ用:
 
-Vim のオプションの幾らかには多くのユーザが期待しない規定値が使われてきました。`nocompatible` オプションを含む新しいユーザにとって親切な規定値が defaults.vim としてロードされます。
+<ftp://ftp.vim.org/pub/vim/pc/gvim80.pdb>
 
-どのオプションの規定値が変更されたかについては patch 7.4.2111 の内容を参照するか、defaults.vim のスクリプトの中身を参照して下さい。
+<ftp://ftp.vim.org/pub/vim/pc/gvim80ole.pdb>
 
-その他、数えきれないほどのバグが修正されています。vim-jp からも多くのコントリビュータが誕生しました。vim-dev で活躍する開発者の方々に感謝します。
+<ftp://ftp.vim.org/pub/vim/pc/vim80w32.pdb>
 
-ぜひ新しくなった Vim を試してみて下さい。そして何か問題を見つけたらぜひ vim-jp に[報告](https://github.com/vim-jp/issues)頂き、一緒に Vim を良くして行きましょう。
+AMIGA:
 
-Happy Vim Life!
+ランタイムとソースのみ提供で、バイナリはなし:
+
+<ftp://ftp.vim.org/pub/vim/amiga/vim80rt.tgz>
+
+<ftp://ftp.vim.org/pub/vim/amiga/vim80src.tgz>
+
+
+このバージョンでは以下のものは省略されました:
+
+- The 16-bit DOS, OS/2 and Amiga versions, these are obsolete.
+- The 32-bit console version for MS-DOS/Windows 95/98
+- The 16 bit MS-Windows version
+
+
+メーリングリスト
+----------------
+
+Vim ユーザーの方は、なにか質問があったら Vim メーリングリストを調べてみてください。
+たくさんのチップスやスクリプトや解決法が見つかるでしょう。
+Vim についての質問をすることもできます。ただし、登録が必要です。
+<http://www.vim.org/maillist.php#vim> を見てください。
+
+Vim の開発を手伝ってくれる方は、vim-dev メーリングリストに登録すると、
+新しい機能について議論したり、あたらしいパッチを入手したりできます。
+<http://www.vim.org/maillist.php#vim-dev> を見てください。
+
+話題を限定したメーリングリスト:
+
+Macintosh 関連:  <http://www.vim.org/maillist.php#vim-mac>
+
+質問をする前にアーカイブを検索してください。誰かが既に答えているかもしれません。
+
+
+バグレポート
+------------
+
+バグレポートは <vim-dev@vim.org> に送ってください。
+問題をはっきり正確に説明してくださるようお願いします。
+メールの返答に費やす時間は Vim を改善する時間から消費されています! 
+必ず、再現可能な手順を示し、そのバグに関連する設定や環境依存のものがないか確認してみてください。
+あなたの vimrc を使わずに Vim を起動してみてください: "vim -u NONE"。
+可能なら他のマシンで試してみてください。":help bugs" を読んでください。
+そしてもし可能ならパッチを送ってください!
+
+あるいは、github で issue や pull request を作成してください。
+問題が再現し、修正されたら通るテストを書いてみてください。
+<https://github.com/vim/vim> を見てください。
+
+
+Happy Vimming!
