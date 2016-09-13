@@ -30,7 +30,13 @@ Vim 8.0 の大きな変更点としては、まず多くのバグ修正が上げ
 let tempTimer = timer_start(4000, 'CheckTemp')
 ```
 
-この例では 4000 ミリ秒毎に CheckTemp 関数が実行されます。
+この例では 4000 ミリ秒後に CheckTemp 関数が実行されます。繰り返し実行する場合には、第3引数に repeat オプションを付与します。
+
+```vim
+let tempTimer = timer_start(4000, 'CheckTemp', {'repeat': -1})
+```
+
+repeat に3を指定すると3回実行され、-1 を指定すると永遠に実行されます。
 
 詳しくは `:help timer` を参照して下さい。
 
