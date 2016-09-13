@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: Vim 8.0 新機能紹介
+title: Vim 8.0 新機能解説
 
 ---
 2016-09-13、前メジャーバージョンから10年、Vim 7.4 からは3年の歳月を経て Vim の最新版である Vim 8.0 がリリースされました。
