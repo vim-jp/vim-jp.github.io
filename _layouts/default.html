@@ -15,60 +15,30 @@
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 {% seo %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-	(function(doc, script) {
-		window.___gcfg = {lang: 'ja'};
-		//Async Social Buttons
-		var fjs = doc.getElementsByTagName(script)[0];
-		var add = function(url, id) {
-			if (doc.getElementById(id)) {return;}
-			var js = doc.createElement(script);
-			js.src = url;
-			id && (js.id = id);
-			fjs.parentNode.insertBefore(js, fjs);
-		};
 
-		// Twitter SDK
-		add('//platform.twitter.com/widgets.js', 'twitter-wjs');
-		// Google+ button
-		add('//apis.google.com/js/plusone.js');
-		// Facebook SDK
-		add('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'facebook-jssdk');
-		// Hatena
-		add('//b.st-hatena.com/js/bookmark_button_wo_al.js');
-	})(document, 'script');
-</script>
+<!-- load jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<!-- 日本語マニュアル検索用 -->
+<!-- SNSボタンの読み込み -->
+<script src="/assets/javascripts/social-network-buttons.js" async></script>
+
+<!-- 日本語マニュアル検索ボックス -->
 <link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" />
-<script src="//www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript">
-  google.load("search", "1", {language : "ja"});
-  google.setOnLoadCallback(function() {
-    // search
-    var customSearchControl = new google.search.CustomSearchControl("001325159752250591701:65aunpq8rlg");
-    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-    var options = new google.search.DrawOptions();
-    options.enableSearchboxOnly("//www.google.com/cse?cx=001325159752250591701:65aunpq8rlg");
-    customSearchControl.draw('VimdocJaSearch', options);
-  }, true);
+<script src="https://www.google.com/jsapi"></script>
+<script src="/assets/javascripts/search-vimdoc-ja.js"></script>
 
-  $.getJSON("//vim-jp.herokuapp.com/patches/json?callback=?", function(items) {
-    $.each(items, function() {
-      $('<li/>').append(
-        $('<a/>').attr({'href': this.link, 'target': '_blank'}).text("Patch " + this.title)
-      ).append($('<br/>')).append($('<span/>').text(this.description)).appendTo('#patches-list');
-    });
-  });
-</script>
-<script type="text/javascript" src="/assets/javascripts/mousetrap.min.js"></script>
-<script type="text/javascript">
+<!-- パッチリスト読み込み -->
+<script src="/assets/javascripts/patch-list.js" async></script>
+
+<!-- 隠しコマンド設定 -->
+<script src="/assets/javascripts/mousetrap.min.js"></script>
+<script defer>
   Mousetrap.bind("I space h a t e space V i m enter", function(e) {
     console.log(e);
     window.location = "http://www.gnu.org/software/emacs/";
   });
 </script>
+
 </head>
 <body>
 
