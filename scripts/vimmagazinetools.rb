@@ -269,7 +269,7 @@ end
 
 
 def cmd_scriptjson(_args)
-  puts JSON.dump(vimscript_all())
+  puts JSON.pretty_generate(vimscript_all())
 end
 
 
@@ -361,9 +361,9 @@ def cmd_generate(args)
   }
 
   if args["update"]
-    open(args["statefile"], "w") {|f|
-      JSON.dump(newstate, f)
-    }
+    open(args["statefile"], "w") do |f|
+      f.write JSON.pretty_generate(newstate)
+    end
   end
 end
 
