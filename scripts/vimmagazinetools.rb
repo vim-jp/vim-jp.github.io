@@ -85,6 +85,7 @@ end
 
 def vimpatch_all()
   [].tap do |patches|
+    # XXX: stop to fetch patches of 7.4 after 2016/09 was released
     patches.concat vimpatch('7.4')
     patches.concat vimpatch('8.0')
   end
