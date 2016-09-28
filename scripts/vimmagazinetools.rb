@@ -276,7 +276,7 @@ end
 
 
 def cmd_scriptjson(_args)
-  puts JSON.pretty_generate(vimscript_all())
+  puts JSON.pretty_generate(filter_vimscripts(vimscript_all()))
 end
 
 
@@ -358,7 +358,7 @@ def cmd_generate(args)
     },
     "script" => {
       "script_id" => vimscripts[-1]["script_id"],
-      "state" => vimscripts,
+      "state" => filter_vimscripts(vimscripts),
     },
     "vim-jp/issues" => {
       "opencount" => opencount,
@@ -374,6 +374,16 @@ def cmd_generate(args)
   end
 end
 
+
+def filter_vimscripts(scripts)
+  scripts.map do |item|
+    {
+      'script_id': item['script_id'],
+      'rating': item['rating'],
+      'downloads': item['downloads'],
+    }
+  end
+end
 
 def main()
   cmd = ARGV.shift()
