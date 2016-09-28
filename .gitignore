@@ -3,3 +3,4 @@ _site
 *.un~
 Gemfile.lock
 /.jekyll-metadata
+/tmp/
