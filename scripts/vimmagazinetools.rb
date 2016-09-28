@@ -9,8 +9,7 @@ require 'optparse'
 require 'date'
 
 
-VIMPATCH_URL = "http://ftp.vim.org/pub/vim/patches/7.4/%s"
-VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/7.4/README"
+VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/%s/README"
 VIMSCRIPT_URL = "http://www.vim.org/scripts/script.php?script_id=%s"
 VIMSCRIPT_LIST_URL = "http://www.vim.org/scripts/script_search_results.php?&show_me=99999"
 VIM_GITHUB_COMMIT_URL = "https://github.com/vim/vim/commit/%s"
@@ -85,9 +84,18 @@ end
 
 
 def vimpatch_all()
+  [].tap do |patches|
+    patches.concat vimpatch('7.4')
+    patches.concat vimpatch('8.0')
+  end
+end
+
+# vimpatch fetches info of patches for Vim x.x (ver)
+def vimpatch(ver)
   items = []
   tag2sha = github_git_tags("vim", "vim")
-  readme = httpget(VIMPATCH_README_URL).entity.force_encoding("UTF-8")
+  url = sprintf(VIMPATCH_README_URL, ver)
+  readme = httpget(url).entity.force_encoding("UTF-8")
   for line in readme.split(/\r\n|\r|\n/)
     m = line.match(/^\s*(?#size)(\d+)  (?#version)(\d\.\d\.\d{3,4})  (?#summary)(.*)$/)
     if !m
@@ -97,7 +105,6 @@ def vimpatch_all()
     e["size"] = m[1].to_i
     e["version"] = m[2]
     e["summary"] = m[3]
-    # e["url"] = sprintf(VIMPATCH_URL, e["version"])
     major, minor, patchlevel = e["version"].split(".")
     tag = "v#{major}.#{minor}.#{patchlevel}"
     e["tag"] = tag
