@@ -20,3 +20,4 @@ title: Vim Magazine 2016 年 9 月号
 *   7.4.2314: 現在の augroup を `augroup!` で削除できなくなりました。(E936)
 *   7.4.2319: $VIM/vimrc で `g:skip_defaults_vim` を定義すると `defaults.vim` の読み込みをスキップできるようになりました。
 *   7.4.2340: Windows 向け公式インストーラーの対応 Ruby バージョンが 2.2 になりました。
+*   8.0.0015: `ch_status()` に第 2 引数 `{options}` が追加されました。
