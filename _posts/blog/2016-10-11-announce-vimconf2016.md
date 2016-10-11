@@ -4,7 +4,7 @@ category: blog
 title: 待ちに待った VimConf 2016 が今年も開催されます！
 ---
 
-今年も国内外の Vimmer たちが集う祭典、VimConf がやってきます。
+今年も国内外の Vimmer たちが集う祭典、[VimConf 2016](http://vimconf.vim-jp.org/2016/) がやってきます。
 VimConf とは日本発世界初のVimの(コミュニティにより定期開催される)国際的なカンファレンスです。
 今年は Vim 8.0 が公開されたり、ますますの賑わいを見せる Vim 界隈、ぜひキャッチアップしにいらしてください。
 
