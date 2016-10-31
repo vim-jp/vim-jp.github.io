@@ -1,10 +1,10 @@
 vim-win: &vim-win
   title: Windows 32ビット/64ビット
-  version: '8.0.0003'
+  version: '8.0.0039'
   info: +kaoriya, 15.6/16.3MB ZIP
 vim-mac: &vim-mac
-  title: OS X 10.9/10/11
-  version: '8.0.0003'
+  title: OS X 10.9+
+  version: '8.0.0052'
   info: +macvim-kaoriya, 14MB DMG
   url: http://vim-jp.org/redirects/splhack/macvim-kaoriya/latest/
 

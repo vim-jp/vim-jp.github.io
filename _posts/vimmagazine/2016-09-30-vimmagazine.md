@@ -13,7 +13,7 @@ title: Vim Magazine 2016 年 9 月号
 ## 今月の新機能
 
 *   7.4.2298: `ch_close_in()` が追加されました。
-*   7.4.2299: `:expr`, `:cbuffer` においても `QuickFixCmdPre`, `QuickFixCmdPost` イベントがトリガーされるようになりました。
+*   7.4.2299: `:cexpr`, `:cbuffer` などにおいても `QuickFixCmdPre`, `QuickFixCmdPost` イベントがトリガーされるようになりました。
 *   7.4.2302: Windows 向け公式インストーラーの対応する Perl と Python のバージョンが、それぞれ 5.24 と 3.5 になりました。
 *   7.4.2304: timer callback 内で自身の timer を停止できるようになりました。
 *   7.4.2306: `'langremap'` のデフォルト値がドキュメント通りの `enabled` になりました。
