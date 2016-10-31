@@ -10,6 +10,7 @@ title: Vim Magazine 2016 年 10 月号
 *   VimConf 2016 関連
     *   タイムテーブルが決定しました
     *   参加者の募集が行われました
+*   [Vim Advent Calendar 2016](http://qiita.com/advent-calendar/2016/vim) が今年も開催されます
 
 ## 今月の新機能
 
