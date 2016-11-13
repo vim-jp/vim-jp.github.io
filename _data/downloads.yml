@@ -1,7 +1,7 @@
 vim-win: &vim-win
   title: Windows 32ビット/64ビット
-  version: '8.0.0039'
-  info: +kaoriya, 15.6/16.3MB ZIP
+  version: '8.0.0082'
+  info: +kaoriya, 15.7/16.4MB ZIP
 vim-mac: &vim-mac
   title: OS X 10.9+
   version: '8.0.0052'
@@ -11,12 +11,12 @@ vim-mac: &vim-mac
 vim-w32: &vim-w32
   <<: *vim-win
   title: Windows 32ビット
-  info: +kaoriya, 15.6MB ZIP
+  info: +kaoriya, 15.7MB ZIP
   url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win32/
 vim-w64: &vim-w64
   <<: *vim-win
   title: Windows 64ビット
-  info: +kaoriya, 16.3MB ZIP
+  info: +kaoriya, 16.4MB ZIP
   url: http://vim-jp.org/redirects/koron/vim-kaoriya/latest/win64/
 
 list:
