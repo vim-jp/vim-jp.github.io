@@ -367,7 +367,7 @@ def cmd_generate(args)
   }
 
   if args["update"]
-    open(args["statefile"], "w") do |f|
+    open(args["statefile"], "wb") do |f|
       f.write JSON.pretty_generate(newstate)
     end
   end
