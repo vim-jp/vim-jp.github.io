@@ -14,3 +14,7 @@ title: Vim Magazine 2016 年 12 月号
     *   [Vim 8.0](http://qiita.com/advent-calendar/2016/vim8)
 
 ## 今月の新機能
+
+*   8.0.0107: `ch_open()` のオプションに `"drop"` が追加されました。
+*   8.0.0117: 並列 make (例 : `make -j 4`) に対応しました。
+*   ランタイム更新 2016/12/01: `:compiler` に `ghc` が追加されました。
