@@ -1,7 +1,7 @@
 vim-win: &vim-win
   title: Windows 32ビット/64ビット
-  version: '8.0.0082'
-  info: +kaoriya, 15.7/16.4MB ZIP
+  version: '8.0.0134'
+  info: +kaoriya, 15.8/16.4MB ZIP
 vim-mac: &vim-mac
   title: OS X 10.9+
   version: '8.0.0124'
