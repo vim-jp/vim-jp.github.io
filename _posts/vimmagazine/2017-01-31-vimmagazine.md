@@ -11,7 +11,7 @@ title: Vim Magazine 2017 年 1 月号
 
 ## 今月の新機能
 
-*   8.0.0151: `system()` と `systemlist()` の第 2 引数にバッファ番号を渡せるようになりました。
+*   8.0.0151: `system()` と `systemlist()` の第 2 引数にバッファ番号を渡せるようになりました。ここで指定されたバッファの内容は、`system()` で 起動するプロセスへ標準入力として引き渡されます。
 *   8.0.0157: `:syntax spell` と `:syntax sync` で補完が効くようになりました。
 *   8.0.0171: `js_decode()` がシングルクォート(')で囲まれた文字列をサポートしました。
 *   8.0.0175: オフィシャルで頒布している [Windows 版 Gvim](https://github.com/vim/vim-win32-installer/releases)の言語設定が反映されない件を修正しました。
