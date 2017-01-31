@@ -7,7 +7,8 @@ title: Vim Magazine 2017 年 1 月号
 
 ## 話題
 
-* [Meguro.vim #2](https://megurovim.connpass.com/event/49507/) が開催されます。
+* 2/11 に [Yokohama.vim #9](https://yokohamavim.connpass.com/event/47519/) が開催されます。
+* 2/25 に [Meguro.vim #2](https://megurovim.connpass.com/event/49507/) が開催されます。
 
 ## 今月の新機能
 
