@@ -22,7 +22,7 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 
     $ git checkout -b add-new-func-trim
 
-パッチが作成されたらソースファイルを修正します。
+ブランチを移動したらソースファイルを修正します。
 
     $ vim evalfunc.c
 
