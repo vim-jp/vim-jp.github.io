@@ -16,22 +16,15 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
-    $ hg clone https://bitbucket.org/vim-mirror/vim
+    $ git clone https://github.com/vim/vim
 
-今回の手順では [Mercurial Queue](http://mercurial.selenic.com/wiki/JapaneseMqExtension)を利用するので、あらかじめ機能を有効化しておきましょう。
+次に修正内容に対応するブランチを作成します。
 
-    $ cat ~/.hgrc
-    [extensions]
-    mq=
-
-次に修正内容に対応するパッチを作成します。
-今回はパッチ名を`010-fix-quickfix-on-windows.patch`としました。
-
-    $ hg qnew 010-fix-quickfix-on-windows.patch
+    $ git checkout -b add-new-func-trim
 
 パッチが作成されたらソースファイルを修正します。
 
-    $ vim os_win32.c
+    $ vim evalfunc.c
 
 この際コーディングスタイルは既存のものに合わせるようにしましょう。
 [`:help coding-style`](http://vim-jp.org/vimdoc-ja/develop.html#coding-style)にコーディング規約が書かれてあります。
@@ -41,20 +34,33 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 
     $ patch -p1 < something.patch
 
-ソースファイルを修正したらパッチを更新しましょう。
+ソースファイルを修正したらコミットしましょう。
 
-    $ hg qrefresh
+    $ git commit -m "added new function trim()"
 
 もし、修正中に元のソースコードが変更された場合は、次のコマンドでリポジトリを同期させます。
 
-    $ hg qpop -a; hg pull -u; hg qpush -a
+    $ git fetch --all
+    $ git rebase master
 
-全ての修正が完了したらパッチファイルを作りましょう。最終的には全修正を一連のパッチファイルとしてメーリングリストに投げます。
+全ての修正が完了したら pull-request を送信しましょう。GitHub 上で vim のリポジトリから Fork ボタンをクリックするか、[hub](https://github.com/github/hub) コマンドをお持ちであれば `hub fork` でも可能です。fork が出来たら自分のリポジトリに対して push します。
 
-    $ hg qdiff > fix-quickfix-on-windows.diff
+    $ hub fork
+    $ git push [ユーザID] add-new-func-trim
+
+あとはブラウザで vim のリポジトリを開くと pull-request ボタンが表示されるので指示に従って pull-request を作成して下さい。その際、海外の方も開発に参加していますので本文は英語で書いて頂く必要があります。
+
+pull-request の冒頭で
+
+- 発生している現象
+- 再現手順
+
+を説明します。また、パッチを作成してメーリングリストに送信する方法もあります。
+
+    $ git diff master > add-new-func-trim.diff
 
 これで作成したパッチの差分ファイルが作成出来るので、メーリングリスト[vim\_dev](https://groups.google.com/forum/#!forum/vim_dev)に添付ファイルを付けるか本文に貼り付けてメールを投げます。(vim\_dev初回投稿時はBram氏の承認が必要なため、すぐには表示されません。)
-メールの冒頭で
+pull-request と同様にメールの冒頭で
 
 - 発生している現象
 - 再現手順
@@ -68,21 +74,15 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 Vimでは基本的にバグ修正が優先して取り込まれ、新機能の追加は後回しにされる傾向が強いです。
 特に巨大な変更の場合、パッチの取り込みがマイナーリリース時点まで保留されることもあります。
 
-パッチが取り込まれ、パッチが不要になったら
+パッチが取り込まれたらローカルのブランチを削除しても構いません。
 
-    $ hg qdelete
+    $ git checkout master
+    $ git branch -D add-new-func-trim
 
-で削除できます。あとは最新版のVimをMercurialで取ってきてコンパイルするだけです。
+で削除できます。あとは最新版のVimを Git で取ってきてコンパイルするだけです。
 
 さぁ君もCONTRIBUTE AUTHORになろう！
 
-※ここで紹介しているMercurial Queueは[quilt](http://savannah.nongnu.org/projects/quilt)と呼ばれるパッチ管理ソフトウェアのコマンド体系をベースにしています。
-Mercurial Queueの使い方を勉強するときには、まずquiltについて学んでおくと理解が早いでしょう。
-
 参考資料：
 
-- [Mercurial Queues エクステンション](http://mercurial.selenic.com/wiki/JapaneseMqExtension)
-- [Mercurial MQ について](http://d.hatena.ne.jp/dayflower/20090520/1242794877)
-- [12 Managing change with Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch12.html#x105-26500012)
-- [13 Advanced uses of Mercurial Queues](http://foozy.bitbucket.org/hgbook-ja/d6ca1334a19d/hgbookch13.html#x108-30000013)
 - [Vim development](http://www.vim.org/develop.php)
