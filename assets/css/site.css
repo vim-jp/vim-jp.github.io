@@ -214,6 +214,13 @@ div.links > div > h2 {
 div#VimdocJaSearch {
   height: 28px;
 }
+#VimdocJaSearch .gsc-control-cse {
+  margin: 0;
+  border: none;
+  padding: 4px 0 0 0;
+  background-color: transparent;
+}
+
 
 /* Most of styles are imported from github-button. */
 .download_button,
