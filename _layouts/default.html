@@ -23,9 +23,7 @@
 <script src="/assets/javascripts/social-network-buttons.js" async></script>
 
 <!-- 日本語マニュアル検索ボックス -->
-<link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" />
 <script src="https://www.google.com/jsapi"></script>
-<script src="/assets/javascripts/search-vimdoc-ja.js"></script>
 
 <!-- パッチリスト読み込み -->
 <script src="/assets/javascripts/patch-list.js" async></script>
@@ -77,7 +75,21 @@
 					</dd>
 					<dt><a href="//vim-jp.org/vimdoc-ja">日本語マニュアル</a></dt>
 					<dd>
-					<div id="VimdocJaSearch"></div>
+
+					<!-- Google CSE -->
+					<script>
+					  (function() {
+					    var cx = '001325159752250591701:65aunpq8rlg';
+					    var gcse = document.createElement('script');
+					    gcse.type = 'text/javascript';
+					    gcse.async = true;
+					    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+					    var s = document.getElementsByTagName('script')[0];
+					    s.parentNode.insertBefore(gcse, s);
+					  })();
+					</script>
+					<gcse:search id="VimdocJaSearch"></gcse:search>
+
 					<div>検索もできます。</div>
 					</dd>
 					<dt><a href="https://github.com/vim-jp/issues/issues">Issues</a></dt>
