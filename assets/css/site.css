@@ -211,7 +211,8 @@ div.links > div > h2 {
   margin-bottom: 10px;
 }
 
-div#VimdocJaSearch {
+#VimdocJaSearch {
+  display: block;
   height: 28px;
 }
 #VimdocJaSearch .gsc-control-cse {
