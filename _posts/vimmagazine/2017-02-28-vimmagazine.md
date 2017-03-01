@@ -139,7 +139,7 @@ title: Vim Magazine 2017 年 2 月号
 - [8.0.0386 : tiny build has a problem with generating the options test](https://github.com/vim/vim/commit/5b3af14b34c97ab58bfd4699bc2f3e5a2b704117)
 - [8.0.0387 : compiler warnings](https://github.com/vim/vim/commit/b113c3a618113122e62697dd73427261f8c51b2c)
 - [8.0.0388 : filtering lines changes folds](https://github.com/vim/vim/commit/1159b168dd94c1a25b4284c6544de385855df6f6)
-- [8.0.0389 : test for arabic does not check what is displayed]()
+- [8.0.0389 : test for arabic does not check what is displayed](https://github.com/vim/vim/commit/5342f00ff95ed0256b8183063a83d72112f1243c)
 
 ## 新着スクリプト
 
