@@ -9,6 +9,7 @@ title: Vim Magazine 2017 年 4 月号
 
 * [k-takata/minpac](https://github.com/k-takata/minpac) の正式リリース v1.0 がリリースされました
 * [meguro.vim #3](https://megurovim.connpass.com/event/53990/) の開催が 5/20 に予定されています
+* [Udon.vim #0](https://connpass.com/event/55348/) の開催が 5/28 に香川県で予定されています
 
 ## 今月の新機能
 
