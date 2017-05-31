@@ -82,6 +82,7 @@ title: Vim Magazine 2017 年 4 月号
 - [8.0.0586 : no test for mapping timing out](https://github.com/vim/vim/commit/b7637c44c26b057d1f3721d932bbab06d9f74393)
 - [8.0.0587 : configure check for return value of tgetent skipped](https://github.com/vim/vim/commit/696cbd224b4f78b99b8fc34538867303a8a922fc)
 - [8.0.0588 : job&#x5f;stop() often assumes the channel will be closed](https://github.com/vim/vim/commit/1a9020d4cba6d90688506102ab587c371ff72f8b)
+- [8.0.0589 : (after 8.0.0578) :simalt still does not work](https://github.com/vim/vim/commit/a21ccb7a974a96550c5cd99c4633e166d2083172)
 
 ## 新着スクリプト
 
