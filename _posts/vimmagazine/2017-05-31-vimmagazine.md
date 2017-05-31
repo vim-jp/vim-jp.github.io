@@ -9,6 +9,7 @@ title: Vim Magazine 2017 年 5 月号
 
 * [meguro.vim #3](https://megurovim.connpass.com/event/53990/) が 5/20 に開催されました
 * [Fablic.vim #1](https://connpass.com/event/56803/) が 2017-05-22 に[開催されました](http://in.fablic.co.jp/entry/2017-05-fablic.vim)。次回は7月です。
+*   [Udon.vim #0](https://connpass.com/event/55348/) が開催されました。
 
 ## 今月の新機能
 
