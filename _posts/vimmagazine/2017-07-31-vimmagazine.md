@@ -15,4 +15,4 @@ title: Vim Magazine 2017 年 7 月号
 
 ## Vimに関する脆弱性
 
-* 8.0.0703 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11109
+* 8.0.0703 <http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11109> (関連パッチ 8.0.0706)
