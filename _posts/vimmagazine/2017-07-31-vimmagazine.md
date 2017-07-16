@@ -16,6 +16,8 @@ title: Vim Magazine 2017 年 7 月号
   * `--clean`: `-u DEFAULTS -i NONE` と同じです
   * `-u DEFAULTS`: defaults.vim のみ読み込まれます (vimrc:no, plugin:no, defaults.vim:yes)
   * `'viminfofile'`: 空文字以外の時は viminfo ファイル名を上書きします。`NONE` の時は viminfo ファイルが読み込まれません
+* Patch 8.0.0718: job の端末への出力が表示できるようになりました
+* Patch 8.0.0721: `:argedit` が複数の引数に対応しました
 
 ## Vimに関する脆弱性
 
