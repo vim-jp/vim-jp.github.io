@@ -7,8 +7,9 @@ title: Vim Magazine 2017 年 6 月号
 
 ## 話題
 
+*   [Osaka.vim #10](https://osaka-vim.connpass.com/event/58127/) が 06/24 に開催されました。
 *   [Meguro.vim #4](https://megurovim.connpass.com/event/57955/) が 07/15 に開催されます。既に定員は超えているようですが、キャンセルや増員がないとも限らないので注目です。
-*   [Fabric.vim #2](https://fablicvim.connpass.com/event/60339/) が 07/20 に開催されます。こちらはまだ定員に余裕があります。
+*   [Fablic.vim #2](https://fablicvim.connpass.com/event/60339/) が 07/20 に開催されます。こちらはまだ定員に余裕があります。
 
 ## 今月の新機能
 
