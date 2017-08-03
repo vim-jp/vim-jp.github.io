@@ -72,6 +72,5 @@ vimrcを研ぎ、Vimの素振り訓練を行っておいてください。
 ## 脚注
 
 * `*1` 3行におさまらなかった...
-* `*2` たぶん唯一
 
 文責: [ujihisa](https://github.com/ujihisa)
