@@ -67,6 +67,6 @@ Keep in touch with us by watching [#vimconf](https://twitter.com/search?f=tweets
 
 ## Footnotes
 
-* [^1] that's me, assuming I don't get sick on that day
+* [^1]: that's me, assuming I don't get sick on that day
 
 Written by [ujihisa](https://github.com/ujihisa) on 2017-08-04
