@@ -65,8 +65,8 @@ Keep in touch with us by watching [#vimconf](https://twitter.com/search?f=tweets
 * VimConf 2014 <http://vimconf.vim-jp.org/2014/>
 * VimConf 2013 <http://vimconf.vim-jp.org/2013/>
 
+Written by [ujihisa](https://github.com/ujihisa) on 2017-08-04
+
 ## Footnotes
 
-* [^1]: that's me, assuming I don't get sick on that day
-
-Written by [ujihisa](https://github.com/ujihisa) on 2017-08-04
+[^1]: that's me, assuming I don't get sick on that day

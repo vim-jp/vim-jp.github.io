@@ -71,8 +71,8 @@ vimrcを研ぎ、Vimの素振り訓練を行っておいてください。
 * VimConf 2014 <http://vimconf.vim-jp.org/2014/>
 * VimConf 2013 <http://vimconf.vim-jp.org/2013/>
 
+文責: [ujihisa](https://github.com/ujihisa)
+
 ## 脚注
 
-* [^1]: 3行におさまらなかった...
-
-文責: [ujihisa](https://github.com/ujihisa)
+[^1]: 3行におさまらなかった...
