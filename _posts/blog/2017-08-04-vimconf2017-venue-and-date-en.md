@@ -12,7 +12,7 @@ TL;DR
 * Here's VimConf 2017 date and venue!
 * Our CFP is going to be open shortly. Get ready for it!
 * We want you or your org to be interested in sponsoring
-* Tickets for audiences won't be available yet
+* Tickets for audiences won't be available yet [^1]
 
 VimConf is the only and the first international Vim conference that has been running periodically by a Vim community. It had been running for 4 times, and in Tokyo, Japan, so far.
 We organize VimConf this year again. You may find it pretty much differently in this time.
@@ -28,7 +28,7 @@ In 2013 [I](https://github.com/ujihisa) organized so it was more international t
 such as all presentation slides have to be in English, and the web site was only in English.
 However there weren't much English talks, nor interpreters/translators.
 
-This time in VimConf 2017, we have dedicated person who help translating ([\*1](#footnote1)).
+This time in VimConf 2017, we have dedicated person who help translating.
 There will be both Japanese and English talks, with all English or Vim script slides.
 
 Sorry for people who's native languages aren't English nor Japanese; we don't have resources to support other languages such as Chinese or Spanish yet.
@@ -67,6 +67,6 @@ Keep in touch with us by watching [#vimconf](https://twitter.com/search?f=tweets
 
 ## Footnotes
 
-* `*1` that's me, assuming I don't get sick on that day {#footnote1}
+* [^1] that's me, assuming I don't get sick on that day
 
 Written by [ujihisa](https://github.com/ujihisa) on 2017-08-04
