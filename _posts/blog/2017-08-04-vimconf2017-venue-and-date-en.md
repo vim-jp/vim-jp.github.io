@@ -17,7 +17,7 @@ TL;DR
 VimConf is the only and the first international Vim conference that has been running periodically by a Vim community. It had been running for 4 times, and in Tokyo, Japan, so far.
 We organize VimConf this year again. You may find it pretty much differently in this time.
 
-![photo from ryunix https://twitter.com/ryunix/status/794772705815891968 from VimConf 2016 last year](https://pbs.twimg.com/media/CweZjRiUsAEE-j9.jpg:large 80%)
+![photo from ryunix https://twitter.com/ryunix/status/794772705815891968 from VimConf 2016 last year](https://pbs.twimg.com/media/CweZjRiUsAEE-j9.jpg:large)
 
 As described below, we finalized the VimConf date and venue. Go get some flight tickets to Tokyo, Japan!
 
