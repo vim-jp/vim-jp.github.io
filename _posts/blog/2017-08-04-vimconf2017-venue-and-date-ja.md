@@ -3,7 +3,7 @@ layout: post
 category: blog
 title: VimConf 2017を開催します
 redirect_from:
-  - /2017/08/03/vimconf2017-venue-and-date-ja.html
+  - /blog/2017/08/03/vimconf2017-venue-and-date-ja.html
 
 ---
 
