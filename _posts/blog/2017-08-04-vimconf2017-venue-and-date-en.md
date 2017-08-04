@@ -2,6 +2,8 @@
 layout: post
 category: blog
 title: Announcing VimConf 2017
+redirect_from:
+  - /2017/08/03/vimconf2017-venue-and-date-en.html
 
 ---
 
