@@ -10,7 +10,7 @@ title: VimConf 2017を開催します
 * 日時と場所が決まりました
 * すぐに発表を公募するので準備してね
 * スポンサー公募します!!
-* 参加チケットの発売はまだ先 (\*1)
+* 参加チケットの発売はまだ先 ([^footnote1])
 
 有志Vimユーザが主体となってはじめ、これまで4回開催された、VimConf。
 これは世界初かつ世界で唯一の、コミュニティによって定期運営されているVimの国際カンファレンスです。
@@ -25,7 +25,7 @@ title: VimConf 2017を開催します
 
 これまで2013年からやっていたVimConf
 
-* 好意により貸してくださっていた会場
+* 厚意により貸してくださっていた会場
 * 年度ごとに国際化度のブレあり。完全英語の2013とベストエフォートのそれ以降
 * 高まるVim熱
 
@@ -63,14 +63,14 @@ vimrcを研ぎ、Vimの素振り訓練を行っておいてください。
 
 ## 参考リンク
 
-* VimConf 2016 http://vimconf.vim-jp.org/2016/
-    * togetter: https://togetter.com/li/1045761
-* VimConf 2015 http://vimconf.vim-jp.org/2015/
-* VimConf 2014 http://vimconf.vim-jp.org/2014/
-* VimConf 2013 http://vimconf.vim-jp.org/2013/
+* VimConf 2016 <http://vimconf.vim-jp.org/2016/>
+    * togetter: <https://togetter.com/li/1045761>
+* VimConf 2015 <http://vimconf.vim-jp.org/2015/>
+* VimConf 2014 <http://vimconf.vim-jp.org/2014/>
+* VimConf 2013 <http://vimconf.vim-jp.org/2013/>
 
 ## 脚注
 
-* `*1` 3行におさまらなかった...
+* [^#footnote1] 3行におさまらなかった...
 
 文責: [ujihisa](https://github.com/ujihisa)
