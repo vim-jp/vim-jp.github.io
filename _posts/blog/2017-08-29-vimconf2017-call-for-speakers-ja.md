@@ -17,7 +17,7 @@ Vimの最新動向を語るもよし。オレオレVim pluginを語るもよし�
 
 きっと多くのVimmerとの出会い、まだ見ぬ世界が広がるはずです。
 
-応募は、以下の[応募フォームページ](https://docs.google.com/forms/d/e/1FAIpQLSdvKDhDa3oU-1r8ywVM_DUkgvFTS7IN-V82bPLUT4Wo-zjVuA/viewform?usp=sf_link)にてご応募ください。
+応募は、[応募フォームページ](https://docs.google.com/forms/d/e/1FAIpQLSdvKDhDa3oU-1r8ywVM_DUkgvFTS7IN-V82bPLUT4Wo-zjVuA/viewform?usp=sf_link)にてご応募ください。
 
 皆さんのVimへの熱い思いを存分にぶつけてください。<br/>
 それではご応募のほどお待ちしております。
