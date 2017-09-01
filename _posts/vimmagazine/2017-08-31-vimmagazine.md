@@ -34,7 +34,7 @@ title: Vim Magazine 2017 年 8 月号
 *   8.0.1026: 入力スタイル over-the-spot がサポートされました
 
 *   ランタイムの更新
-    *   `:he design-not` が更新されています
+    *   `:help design-not` が更新されています
     *   Couchbase の N1QL 用のファイルタイプ n1ql が追加されました
 
 ## Vimに関する脆弱性
