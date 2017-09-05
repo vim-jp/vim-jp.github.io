@@ -1,7 +1,0 @@
-test:
-  pre:
-    - bundle show
-  override:
-    - bundle exec jekyll build -d $CIRCLE_ARTIFACTS
-  post:
-    - find $CIRCLE_ARTIFACTS -type f
