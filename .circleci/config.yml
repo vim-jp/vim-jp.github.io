@@ -21,3 +21,6 @@ jobs:
       - store_artifacts:
           path: jekyll/_site/docs/
           destination: vim-jp.github.io
+      - run:
+          name: List generated files
+          command: find jekyll/_site/docs/ -type f
