@@ -6,7 +6,7 @@ author: ujihisa
 
 ---
 
-At least the following 4 people are coming in front of you at VimConf 2017!
+At least the following 4 people are coming in front of you at [VimConf 2017](http://vimconf.vim-jp.org/2017/)!
 
 * **haya14busa**
     * <https://medium.com/@haya14busa/>
