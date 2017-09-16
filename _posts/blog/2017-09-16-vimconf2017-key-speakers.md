@@ -22,6 +22,11 @@ At least the following 4 people are coming in front of you at VimConf 2017!
     * https://github.com/k-takata
     * Famous at [Onigmo](https://github.com/k-takata/Onigmo), and [DirectWrite](https://github.com/vim/vim/commit/b5a7a8b5451c6fe8a2cc1d5d86c42d9b9a50ef98)
 
+![haya14busa](https://avatars2.githubusercontent.com/u/3797062?v=4&s=400)
+![fatih](https://avatars3.githubusercontent.com/u/438920?v=4&s=400)
+![mattn](https://avatars1.githubusercontent.com/u/10111?v=4&s=400)
+![k-takata](https://avatars0.githubusercontent.com/u/840186?v=4&s=400)
+
 See you there!
 
 <footer><p>Written by: [ujihisa](https://github.com/ujihisa)</p></footer>
