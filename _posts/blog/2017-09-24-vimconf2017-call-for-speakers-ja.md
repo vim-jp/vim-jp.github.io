@@ -12,7 +12,7 @@ title: VimConf 2017のスピーカー募集締切間近！
 
 まだお悩みの方は以下ページよりお早めにご登録をお願い致します。
 
-[応募フォームページ](https://docs.google.com/forms/d/e/1FAIpQLSef5obej3dotmtUe3Z_ydmQpkXlYkx3p2RyREc0eRw3uY7Gkg/viewform?usp=sf_link)
+~~応募フォームページ~~ (2017/9/29(金)を持ちまして応募は締め切らせていただきました)
 
 ご応募のほどお待ちしております。
 
