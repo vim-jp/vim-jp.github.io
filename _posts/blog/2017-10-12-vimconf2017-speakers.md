@@ -17,7 +17,7 @@ VimConf 2017 の登壇者が決定しました。
     <tr>
       <th>登壇者</th>
       <th>発表タイトル</th>
-      <th>言語</th>
+      <th>発表言語</th>
     </tr>
   </thead>
   <tbody>
