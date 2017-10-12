@@ -17,6 +17,7 @@ VimConf 2017 の登壇者が決定しました。
     <tr>
       <th>登壇者</th>
       <th>発表タイトル</th>
+      <th>発表時間</th>
       <th>発表言語</th>
     </tr>
   </thead>
@@ -26,8 +27,9 @@ VimConf 2017 の登壇者が決定しました。
         <img src="/assets/images/vimconf2017/fatih.png" />
         <a href="https://twitter.com/fatih">Fatih Arslan</a>
       </td>
-      <td>TBD</td>
-      <td>英語(翻訳あり)</td>
+      <td>The Past and Future of Vim-go</td>
+      <td>45分</td>
+      <td>英語</td>
     </tr>
     <tr>
       <td>
@@ -35,6 +37,7 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/haya14busa">Hayabusa</a>
       </td>
       <td>TBD</td>
+      <td>60分</td>
       <td>日本語</td>
     </tr>
     <tr>
@@ -43,7 +46,8 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/senopen">SENOO Ken</a>
       </td>
       <td>Vim and Compatibility</td>
-      <td>英語(翻訳あり)</td>
+      <td>30分</td>
+      <td>英語</td>
     </tr>
     <tr>
       <td>
@@ -51,6 +55,7 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/dice_zu">daisuzu</a>
       </td>
       <td>How ordinary Vim user contributed to Vim</td>
+      <td>25分</td>
       <td>日本語</td>
     </tr>
     <tr>
@@ -59,6 +64,7 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/ShougoMatsu">Shougo</a>
       </td>
       <td>neosnippet.vim + deoppet.nvim</td>
+      <td>30分</td>
       <td>日本語</td>
     </tr>
     <tr>
@@ -67,6 +73,7 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/cocopon">Hiroki Kokubun</a>
       </td>
       <td>Creating your lovely color scheme</td>
+      <td>30分</td>
       <td>日本語</td>
     </tr>
     <tr>
@@ -75,7 +82,8 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/t9md">t9md</a>
       </td>
       <td>Quick walkthrough of unique features of vim-mode-plus</td>
-      <td>英語(翻訳あり)</td>
+      <td>30分</td>
+      <td>英語</td>
     </tr>
     <tr>
       <td>
@@ -83,6 +91,7 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/lambdalisue">Λlisue</a>
       </td>
       <td>TBD</td>
+      <td>20分</td>
       <td>日本語</td>
     </tr>
     <tr>
@@ -91,10 +100,13 @@ VimConf 2017 の登壇者が決定しました。
         <a href="https://twitter.com/p_ck_">Masataka Kuwabara</a>
       </td>
       <td>A new syntax highlighter for Vim</td>
+      <td>20分</td>
       <td>日本語</td>
     </tr>
   </tbody>
 </table>
+
+英語の発表は日本語に、日本語の発表は英語に翻訳されます。
 
 引き続き、チケットの販売を行っております。詳しくは Peatix をご覧下さい。
 
