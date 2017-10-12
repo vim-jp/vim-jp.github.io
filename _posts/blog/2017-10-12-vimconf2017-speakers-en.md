@@ -4,7 +4,7 @@ category: blog
 title: VimConf 2017 Speakers
 ---
 
-We ara happy to announce speakers in VimConf 2017.
+We are happy to announce speakers in VimConf 2017.
 
 <style type="text/css">
 #vimconf2017-speakers img { width: 50px; }
