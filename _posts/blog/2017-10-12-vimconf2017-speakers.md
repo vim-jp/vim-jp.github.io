@@ -90,7 +90,7 @@ VimConf 2017 の登壇者が決定しました。
         <img src="/assets/images/vimconf2017/lambdalisue.png" />
         <a href="https://twitter.com/lambdalisue">Λlisue</a>
       </td>
-      <td>TBD</td>
+      <td>超プラグ員を超えた超プラグ員…超プラグ員2ってとこかな 〜 いつも隣に gina.vim</td>
       <td>20分</td>
       <td>日本語</td>
     </tr>
@@ -99,7 +99,7 @@ VimConf 2017 の登壇者が決定しました。
         <img src="/assets/images/vimconf2017/p_ck_.png" />
         <a href="https://twitter.com/p_ck_">Masataka Kuwabara</a>
       </td>
-      <td>A new syntax highlighter for Vim</td>
+      <td>The new syntax highlighter for Vim</td>
       <td>20分</td>
       <td>日本語</td>
     </tr>
