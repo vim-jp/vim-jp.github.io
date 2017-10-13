@@ -90,7 +90,7 @@ Note: not ordered
         <img src="/assets/images/vimconf2017/lambdalisue.png" />
         <a href="https://twitter.com/lambdalisue">Λlisue</a>
       </td>
-      <td>TBD</td>
+      <td>You've been super viman. After this talk, you are super viman2. - Life with gina.vim</td>
       <td>20min</td>
       <td>Japanese</td>
     </tr>
@@ -99,7 +99,7 @@ Note: not ordered
         <img src="/assets/images/vimconf2017/p_ck_.png" />
         <a href="https://twitter.com/p_ck_">Masataka Kuwabara</a>
       </td>
-      <td>A new syntax highlighter for Vim</td>
+      <td>The new syntax highlighter for Vim</td>
       <td>20min</td>
       <td>Japanese</td>
     </tr>
