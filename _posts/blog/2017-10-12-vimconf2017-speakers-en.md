@@ -81,7 +81,7 @@ Note: not ordered
         <img src="/assets/images/vimconf2017/t9md.png" />
         <a href="https://twitter.com/t9md">t9md</a>
       </td>
-      <td>Quick walkthrough of unique features of vim-mode-plus</td>
+      <td>vim-mode-plus: The most ambitious vim emulator in the world</td>
       <td>30min</td>
       <td>English</td>
     </tr>
@@ -90,7 +90,7 @@ Note: not ordered
         <img src="/assets/images/vimconf2017/lambdalisue.png" />
         <a href="https://twitter.com/lambdalisue">Λlisue</a>
       </td>
-      <td>You've been super viman. After this talk, you are super viman2. - Life with gina.vim</td>
+      <td>You've been Super Viman. After this talk, you could say you are Super Viman 2 -- Life with gina.vim</td>
       <td>20min</td>
       <td>Japanese</td>
     </tr>

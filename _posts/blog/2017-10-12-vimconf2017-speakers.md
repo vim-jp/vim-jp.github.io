@@ -81,7 +81,7 @@ VimConf 2017 の登壇者が決定しました。
         <img src="/assets/images/vimconf2017/t9md.png" />
         <a href="https://twitter.com/t9md">t9md</a>
       </td>
-      <td>Quick walkthrough of unique features of vim-mode-plus</td>
+      <td>vim-mode-plus: The most ambitious vim emulator in the world</td>
       <td>30分</td>
       <td>英語</td>
     </tr>
