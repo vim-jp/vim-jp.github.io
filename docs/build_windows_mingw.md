@@ -15,16 +15,16 @@ title: MinGWを使ってのビルド方法
 
         pacman -Suuy
 
-    MSYS2を終了して再実行するように言われた場合は、それに従ってminttyのウィンドウを閉じ、スタートメニューから `MSYS2 MSYS` を実行し、再度 `pacman -Suuy` を実行します。
+    MSYS2を終了して再実行するように言われた場合は、それに従ってminttyのウィンドウを閉じ、スタートメニューから再度 `MSYS2 MSYS` を実行し、`pacman -Suu` を実行します。
     システムの更新が終わったら、以下のコマンドを実行してGitやGCCなど必要なパッケージをインストールします。
 
         pacman -S git mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain
 
     pacmanのwrapperコマンドであるpacboyを使えば、もう少し簡単に、以下のコマンドでインストールできます。
 
-        pacboy -S git: toolchain:m
+        pacboy -S git toolchain:m
 
-    pacboyの使い方は、当該コマンドを引数無しで実行すると表示されます。`:`でプレフィックス無し、`:x`で64bit用(`mingw-w64-x86_64-`)、`:i`で32bit用(`mingw-w64-i686-`)、`:m`で64/32bit用両方がインストールされます。
+    pacboyの使い方は、`pacboy help`を実行すると表示されます。パッケージ名の後に`:x`で64bit用(`mingw-w64-x86_64-`)、`:i`で32bit用(`mingw-w64-i686-`)、`:m`で64/32bit用両方がインストールされます。
 
 3.  ソース取得
 

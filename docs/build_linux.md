@@ -33,7 +33,7 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
         $ sudo apt-get install lua5.2 liblua5.2-dev
 
-    LuaJITのLua拡張を使うには以下も追加で必要です。
+    LuaJITのLua拡張を使うには代わりに以下も追加で必要です。
 
         $ sudo apt-get install luajit libluajit-5.1
 
@@ -77,7 +77,7 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
           --enable-fail-if-missing
         $ make
 
-    もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に指定します。(上記に加えて`--with-luajit`を指定している点に注意)
+    もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に`--with-luajit`を追加します。
 
         $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-perlinterp --enable-pythoninterp

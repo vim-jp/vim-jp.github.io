@@ -52,6 +52,6 @@ title: VisualStudioを使ってのビルド方法
 
     VC2012以降を使う場合は、`SDK_INCLUDE_DIR` で `Win32.mak` があるフォルダを指定しなければならない場合があります。例:
 
-        "SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include"
+        nmake -f Make_mvc.mak "SDK_INCLUDE_DIR=C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include" ...
 
     `SDK_INCLUDE_DIR` の指定が必要かどうかは、Vimのバージョンに依存します。
