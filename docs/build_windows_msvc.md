@@ -34,17 +34,18 @@ title: VisualStudioを使ってのビルド方法
         nmake -f Make_mvc.mak GUI=yes IME=yes MBYTE=yes ^
           ICONV=yes DEBUG=no
 
-    もしPerl拡張やPython2/3拡張などを使う場合は以下の様に指定します。
+    もしPerl拡張やPython2/3拡張、Lua拡張などを使う場合は以下の様に指定します。
 
         nmake -f Make_mvc.mak GUI=yes IME=yes MBYTE=yes ICONV=yes ^
           PERL=C:\strawberry\perl DYNAMIC_PERL=yes PERL_VER=526 ^
           PYTHON=c:\python27 DYNAMIC_PYTHON=yes PYTHON_VER=27 ^
           PYTHON3=c:\python36 DYNAMIC_PYTHON3=yes PYTHON3_VER=36 ^
+          LUA=c:\lua53 DYNAMIC_LUA=yes LUA_VER=53 ^
           CSCOPE=yes NETBEANS=yes DEBUG=no
 
     注意) 複数行に跨るのでバッチファイルに記載して実行して下さい。(行末の `^` は行継続を示しています。)
 
-    Ruby拡張を使うには、少々面倒な手順が必要になります。通常はRubyとVimを同じコンパイラでビルドする必要があるのですが、現在Windowsで広く使われている[RubyInstaller](https://rubyinstaller.org/)はMinGWでビルドされているので、そのままではVCから使うことができないのです。
+    Ruby拡張を使うには少々面倒な手順が必要になるため、ここでは説明を割愛します。通常はRubyとVimを同じコンパイラでビルドする必要があるのですが、現在Windowsで広く使われている[RubyInstaller](https://rubyinstaller.org/)はMinGWでビルドされているので、そのままではVCから使うことができないためです。
     詳細は、[src/INSTALLpc.txt](https://github.com/vim/vim/blob/master/src/INSTALLpc.txt)の "Building with Ruby support" の項を参照してください。
 
     Vim 7.4.393以降で使えるようになったDirectWriteを有効にするには、`DIRECTX=yes` を指定する必要があります。

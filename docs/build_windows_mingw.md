@@ -41,16 +41,17 @@ title: MinGWを使ってのビルド方法
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes \
           ICONV=yes DEBUG=no
 
-    もしPerl拡張やRuby拡張、Python2/3拡張を使う場合は以下の様に指定します。
+    もしPerl拡張やPython2/3拡張、Ruby拡張、Lua拡張を使う場合は以下の様に指定します。
 
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes \
           PERL=c:/strawberry/perl DYNAMIC_PERL=yes PERL_VER=526 \
           PYTHON=c:/python27 DYNAMIC_PYTHON=yes PYTHON_VER=27 \
           PYTHON3=c:/python36 DYNAMIC_PYTHON3=yes PYTHON3_VER=36 \
           RUBY=c:/Ruby24 DYNAMIC_RUBY=yes RUBY_VER=24 RUBY_API_VER_LONG=2.4.0 \
+          LUA=c:/lua53 DYNAMIC_LUA=yes LUA_VER=53 \
           CSCOPE=yes NETBEANS=yes STATIC_STDCPLUS=yes DEBUG=no
 
-    msys2 付属の perl/python/ruby を使う場合は以下の様に指定します。
+    msys2 付属の perl/python/ruby/lua を使う場合は以下の様に指定します。
 
         mingw32-make -f Make_ming.mak GUI=yes IME=yes MBYTE=yes ICONV=yes \
           PERL=c:/msys64/mingw64 DYNAMIC_PERL=yes PERL_VER=522 \
@@ -65,6 +66,7 @@ title: MinGWを使ってのビルド方法
             PYTHON3INC=-Ic:/msys64/mingw64/include/python3.6m \
             DYNAMIC_PYTHON3_DLL=libpython3.6m.dll \
           RUBY=c:/msys64/mingw64 DYNAMIC_RUBY=yes RUBY_VER=24 RUBY_API_VER_LONG=2.4.0 \
+          LUA=c:/msys64/mingw64 DYNAMIC_LUA=yes LUA_VER=53 \
           CSCOPE=yes NETBEANS=yes STATIC_STDCPLUS=yes DEBUG=no
 
     注意1) 複数行に跨るのでシェルスクリプトに記載して実行して下さい。

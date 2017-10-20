@@ -68,15 +68,7 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
     ※GTK2-GNOME GUI版の場合は`--enable-gui=gtk2`の代わりに、`--enable-gui=gnome2`を指定<br />
     ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション<br />
 
-    もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
-
-        $ ./configure --with-features=huge --enable-gui=gtk2
-          --enable-perlinterp --enable-pythoninterp
-          --enable-python3interp --enable-rubyinterp
-          --enable-fail-if-missing
-        $ make
-
-    もしLua拡張を合わせて有効化する場合は以下の様に指定します。
+    もしPerl拡張やPython2/3拡張、Ruby拡張、Lua拡張を使う場合は以下の様に指定します。
 
         $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-perlinterp --enable-pythoninterp
