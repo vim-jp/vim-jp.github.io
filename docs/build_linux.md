@@ -18,11 +18,12 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
     ※実際は1行
 
-    GVim (GTK2-GNOME GUI版)をビルドするには以下も追加で必要です。 Unity 版の Ubuntu を利用する場合は、GNOME GUI よりも GTK2 GUI の方が推奨されます。
+    gvim (GTK2 GUI版)をビルドするには以下も追加で必要です。(GUI版は一般的にはGTK2またはGTK3を使うのがよいでしょう。)
 
-        $ sudo apt-get install libxmu-dev libgnomeui-dev libxpm-dev
+        $ sudo apt-get install libxmu-dev libgtk2.0-dev libxpm-dev
 
-    ※GTK2 GUI版の場合は`libgnomeui-dev`の代わりに、`libgtk2.0-dev`を指定。
+    ※GTK3 GUI版の場合は`libgtk2.0-dev`の代わりに、`libgtk-3-dev`を指定。<br />
+    ※GTK2-GNOME GUI版の場合は`libgtk2.0-dev`の代わりに、`libgnomeui-dev`を指定。<br />
 
     Perl, Python2,3, Ruby拡張を使うには以下も追加で必要です。
 
@@ -48,11 +49,6 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
     `git clone`を実行した後にソースが更新された場合は、以下のコマンドで最新のソースを取得できます。
 
-        $ git fetch
-        $ git merge
-
-    ローカルでの変更がない場合、あるいは2つをまとめて以下のコマンドでもOKです。
-
         $ git pull
 
     特定のバージョンを指定して取得する場合は、以下のコマンドを実行します。
@@ -63,17 +59,18 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
     `vim/src`フォルダに移動し以下のコマンドを実行します。
 
-        $ ./configure --with-features=huge --enable-gui=gnome2
+        $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-fail-if-missing
         $ make
 
-    ※`./configure`の行は実際は1行  
-    ※GTK2 GUI版の場合は`--enable-gui=gnome2`の代わりに、`--enable-gui=gtk2`を指定  
-    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション  
+    ※`./configure`の行は実際は1行<br />
+    ※GTK3 GUI版の場合は`--enable-gui=gtk2`の代わりに、`--enable-gui=gtk3`を指定<br />
+    ※GTK2-GNOME GUI版の場合は`--enable-gui=gtk2`の代わりに、`--enable-gui=gnome2`を指定<br />
+    ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション<br />
 
     もしPerl拡張やRuby拡張、Python拡張を使う場合は以下の様に指定します。
 
-        $ ./configure --with-features=huge --enable-gui=gnome2
+        $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-perlinterp --enable-pythoninterp
           --enable-python3interp --enable-rubyinterp
           --enable-fail-if-missing
@@ -81,7 +78,7 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
     もしLua拡張を合わせて有効化する場合は以下の様に指定します。
 
-        $ ./configure --with-features=huge --enable-gui=gnome2
+        $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-perlinterp --enable-pythoninterp
           --enable-python3interp --enable-rubyinterp
           --enable-luainterp
@@ -90,7 +87,7 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
 
     もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に指定します。(上記に加えて`--with-luajit`を指定している点に注意)
 
-        $ ./configure --with-features=huge --enable-gui=gnome2
+        $ ./configure --with-features=huge --enable-gui=gtk2
           --enable-perlinterp --enable-pythoninterp
           --enable-python3interp --enable-rubyinterp
           --enable-luainterp --with-luajit
