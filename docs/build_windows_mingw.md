@@ -20,6 +20,12 @@ title: MinGWを使ってのビルド方法
 
         pacman -S git mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain
 
+    pacmanのwrapperコマンドであるpacboyを使えば、もう少し簡単に、以下のコマンドでインストールできます。
+
+        pacboy -S git: toolchain:m
+
+    pacboyの使い方は、当該コマンドを引数無しで実行すると表示されます。`:`でプレフィックス無し、`:x`で64bit用(`mingw-w64-x86_64-`)、`:i`で32bit用(`mingw-w64-i686-`)、`:m`で64/32bit用両方がインストールされます。
+
 3.  ソース取得
 
     ビルドするターゲットに合わせて、スタートメニューから `MSYS2 MinGW 64-bit` または `MSYS2 MinGW 32-bit` のいずれかを実行し、そこから以下を実行します。
