@@ -1,3 +1,5 @@
+# TODO: 今後しばらくは travis-ci を使わないので近い将来消す
+
 language: ruby
 rvm:
   # RubyInstallerで提供される最新版を、指定・利用の目安としている
