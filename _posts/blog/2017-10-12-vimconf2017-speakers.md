@@ -36,7 +36,7 @@ VimConf 2017 の登壇者が決定しました。
         <img src="/assets/images/vimconf2017/haya14busa.png" />
         <a href="https://twitter.com/haya14busa">Hayabusa</a>
       </td>
-      <td>TBD</td>
+      <td>Vim, Me and Community</td>
       <td>60分</td>
       <td>日本語</td>
     </tr>

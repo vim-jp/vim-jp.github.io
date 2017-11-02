@@ -36,7 +36,7 @@ Note: not ordered
         <img src="/assets/images/vimconf2017/haya14busa.png" />
         <a href="https://twitter.com/haya14busa">Hayabusa</a>
       </td>
-      <td>TBD</td>
+      <td>Vim, Me and Community</td>
       <td>60min</td>
       <td>Japanese</td>
     </tr>
