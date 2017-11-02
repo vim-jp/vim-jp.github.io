@@ -24,7 +24,7 @@ title: Vim Magazine 2017 年 10 月号
 *   8.0.1236: `has('osxdarwin')` で `--enable-darwin` でコンパイルされたのかチェックできるようになりました
 *   8.0.1238: 'incsearch' と 'hlsearch' がオンの場合、インクリメンタルサーチ中にも全ての候補をハイライトするようになりました
 *   8.0.1239: `searchpair()` 関数の skip パラメーターに lambda を渡せるようになりました
-*   8.0.1240: Windows において `term_start()` に環境変数が渡されるようになりました
+*   8.0.1240: Windows において `term_start()` に環境変数が渡せるようになりました
 
 ## Vimに関する脆弱性
 
