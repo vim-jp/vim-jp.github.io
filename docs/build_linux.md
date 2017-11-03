@@ -3,43 +3,49 @@ layout: docs
 title: Linuxでのビルド方法
 ---
 
-Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
+Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
 1.  必要なパッケージのインストール
 
     Terminalアプリを開き、以下を実行します。ビルドに必要なパッケージが全てインストールされますが、ビルド設定によっては不要なパッケージも大量に含まれています。（行頭の`$`はプロンプトを示しており、実際には入力不要です。）
 
-        $ sudo apt-get build-dep vim
+        $ sudo apt build-dep vim
 
-    パッケージを個別にインストールするには以下を実行します。
+    ※もしも、`E: You must put some 'source' URIs in your sources.list` というエラーが表示された場合は、`/etc/apt/sources.list` を編集して `deb-src` エントリーを有効化する必要があります。
 
-        $ sudo apt-get install git gettext libncurses5-dev
+    build-dep コマンドを使わずに、パッケージを個別にインストールするには以下を実行します。
+
+        $ sudo apt install git gettext libtinfo-dev
           libacl1-dev libgpm-dev
 
     ※実際は1行
 
+    GCC等のビルドツールをまだインストールしていない場合は以下も実行します。
+
+        $ sudo apt install build-essential
+
     gvim (GTK2 GUI版)をビルドするには以下も追加で必要です。(GUI版は一般的にはGTK2またはGTK3を使うのがよいでしょう。)
 
-        $ sudo apt-get install libxmu-dev libgtk2.0-dev libxpm-dev
+        $ sudo apt install libxmu-dev libgtk2.0-dev libxpm-dev
 
     ※GTK3 GUI版の場合は`libgtk2.0-dev`の代わりに、`libgtk-3-dev`を指定。<br />
     ※GTK2-GNOME GUI版の場合は`libgtk2.0-dev`の代わりに、`libgnomeui-dev`を指定。<br />
 
     Perl, Python2,3, Ruby拡張を使うには以下も追加で必要です。
 
-        $ sudo apt-get install libperl-dev python-dev python3-dev ruby-dev
+        $ sudo apt install libperl-dev python-dev python3-dev ruby-dev
 
     Lua拡張を使うには以下も追加で必要です。
 
-        $ sudo apt-get install lua5.2 liblua5.2-dev
+        $ sudo apt install lua5.2 liblua5.2-dev
 
     LuaJITのLua拡張を使うには代わりに以下も追加で必要です。
 
-        $ sudo apt-get install luajit libluajit-5.1
+        $ sudo apt install luajit libluajit-5.1
 
     ソースコードを修正する場合は、以下のパッケージも必要になることがあります。
 
-        $ sudo apt-get install autoconf automake cproto
+        $ sudo apt install autoconf automake cproto
 
 2.  ソース取得
 
@@ -101,3 +107,14 @@ Ubuntu 14.04 LTSを使った場合のビルド方法を説明します。
     以下のコマンドを実行すると、`./configure`の`--prefix`オプションで指定した先にインストールされます。（無指定の場合は、`/usr/local`など）
 
         $ sudo make install
+
+    必要に応じて`hash -r`を実行してから、`vim`コマンドを実行し、今ビルドしたバージョンが立ち上がればOKです。
+
+    英語環境でも、Vimは日本語で使いたいという場合は、以下のように実行してみてください。
+
+        $ LANG=ja_JP.utf-8 vim
+
+    メッセージが日本語化されない場合は、`:version`の出力に`+gettext`が含まれているかどうかを確認してください。`-gettext`となっている場合は、`gettext`パッケージをインストールしてから、`./configure`と`make`をやり直してください。
+    `+gettext`が含まれているにも関わらず日本語メッセージが出ない場合は、日本語ロケールがインストールされていない可能性があります。以下のコマンドでインストールしてください。
+
+        $ sudo apt install language-pack-ja
