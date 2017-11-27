@@ -15,7 +15,7 @@ Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画
 
 # 技術背景
 
-これまでの gvim は Compatible Bitmap を使って DirectWrite に一括描画させ、それを BitBlt という描画転送 API を使ってレンダリングするという手法が使われてきました。この制限により DirectWrite でつかえる使える API も限定されていました。今回の修正では、実装にてグリフを解釈し個々に色付けする事で絵文字を描画しています。
+これまでの gvim は Compatible Bitmap を使って DirectWrite に一括描画させ、それを BitBlt という描画転送 API を使ってレンダリングするという手法が使われてきました。この制限により DirectWrite で使える API も限定されていました。今回の修正では、実装にてグリフを解釈し個々に色付けする事で絵文字を描画しています。
 
 実装内容をお知りになりたい方は、今回マージされた pull-request を参照下さい。
 
