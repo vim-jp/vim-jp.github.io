@@ -5,7 +5,7 @@ title: Windows で色付きの絵文字が表示出来る様になりました�
 ---
 # 色付き絵文字の問題
 
-Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画し、フォントのレンダリングを DirectX API の DirectWrite を使って描画しています。ハードウェアレンダリング用の API ではありますが、Vim は GDI でのレンダリングにツギハギをあてる様に DirectWrite を使った実装が行われているため、思った様にパフォーマンスを得る事が出来ず、逆に遅くなってしまう状況でした。renderoptions を使っておられた方であれば、アンチエイリアスを効かせたとたん Vim がモッサリしていたのをご存じかと思います。
+Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画し、フォントのレンダリングを DirectX API の DirectWrite を使って描画しています。ハードウェアレンダリング用の API ではありますが、Vim は GDI でのレンダリングにツギハギをあてる様に DirectWrite を使った実装が行われているため、思った様にパフォーマンスを得る事が出来ず、逆に遅くなってしまっていました。renderoptions を使っておられた方であれば、アンチエイリアスを効かせたとたん Vim がモッサリしていたのをご存じかと思います。
 
 それとは別に、Windows 版の gvim には Windows 8.1 以降でサポートされた「色付きの絵文字」がレンダリング出来ないという重大な欠陥がありました。この問題に対して Windows で色付きの絵文字を描画できる様にして、なおかつ描画パフォーマンスも改善するパッチが[マージ](https://github.com/vim/vim/pull/2375)されました。
 
