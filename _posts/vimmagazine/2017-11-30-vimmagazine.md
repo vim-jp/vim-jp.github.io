@@ -36,4 +36,20 @@ title: Vim Magazine 2017 年 11 月号
 
 ## Vimに関する脆弱性
 
-特筆すべき脆弱性の報告はありませんでした。
+*   スワップファイルのパーミッションを問題とする脆弱性 [CVE-2017-1000382][1000382] ([JVNDB-2017-009929 ][009929_AD_1]) が指摘されました。
+
+    基本的にはWebサーバーなどの設定および使い方の問題であると考えられています。
+    しかしスワップファイルが編集中のファイルと同じディレクトリに作られるのを
+    避けたいのであれば、 `'dir'` オプションで別のディレクトリに作るように
+    設定すると良いでしょう。設定例:
+
+    ```vimscript
+    silent! call mkdir($HOME . '/.vim/swap', 'p', 0700)
+    set directory=~/.vim/swap//
+    ```
+
+*   その他、軽微な脆弱性が 8.0.1345 までで 3点修正されています。 [参考資料][bramcomment]
+
+[1000382]:https://oss.sios.com/security/editors-security-vulnerabiltiy-20171101
+[009929_AD_1]:http://vrda.jpcert.or.jp/feed/ja/JVNiPedia_JVNDB-2017-009929_AD_1.html
+[bramcomment]:http://www.openwall.com/lists/oss-security/2017/11/28/4
