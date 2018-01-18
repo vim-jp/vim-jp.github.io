@@ -6,7 +6,7 @@ title: Vim Magazine 2018 年 01 月号
 ---
 ## 話題
 
-*   [vital.vim開発者会議2018-02](https://fablicvim.connpass.com/event/74842/)が来年である2018-02-15 (木) に開催されました(予定
+*   [vital.vim開発者会議2018-02](https://fablicvim.connpass.com/event/74842/)が 2018-02-15 (木) に開催されます
 
 ## 今月の新機能
 
