@@ -14,6 +14,8 @@ title: Vim Magazine 2018 年 01 月号
 
 今月の新機能及びユーザーに影響のある変更は以下のとおりです。
 
+*   8.0.1436: `has()` で確認可能な機能 `python_compiled`, `python3_compiled`, `python_dynamic`, `python3_dynamic` が追加されました
+
 ## Vimに関する脆弱性
 
 特筆すべき脆弱性の報告はありませんでした。
