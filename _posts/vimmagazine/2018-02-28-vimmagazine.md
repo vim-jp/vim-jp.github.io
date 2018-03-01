@@ -27,6 +27,9 @@ title: Vim Magazine 2018 年 02 月号
 *   8.0.1531: Windows 10 Version 1703 (Creators Update) 以降のコマンドプロンプトで 24bit 色が使えるようになりました
 *   8.0.1553: `ga` でダイグラフが表示されるようになりました
 
+*   ランタイムの更新
+    *   [CHICKEN scheme](http://wiki.call-cc.org/) のファイルタイププラグインが追加されました。 `let b:is_chicken=1` と `set ft=scheme` で利用できます
+
 ## Vimに関する脆弱性
 
 特筆すべき脆弱性の報告はありませんでした。
