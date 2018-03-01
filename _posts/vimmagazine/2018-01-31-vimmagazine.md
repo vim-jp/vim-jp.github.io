@@ -14,8 +14,8 @@ title: Vim Magazine 2018 年 01 月号
 
 今月の新機能及びユーザーに影響のある変更は以下のとおりです。
 
-*   8.0.1436: `has()` で確認可能な機能 `python_compiled`, `python3_compiled`, `python_dynamic`, `python3_dynamic` が追加されました
-*   8.0.1445: コマンドラインが編集された時に実行される autocommand イベント `CmdlineChanged` が追加されました
+*   8.0.1436: `has()` で確認可能な機能 `python_compiled`, `python3_compiled`, `python_dynamic`, `python3_dynamic` が追加されました
+*   8.0.1445: コマンドラインが編集された時に実行される autocommand イベント `CmdlineChanged` が追加されました
 *   8.0.1451: `'pythonhome'`, `'pythonthreehome'` オプションが追加されました
 
 *   ランタイムの更新
