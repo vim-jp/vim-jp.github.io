@@ -23,8 +23,9 @@ title: Vim Magazine 2018 年 02 月号
 *   8.0.1510: ビープのテスト用関数 `assert_beeps()` が追加されました
 *   8.0.1514: 変更リストを取得する関数 `getchangelist()` が追加されました (関連パッチ: 8.0.1519)
 *   8.0.1521: 端末ウィンドウ内で Shift-Tab が使えるようになりました
-*   8.0.1523: 端末ウィンドウのダンプを取って比較するための関数 `term_dumpwrite()`, `term_dumpread()`, `term_dumpdiff()`, `assert_equalfile()` が追加されました (関連パッチ: 8.0.1529, 8.0.1542)
+*   8.0.1523: 端末ウィンドウのダンプを取って比較するための関数 `term_dumpwrite()`, `term_dumpload()`, `term_dumpdiff()`, `assert_equalfile()` が追加されました (関連パッチ: 8.0.1529, 8.0.1542)
 *   8.0.1531: Windows 10 Version 1703 (Creators Update) 以降のコマンドプロンプトで 24bit 色が使えるようになりました
+*   8.0.1553: `ga` でダイグラフが表示されるようになりました
 
 ## Vimに関する脆弱性
 
