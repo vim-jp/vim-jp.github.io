@@ -29,6 +29,7 @@ title: Vim Magazine 2018 年 02 月号
 
 *   ランタイムの更新
     *   [CHICKEN scheme](http://wiki.call-cc.org/) のファイルタイププラグインが追加されました。 `let b:is_chicken=1` と `set ft=scheme` で利用できます
+    *   古テュルク語 (oldturkic) のキーマップが2つ追加されました
 
 ## Vimに関する脆弱性
 
