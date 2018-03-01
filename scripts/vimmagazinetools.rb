@@ -10,8 +10,8 @@ require 'date'
 
 
 VIMPATCH_README_URL = "http://ftp.vim.org/pub/vim/patches/%s/README"
-VIMSCRIPT_URL = "https://vim.sourceforge.io/scripts/script.php?script_id=%s"
-VIMSCRIPT_LIST_URL = "https://vim.sourceforge.io/scripts/script_search_results.php?&show_me=99999"
+VIMSCRIPT_URL = "https://www.vim.org/scripts/script.php?script_id=%s"
+VIMSCRIPT_LIST_URL = "https://www.vim.org/scripts/script_search_results.php?&show_me=99999"
 VIM_GITHUB_COMMIT_URL = "https://github.com/vim/vim/commit/%s"
 GITHUBAPI_ISSUE_LIST_URL = "https://api.github.com/repos/%s/%s/issues"
 GITHUBAPI_ISSUE_URL = "https://api.github.com/repos/%s/%s/issues/%s"
