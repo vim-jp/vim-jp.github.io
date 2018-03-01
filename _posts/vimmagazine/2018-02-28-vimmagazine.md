@@ -6,9 +6,9 @@ title: Vim Magazine 2018 年 02 月号
 ---
 ## 話題
 
-*   [vital.vim開発者会議2018-02](https://fablicvim.connpass.com/event/74842/)が 2018-02-15 (木) に開催されました
 *   [Meguro.vim #8](https://megurovim.connpass.com/event/76881/)が 2018-02-17 (土) に開催されました
 *   [Osaka.vim #12](https://osaka-vim.connpass.com/event/77504/)が 2018-02-17 (土) に開催されました
+*   [vital.vim開発者会議2018-03](https://fablicvim.connpass.com/event/74842/)が 参加者募集中です
 
 ## 今月の新機能
 
