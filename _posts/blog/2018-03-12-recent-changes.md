@@ -35,7 +35,7 @@ augroup END
 
 Vim プラグイン開発者はこれまで Vim の終了を検知する為に QuitPre イベントを使ってきました。しかしこの QuitPre イベントは、バッファの終了を確認する手前で発火される為、バッファに割り当てた channel を閉じたいといったニーズに使用するには少し無理がありました。
 
-[Patch 8.0.1595](https://github.com/vim/vim/commit/12a96de430779b88795fac87a2be666d9f661d1e) にて ExitPre イベントが導入され、バッファが全て閉じられた後に発火するイベントが追加されました。Vim プラグインから Vim が ExitPre イベントをサポートしているかどうかを確認するには以下の様に実行します。
+[Patch 8.0.1595](https://github.com/vim/vim/commit/12a96de430779b88795fac87a2be666d9f661d1e) にて ExitPre イベントが導入され、バッファが全て閉じられる事が確定した後に発火するイベントが追加されました。Vim プラグインから Vim が ExitPre イベントをサポートしているかどうかを確認するには以下の様に実行します。
 
 ```vim
 :echo exists("##ExitPre")
