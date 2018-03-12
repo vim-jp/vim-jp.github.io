@@ -1,8 +1,10 @@
 ---
 layout: post
 category: blog
-title: :terminal コマンドを終了する方法
+title: 最近追加された機能
 ---
+最近追加された機能について説明します。
+
 # terminal バッファ強制終了の動作
 
 これまで GVim で `:terminal` コマンドを実行した状態で画面の × ボタンをクリックすると、エラーが発生して GVim を終了する事が出来ませんでした。これは Vim の設計方針としてバッファを閉じる際にジョブを強制終了するかどうかが明確に決まっていなかった事が原因です。
@@ -39,3 +41,8 @@ Vim プラグイン開発者はこれまで Vim の終了を検知する為に Q
 :echo exists("##ExitPre")
 ```
 
+# terminal セッションの復帰
+
+Vim では `:mksession` コマンドを使う事で、編集中のバッファの状態を保存し、次回 Vim を起動した際に復帰できる機能があります。[Patch 8.0.1592](https://github.com/vim/vim/commit/4d8bac8bf593ff087517ff79090c2d224325aae6) にて sessionoptions オプションに terminal という値を含める事が出来る様になりました。これによりセッションを読み込んだ際に terminal ウィンドウも復帰されます。
+
+※起動していたプロセスの状態などは復帰しません
