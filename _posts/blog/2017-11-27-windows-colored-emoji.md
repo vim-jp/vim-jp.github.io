@@ -3,7 +3,8 @@ layout: post
 category: blog
 title: Windows で色付きの絵文字が表示出来る様になりました。
 ---
-# 色付き絵文字の問題
+
+## 色付き絵文字の問題
 
 Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画し、フォントのレンダリングを DirectX API の DirectWrite を使って描画しています。ハードウェアレンダリング用の API ではありますが、Vim は GDI でのレンダリングにツギハギをあてる様に DirectWrite を使った実装が行われているため、思った様にパフォーマンスを得る事が出来ず、逆に遅くなってしまっていました。renderoptions オプションを使っておられた方であれば、アンチエイリアスを効かせたとたん Vim がモッサリしていたのをご存じかと思います。
 
@@ -13,7 +14,7 @@ Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画
 
 ![色付き絵文字](/assets/images/emoji-sample1.png)
 
-# 技術背景
+## 技術背景
 
 これまでの gvim は Compatible Bitmap を使って DirectWrite に一括描画させ、それを BitBlt という描画転送 API を使ってレンダリングするという手法が使われてきました。この制限により DirectWrite で使える API も限定されていました。今回の修正では、実装にてグリフを解釈し個々に色付けする事で絵文字を描画しています。
 
@@ -21,7 +22,7 @@ Windows 版の gvim は基本部分は GDI (Graphics Device Interface) で描画
 
 <https://github.com/vim/vim/pull/2375>
 
-# 色付き絵文字が表示されない条件
+## 色付き絵文字が表示されない条件
 
 gvim をお使いの環境や設定次第では正しく描画されないケースがあります。
 
@@ -33,13 +34,13 @@ gvim をお使いの環境や設定次第では正しく描画されないケー
 
 ![色付き絵文字](/assets/images/emoji-sample2.png)
 
-# パフォーマンスの改善
+## パフォーマンスの改善
 
 今回はこの色付き絵文字の対応を行った際に、前述の Compatible Bitmap を使った方式を廃止し、DirectWrite にデバイスコンテキストを預けて描画させる方式へとスイッチしました。これにより、これまでの色付き絵文字に対応していないバージョンよりも描画パフォーマンスが改善しモッサリ感が幾らか解消されました。ぜひ最新版を使って頂き、このパフォーマンス改善を体感して頂きたいと思います。Vim の nightly build は以下からダウンロード出来ます。
 
 <https://github.com/vim/vim-win32-installer/releases>
 
-# 対応裏話
+## 対応裏話
 
 今回の色付き絵文字対応は vim-jp の3名で行いました。Vim の開発者 Bram Moolenaar 氏は、送られてきたパッチを事細かく確認される方なので、マージされるまでには数週間掛かるのではとも言われていました。しかしいざ [pull-request](https://github.com/vim/vim/pull/2375) を送ってみたところ、わずか3時間というスピードマージとなり、担当した3人も驚きを隠せませんでした。
 
