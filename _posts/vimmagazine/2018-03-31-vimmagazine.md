@@ -6,7 +6,9 @@ title: Vim Magazine 2018 年 03 月号
 ---
 ## 話題
 
-*   [vital.vim開発者会議2018-03](https://fablicvim.connpass.com/event/74842/) が 03/01 に開催されました
+*   [vital.vim開発者会議2018-03](https://fablicvim.connpass.com/event/74842/) が 03/01 (木) に開催されました
+*   [Yokohama.vim #11](https://yokohamavim.connpass.com/event/81539/) が 03/31 (土) に開催されました
+*   [Meguro.vim #9](https://megurovim.connpass.com/event/81678/) が 04/07 (土) に開催されます
 
 ## 今月の新機能
 
