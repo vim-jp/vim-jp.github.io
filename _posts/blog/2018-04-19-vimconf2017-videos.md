@@ -8,4 +8,3 @@ title: VimConf 2017 のビデオを公開します
 
 [YouTube のプレイリスト #VimConf2017](https://www.youtube.com/playlist?list=PLx8bw5NQypskGEy8ARntIDxKmXcBEoRZQ) から参照下さい。
 
-{% include vimconf2017player.html %}
