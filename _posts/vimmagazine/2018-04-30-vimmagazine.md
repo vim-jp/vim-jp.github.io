@@ -27,6 +27,7 @@ title: Vim Magazine 2018 年 04 月号
 *   8.0.1738: `:args` コマンドの出力が複数行の場合、余白付きで表示されるようになりました
 *   8.0.1742: `job_info()` 関数の引数に何も渡されなかった場合、全てのジョブの情報が取得できるようになりました
 *   8.0.1743: 端末ウィンドウに関するオプション名は `termwin` が先頭に付くようになりました (`termkey` → `termwinkey`, `termsize` → `termwinsize`, `terminalscroll` → `termwinscroll`)
+*   8.0.1747: `term_start()` 関数が `job_info()` 関数で取得できる情報を設定するようになりました
 
 ## Vimに関する脆弱性
 
