@@ -87,7 +87,7 @@ function loadVimmers(data) {
 
     if (vimorg) {
       links.push({
-        'url': 'http://www.vim.org/account/profile.php?user_id=' + vimorg,
+        'url': 'https://www.vim.org/account/profile.php?user_id=' + vimorg,
         'label': 'Vim',
         'class': 'vimorg'
       });
@@ -136,7 +136,7 @@ function loadVimmers(data) {
 
 (function () {
   var js = document.createElement('script');
-  js.src = 'http://vim-jp.herokuapp.com/vimmers?callback=loadVimmers';
+  js.src = 'https://vim-jp.herokuapp.com/vimmers?callback=loadVimmers';
   js.async = true;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(js, s);
