@@ -35,13 +35,13 @@ kramdown:
 # 以下はvim-jp固有の設定項目
 
 # baseurl と紛らわしいが別物なので要注意
-base-url: http://vim-jp.org
+base-url: https://vim-jp.org
 
 hotkeys: true
 
 twitter:
   username: vim_jp
-logo: http://vim-jp.org/assets/images/vim2-128.png?20170201003200
+logo: https://vim-jp.org/assets/images/vim2-128.png?20170201003200
 
 defaults:
   - scope:
