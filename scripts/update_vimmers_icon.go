@@ -1,17 +1,49 @@
 package main
 
 import (
+	"crypto/md5"
 	"encoding/json"
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
+	"io"
 	"io/ioutil"
 	"log"
+	"net/http"
 	"os"
+	"path/filepath"
+	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 const (
 	filename = "./vimmers/vimmers.json"
 )
+
+func download(u string) (string, error) {
+	resp, err := http.Get(u)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	ct := resp.Header.Get("content-type")
+	ext := ""
+	if strings.Index(ct, "/jpeg") != -1 {
+		ext = "jpg"
+	} else if strings.Index(ct, "/png") != -1 {
+		ext = "png"
+	} else if strings.Index(ct, "/gif") != -1 {
+		ext = "gif"
+	}
+	sum := md5.Sum([]byte(u))
+	filename := filepath.Join("assets/images/vimmers", fmt.Sprintf("%x", sum[:])+"."+ext)
+	f, err := os.Create(filename)
+	if err != nil {
+		return "", err
+	}
+	defer f.Close()
+	_, err = io.Copy(f, resp.Body)
+	return filename, err
+}
 
 func main() {
 	f, err := os.Open(filename)
@@ -34,7 +66,11 @@ func main() {
 			}
 			if icon, ok := doc.Find("img.ProfileAvatar-image").First().Attr("src"); ok {
 				fmt.Println(icon)
-				vimmer["twitter_icon"] = icon
+				if h, err := download(icon); err == nil {
+					vimmer["twitter_icon"] = "/" + filepath.ToSlash(h)
+				} else {
+					vimmer["twitter_icon"] = icon
+				}
 			}
 		}
 	}
