@@ -1,7 +1,7 @@
 // vim:set ts=8 sts=2 sw=2 tw=0 et:
 (function(global){
 
-var VIMMERS_DATA_URL = "http://vim-jp.herokuapp.com/vimmers?callback=?";
+var VIMMERS_DATA_URL = "https://vim-jp.herokuapp.com/vimmers?callback=?";
 var DEFAULT_LIMITS = 50;
 
 var allVimmers = [];
@@ -53,7 +53,7 @@ function toVimmerData(raw, delay) {
       v.face_icon_url = raw.twitter_icon;
     }
     v.links.push({
-      url: 'https://twitter.com/' + raw.twitter,
+      url: 'httpss://twitter.com/' + raw.twitter,
       type: 'Twitter',
       icon_url: '/assets/images/icon-twitter.png'
     });
@@ -78,7 +78,7 @@ function toVimmerData(raw, delay) {
       }));
     }
     v.links.push({
-      url: 'https://github.com/' + raw.github,
+      url: 'httpss://github.com/' + raw.github,
       type: 'Github',
       icon_url: '/assets/images/icon-github.png'
     });
@@ -110,7 +110,7 @@ function toVimmerData(raw, delay) {
 
   if (raw.vimorg) {
     v.links.push({
-      url: 'http://www.vim.org/account/profile.php?user_id=' + raw.vimorg,
+      url: 'https://www.vim.org/account/profile.php?user_id=' + raw.vimorg,
       type: 'Vim',
       icon_url: '/assets/images/icon-vim.png'
     });
