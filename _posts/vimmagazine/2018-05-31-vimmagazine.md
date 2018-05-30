@@ -7,6 +7,7 @@ title: Vim Magazine 2018 年 05 月号
 
 ## 話題
 
+*   [vim-jp.org](https://vim-jp.org) が HTTPS になりました
 *   Vim 8.1 が 05/18(金) に[リリース](https://vim-jp.org/blog/2018/05/18/Vim-8.1-released.html)されました
 *   [asakusa.vim #0](https://asakusavim.connpass.com/event/88381/) が 05/24(木) に開催されました
 
