@@ -19,6 +19,8 @@ title: Vim Magazine 2018 年 06 月号
     *   関数 `prompt_addtext()`, `prompt_setprompt()`, `prompt_setcallback()` が追加されました
 *   8.1.0037: 任意のバッファに行を追記できる関数 `appendbufline()` が追加されました
 *   8.1.0039: 任意のバッファの行を削除できる関数 `deletebufline()` が追加されました
+*   8.1.0047: `:unlet $VAR` にコマンドライン補完が追加されました
+*   8.1.0049: `:terminal` を実行した時にシェルから参照可能な環境変数 `VIM_TERMINAL` が追加されました
 
 *   ランタイムの更新
     *   PHP のインデントスクリプトに `g:PHP_noArrowMatching`, `b:PHP_noArrowMatching` 変数が追加されました (`:help PHP_noArrowMatching`)。1 にするとメソッド呼び出しの `->` の位置を揃えないようになります
