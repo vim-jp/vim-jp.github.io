@@ -17,7 +17,7 @@ vim-jp では Vim のドキュメント翻訳を行っています。
 
 <img title="編集リンク" src="/assets/images/post-docedit2.png" style="border: solid 1px black">
 
-細かな誤字や、より良い翻訳をご提案頂ける場合は、このリンクから GitHub のプルリクエストを送信して下さい。皆様からのコントリビューションをお待ちしています。
+細かな誤字の修正や、より良い翻訳をご提案頂ける場合は、このリンクから GitHub のプルリクエストを送信して下さい。皆様からのコントリビューションをお待ちしています。
 
 参考: <https://qiita.com/amay077/items/8823376f307235a7f651>
 
