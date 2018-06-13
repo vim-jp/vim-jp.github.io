@@ -11,11 +11,11 @@ vim-jp では Vim のドキュメント翻訳を行っています。
 
 この度、[日本語ドキュメントサイト](http://vim-jp.org/vimdoc-ja/)に「編集」リンクを設置しました。
 
-<img title="編集リンク" src="/assets/images/post-docedit1.png" style="border: solid 1px">
+<img title="編集リンク" src="/assets/images/post-docedit1.png" style="border: solid 1px black">
 
 クリックすると GitHub 上のドキュメントが表示されます。
 
-<img title="編集リンク" src="/assets/images/post-docedit2.png" style="border: solid 1px">
+<img title="編集リンク" src="/assets/images/post-docedit2.png" style="border: solid 1px black">
 
 細かな誤字や、より良い翻訳をご提案頂ける場合は、このリンクから GitHub のプルリクエストを送信して下さい。皆様からのコントリビューションをお待ちしています。
 
