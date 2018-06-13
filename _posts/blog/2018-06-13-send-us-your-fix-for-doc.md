@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: ドキュメントに編集リンクを追加しました
+title: ドキュメントサイトに編集リンクを追加しました
 ---
 vim-jp では Vim のドキュメント翻訳を行っています。
 
