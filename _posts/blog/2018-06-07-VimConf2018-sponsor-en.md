@@ -4,6 +4,15 @@ category: blog
 title: Looking for companies sponsoring VimConf 2018
 ---
 
+## [UPDATED] 2018-06-15
+
+We are now accepting sponsors for VimConf 2018!
+If you wish to participate, please submit the form below.
+
+<https://goo.gl/forms/sd3s5YqFSncPg6903>
+
+##
+
 VimConf is the only and the first international Vim conference that has been running periodically by a Vim community. It had been running for 5 times, and in Tokyo, Japan, so far. We organize VimConf this year again.
 
 It'll be in the end of Nov 2018 in Tokyo, Japan. In this year the very famous Vim developers will give a talk, including [mattn](https://twitter.com/mattn_jp). We have dedicated staff who translate all the Japanese/English talks into English/Japanese there. There will be both Japanese and English talks, with all English or Vim script slides.
