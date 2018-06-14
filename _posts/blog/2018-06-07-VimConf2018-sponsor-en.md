@@ -4,10 +4,14 @@ category: blog
 title: Looking for companies sponsoring VimConf 2018
 ---
 
-[UPDATED] 2018-06-15
-Sponsoring application form has been opened !
+## [UPDATED] 2018-06-15
+
+We are now accepting sponsors for VimConf 2018!
 If you wish to participate, please submit the form below.
-https://goo.gl/forms/sd3s5YqFSncPg6903
+
+<https://goo.gl/forms/sd3s5YqFSncPg6903>
+
+##
 
 VimConf is the only and the first international Vim conference that has been running periodically by a Vim community. It had been running for 5 times, and in Tokyo, Japan, so far. We organize VimConf this year again.
 
