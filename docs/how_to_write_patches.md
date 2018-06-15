@@ -46,7 +46,7 @@ Windowsユーザーであれば[Visual Studioでのコンパイル方法](http:/
 全ての修正が完了したら pull-request を送信しましょう。GitHub 上で vim のリポジトリから Fork ボタンをクリックするか、[hub](https://github.com/github/hub) コマンドをお持ちであれば `hub fork` でも可能です。fork が出来たら自分のリポジトリに対して push します。
 
     $ hub fork
-    $ git push [ユーザID] add-new-func-trim
+    $ git push [ユーザーID] add-new-func-trim
 
 あとはブラウザで vim のリポジトリを開くと pull-request ボタンが表示されるので指示に従って pull-request を作成して下さい。その際、海外の方も開発に参加していますので本文は英語で書いて頂く必要があります。
 
