@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: VimConf 2018をスポンサーしてくださる会社を募集します
+title: VimConf 2018をスポンサーとしてサポート頂ける企業を募集します
 ---
 
 ## [UPDATED] 2018-06-15
