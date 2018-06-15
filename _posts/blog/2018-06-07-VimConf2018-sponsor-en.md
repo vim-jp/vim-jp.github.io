@@ -11,7 +11,7 @@ If you wish to participate, please submit the form below.
 
 <https://goo.gl/forms/sd3s5YqFSncPg6903>
 
-##
+---
 
 VimConf is the only and the first international Vim conference that has been running periodically by a Vim community. It had been running for 5 times, and in Tokyo, Japan, so far. We organize VimConf this year again.
 
