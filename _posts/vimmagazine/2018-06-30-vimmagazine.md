@@ -21,6 +21,9 @@ title: Vim Magazine 2018 年 06 月号
 *   8.1.0039: 任意のバッファの行を削除できる関数 `deletebufline()` が追加されました
 *   8.1.0047: `:unlet $VAR` にコマンドライン補完が追加されました
 *   8.1.0049: `:terminal` を実行した時にシェルから参照可能な環境変数 `VIM_TERMINAL` が追加されました
+*   8.1.0105: 可変タブ機能 (`+vartabs`) が追加されました
+    *   `'varsofttabstop'`, `'vartabstop'` に設定されたタブ幅のリストが `'softtabstop'`, `'tabstop'` の代わりに使用されます
+*   8.1.0110: `'shortmess'` オプションが `F` フラグを含んでいても `:file` コマンドの出力が省略されないようになりました
 
 *   ランタイムの更新
     *   PHP のインデントスクリプトに `g:PHP_noArrowMatching`, `b:PHP_noArrowMatching` 変数が追加されました (`:help PHP_noArrowMatching`)。1 にするとメソッド呼び出しの `->` の位置を揃えないようになります
