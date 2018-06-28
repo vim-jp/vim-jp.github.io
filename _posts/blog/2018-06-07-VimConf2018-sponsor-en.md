@@ -33,7 +33,7 @@ The sponsor plans for VimConf 2018:
     * Besides above, you can give a short talk such as for recruiting as a main session
     * Tickets for 2 people by total, including one more ticket than Gold plan
 
-We'll start opening shortly. See vim-jp.org and [#vimconf](https://twitter.com/search?f=tweets&vertical=default&q=%23vimconf&src=typd) for further information!
+<del>We'll start opening shortly. See vim-jp.org and [#vimconf](https://twitter.com/search?f=tweets&vertical=default&q=%23vimconf&src=typd) for further information!</del>
 
 Feel free to contact us if you are interested in. vimconf@gmail.com
 

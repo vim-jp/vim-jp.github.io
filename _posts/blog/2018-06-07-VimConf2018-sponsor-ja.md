@@ -33,8 +33,7 @@ title: VimConf 2018をスポンサーとしてサポート頂ける企業を募�
     * 上に加えて、メインセッションとしてリクルーティングなどの発表を数分可能
     * Goldプランに加えて、チケット合計2人分を含む
 
-近日中に受け付けを開始します。
-改めて後日公開する予定ですので、vim-jp.orgないし [#vimconf](https://twitter.com/search?f=tweets&vertical=default&q=%23vimconf&src=typd) を監視してみてください。
+<del>近日中に受け付けを開始します。改めて後日公開する予定ですので、vim-jp.orgないし [#vimconf](https://twitter.com/search?f=tweets&vertical=default&q=%23vimconf&src=typd) を監視してみてください。</del>
 
 興味のある方は、以下に気軽にメールを送ってください。 vimconf@gmail.com
 
