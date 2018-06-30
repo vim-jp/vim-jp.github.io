@@ -1,10 +1,10 @@
 {
-  "updated": "2018-05-31",
+  "updated": "2018-06-30",
   "vim": {
-    "version": "8.0.1850"
+    "version": "8.1.0127"
   },
   "script": {
-    "script_id": "5698",
+    "script_id": "5716",
     "state": [
       {
         "script_id": "1",
@@ -24,7 +24,7 @@
       {
         "script_id": "4",
         "rating": 117,
-        "downloads": 7923
+        "downloads": 7924
       },
       {
         "script_id": "5",
@@ -109,7 +109,7 @@
       {
         "script_id": "21",
         "rating": 623,
-        "downloads": 8278
+        "downloads": 8279
       },
       {
         "script_id": "22",
@@ -154,12 +154,12 @@
       {
         "script_id": "30",
         "rating": 1240,
-        "downloads": 40757
+        "downloads": 40759
       },
       {
         "script_id": "31",
         "rating": 3381,
-        "downloads": 79597
+        "downloads": 79598
       },
       {
         "script_id": "33",
@@ -194,7 +194,7 @@
       {
         "script_id": "39",
         "rating": 2392,
-        "downloads": 58150
+        "downloads": 58153
       },
       {
         "script_id": "40",
@@ -209,7 +209,7 @@
       {
         "script_id": "42",
         "rating": 3454,
-        "downloads": 119176
+        "downloads": 119178
       },
       {
         "script_id": "43",
@@ -254,12 +254,12 @@
       {
         "script_id": "51",
         "rating": 156,
-        "downloads": 7183
+        "downloads": 7185
       },
       {
         "script_id": "52",
         "rating": 1782,
-        "downloads": 45075
+        "downloads": 45076
       },
       {
         "script_id": "53",
@@ -289,7 +289,7 @@
       {
         "script_id": "58",
         "rating": 537,
-        "downloads": 14412
+        "downloads": 14413
       },
       {
         "script_id": "59",
@@ -344,7 +344,7 @@
       {
         "script_id": "69",
         "rating": 3349,
-        "downloads": 85522
+        "downloads": 85523
       },
       {
         "script_id": "70",
@@ -488,7 +488,7 @@
       },
       {
         "script_id": "98",
-        "rating": 26,
+        "rating": 30,
         "downloads": 2817
       },
       {
@@ -509,7 +509,7 @@
       {
         "script_id": "102",
         "rating": 1996,
-        "downloads": 18119
+        "downloads": 18120
       },
       {
         "script_id": "103",
@@ -528,7 +528,7 @@
       },
       {
         "script_id": "106",
-        "rating": 128,
+        "rating": 129,
         "downloads": 7710
       },
       {
@@ -754,7 +754,7 @@
       {
         "script_id": "152",
         "rating": 704,
-        "downloads": 25673
+        "downloads": 25674
       },
       {
         "script_id": "153",
@@ -789,7 +789,7 @@
       {
         "script_id": "159",
         "rating": 3844,
-        "downloads": 117919
+        "downloads": 117920
       },
       {
         "script_id": "160",
@@ -799,7 +799,7 @@
       {
         "script_id": "161",
         "rating": 279,
-        "downloads": 5636
+        "downloads": 5637
       },
       {
         "script_id": "162",
@@ -1029,7 +1029,7 @@
       {
         "script_id": "207",
         "rating": 79,
-        "downloads": 2617
+        "downloads": 2618
       },
       {
         "script_id": "208",
@@ -1059,7 +1059,7 @@
       {
         "script_id": "213",
         "rating": 5247,
-        "downloads": 124863
+        "downloads": 124864
       },
       {
         "script_id": "214",
@@ -1359,7 +1359,7 @@
       {
         "script_id": "273",
         "rating": 14225,
-        "downloads": 322480
+        "downloads": 322483
       },
       {
         "script_id": "274",
@@ -1464,7 +1464,7 @@
       {
         "script_id": "294",
         "rating": 1847,
-        "downloads": 40641
+        "downloads": 40644
       },
       {
         "script_id": "295",
@@ -1504,7 +1504,7 @@
       {
         "script_id": "302",
         "rating": 325,
-        "downloads": 11535
+        "downloads": 11536
       },
       {
         "script_id": "303",
@@ -1549,7 +1549,7 @@
       {
         "script_id": "311",
         "rating": 1020,
-        "downloads": 45568
+        "downloads": 45569
       },
       {
         "script_id": "312",
@@ -1769,7 +1769,7 @@
       {
         "script_id": "356",
         "rating": 1276,
-        "downloads": 31923
+        "downloads": 31924
       },
       {
         "script_id": "357",
@@ -1814,7 +1814,7 @@
       {
         "script_id": "365",
         "rating": 819,
-        "downloads": 39446
+        "downloads": 39448
       },
       {
         "script_id": "366",
@@ -2129,7 +2129,7 @@
       {
         "script_id": "431",
         "rating": 69,
-        "downloads": 2318
+        "downloads": 2319
       },
       {
         "script_id": "432",
@@ -2179,7 +2179,7 @@
       {
         "script_id": "441",
         "rating": 251,
-        "downloads": 4928
+        "downloads": 4929
       },
       {
         "script_id": "442",
@@ -2273,7 +2273,7 @@
       },
       {
         "script_id": "460",
-        "rating": 31,
+        "rating": 32,
         "downloads": 1914
       },
       {
@@ -2288,7 +2288,7 @@
       },
       {
         "script_id": "463",
-        "rating": 66,
+        "rating": 67,
         "downloads": 6260
       },
       {
@@ -2299,7 +2299,7 @@
       {
         "script_id": "465",
         "rating": 1948,
-        "downloads": 33179
+        "downloads": 33180
       },
       {
         "script_id": "466",
@@ -2369,7 +2369,7 @@
       {
         "script_id": "479",
         "rating": 681,
-        "downloads": 11629
+        "downloads": 11631
       },
       {
         "script_id": "480",
@@ -2434,7 +2434,7 @@
       {
         "script_id": "492",
         "rating": 295,
-        "downloads": 13303
+        "downloads": 13304
       },
       {
         "script_id": "493",
@@ -2579,7 +2579,7 @@
       {
         "script_id": "521",
         "rating": 1170,
-        "downloads": 30589
+        "downloads": 30590
       },
       {
         "script_id": "522",
@@ -2609,7 +2609,7 @@
       {
         "script_id": "527",
         "rating": 267,
-        "downloads": 22158
+        "downloads": 22159
       },
       {
         "script_id": "528",
@@ -2674,7 +2674,7 @@
       {
         "script_id": "540",
         "rating": 90,
-        "downloads": 2224
+        "downloads": 2225
       },
       {
         "script_id": "541",
@@ -2938,7 +2938,7 @@
       },
       {
         "script_id": "593",
-        "rating": 105,
+        "rating": 109,
         "downloads": 3018
       },
       {
@@ -3028,7 +3028,7 @@
       },
       {
         "script_id": "611",
-        "rating": 72,
+        "rating": 71,
         "downloads": 4545
       },
       {
@@ -3054,7 +3054,7 @@
       {
         "script_id": "616",
         "rating": 29,
-        "downloads": 1566
+        "downloads": 1567
       },
       {
         "script_id": "617",
@@ -3138,7 +3138,7 @@
       },
       {
         "script_id": "633",
-        "rating": 14,
+        "rating": 13,
         "downloads": 958
       },
       {
@@ -3193,7 +3193,7 @@
       },
       {
         "script_id": "644",
-        "rating": 13,
+        "rating": 17,
         "downloads": 1184
       },
       {
@@ -3304,7 +3304,7 @@
       {
         "script_id": "666",
         "rating": 142,
-        "downloads": 7651
+        "downloads": 7652
       },
       {
         "script_id": "667",
@@ -3629,7 +3629,7 @@
       {
         "script_id": "739",
         "rating": 108,
-        "downloads": 10869
+        "downloads": 10871
       },
       {
         "script_id": "740",
@@ -3864,7 +3864,7 @@
       {
         "script_id": "786",
         "rating": 96,
-        "downloads": 2955
+        "downloads": 2956
       },
       {
         "script_id": "787",
@@ -3884,11 +3884,11 @@
       {
         "script_id": "790",
         "rating": 1920,
-        "downloads": 124044
+        "downloads": 124045
       },
       {
         "script_id": "791",
-        "rating": 66,
+        "rating": 70,
         "downloads": 7949
       },
       {
@@ -3974,7 +3974,7 @@
       {
         "script_id": "808",
         "rating": 404,
-        "downloads": 14222
+        "downloads": 14223
       },
       {
         "script_id": "809",
@@ -4244,7 +4244,7 @@
       {
         "script_id": "862",
         "rating": 121,
-        "downloads": 3208
+        "downloads": 3209
       },
       {
         "script_id": "863",
@@ -4254,7 +4254,7 @@
       {
         "script_id": "864",
         "rating": 423,
-        "downloads": 9694
+        "downloads": 9695
       },
       {
         "script_id": "865",
@@ -4359,7 +4359,7 @@
       {
         "script_id": "885",
         "rating": 3,
-        "downloads": 656
+        "downloads": 657
       },
       {
         "script_id": "886",
@@ -4389,7 +4389,7 @@
       {
         "script_id": "891",
         "rating": 181,
-        "downloads": 11140
+        "downloads": 11141
       },
       {
         "script_id": "892",
@@ -4803,8 +4803,8 @@
       },
       {
         "script_id": "974",
-        "rating": 1769,
-        "downloads": 34152
+        "rating": 1768,
+        "downloads": 34154
       },
       {
         "script_id": "975",
@@ -4869,7 +4869,7 @@
       {
         "script_id": "987",
         "rating": 552,
-        "downloads": 24435
+        "downloads": 24436
       },
       {
         "script_id": "988",
@@ -5534,7 +5534,7 @@
       {
         "script_id": "1120",
         "rating": 1038,
-        "downloads": 18365
+        "downloads": 18366
       },
       {
         "script_id": "1121",
@@ -5849,7 +5849,7 @@
       {
         "script_id": "1183",
         "rating": 35,
-        "downloads": 1582
+        "downloads": 1583
       },
       {
         "script_id": "1184",
@@ -6024,7 +6024,7 @@
       {
         "script_id": "1218",
         "rating": 2008,
-        "downloads": 65534
+        "downloads": 65535
       },
       {
         "script_id": "1219",
@@ -6124,7 +6124,7 @@
       {
         "script_id": "1238",
         "rating": 1067,
-        "downloads": 13677
+        "downloads": 13678
       },
       {
         "script_id": "1239",
@@ -6148,7 +6148,7 @@
       },
       {
         "script_id": "1243",
-        "rating": 295,
+        "rating": 296,
         "downloads": 26744
       },
       {
@@ -6174,7 +6174,7 @@
       {
         "script_id": "1248",
         "rating": 15,
-        "downloads": 726
+        "downloads": 727
       },
       {
         "script_id": "1249",
@@ -6564,7 +6564,7 @@
       {
         "script_id": "1327",
         "rating": 585,
-        "downloads": 18395
+        "downloads": 18398
       },
       {
         "script_id": "1328",
@@ -6619,7 +6619,7 @@
       {
         "script_id": "1338",
         "rating": 627,
-        "downloads": 17301
+        "downloads": 17302
       },
       {
         "script_id": "1339",
@@ -6689,7 +6689,7 @@
       {
         "script_id": "1353",
         "rating": 46,
-        "downloads": 1929
+        "downloads": 1930
       },
       {
         "script_id": "1354",
@@ -6938,7 +6938,7 @@
       },
       {
         "script_id": "1403",
-        "rating": 18,
+        "rating": 17,
         "downloads": 874
       },
       {
@@ -7028,7 +7028,7 @@
       },
       {
         "script_id": "1421",
-        "rating": 33,
+        "rating": 37,
         "downloads": 2127
       },
       {
@@ -7039,7 +7039,7 @@
       {
         "script_id": "1423",
         "rating": 8,
-        "downloads": 929
+        "downloads": 930
       },
       {
         "script_id": "1424",
@@ -7158,7 +7158,7 @@
       },
       {
         "script_id": "1447",
-        "rating": 21,
+        "rating": 25,
         "downloads": 934
       },
       {
@@ -7174,7 +7174,7 @@
       {
         "script_id": "1450",
         "rating": 229,
-        "downloads": 6836
+        "downloads": 6837
       },
       {
         "script_id": "1451",
@@ -7289,7 +7289,7 @@
       {
         "script_id": "1473",
         "rating": 60,
-        "downloads": 4791
+        "downloads": 4793
       },
       {
         "script_id": "1474",
@@ -7429,7 +7429,7 @@
       {
         "script_id": "1502",
         "rating": 247,
-        "downloads": 30881
+        "downloads": 30883
       },
       {
         "script_id": "1503",
@@ -7559,7 +7559,7 @@
       {
         "script_id": "1528",
         "rating": 1016,
-        "downloads": 15961
+        "downloads": 15962
       },
       {
         "script_id": "1529",
@@ -7784,7 +7784,7 @@
       {
         "script_id": "1573",
         "rating": 200,
-        "downloads": 6707
+        "downloads": 6708
       },
       {
         "script_id": "1574",
@@ -7849,7 +7849,7 @@
       {
         "script_id": "1586",
         "rating": 1084,
-        "downloads": 14626
+        "downloads": 14629
       },
       {
         "script_id": "1587",
@@ -7889,7 +7889,7 @@
       {
         "script_id": "1594",
         "rating": 88,
-        "downloads": 1584
+        "downloads": 1585
       },
       {
         "script_id": "1595",
@@ -7923,7 +7923,7 @@
       },
       {
         "script_id": "1601",
-        "rating": 54,
+        "rating": 58,
         "downloads": 2448
       },
       {
@@ -7934,7 +7934,7 @@
       {
         "script_id": "1603",
         "rating": 199,
-        "downloads": 4943
+        "downloads": 4944
       },
       {
         "script_id": "1604",
@@ -8118,7 +8118,7 @@
       },
       {
         "script_id": "1640",
-        "rating": 217,
+        "rating": 218,
         "downloads": 13069
       },
       {
@@ -8134,7 +8134,7 @@
       {
         "script_id": "1643",
         "rating": 2787,
-        "downloads": 85850
+        "downloads": 85852
       },
       {
         "script_id": "1644",
@@ -8209,7 +8209,7 @@
       {
         "script_id": "1658",
         "rating": 8660,
-        "downloads": 225975
+        "downloads": 225977
       },
       {
         "script_id": "1659",
@@ -8379,7 +8379,7 @@
       {
         "script_id": "1693",
         "rating": 136,
-        "downloads": 4616
+        "downloads": 4617
       },
       {
         "script_id": "1694",
@@ -8484,7 +8484,7 @@
       {
         "script_id": "1714",
         "rating": 62,
-        "downloads": 6923
+        "downloads": 6924
       },
       {
         "script_id": "1715",
@@ -8519,7 +8519,7 @@
       {
         "script_id": "1721",
         "rating": 499,
-        "downloads": 4634
+        "downloads": 4635
       },
       {
         "script_id": "1722",
@@ -8839,7 +8839,7 @@
       {
         "script_id": "1785",
         "rating": 711,
-        "downloads": 25777
+        "downloads": 25778
       },
       {
         "script_id": "1786",
@@ -8893,7 +8893,7 @@
       },
       {
         "script_id": "1797",
-        "rating": 113,
+        "rating": 117,
         "downloads": 4853
       },
       {
@@ -9189,7 +9189,7 @@
       {
         "script_id": "1856",
         "rating": 163,
-        "downloads": 12721
+        "downloads": 12722
       },
       {
         "script_id": "1857",
@@ -9283,8 +9283,8 @@
       },
       {
         "script_id": "1875",
-        "rating": 110,
-        "downloads": 2820
+        "rating": 111,
+        "downloads": 2821
       },
       {
         "script_id": "1876",
@@ -9304,7 +9304,7 @@
       {
         "script_id": "1879",
         "rating": 4382,
-        "downloads": 66055
+        "downloads": 66059
       },
       {
         "script_id": "1880",
@@ -9644,7 +9644,7 @@
       {
         "script_id": "1950",
         "rating": 445,
-        "downloads": 11301
+        "downloads": 11302
       },
       {
         "script_id": "1951",
@@ -10214,7 +10214,7 @@
       {
         "script_id": "2065",
         "rating": 1,
-        "downloads": 790
+        "downloads": 791
       },
       {
         "script_id": "2066",
@@ -11019,7 +11019,7 @@
       {
         "script_id": "2226",
         "rating": 6119,
-        "downloads": 21816
+        "downloads": 21817
       },
       {
         "script_id": "2227",
@@ -11328,8 +11328,8 @@
       },
       {
         "script_id": "2288",
-        "rating": 57,
-        "downloads": 9805
+        "rating": 61,
+        "downloads": 9806
       },
       {
         "script_id": "2289",
@@ -11754,7 +11754,7 @@
       {
         "script_id": "2373",
         "rating": 51,
-        "downloads": 2407
+        "downloads": 2408
       },
       {
         "script_id": "2374",
@@ -11833,7 +11833,7 @@
       },
       {
         "script_id": "2389",
-        "rating": 36,
+        "rating": 37,
         "downloads": 2214
       },
       {
@@ -12034,7 +12034,7 @@
       {
         "script_id": "2429",
         "rating": 134,
-        "downloads": 5708
+        "downloads": 5710
       },
       {
         "script_id": "2430",
@@ -12784,7 +12784,7 @@
       {
         "script_id": "2579",
         "rating": 5,
-        "downloads": 541
+        "downloads": 542
       },
       {
         "script_id": "2580",
@@ -12869,7 +12869,7 @@
       {
         "script_id": "2596",
         "rating": 417,
-        "downloads": 9283
+        "downloads": 9284
       },
       {
         "script_id": "2597",
@@ -12919,7 +12919,7 @@
       {
         "script_id": "2606",
         "rating": 42,
-        "downloads": 2317
+        "downloads": 2318
       },
       {
         "script_id": "2607",
@@ -13029,7 +13029,7 @@
       {
         "script_id": "2628",
         "rating": 1131,
-        "downloads": 24682
+        "downloads": 24684
       },
       {
         "script_id": "2629",
@@ -13214,7 +13214,7 @@
       {
         "script_id": "2666",
         "rating": 526,
-        "downloads": 12041
+        "downloads": 12042
       },
       {
         "script_id": "2667",
@@ -13438,7 +13438,7 @@
       },
       {
         "script_id": "2711",
-        "rating": 207,
+        "rating": 211,
         "downloads": 9940
       },
       {
@@ -13459,7 +13459,7 @@
       {
         "script_id": "2715",
         "rating": 710,
-        "downloads": 6225
+        "downloads": 6226
       },
       {
         "script_id": "2716",
@@ -13479,7 +13479,7 @@
       {
         "script_id": "2719",
         "rating": 1363,
-        "downloads": 2580
+        "downloads": 2581
       },
       {
         "script_id": "2720",
@@ -13518,7 +13518,7 @@
       },
       {
         "script_id": "2727",
-        "rating": 320,
+        "rating": 324,
         "downloads": 11716
       },
       {
@@ -13598,7 +13598,7 @@
       },
       {
         "script_id": "2743",
-        "rating": 58,
+        "rating": 62,
         "downloads": 679
       },
       {
@@ -14038,7 +14038,7 @@
       },
       {
         "script_id": "2831",
-        "rating": 464,
+        "rating": 465,
         "downloads": 1912
       },
       {
@@ -14159,7 +14159,7 @@
       {
         "script_id": "2855",
         "rating": 418,
-        "downloads": 28841
+        "downloads": 28843
       },
       {
         "script_id": "2856",
@@ -14244,7 +14244,7 @@
       {
         "script_id": "2872",
         "rating": 3,
-        "downloads": 519
+        "downloads": 520
       },
       {
         "script_id": "2873",
@@ -14279,7 +14279,7 @@
       {
         "script_id": "2879",
         "rating": 30,
-        "downloads": 1415
+        "downloads": 1416
       },
       {
         "script_id": "2880",
@@ -14609,7 +14609,7 @@
       {
         "script_id": "2945",
         "rating": 626,
-        "downloads": 111956
+        "downloads": 111957
       },
       {
         "script_id": "2946",
@@ -14759,7 +14759,7 @@
       {
         "script_id": "2975",
         "rating": 2966,
-        "downloads": 13796
+        "downloads": 13799
       },
       {
         "script_id": "2976",
@@ -14789,7 +14789,7 @@
       {
         "script_id": "2981",
         "rating": 1653,
-        "downloads": 41079
+        "downloads": 41081
       },
       {
         "script_id": "2982",
@@ -15053,7 +15053,7 @@
       },
       {
         "script_id": "3034",
-        "rating": 117,
+        "rating": 121,
         "downloads": 3565
       },
       {
@@ -15069,7 +15069,7 @@
       {
         "script_id": "3037",
         "rating": 160,
-        "downloads": 1780
+        "downloads": 1781
       },
       {
         "script_id": "3038",
@@ -15203,8 +15203,8 @@
       },
       {
         "script_id": "3064",
-        "rating": 123,
-        "downloads": 6032
+        "rating": 127,
+        "downloads": 6033
       },
       {
         "script_id": "3065",
@@ -15449,7 +15449,7 @@
       {
         "script_id": "3114",
         "rating": 581,
-        "downloads": 13944
+        "downloads": 13945
       },
       {
         "script_id": "3115",
@@ -15608,7 +15608,7 @@
       },
       {
         "script_id": "3146",
-        "rating": 68,
+        "rating": 69,
         "downloads": 2476
       },
       {
@@ -16029,7 +16029,7 @@
       {
         "script_id": "3230",
         "rating": 47,
-        "downloads": 2521
+        "downloads": 2522
       },
       {
         "script_id": "3231",
@@ -16178,7 +16178,7 @@
       },
       {
         "script_id": "3260",
-        "rating": 40,
+        "rating": 44,
         "downloads": 2189
       },
       {
@@ -16204,7 +16204,7 @@
       {
         "script_id": "3265",
         "rating": 31,
-        "downloads": 1781
+        "downloads": 1782
       },
       {
         "script_id": "3266",
@@ -16483,8 +16483,8 @@
       },
       {
         "script_id": "3321",
-        "rating": 165,
-        "downloads": 4030
+        "rating": 169,
+        "downloads": 4034
       },
       {
         "script_id": "3322",
@@ -16539,7 +16539,7 @@
       {
         "script_id": "3332",
         "rating": 13,
-        "downloads": 1013
+        "downloads": 1014
       },
       {
         "script_id": "3333",
@@ -16854,7 +16854,7 @@
       {
         "script_id": "3396",
         "rating": 585,
-        "downloads": 5161
+        "downloads": 5162
       },
       {
         "script_id": "3397",
@@ -16934,7 +16934,7 @@
       {
         "script_id": "3412",
         "rating": 45,
-        "downloads": 2951
+        "downloads": 2952
       },
       {
         "script_id": "3413",
@@ -17199,7 +17199,7 @@
       {
         "script_id": "3465",
         "rating": 1008,
-        "downloads": 16463
+        "downloads": 16464
       },
       {
         "script_id": "3466",
@@ -17449,7 +17449,7 @@
       {
         "script_id": "3515",
         "rating": 189,
-        "downloads": 4140
+        "downloads": 4141
       },
       {
         "script_id": "3516",
@@ -17469,7 +17469,7 @@
       {
         "script_id": "3520",
         "rating": 449,
-        "downloads": 10437
+        "downloads": 10439
       },
       {
         "script_id": "3521",
@@ -17478,7 +17478,7 @@
       },
       {
         "script_id": "3522",
-        "rating": 81,
+        "rating": 85,
         "downloads": 3514
       },
       {
@@ -17558,7 +17558,7 @@
       },
       {
         "script_id": "3538",
-        "rating": 19,
+        "rating": 20,
         "downloads": 2595
       },
       {
@@ -17859,7 +17859,7 @@
       {
         "script_id": "3599",
         "rating": 190,
-        "downloads": 5889
+        "downloads": 5891
       },
       {
         "script_id": "3600",
@@ -18819,7 +18819,7 @@
       {
         "script_id": "3797",
         "rating": 181,
-        "downloads": 4500
+        "downloads": 4501
       },
       {
         "script_id": "3798",
@@ -19108,7 +19108,7 @@
       },
       {
         "script_id": "3860",
-        "rating": 4,
+        "rating": 5,
         "downloads": 191
       },
       {
@@ -19444,7 +19444,7 @@
       {
         "script_id": "3929",
         "rating": 46,
-        "downloads": 2093
+        "downloads": 2094
       },
       {
         "script_id": "3930",
@@ -19468,7 +19468,7 @@
       },
       {
         "script_id": "3934",
-        "rating": 27,
+        "rating": 28,
         "downloads": 2076
       },
       {
@@ -19718,7 +19718,7 @@
       },
       {
         "script_id": "3994",
-        "rating": 32,
+        "rating": 36,
         "downloads": 930
       },
       {
@@ -19773,7 +19773,7 @@
       },
       {
         "script_id": "4006",
-        "rating": 96,
+        "rating": 100,
         "downloads": 2777
       },
       {
@@ -20268,7 +20268,7 @@
       },
       {
         "script_id": "4111",
-        "rating": 4,
+        "rating": 5,
         "downloads": 875
       },
       {
@@ -20599,7 +20599,7 @@
       {
         "script_id": "4177",
         "rating": 268,
-        "downloads": 2365
+        "downloads": 2366
       },
       {
         "script_id": "4178",
@@ -21223,7 +21223,7 @@
       },
       {
         "script_id": "4315",
-        "rating": 20,
+        "rating": 19,
         "downloads": 1703
       },
       {
@@ -21344,7 +21344,7 @@
       {
         "script_id": "4339",
         "rating": 237,
-        "downloads": 3924
+        "downloads": 3926
       },
       {
         "script_id": "4340",
@@ -21783,7 +21783,7 @@
       },
       {
         "script_id": "4428",
-        "rating": 13,
+        "rating": 14,
         "downloads": 1370
       },
       {
@@ -21844,7 +21844,7 @@
       {
         "script_id": "4440",
         "rating": 18,
-        "downloads": 1769
+        "downloads": 1770
       },
       {
         "script_id": "4449",
@@ -22199,11 +22199,11 @@
       {
         "script_id": "4520",
         "rating": 184,
-        "downloads": 4217
+        "downloads": 4218
       },
       {
         "script_id": "4521",
-        "rating": 68,
+        "rating": 72,
         "downloads": 1884
       },
       {
@@ -22373,7 +22373,7 @@
       },
       {
         "script_id": "4567",
-        "rating": 5,
+        "rating": 6,
         "downloads": 863
       },
       {
@@ -22448,7 +22448,7 @@
       },
       {
         "script_id": "4582",
-        "rating": 244,
+        "rating": 245,
         "downloads": 4979
       },
       {
@@ -22464,7 +22464,7 @@
       {
         "script_id": "4585",
         "rating": 16,
-        "downloads": 513
+        "downloads": 514
       },
       {
         "script_id": "4586",
@@ -22524,12 +22524,12 @@
       {
         "script_id": "4597",
         "rating": 27,
-        "downloads": 20474
+        "downloads": 20475
       },
       {
         "script_id": "4598",
-        "rating": 12,
-        "downloads": 581
+        "rating": 16,
+        "downloads": 582
       },
       {
         "script_id": "4599",
@@ -22609,7 +22609,7 @@
       {
         "script_id": "4614",
         "rating": 26,
-        "downloads": 1714
+        "downloads": 1715
       },
       {
         "script_id": "4615",
@@ -23239,7 +23239,7 @@
       {
         "script_id": "4743",
         "rating": 175,
-        "downloads": 4596
+        "downloads": 4599
       },
       {
         "script_id": "4744",
@@ -23569,7 +23569,7 @@
       {
         "script_id": "4810",
         "rating": 10,
-        "downloads": 343
+        "downloads": 344
       },
       {
         "script_id": "4811",
@@ -23594,7 +23594,7 @@
       {
         "script_id": "4815",
         "rating": 23,
-        "downloads": 856
+        "downloads": 857
       },
       {
         "script_id": "4816",
@@ -23618,7 +23618,7 @@
       },
       {
         "script_id": "4820",
-        "rating": 141,
+        "rating": 145,
         "downloads": 1133
       },
       {
@@ -23813,7 +23813,7 @@
       },
       {
         "script_id": "4862",
-        "rating": 26,
+        "rating": 30,
         "downloads": 569
       },
       {
@@ -23969,7 +23969,7 @@
       {
         "script_id": "4893",
         "rating": 21,
-        "downloads": 991
+        "downloads": 993
       },
       {
         "script_id": "4894",
@@ -24053,7 +24053,7 @@
       },
       {
         "script_id": "4910",
-        "rating": 8,
+        "rating": 9,
         "downloads": 575
       },
       {
@@ -24163,7 +24163,7 @@
       },
       {
         "script_id": "4932",
-        "rating": 70,
+        "rating": 74,
         "downloads": 2894
       },
       {
@@ -24288,7 +24288,7 @@
       },
       {
         "script_id": "4958",
-        "rating": 9,
+        "rating": 13,
         "downloads": 573
       },
       {
@@ -24583,7 +24583,7 @@
       },
       {
         "script_id": "5019",
-        "rating": 5,
+        "rating": 6,
         "downloads": 194
       },
       {
@@ -24689,7 +24689,7 @@
       {
         "script_id": "5040",
         "rating": 4,
-        "downloads": 547
+        "downloads": 548
       },
       {
         "script_id": "5041",
@@ -25503,7 +25503,7 @@
       },
       {
         "script_id": "5206",
-        "rating": 4,
+        "rating": 3,
         "downloads": 231
       },
       {
@@ -26023,7 +26023,7 @@
       },
       {
         "script_id": "5313",
-        "rating": 9,
+        "rating": 13,
         "downloads": 346
       },
       {
@@ -26113,7 +26113,7 @@
       },
       {
         "script_id": "5332",
-        "rating": 4,
+        "rating": 8,
         "downloads": 350
       },
       {
@@ -26184,7 +26184,7 @@
       {
         "script_id": "5346",
         "rating": 4,
-        "downloads": 117
+        "downloads": 118
       },
       {
         "script_id": "5347",
@@ -26239,7 +26239,7 @@
       {
         "script_id": "5359",
         "rating": 12,
-        "downloads": 159
+        "downloads": 160
       },
       {
         "script_id": "5360",
@@ -26829,7 +26829,7 @@
       {
         "script_id": "5490",
         "rating": 23,
-        "downloads": 919
+        "downloads": 920
       },
       {
         "script_id": "5491",
@@ -26874,7 +26874,7 @@
       {
         "script_id": "5499",
         "rating": 0,
-        "downloads": 242
+        "downloads": 243
       },
       {
         "script_id": "5500",
@@ -27088,7 +27088,7 @@
       },
       {
         "script_id": "5546",
-        "rating": 0,
+        "rating": 1,
         "downloads": 96
       },
       {
@@ -27223,7 +27223,7 @@
       },
       {
         "script_id": "5575",
-        "rating": -1,
+        "rating": 0,
         "downloads": 271
       },
       {
@@ -27338,7 +27338,7 @@
       },
       {
         "script_id": "5599",
-        "rating": 12,
+        "rating": 16,
         "downloads": 86
       },
       {
@@ -27414,7 +27414,7 @@
       {
         "script_id": "5615",
         "rating": 0,
-        "downloads": 118
+        "downloads": 119
       },
       {
         "script_id": "5616",
@@ -27464,7 +27464,7 @@
       {
         "script_id": "5626",
         "rating": 2,
-        "downloads": 210
+        "downloads": 211
       },
       {
         "script_id": "5627",
@@ -27494,7 +27494,7 @@
       {
         "script_id": "5632",
         "rating": 5,
-        "downloads": 96
+        "downloads": 97
       },
       {
         "script_id": "5633",
@@ -27554,7 +27554,7 @@
       {
         "script_id": "5649",
         "rating": 2,
-        "downloads": 85
+        "downloads": 86
       },
       {
         "script_id": "5650",
@@ -27624,7 +27624,7 @@
       {
         "script_id": "5663",
         "rating": 0,
-        "downloads": 16
+        "downloads": 17
       },
       {
         "script_id": "5664",
@@ -27694,7 +27694,7 @@
       {
         "script_id": "5678",
         "rating": 1,
-        "downloads": 1
+        "downloads": 2
       },
       {
         "script_id": "5679",
@@ -27743,64 +27743,154 @@
       },
       {
         "script_id": "5688",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5689",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5690",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5691",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5692",
-        "rating": 0,
-        "downloads": 1
+        "rating": -1,
+        "downloads": 2
       },
       {
         "script_id": "5693",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5694",
-        "rating": 0,
+        "rating": -1,
         "downloads": 2
       },
       {
         "script_id": "5695",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5696",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5697",
-        "rating": 0,
+        "rating": -1,
         "downloads": 1
       },
       {
         "script_id": "5698",
+        "rating": -1,
+        "downloads": 1
+      },
+      {
+        "script_id": "5699",
+        "rating": 1,
+        "downloads": 1
+      },
+      {
+        "script_id": "5700",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5701",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5702",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5703",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5704",
+        "rating": 4,
+        "downloads": 1
+      },
+      {
+        "script_id": "5705",
+        "rating": -1,
+        "downloads": 1
+      },
+      {
+        "script_id": "5706",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5707",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5708",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5709",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5710",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5711",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5712",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5713",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5714",
+        "rating": 1,
+        "downloads": 1
+      },
+      {
+        "script_id": "5715",
+        "rating": 0,
+        "downloads": 1
+      },
+      {
+        "script_id": "5716",
         "rating": 0,
         "downloads": 1
       }
     ]
   },
   "vim-jp/issues": {
-    "opencount": 261,
-    "closedcount": 909,
-    "number": 1170
+    "opencount": 260,
+    "closedcount": 914,
+    "number": 1174
   }
 }
