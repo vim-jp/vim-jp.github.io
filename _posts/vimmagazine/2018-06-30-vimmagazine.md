@@ -7,8 +7,12 @@ title: Vim Magazine 2018 年 06 月号
 
 ## 話題
 
-* [asakusa.vim #1](https://asakusavim.connpass.com/event/90854/) が 2018-06-21 (木) に開催され、Vim使いたちの貴重な知見が共有されました。
-* [VimConf 2018のスポンサー公募](https://vim-jp.org/blog/2018/06/07/VimConf2018-sponsor-ja.html) がはじまりました。
+*   [asakusa.vim #1](https://asakusavim.connpass.com/event/90854/) が 2018-06-21 (木) に開催され、Vim使いたちの貴重な知見が共有されました
+*   [meguro.vim #10](https://megurovim.connpass.com/event/89330/) が 2018-06-23 (土) に開催されました
+*   VimConf 2018 関連
+    *   VimConf 2018 が 2018-11-24 に秋葉原のアキバPLAZAで開催されます
+    *   [VimConf 2018のスポンサー公募](https://vim-jp.org/blog/2018/06/07/VimConf2018-sponsor-ja.html) が始まっています
+    *   [VimConf 2018のスピーカーの公募](https://vim-jp.org/blog/2018/06/28/VimConf2018-cfp-ja.html) が始まっています
 
 ## 今月の新機能
 
