@@ -85,7 +85,7 @@ end
 
 def vimpatch_all()
   [].tap do |patches|
-    patches.concat vimpatch('8.0')
+    patches.concat vimpatch('8.1')
   end
 end
 
