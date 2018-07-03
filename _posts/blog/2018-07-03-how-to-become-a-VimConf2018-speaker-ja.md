@@ -26,7 +26,7 @@ title: "[攻略記事] VimConf 2018のスピーカーになるには"
 
 ![VimConf 2018発表者の一般的な様子](/assets/images/vimconf2018/vimconf-speaker.png)
 
-(図はVimConf 2018で前述のような発表を行っているイメージです。スライドは過去のVimConfにおける[マクロ漁船](https://togetter.com/li/401111)の発表より引用)
+(図はVimConf 2018で前述のような発表を行っているイメージです。スライドは2012年の[マクロ漁船](https://togetter.com/li/401111)の発表より引用)
 
 ### 以下、余談
 
