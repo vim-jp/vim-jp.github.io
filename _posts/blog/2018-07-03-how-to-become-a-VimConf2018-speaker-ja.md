@@ -24,7 +24,7 @@ title: "[攻略記事] VimConf 2018のスピーカーになるには"
 
 去年のVimConf 2017では、スタッフ6名ともVimConf業に時間を無限に吸い取られ、当日にVimの発表をする余裕が一切ありませんでした。そのときの反省を活かし、今年は意識的にCFP出す予定です。なお、スタッフによる応募でも、他スタッフによる審査で容赦なく落選しうります。
 
-![VimConf 2018発表者の一般的な様子](./assets/images/vimconf2018/vimconf-speaker.png)
+![VimConf 2018発表者の一般的な様子](/assets/images/vimconf2018/vimconf-speaker.png)
 
 以下、余談
 
