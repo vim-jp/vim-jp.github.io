@@ -7,7 +7,7 @@ title: Vim Magazine 2018 年 07 月号
 
 ## 話題
 
-*   VimConf 2018 関連
+*   [VimConf 2018](https://vimconf.org/2018/) 関連
     *   VimConf 2018 が 2018-11-24 に秋葉原のアキバPLAZAで開催されます
 
 ## 今月の新機能
