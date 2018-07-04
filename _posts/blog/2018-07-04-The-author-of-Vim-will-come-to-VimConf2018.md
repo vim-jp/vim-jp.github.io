@@ -35,7 +35,7 @@ Vim の作者、Bram Moolenaar 氏が VimConf 2018 にやってきます。「�
 
 今後 Vim に入る機能の予定や展望、Vim の日本人開発者についてどんな風に思ってるのか。聞きたい事を今からまとめておいて下さい。
 
-Bram Moolenaar 氏に僕が作った最強のプラグインを見て貰いたい、そんな方は迷わず CfP に応募して下さい。
+Bram Moolenaar 氏に僕が作った最強のプラグインを見て貰いたい、そんな方は迷わず CFP に応募して下さい。
 
 <https://vim-jp.org/blog/2018/06/28/VimConf2018-cfp-ja.html>
 
@@ -43,5 +43,5 @@ Bram Moolenaar 氏に僕が作った最強のプラグインを見て貰いた�
 
 <https://vim-jp.org/blog/2018/06/07/VimConf2018-sponsor-ja.html>
 
-我々スタッフも頑張ってこの VimConf 2018 をサポートして行きたいと思います。
+我々スタッフも頑張ってこの VimConf 2018 を運営して行きたいと思います。
 
