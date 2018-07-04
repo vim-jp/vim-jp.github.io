@@ -8,7 +8,7 @@ title: The author of Vim will come to VimConf2018
 
 2013年から毎年開催されている Vim の国際カンファレンス VimConf も今年で 6 回目の開催となります。今年も 11/24、富士ソフトアキバプラザで開催されます。
 
-![](/assets/images/vimconf2017-akibaplaza.jpg)
+![VimConf2017](/assets/images/vimconf2017-akibaplaza.jpg)
 
 # 記念すべき日
 
@@ -29,7 +29,7 @@ VimConf 2018 でこの記念すべき日がやってくる事に、我々スタ�
 
 Vim の作者、Bram Moolenaar 氏が VimConf 2018 にやってきます。「あんな事やこんな事が聞いてみたい」と今から色んな事を考えてしまい睡眠不足になってしまいそうです。
 
-![](/assets/images/Bram_Moolenaar.jpg)
+![Bram Moolenaar](/assets/images/Bram_Moolenaar.jpg)
 
 > いったいどんな開発者が、25年以上もユーザに使い続けられるテキストエディタを作ったのか。
 
