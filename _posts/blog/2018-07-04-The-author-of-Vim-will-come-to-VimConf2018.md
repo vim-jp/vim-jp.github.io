@@ -6,7 +6,7 @@ title: The author of Vim will come to VimConf2018
 
 # 今年の VimConf 2018 は凄いぞ
 
-2013年から毎年開催されている Vim の国際カンファレンス VimConf も今年で 6 回目の開催となります。今年も 11/4、富士ソフトアキバプラザで開催されます。
+2013年から毎年開催されている Vim の国際カンファレンス VimConf も今年で 6 回目の開催となります。今年も 11/24、富士ソフトアキバプラザで開催されます。
 
 ![](/assets/images/vimconf2018-akibaplaza.jpg)
 
