@@ -5,11 +5,9 @@ title: vim-jpのチャットルームについて
 
 [https://vim-jp.slack.com/](https://vim-jp.slack.com/)
 
-Slackが招待制でしか利用できない為、これまで手動による招待のみで運用を行ってきましたが、botを設置して自動的に招待するようにしました。
+vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.com/)に用意しています。vim-jp に興味のある方ならどなたでも参加できます。以下の招待用ページからメールアドレスを入力して、気軽にご参加ください。
 
-[https://goo.gl/forms/evqcAReREnD8I1tn1](https://goo.gl/forms/evqcAReREnD8I1tn1)
-
-上記ページのフォームにメールアドレスを入力すれば自動で招待されます。
+[招待用ページ](https://vim-jp.slack.com/join/shared_invite/enQtMzk2NDI1NjMwNTc5LWJhNDBiMDFlYzk4MzBiM2EyZWFiYTFjYTE0ZDk1MWJiNGZiMjRmNmQ3OTEyNjBkNjJhODJiNGRhYmZiNTcyMjA)
 
 vimに関するコミュニケーションは、長らく[LingrのVim部屋](http://lingr.com/room/vim)を利用してきました。
 
