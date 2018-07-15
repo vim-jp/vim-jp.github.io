@@ -17,7 +17,7 @@ title: Vim Magazine 2018 年 07 月号
 
 *   8.1.0142: 組込み termcap の xterm, vt320 エントリにキーパッドのエスケープシーケンスが追加されました
 *   8.1.0182: Unicode 11 に対応しました
-*   8.1.0184: `wincol` と `winrow` の項目が `getwininfo()` の返り値に追加されました
+*   8.1.0184: `wincol` と `winrow` の項目が `getwininfo()` の返り値に追加されました (関連: 8.1.0187)
 
 ## Vimに関する脆弱性
 
