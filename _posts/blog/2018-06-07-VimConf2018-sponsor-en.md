@@ -24,7 +24,8 @@ The sponsor plans for VimConf 2018:
 * Bronze plan: JPY 100,000 (JPY 108,000 incl. tax)
     * Company or product logo on the pamphlet and website
 * Silver plan: JPY 250,000 (JPY 270,000 incl. tax), estimated limit: 8 companies
-    * Besides above, you can distribute your own pamphlet
+    * Besides above, you can distribute your own pamphlet and/or novelties
+        * VimConf reception staff will give them to participants along with VimConf pamphlet.
     * A ticket for 1 person
 * Gold plan: JPY 500,000 (JPY 540,000 incl. tax), estimated limit: 4 companies
     * Besides above, you can give a short talk at the official after party
