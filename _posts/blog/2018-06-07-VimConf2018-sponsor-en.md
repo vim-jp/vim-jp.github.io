@@ -29,7 +29,7 @@ The sponsor plans for VimConf 2018:
     * A ticket for 1 person
 * Gold plan: JPY 500,000 (JPY 540,000 incl. tax), estimated limit: 4 companies
     * Besides above, you can give a short talk at the official after party
-    * A ticket for 1 person by total, same as Gold plan
+    * A ticket for 1 person by total, same as Silver plan
 * Platinum plan: JPY 1,000,000 (JPY 1,080,000 incl. tax), estimated limit: 2 companies
     * Besides above, you can give a short talk such as for recruiting as a main session
     * Tickets for 2 people by total, including one more ticket than Gold plan
