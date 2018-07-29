@@ -30,6 +30,7 @@ title: Vim Magazine 2018 年 07 月号
 
 *   ランタイムの更新
     *   reStructuredText の ftplugin スクリプトで reStructuredText 標準ルールの設定を行うようになりました (`setlocal expandtab shiftwidth=3 softtabstop=3 tabstop=8`)
+        *   `shiftwidth=3 softtabstop=3` についてはディレクティブ (..) と 順序付きリスト (1.) のより良いサポートのためですが、問題を起こす可能性もあるため改善の余地ありとのこと ([参考](https://github.com/vim/vim/blob/91f84f6e11cd879d43d651c0903d85bff95f0716/runtime/ftplugin/rst.vim#L21-L24))
         *   これを抑制するには `let g:rst_style = 0` と vimrc に書く必要があります
     *   reStructuredText の ftplugin スクリプトで独自の折畳みを行うようになりました
 
