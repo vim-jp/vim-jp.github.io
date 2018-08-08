@@ -17,7 +17,7 @@ title: Vim Magazine 2018 年 08 月号
 今月の新機能及びユーザーに影響のある変更は以下のとおりです。
 
 *   8.1.0232: if_ruby 実行中にエラーが起きた場合、そのバックトレースが Vim のコマンドラインに表示されるようになりました
-*   8.1.0251: `set backupdir=~/vimbackupdir//` のように指定すると `~/vimbackupdir/` 以下に現在のファイルのフルパスが連結されたパスにファイルが保存されるようになりました
+*   8.1.0251: `set backupdir=~/vimbackupdir//` のように指定すると、`~/vimbackupdir/` 以下にファイルのフルパスが連結されたファイル名で書き出されるようになりました
     *   例: 上記の設定を行った際、ファイル `/home/vim/vimrc` のバックアップファイルは `~/vimbackupdir/%home%vim%vimrc{backupext}` となります (`{backupext}` = `'backupext'` オプションの値)
     *   スワップファイルの場合は以前から可能です `set directory=~/swapdir//`
 *   8.1.0253: タイトルスタックに対応した端末では、端末のタイトルが正しく復帰されるようになりました
