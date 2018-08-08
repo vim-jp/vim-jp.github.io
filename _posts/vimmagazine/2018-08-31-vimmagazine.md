@@ -20,6 +20,8 @@ title: Vim Magazine 2018 年 08 月号
 *   8.1.0251: `set backupdir=~/vimbackupdir//` のように指定すると `~/vimbackupdir/` 以下に現在のファイルのフルパスが連結されたパスにファイルが保存されるようになりました
     *   例: 上記の設定を行った際、ファイル `/home/vim/vimrc` のバックアップファイルは `~/vimbackupdir/%home%vim%vimrc{backupext}` となります (`{backupext}` = `'backupext'` オプションの値)
     *   スワップファイルの場合は以前から可能です `set directory=~/swapdir//`
+*   8.1.0253: タイトルスタックに対応した端末では、端末のタイトルが正しく復帰されるようになりました
+    *   参考記事: [「Vimを使ってくれてありがとう」にさようなら](https://qiita.com/ttdoda/items/903e85f07d58018c851d)
 
 ## Vimに関する脆弱性
 
