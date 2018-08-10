@@ -11,6 +11,8 @@ title: Vim Magazine 2018 年 08 月号
 *   [meguro.vim #11](https://megurovim.connpass.com/event/94477/) が 2018-08-11 (土) に開催されました
 *   [VimConf 2018](https://vimconf.org/2018/) 関連
     *   VimConf 2018 が 2018-11-24 に秋葉原のアキバPLAZAで開催されます
+    *   VimConf 2018 に登壇して発表するためのCFPが2018-08-13 (月)に締め切られました
+*   [コミックマーケット94](https://www.comiket.co.jp/)にて[スパルタンVim 7.0](https://twitter.com/kaoriya/status/1027415480670158848)が[発売](https://twitter.com/kaoriya/status/1027701062264807424)されました
 
 ## 今月の新機能
 
