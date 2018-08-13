@@ -2,6 +2,8 @@
 layout: blog
 category: blog
 title: "VimConf 2018のCFPを本日締め切ります。そして追加の募集のお知らせ"
+redirect_from:
+  - /blog/2018-08-10-vimconf2018-cfp-the-2nd.md
 ---
 
 さて現在絶賛受付中の VimConf2018 のCFPですが、本日2018年8月13日 11pm JSTをもって締め切ります。
