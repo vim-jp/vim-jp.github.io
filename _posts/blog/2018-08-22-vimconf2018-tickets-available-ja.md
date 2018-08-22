@@ -4,14 +4,19 @@ category: blog
 title: "VimConf 2018のチケット販売を開始します"
 ---
 
-VimConf 2018 公式サイト <https://vimconf.org/2018/> にて、2018-xx-xx日 yy:yy am/pm JSTよりチケット販売を開始します。
+VimConf 2018 公式サイト <https://vimconf.org/2018/> にて、2018-08-29日(水) お昼 1:00pm JSTよりチケット販売を開始します。
 
-* Early bird ticket XXXXXXX円 (税込みYYYYYY円)
+* Early bird ticket 8,000円 (税込み8,640円)
     * 一人一枚購入する入場券です。お買い得な枚数限定チケットです。後述するStandard ticketと中身は全く同じです。
-* Standard ticket
-    * 一人一枚購入する入場券です。2018-zz-zz日 yy:yy am/pm JSTよりチケット販売を開始する予定の、上記Early bird ticketと全く同じです。
-* Individual sponsor option 一口 ZZZZZZ円 (税込みQQQQQ円)
-    * 枚数無制限のTODO
+* Standard ticket (金額未定)
+    * 一人一枚購入する入場券です。後日チケット販売を開始する予定の、上記Early bird ticketと全く同じです。
+    * 金額と発売日は未定です
+* Individual sponsor option 一口 5,000円 (税込み5,400円)
+    * 枚数無制限
+    * 特典
+        * 名前または任意の一言メッセージと、任意のアイコン画像をVimConf オープニング時に個人スポンサーとして紹介
+        * 任意のアイコン画像を https://vimconf.org/2018 サイトに掲載
+        * 他にもあんなことやこんなこともあるかもしれないしないかもしれない
 
 ## ライトニングトーク発表を考えている皆様へ
 
