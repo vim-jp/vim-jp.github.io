@@ -21,7 +21,9 @@ VimConf 2018 公式サイト <https://vimconf.org/2018/> にて、2018-08-29日(
         * (上記いずれも公序良俗に反しない内容に限ります)
         * 他にもあんなことやこんなこともあるかもしれないしないかもしれない
 
-**[UPDATED 2018-08-29]** Early bird ticket / individual sponsor option販売が開始されました。 <https://vimconf.org/2018> より購入ページに進むことができます。
+~~**[UPDATED 2018-08-29]** Early bird ticket / individual sponsor option販売が開始されました。 <https://vimconf.org/2018> より購入ページに進むことができます。~~
+
+**[UPDATED 2018-08-29]** Early bird ticket はわずか30分で完売しました。Standard ticket の販売をお待ちください。
 
 ## ライトニングトーク発表を考えている皆様へ
 
