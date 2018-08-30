@@ -5,11 +5,12 @@ title: "VimConf 2018の通常チケットを9月17日に販売します"
 ---
 
 VimConf 2018 公式サイト <https://vimconf.org/2018/#link-tickets> にて、2018-09-17日(月) お昼 1:00pm JSTからチケット販売を開始します。
+祝日(敬老の日)です。
 先日販売した Early Bird チケットは50枚が約30分で売り切れました。
 今回の販売枚数はそれよりは多いですが、数時間で売り切れる可能性もあります。
 発売日当日は気合を入れて望んでください。
 
-* Standard ticket xxxxxx円 (税込みxxxxxx円)
+* Standard ticket 12,000円 (税込み12,960円)
     * VimConf2018の会場に入場するのに必要な入場券です。
     * 一人一枚購入して下さい。
 * Individual sponsor option 一口 5,000円 (税込み5,400円)
