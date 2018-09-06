@@ -1,23 +1,21 @@
 ---
 layout: blog
 category: blog
-title: "VimConf 2018のライトニングトークの募集を開始します"
+title: "VimConf 2018 のライトニングトークの募集を開始します"
 ---
 
-### ライトニングトークの募集を開始します
+### VimConf 2018 のライトニングトークの募集を開始します
 
-ただいま(9月10日)より、ライトニングトーク(LT)の募集を開始します。
-以下の応募フォームより応募して下さい。  
-
-[応募フォーム](https://docs.google.com/forms/d/e/1FAIpQLSfPu1uP6kj5h_IvenlIqmgCR5II8An-951kUKdZsURSqQ5jbA/viewform)
+ただいま(9月10日)より、VimConf 2018 のライトニングトーク(LT)の募集を開始します。
 
 * 募集期間: 9月10日〜9月30日
 * 合否判定: 10月中旬頃
 * 応募要件: 当日会場にいられる人のみ(チケットを購入済みの人等)
+* [応募フォーム](https://docs.google.com/forms/d/e/1FAIpQLSfPu1uP6kj5h_IvenlIqmgCR5II8An-951kUKdZsURSqQ5jbA/viewform)  
 
-### 募集要件・内容の詳細
+### 募集内容の詳細
 
-* 応募資格: 当日会場に入場できる人。具体的には以下の人
+* 応募資格: **当日会場に入場できる人。** 具体的には以下の人
   * 入場チケットを購入済みの人
   * スポンサー枠、あるいは招待枠で会場に入場する人
   * スタッフ(VimConf2018 スタッフも応募資格があります)
