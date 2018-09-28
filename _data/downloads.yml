@@ -4,7 +4,7 @@ vim-win: &vim-win
   info: +kaoriya, 16.8/17.5MB ZIP
 vim-mac: &vim-mac
   title: OS X 10.9+
-  version: '8.0.1522'
+  version: '8.0.1633'
   info: +macvim-kaoriya, 14MB DMG
   url: http://vim-jp.org/redirects/splhack/macvim-kaoriya/latest/
 
