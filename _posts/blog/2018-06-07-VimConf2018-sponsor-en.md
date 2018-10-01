@@ -4,6 +4,10 @@ category: blog
 title: Looking for companies sponsoring VimConf 2018
 ---
 
+## [UPDATED] 2018-10-01
+
+The form was closed.
+
 ## [UPDATED] 2018-08-22
 
 The form will be closed at 2018-10-01.
