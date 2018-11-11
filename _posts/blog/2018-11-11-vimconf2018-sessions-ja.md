@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: "VimConf 2018 のAbstractが公開されました"
+title: "VimConf 2018 の発表概要が公開されました"
 ---
 
 いよいよVimConf 2018まで残り約2週間となりました。  
