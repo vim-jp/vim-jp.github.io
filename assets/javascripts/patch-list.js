@@ -3,7 +3,7 @@ $(function() {
 
   $.getJSON("https://api.github.com/repos/vim/vim/commits?callback=?", function(items) {
     $.each(items.data, function(index) {
-      if (index == 10) {
+      if (index == 10 || !this.commit) {
         return false;
       }
       var token = this.commit.message.split(/\n\n/, 2);
