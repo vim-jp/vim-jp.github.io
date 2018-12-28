@@ -8,7 +8,7 @@ title: 新しい diffopts オプションの動作とその注意点について
 これまでも Vim の diff 表示は便利に使われてきたのですが、中には diff モードに入った事を継起にキーをマップしたり便利な設定をされていたかもしれません。その際これまでは外部コマンドによるフィルタ処理が行われていたので `FilterWritePre` や `FilterWritePost` というイベントが発火しておりそれを利用されていたと思います。今回入った `internal` は外部コマンドを使わなくなりますので `FilterWritePre` や `FilterWritePost` は発火しません。別途 [8.1.0397](https://github.com/vim/vim/commit/e8fa05b5bc2d6d76bf5af50176a63655d00d1110) で用意された `DiffUpdated` イベントを使って下さい。
 
 ```vim
-autocmd FilterWritePre * call s:my_diff_settings()
+autocmd DiffUpdated * call s:my_diff_settings()
 function! s:my_diff_settings() abort
   if &diff
     setlocal nocursorline
