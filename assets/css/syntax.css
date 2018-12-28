@@ -1,65 +1,16 @@
-.highlight {
-	color: #000;
-}
-
-.highlight div {
+.highlight pre {
 	padding: 0;
 	margin: 0;
-	border: 1px dotted black;
 }
 
-.highlight .highlight-file {
+.highlight pre {
+	color: #000;
 	border: 1px solid #dedede; /* gray */
 	font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 	margin-bottom: 1em;
-}
-
-.highlight .highlight-file .highlight-meta {
 	overflow: hidden;
-	font-size: 85%;
 	padding: .5em;
-	color: #666;
 	background-color: #eaeaea;
-}
-
-.highlight .highlight-file .highlight-meta a {
-	color: #369;
-}
-
-.highlight .highlight-file .highlight-meta a:visited {
-	color: #737;
-}
-
-.highlight .highlight-file .highlight-data {
-	overflow: auto;
-	word-wrap: normal;
-	background-color: #f8f8ff;
-	border-bottom: 1px solid #ddd;
-	font-size: 100%;
-}
-
-.highlight .highlight-file .highlight-data pre {
-	font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
-	background: transparent !important;
-	margin: 0 !important;
-	border: none !important;
-	padding: .25em .5em .5em .5em !important;
-}
-
-.highlight .highlight-file .highlight-data .highlight-highlight {
-	background: transparent !important;
-}
-
-.highlight .highlight-file .highlight-data .highlight-line-numbers {
-	background-color: #ececec;
-	color: #aaa;
-	border-right: 1px solid #ddd;
-	text-align: right;
-}
-
-.highlight .highlight-file .highlight-data .highlight-line-numbers span {
-	clear: right;
-	display: block;
 }
 
 .highlight  { background: transparent; }
