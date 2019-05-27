@@ -9,12 +9,6 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 
 [招待用ページ](https://vim-jp.slack.com/join/shared_invite/enQtMzk2NDI1NjMwNTc5LWJhNDBiMDFlYzk4MzBiM2EyZWFiYTFjYTE0ZDk1MWJiNGZiMjRmNmQ3OTEyNjBkNjJhODJiNGRhYmZiNTcyMjA)
 
-vimに関するコミュニケーションは、長らく[LingrのVim部屋](http://lingr.com/room/vim)を利用してきました。
-
-Slack上の[#lingr](https://vim-jp.slackarchive.io/lingr) にてLingrと相互ブリッジを行っているので、引き続きLingrからも会話に参加できます。
-
-(なおLingrとのブリッジは[@takano32](https://github.com/takano32)さんによって運用されております)
-
 これを機にぜひvim-jpのSlackに参加してみませんか？
 
 vim-jp一同、みなさんの参加をお待ちしております！
