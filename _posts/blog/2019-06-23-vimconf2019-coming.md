@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: VimConf2019のCFPを募集します！
+title: VimConf2019のCFP受付を開始します！
 ---
 
 どうも、温まっていますか？　vim-jpです。
