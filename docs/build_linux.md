@@ -104,7 +104,7 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
     デバッグのためGDBの有効化など、一部の変更はconfigure経由では行えず、`vim/src/Makefile`を編集する必要があります。以下、[GDBを有効にする例です。](https://quipper.hatenablog.com/entry/vim-gdb-ujihisa)これによって:Termdebugなどによる自分自身のデバグが利用可能になります。
 
-    ```patch
+    {{"```patch
     diff --git a/src/Makefile b/src/Makefile
     index f2fafa4dc..8b41d0648 100644
     --- a/src/Makefile
@@ -135,7 +135,7 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
      ### Permissions for binaries  {{{1
      BINMOD = 755
-    ```
+    ```"}}
 
 4.  インストール
 
