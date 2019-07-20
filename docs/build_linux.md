@@ -102,6 +102,41 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
         $ make reconfig
 
+    デバッグのためGDBの有効化など、一部の変更はconfigure経由では行えず、`vim/src/Makefile`を編集する必要があります。以下、[GDBを有効にする例です。](https://quipper.hatenablog.com/entry/vim-gdb-ujihisa)これによって:Termdebugなどによる自分自身のデバグが利用可能になります。
+
+    ```patch
+    diff --git a/src/Makefile b/src/Makefile
+    index f2fafa4dc..8b41d0648 100644
+    --- a/src/Makefile
+    +++ b/src/Makefile
+    @@ -591,7 +591,7 @@ CClink = $(CC)
+     # When using -g with some older versions of Linux you might get a
+     # statically linked executable.
+     # When not defined, configure will try to use -O2 -g for gcc and -O for cc.
+    -#CFLAGS = -g
+    +CFLAGS = -g
+     #CFLAGS = -O
+
+     # Optimization limits - depends on the compiler.  Automatic check in configure
+    @@ -1006,6 +1006,7 @@ TOOLS = xxd/xxd$(EXEEXT)
+     #
+     # Uncomment the next line to install Vim in your home directory.
+     #prefix = $(HOME)
+    +prefix = $(HOME)/git/vim/local
+
+     ### exec_prefix    is the top directory for the executable (default $(prefix))
+     #
+    @@ -1156,7 +1157,7 @@ INSTALL_DATA_R = cp -r
+
+     ### Program to run on installed binary.  Use the second one to disable strip.
+     #STRIP = strip
+    -#STRIP = /bin/true
+    +STRIP = /bin/true
+
+     ### Permissions for binaries  {{{1
+     BINMOD = 755
+    ```
+
 4.  インストール
 
     以下のコマンドを実行すると、`./configure`の`--prefix`オプションで指定した先にインストールされます。（無指定の場合は、`/usr/local`など）
