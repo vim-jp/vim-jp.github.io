@@ -4,7 +4,7 @@ category: blog
 title: "VimConf 2019のチケット販売を開始します"
 ---
 
-VimConf 2019 チケット販売サイト <http://vimconf2019-ticket.peatix.com> にて、2019-08-10日(土) お昼 12:00 JSTよりチケット販売を開始します。
+VimConf 2019 チケット販売サイト <https://vimconf2019-ticket.peatix.com> にて、2019-08-10日(土) お昼 12:00 JSTよりチケット販売を開始します。
 
 * Early bird ticket 税込み 8,800円 (増税後の価格です)
     * 一人一枚購入する入場券です。お買い得な枚数限定チケットです。後述するStandard ticketと中身は全く同じです。
