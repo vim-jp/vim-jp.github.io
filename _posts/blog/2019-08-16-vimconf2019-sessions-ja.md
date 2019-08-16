@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: "VimConf 2019 の発表概要が公開されました"
+title: "VimConf 2019 のタイムテーブルが公開されました"
 ---
 
 今年も VimConf 2019 が開催されます。
