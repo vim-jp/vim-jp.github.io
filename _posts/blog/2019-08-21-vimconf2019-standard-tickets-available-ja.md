@@ -4,7 +4,7 @@ category: blog
 title: "VimConf 2019の通常チケットを9月1日に販売します"
 ---
 
-VimConf 2019 公式サイト <https://vimconf.org/2019/#menu-ticket> にて、2019-09-01(月) お昼 1:00pm JSTからチケット販売を開始します。
+VimConf 2019 公式サイト <https://vimconf.org/2019/#menu-ticket> にて、2019-09-01(日) お昼 1:00pm JSTからチケット販売を開始します。
 
 * Standard ticket 13,200円 (消費税 10% 税込)
     * VimConf2019の会場に入場するのに必要な入場券です。
