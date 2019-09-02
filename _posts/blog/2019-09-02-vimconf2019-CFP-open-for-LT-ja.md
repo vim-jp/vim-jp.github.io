@@ -8,7 +8,7 @@ title: "VimConf 2019 のライトニングトークの募集を開始します"
 
 ただいま(2019年9月2日)より、VimConf 2019 のライトニングトーク(LT)の募集を開始します。
 
-* 募集期間: 2019年9月2日〜2019年9月30日
+* 募集期間: 2019年9月2日〜2019年10月16日
 * 合否判定: 2019年10月中旬頃
 * 応募要件: VimConf 2019 参加者
 * [応募フォーム](https://docs.google.com/forms/d/1CY8Nx13PNXCmQ-3w88lt2GHfkFF1KYkwbURygPGjwb0/edit)
