@@ -4,7 +4,7 @@ category: blog
 title: "個人スポンサーオプションおよびSNSアイコンについて"
 ---
 
-VimConf 2019 では個人スポンサーを募集しています。
+個人スポンサーオプションの販売を開始しました。
 
 <https://vimconf2019-individual-sponsor-option.peatix.com/>
 
