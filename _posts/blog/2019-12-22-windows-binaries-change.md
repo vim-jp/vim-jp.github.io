@@ -2,7 +2,7 @@
 layout: blog
 category: blog
 title: Windows バイナリのリンク先変更のお知らせ
-author: '<a href="https://twitter.com/kaoriya">KoRoN a.k.a. kaoriya</a>'
+author: 'KoRoN a.k.a. kaoriya'
 
 ---
 
