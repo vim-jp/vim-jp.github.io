@@ -16,7 +16,7 @@ encoding: utf-8
 future: true
 
 ### Plugins
-gems:
+plugins:
   - jemoji
   - jekyll-sitemap
   - jekyll-redirect-from
