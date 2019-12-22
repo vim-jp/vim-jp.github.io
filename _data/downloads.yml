@@ -1,7 +1,6 @@
 vim-win: &vim-win
   title: Windows 32ビット/64ビット
   version: '8.2 latest'
-  info: vim-win32-installer, 17.3/18.1MB ZIP
 vim-mac: &vim-mac
   title: OS X 10.9+
   version: '8.0.1633'
@@ -17,7 +16,7 @@ vim-w64: &vim-w64
   <<: *vim-win
   title: Windows 64ビット
   info: vim-win32-installer, 17.2MB ZIP
-  url: https://vim-jp.org/redirects/vim/vim-win32-installer/latest/x86/
+  url: https://vim-jp.org/redirects/vim/vim-win32-installer/latest/x64/
 
 list:
   - *vim-w32
