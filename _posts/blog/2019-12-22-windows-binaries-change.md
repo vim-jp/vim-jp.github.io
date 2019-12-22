@@ -2,7 +2,7 @@
 layout: blog
 category: blog
 title: Windows バイナリのリンク先変更のお知らせ
-author: 'KoRoN a.k.a. kaoriya'
+author: KoRoN
 
 ---
 
