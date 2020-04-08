@@ -1,0 +1,46 @@
+---
+# vim:set ts=2 sts=2 sw=2 noet:
+---
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>vim-jp &raquo; {{ page.title }}</title>
+<link rel="stylesheet" href="/assets/css/site.css" type="text/css" />
+<link rel="stylesheet" href="/assets/css/vimmers.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="//vim-jp.org/rss.xml" />
+<link rel="canonical" href="{{ site.base-url }}{{ page.url }}" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- for facebook like button -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="header">
+		<h1><a href="/">vim-jp &raquo; Vimのユーザーと開発者を結ぶコミュニティサイト</a></h1>
+	</div>
+	<div class="body">
+		<div id="content">
+			<div class="entry-wide">
+			{{ content }}
+
+			{% include disqus.html %}
+
+			</div>
+		</div>
+		<br class="clear" />
+		<div id="footer">
+			<p>Powered by <a href="https://github.com/">github</a>. vim-jp.org is licensed under a <a href="https://creativecommons.org/licenses/by/2.1/jp/">Creative Commons License</a>.
+		</div>
+	</div>
+</body>
