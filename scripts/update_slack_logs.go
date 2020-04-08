@@ -129,7 +129,7 @@ func genChannelIndex(inDir string, channel *channel, msgMap map[string]*msgPerMo
 	t, err := template.New("channelIndex").Delims("<<", ">>").Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
 layout: slacklog
-title: vim-jp.slack.com log - #<< .channel.Name >>
+title: vim-jp.slack.com log - &#35<< .channel.Name >>
 ---
 <div>
 <h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
@@ -160,7 +160,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	t, err := template.New("channelPerMonthIndex").Delims("<<", ">>").Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
 layout: slacklog
-title: vim-jp.slack.com log - #<< .channel.Name >> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月
+title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月
 ---
 <div>
 <h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
