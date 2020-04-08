@@ -167,6 +167,34 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
 	var out bytes.Buffer
+
+	var reLinkWithTitle = regexp.MustCompile(`&lt;(https?://[^>]+?\|(.+?))&gt;`)
+	var reLink = regexp.MustCompile(`&lt;(https?://[^>]+?)&gt;`)
+	var reCode = regexp.MustCompile("```([^`]+?)```")
+	var reCodeShort = regexp.MustCompile("`([^`]+?)`")
+	var reDel = regexp.MustCompile("~([^~]+?)~")
+	var reNewline = regexp.MustCompile(`\n`)
+	var text2Html = func(text string) string {
+		text = html.EscapeString(html.UnescapeString(text))
+		text = reLinkWithTitle.ReplaceAllString(text, "<a href='${1}'>${2}</a>")
+		text = reLink.ReplaceAllString(text, "<a href='${1}'>${1}</a>")
+		text = reCode.ReplaceAllString(text, "<code>${1}</code>")
+		text = reCodeShort.ReplaceAllString(text, "<code>${1}</code>")
+		text = reDel.ReplaceAllString(text, "<del>${1}</del>")
+		text = reNewline.ReplaceAllString(text, "<br>")
+		return text
+	}
+	var funcText = func(msg *message) string {
+		text := text2Html(msg.Text)
+		if msg.Edited != nil {
+			text += cfg.EditedSuffix
+		}
+		return text
+	}
+	var funcAttachmentText = func(attachment *messageAttachment) string {
+		return text2Html(attachment.Text)
+	}
+
 	// TODO check below subtypes work correctly
 	// TODO support more subtypes
 	t, err := template.New("channelPerMonthIndex").
@@ -198,27 +226,8 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				}
 				return user.Profile.Image48
 			},
-			"text": func() func(*message) string {
-				var reLinkWithTitle = regexp.MustCompile(`&lt;(https?://[^>]+?\|(.+?))&gt;`)
-				var reLink = regexp.MustCompile(`&lt;(https?://[^>]+?)&gt;`)
-				var reCode = regexp.MustCompile("```([^`]+?)```")
-				var reCodeShort = regexp.MustCompile("`([^`]+?)`")
-				var reDel = regexp.MustCompile("~([^~]+?)~")
-				var reNewline = regexp.MustCompile(`\n`)
-				return func(msg *message) string {
-					text := html.EscapeString(html.UnescapeString(msg.Text))
-					text = reLinkWithTitle.ReplaceAllString(text, "<a href='${1}'>${2}</a>")
-					text = reLink.ReplaceAllString(text, "<a href='${1}'>${1}</a>")
-					text = reCode.ReplaceAllString(text, "<code>${1}</code>")
-					text = reCodeShort.ReplaceAllString(text, "<code>${1}</code>")
-					text = reDel.ReplaceAllString(text, "<del>${1}</del>")
-					text = reNewline.ReplaceAllString(text, "<br>")
-					if msg.Edited != nil {
-						text += cfg.EditedSuffix
-					}
-					return text
-				}
-			}(),
+			"text":           funcText,
+			"attachmentText": funcAttachmentText,
 		}).
 		Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
@@ -244,14 +253,14 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
             <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
             <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
             <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
-            <span class='slacklog-attachment-github-text'><< html .Text >></span>
+            <span class='slacklog-attachment-github-text'><< attachmentText . >></span>
           </span>
         <<- else if eq .ServiceName "twitter" >>
           <span class='slacklog-attachment slacklog-attachment-twitter'>
             <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
             <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
             <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
-            <span class='slacklog-attachment-twitter-text'><< html .Text >></span>
+            <span class='slacklog-attachment-twitter-text'><< attachmentText . >></span>
             <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
             <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
             <<- if .VideoHtml >>
@@ -272,7 +281,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
             <div class='slacklog-attachment-other-title'><< html .Title >></div>
             <<- end >>
             <<- if .Text >>
-            <div class='slacklog-attachment-other-text'><< html .Text >></div>
+            <div class='slacklog-attachment-other-text'><< attachmentText . >></div>
             <<- end >>
           </span>
         <<- end >>
@@ -281,7 +290,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
     <<- end >>
   </span>
 <<- else if eq .Subtype "bot_message" >>
-<< .Username >> << datetime .Ts >>: << html .Text >>
+<< .Username >> << datetime .Ts >>: << text . >>
 <<- end >>
 <<- end >>
 {% endraw %}
