@@ -19,6 +19,8 @@
   margin-left: 10px;
   grid-row: 1;
   grid-column: 3;
+}
+.slacklog-datetime, .slacklog-datetime:link, .slacklog-datetime:visited {
   color: gray;
 }
 .slacklog-text {
