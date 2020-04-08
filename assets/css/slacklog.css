@@ -101,3 +101,14 @@
   grid-row: 4;
   grid-column: 1 / 4;
 }
+
+.slacklog-attachment-other {
+  display: block;
+}
+.slacklog-attachment-other-serviceicon img {
+  width: 32px;
+}
+.slacklog-attachment-other-servicename {
+  font-weight: bold;
+  vertical-align: super;
+}

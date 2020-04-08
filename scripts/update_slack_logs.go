@@ -233,6 +233,23 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
             <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
             <<- end >>
           </span>
+        <<- else if or .Title .Text >>
+          <span class='slacklog-attachment slacklog-attachment-other'>
+            <<- if and .ServiceIcon .ServiceName >>
+            <div>
+              <span class='slacklog-attachment-other-serviceicon'><img src='<< .ServiceIcon >>'></span>
+              <span class='slacklog-attachment-other-servicename'><< html .ServiceName >></span>
+            </div>
+            <<- end >>
+            <<- if and .Title .TitleLink >>
+            <div class='slacklog-attachment-other-title'><a href='<< .TitleLink >>'><< html .Title >></a></div>
+            <<- else if .Title >>
+            <div class='slacklog-attachment-other-title'><< html .Title >></div>
+            <<- end >>
+            <<- if .Text >>
+            <div class='slacklog-attachment-other-text'><< html .Text >></div>
+            <<- end >>
+          </span>
         <<- end >>
       <<- end >>
     </span>
