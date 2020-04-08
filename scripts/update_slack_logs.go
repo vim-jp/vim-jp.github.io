@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"html"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -33,7 +34,7 @@ func doMain() error {
 	inDir := filepath.Clean(os.Args[1])
 	outDir := filepath.Clean(os.Args[2])
 
-	_, err := readUsers(filepath.Join(inDir, "users.json"))
+	userMap, err := readUsers(filepath.Join(inDir, "users.json"))
 	if err != nil {
 		return fmt.Errorf("could not read users.json: %s", err)
 	}
@@ -75,7 +76,7 @@ func doMain() error {
 			if err := mkdir(filepath.Join(outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month)); err != nil {
 				return fmt.Errorf("could not create %s/%s/%s/%s directory: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
-			content, err := genChannelPerMonthIndex(inDir, &channels[i], msgPerMonth)
+			content, err := genChannelPerMonthIndex(inDir, &channels[i], msgPerMonth, userMap)
 			if err != nil {
 				return fmt.Errorf("could not generate %s/%s/%s/%s/index.html: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
@@ -153,7 +154,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >>
 	return out.Bytes(), err
 }
 
-func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth) ([]byte, error) {
+func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]user) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
@@ -182,6 +183,17 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				}
 				return time.Unix(sec, nsec).In(japan).Format("2æ—¥ 15:04:05")
 			},
+			"userIconUrl": func(userId string) string {
+				user, ok := userMap[userId]
+				if !ok {
+					return "" // TODO show default icon
+				}
+				return user.Profile.Image48
+			},
+			"text2html": func(text string) string {
+				// TODO
+				return html.EscapeString(text)
+			},
 		}).
 		Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
@@ -197,9 +209,14 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 {% raw %}
 <<- range .msgPerMonth.Messages >>
 <<- if eq .Subtype "" >>
-<pre><< or .UserProfile.DisplayName .UserProfile.RealName >> << datetime .Ts >>: << .Text >></pre>
+<span class='slacklog-message'>
+<img class='slacklog-icon' src='<< userIconUrl .User >>'>
+<span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
+<span class='slacklog-datetime'><< datetime .Ts >></span>
+<span class='slacklog-text'><< text2html .Text >></span>
+</span>
 <<- else if eq .Subtype "bot_message" >>
-<pre><< .Username >> << datetime .Ts >>: << .Text >></pre>
+<< .Username >> << datetime .Ts >>: << .Text >>
 <<- end >>
 <<- end >>
 {% endraw %}
@@ -367,17 +384,18 @@ type userProfile struct {
 	Team                  string      `json:"team"`
 }
 
-func readUsers(usersJsonPath string) ([]user, error) {
+func readUsers(usersJsonPath string) (map[string]user, error) {
 	content, err := ioutil.ReadFile(usersJsonPath)
 	if err != nil {
 		return nil, err
 	}
 	var users []user
 	err = json.Unmarshal(content, &users)
-	sort.Slice(users, func(i, j int) bool {
-		return users[i].Id < users[j].Id
-	})
-	return users, err
+	result := make(map[string]user, len(users))
+	for i := range users {
+		result[users[i].Id] = users[i]
+	}
+	return result, err
 }
 
 type channel struct {
