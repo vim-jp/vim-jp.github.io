@@ -176,12 +176,12 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	var reNewline = regexp.MustCompile(`\n`)
 	var text2Html = func(text string) string {
 		text = html.EscapeString(html.UnescapeString(text))
+		text = reNewline.ReplaceAllString(text, "<br>")
 		text = reLinkWithTitle.ReplaceAllString(text, "<a href='${1}'>${2}</a>")
 		text = reLink.ReplaceAllString(text, "<a href='${1}'>${1}</a>")
 		text = reCode.ReplaceAllString(text, "<code>${1}</code>")
 		text = reCodeShort.ReplaceAllString(text, "<code>${1}</code>")
 		text = reDel.ReplaceAllString(text, "<del>${1}</del>")
-		text = reNewline.ReplaceAllString(text, "<br>")
 		return text
 	}
 	var funcText = func(msg *message) string {
