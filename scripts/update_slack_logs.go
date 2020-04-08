@@ -241,10 +241,10 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 <<- range .msgPerMonth.Messages >>
 <<- if eq .Subtype "" >>
   <span class='slacklog-message' id='<< .Ts >>'>
-  <img class='slacklog-icon' src='<< userIconUrl .User >>'>
-  <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
-  <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
-  <span class='slacklog-text'><< text . >></span>
+    <img class='slacklog-icon' src='<< userIconUrl .User >>'>
+    <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
+    <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
+    <span class='slacklog-text'><< text . >></span>
     <<- if .Attachments >>
     <span class='slacklog-attachments'>
       <<- range .Attachments >>
