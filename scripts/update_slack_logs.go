@@ -138,7 +138,7 @@ layout: slacklog
 title: vim-jp.slack.com log - &#35<< .channel.Name >>
 ---
 <div>
-<h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
+<h2><a href='/slacklog/'>vim-jp.slack.com log</a> - &#35<< .channel.Name >></h2>
 
 <p>参加方法、各チャンネルの概要等は以下を参照して下さい。<br>
 <a href='/docs/chat.html'>vim-jpのチャットルームについて</a></p>
@@ -205,7 +205,7 @@ layout: slacklog
 title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月
 ---
 <div>
-<h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
+<h2><a href='/slacklog/'>vim-jp.slack.com log</a> - <a href='/slacklog/<< .channel.Name >>/'>&#35<< .channel.Name >></a> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月</h2>
 
 {% raw %}
 <<- range .msgPerMonth.Messages >>
