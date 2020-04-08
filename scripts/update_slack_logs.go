@@ -192,7 +192,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 			},
 			"text2html": func(text string) string {
 				// TODO
-				return html.EscapeString(text)
+				return html.UnescapeString(html.EscapeString(text))
 			},
 		}).
 		Parse(`---
