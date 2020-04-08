@@ -203,9 +203,6 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>�
 <div>
 <h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
 
-<p>参加方法、各チャンネルの概要等は以下を参照して下さい。<br>
-<a href='/docs/chat.html'>vim-jpのチャットルームについて</a></p>
-
 {% raw %}
 <<- range .msgPerMonth.Messages >>
 <<- if eq .Subtype "" >>
