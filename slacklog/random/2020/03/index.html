@@ -601,7 +601,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1583730441.295900'>9日 14:07:22</a>
-    <span class='slacklog-text'><code>diff --git a/autoload/localrc.vim b/autoload/localrc.vim<br>index c1c7f47..4309e9e 100644<br>--- a/autoload/localrc.vim<br>+++ b/autoload/localrc.vim<br>@@ -49,8 +49,8 @@ function! s:match_files(path, fname)<br><br>   let path = escape(a:path, &#39;*?[,&#39;)<br>   if a:fname[0] == &#39;/&#39;<br>-    let files = split(globpath(path, &#39;/.*&#39;, 1), &#34;\n&#34;)<br>-    \         + split(globpath(path, &#39;/*&#39; , 1), &#34;\n&#34;)<br>+    let files = split(globpath(path, &#39;.*&#39;, 1), &#34;\n&#34;)<br>+    \         + split(globpath(path, &#39;*&#39; , 1), &#34;\n&#34;)<br>     let pat = a:fname[1:]<br>     call filter(map(files, &#39;fnamemodify(v:val, &#34;:t&#34;)&#39;), &#39;v:val =~# pat&#39;)</code><br>で動いてそうな気はします。</span>
+    <span class='slacklog-text'><pre>diff --git a/autoload/localrc.vim b/autoload/localrc.vim<br>index c1c7f47..4309e9e 100644<br>--- a/autoload/localrc.vim<br>+++ b/autoload/localrc.vim<br>@@ -49,8 +49,8 @@ function! s:match_files(path, fname)<br><br>   let path = escape(a:path, &#39;*?[,&#39;)<br>   if a:fname[0] == &#39;/&#39;<br>-    let files = split(globpath(path, &#39;/.*&#39;, 1), &#34;\n&#34;)<br>-    \         + split(globpath(path, &#39;/*&#39; , 1), &#34;\n&#34;)<br>+    let files = split(globpath(path, &#39;.*&#39;, 1), &#34;\n&#34;)<br>+    \         + split(globpath(path, &#39;*&#39; , 1), &#34;\n&#34;)<br>     let pat = a:fname[1:]<br>     call filter(map(files, &#39;fnamemodify(v:val, &#34;:t&#34;)&#39;), &#39;v:val =~# pat&#39;)</pre><br>で動いてそうな気はします。</span>
   </span>
   <span class='slacklog-message' id='1583730501.296500'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
@@ -673,7 +673,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png'>
     <span class='slacklog-name'></span>
     <a class='slacklog-datetime' href='#1583730669.300000'>9日 14:11:10</a>
-    <span class='slacklog-text'><code><br>                                                                *globpath()*<br>globpath({path}, {expr} [, {nosuf} [, {list} [, {alllinks}]]])<br>                {path}の中の全ディレクトリで {expr} に対して|glob()|を実行し、<br>                結果を連結する。例:  <br>                        :echo globpath(&amp;rtp, &#34;syntax/c.vim&#34;)<br> <br>                {path}はコンマ区切りのディレクトリのリスト。各ディレクトリを<br>                {expr}の前に付加し、glob()と同様にそれを展開する。必要に応じて<br>                パスの区切り文字が挿入される。<br>                ディレクトリ名の中にコンマを含めるには、バックスラッシュでエス<br>                ケープすること。Note MS-Windowsではディレクトリ名の末尾にバッ<br>                クスラッシュがつくことがある。その後に区切りのコンマを書くとエ<br>                スケープと見なされてしまうので、バックスラッシュは削除すること。<br>                どれかのディレクトリに対して展開が失敗してもエラーメッセージは<br>                表示されない。<br> <br>                {nosuf} に|TRUE|が指定されない限り、オプション &#39;wildignore&#39; が<br>                適用される。つまり、&#39;wildignore&#39; のパターンにマッチする名前は<br>                スキップされる。<br> <br>                {list} が指定され、その値が|TRUE|なら、マッチしたすべてのファ<br>                イルがリストとして返る。リストとして受け取る利点は、改行文字を<br>                含んだファイル名も正しく扱えることである。{list} を指定しな<br>                かった場合は、戻り値は文字列であり、マッチした複数のファイル名<br>                は &lt;NL&gt; 文字で連結されてしまう。例:  <br>                        :echo globpath(&amp;rtp, &#34;syntax/c.vim&#34;, 0, 1)<br> <br>                {alllinks} は|glob()|の場合と同様に扱われる。<br> <br>                &#34;**&#34; を使ってディレクトリツリーを再帰的に検索することができる。<br>                例えば、&#39;runtimepath&#39; とそれ以下のディレクトリから全ての<br>                &#34;README.txt&#34; を探すには次のようにする:  <br>                        :echo globpath(&amp;rtp, &#34;**/README.txt&#34;)<br>                上向き検索と、&#34;**&#34; の深さの限界はサポートされていない。よって<br>                オプション &#39;path&#39; の値をそのまま使うとうまく動かないことが<br>                ある。<br> <br>                |method| としても使用でき、ベースは第2引数として渡される:  <br>                        GetExpr()-&gt;globpath(&amp;rtp)<br></code></span>
+    <span class='slacklog-text'><pre><br>                                                                *globpath()*<br>globpath({path}, {expr} [, {nosuf} [, {list} [, {alllinks}]]])<br>                {path}の中の全ディレクトリで {expr} に対して|glob()|を実行し、<br>                結果を連結する。例:  <br>                        :echo globpath(&amp;rtp, &#34;syntax/c.vim&#34;)<br> <br>                {path}はコンマ区切りのディレクトリのリスト。各ディレクトリを<br>                {expr}の前に付加し、glob()と同様にそれを展開する。必要に応じて<br>                パスの区切り文字が挿入される。<br>                ディレクトリ名の中にコンマを含めるには、バックスラッシュでエス<br>                ケープすること。Note MS-Windowsではディレクトリ名の末尾にバッ<br>                クスラッシュがつくことがある。その後に区切りのコンマを書くとエ<br>                スケープと見なされてしまうので、バックスラッシュは削除すること。<br>                どれかのディレクトリに対して展開が失敗してもエラーメッセージは<br>                表示されない。<br> <br>                {nosuf} に|TRUE|が指定されない限り、オプション &#39;wildignore&#39; が<br>                適用される。つまり、&#39;wildignore&#39; のパターンにマッチする名前は<br>                スキップされる。<br> <br>                {list} が指定され、その値が|TRUE|なら、マッチしたすべてのファ<br>                イルがリストとして返る。リストとして受け取る利点は、改行文字を<br>                含んだファイル名も正しく扱えることである。{list} を指定しな<br>                かった場合は、戻り値は文字列であり、マッチした複数のファイル名<br>                は &lt;NL&gt; 文字で連結されてしまう。例:  <br>                        :echo globpath(&amp;rtp, &#34;syntax/c.vim&#34;, 0, 1)<br> <br>                {alllinks} は|glob()|の場合と同様に扱われる。<br> <br>                &#34;**&#34; を使ってディレクトリツリーを再帰的に検索することができる。<br>                例えば、&#39;runtimepath&#39; とそれ以下のディレクトリから全ての<br>                &#34;README.txt&#34; を探すには次のようにする:  <br>                        :echo globpath(&amp;rtp, &#34;**/README.txt&#34;)<br>                上向き検索と、&#34;**&#34; の深さの限界はサポートされていない。よって<br>                オプション &#39;path&#39; の値をそのまま使うとうまく動かないことが<br>                ある。<br> <br>                |method| としても使用でき、ベースは第2引数として渡される:  <br>                        GetExpr()-&gt;globpath(&amp;rtp)<br></pre></span>
   </span>
   <span class='slacklog-message' id='1583730703.300800'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2015-01-15/3417067010_04a676b32692fb2507e1_48.jpg'>
@@ -2918,7 +2918,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png'>
     <span class='slacklog-name'>ycino</span>
     <a class='slacklog-datetime' href='#1583828818.008000'>10日 17:26:59</a>
-    <span class='slacklog-text'><code>  desc &#39;Override vscode settings file&#39;<br>  task settings: [&#39;.config/vscode/settings.json&#39;, &#39;.config/vscode/keybindings.json&#39;, &#39;.config/vscode/locale.json&#39;] do<br>    config_root = &#39;<del>/Library/Application\ Support/Code/User&#39;<br>    sh &#34;ln -sfn </del>/.config/vscode/settings.json #{config_root}/settings.json&#34;<br>    sh &#34;ln -sfn <del>/.config/vscode/keybindings.json #{config_root}/keybindings.json&#34;<br>    sh &#34;ln -sfn </del>/.config/vscode/locale.json #{config_root}/locale.json&#34;<br>  end</code><br>Rakeでやってる</span>
+    <span class='slacklog-text'><pre>  desc &#39;Override vscode settings file&#39;<br>  task settings: [&#39;.config/vscode/settings.json&#39;, &#39;.config/vscode/keybindings.json&#39;, &#39;.config/vscode/locale.json&#39;] do<br>    config_root = &#39;<del>/Library/Application\ Support/Code/User&#39;<br>    sh &#34;ln -sfn </del>/.config/vscode/settings.json #{config_root}/settings.json&#34;<br>    sh &#34;ln -sfn <del>/.config/vscode/keybindings.json #{config_root}/keybindings.json&#34;<br>    sh &#34;ln -sfn </del>/.config/vscode/locale.json #{config_root}/locale.json&#34;<br>  end</pre><br>Rakeでやってる</span>
   </span>
   <span class='slacklog-message' id='1583828854.008200'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
@@ -3922,7 +3922,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-09/327298108645_48b1c10b3cf4092337c5_48.png'>
     <span class='slacklog-name'>ycino</span>
     <a class='slacklog-datetime' href='#1583990682.119300'>12日 14:24:43</a>
-    <span class='slacklog-text'><code>Jun 2020<br>Beta Build<br>VimL Integration</code><br>ってロードマップにあるから今は無理なのかなーと</span>
+    <span class='slacklog-text'><pre>Jun 2020<br>Beta Build<br>VimL Integration</pre><br>ってロードマップにあるから今は無理なのかなーと</span>
   </span>
   <span class='slacklog-message' id='1583990918.120000'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/b1dffe3b4b3a420d7537059b762a5ea4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png'>
@@ -5072,7 +5072,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png'>
     <span class='slacklog-name'></span>
     <a class='slacklog-datetime' href='#1584255973.245900'>15日 16:06:14</a>
-    <span class='slacklog-text'>ふと caw.vim の initial commit 調べたら10年前でもうそんなに前…！？<br>ってなったので入れてるプラグインで一番古いやつ10個調べてみた。<br>年月が過ぎるの早すぎて笑ってる<br><code>for repo in $(volt list -f &#39;{{ range .Repos }}{{ println .Path }}{{ end }}&#39;); do (cd ~/volt/repos/$repo &amp;&amp; echo -e &#34;$(git show -s --format=%ci &#34;$(git rev-list --max-parents=0 HEAD | head -1)&#34;)\t$repo&#34;) 2&gt;/dev/null; done | sort | head</code></span>
+    <span class='slacklog-text'>ふと caw.vim の initial commit 調べたら10年前でもうそんなに前…！？<br>ってなったので入れてるプラグインで一番古いやつ10個調べてみた。<br>年月が過ぎるの早すぎて笑ってる<br><pre>for repo in $(volt list -f &#39;{{ range .Repos }}{{ println .Path }}{{ end }}&#39;); do (cd ~/volt/repos/$repo &amp;&amp; echo -e &#34;$(git show -s --format=%ci &#34;$(git rev-list --max-parents=0 HEAD | head -1)&#34;)\t$repo&#34;) 2&gt;/dev/null; done | sort | head</pre></span>
   </span>
   <span class='slacklog-message' id='1584257462.246200'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png'>
@@ -5161,7 +5161,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png'>
     <span class='slacklog-name'></span>
     <a class='slacklog-datetime' href='#1584348407.255900'>16日 17:46:48</a>
-    <span class='slacklog-text'><code><br>行番号は以下の方法で指定できる:                 *:range* *{address}*<br>        {number}        絶対的な行番号<br></code></span>
+    <span class='slacklog-text'><pre><br>行番号は以下の方法で指定できる:                 *:range* *{address}*<br>        {number}        絶対的な行番号<br></pre></span>
   </span>
   <span class='slacklog-message' id='1584348415.256200'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
@@ -5185,7 +5185,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png'>
     <span class='slacklog-name'></span>
     <a class='slacklog-datetime' href='#1584348426.256600'>16日 17:47:07</a>
-    <span class='slacklog-text'><code><br>        .               現在の行                                  *:.*<br>        $               ファイルの最終行                          *:$*<br>        %               1,$と同じ (ファイル全体)                  *:%*<br>        &#39;t              マーク tの位置 (小文字)                   *:&#39;*<br>        &#39;T              マーク Tの位置 (大文字); マーク位置が別ファイルにある<br>                        ときには範囲指定には使えない<br></code></span>
+    <span class='slacklog-text'><pre><br>        .               現在の行                                  *:.*<br>        $               ファイルの最終行                          *:$*<br>        %               1,$と同じ (ファイル全体)                  *:%*<br>        &#39;t              マーク tの位置 (小文字)                   *:&#39;*<br>        &#39;T              マーク Tの位置 (大文字); マーク位置が別ファイルにある<br>                        ときには範囲指定には使えない<br></pre></span>
   </span>
   <span class='slacklog-message' id='1584348433.256800'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -5321,7 +5321,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png'>
     <span class='slacklog-name'>tyru</span>
     <a class='slacklog-datetime' href='#1584358026.266400'>16日 20:27:07</a>
-    <span class='slacklog-text'>git diff で<br><code>--- a/hoge.js<br>+++ b/hoge.js</code><br>じゃなく<br><code>--- hoge.js<br>+++ hoge.js</code><br>と表示させる設定。これで <code>gf</code> 等で飛べて快適になった<br><code>git config --global diff.noprefix true</code></span>
+    <span class='slacklog-text'>git diff で<br><pre>--- a/hoge.js<br>+++ b/hoge.js</pre><br>じゃなく<br><pre>--- hoge.js<br>+++ hoge.js</pre><br>と表示させる設定。これで <code>gf</code> 等で飛べて快適になった<br><pre>git config --global diff.noprefix true</pre></span>
   </span>
   <span class='slacklog-message' id='1584358112.267000'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -5451,13 +5451,13 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584369484.284100'>16日 23:38:05</a>
-    <span class='slacklog-text'><code>$ go get <a href='http://github.com/mattn/go-sixel/cmd/gosr|github.com/mattn/go-sixel/cmd/gosr'>github.com/mattn/go-sixel/cmd/gosr</a></code><br>して<br><code>$ gosr input.png &gt; output.drcs</code><br>すると出来上がります。</span>
+    <span class='slacklog-text'><pre>$ go get <a href='http://github.com/mattn/go-sixel/cmd/gosr|github.com/mattn/go-sixel/cmd/gosr'>github.com/mattn/go-sixel/cmd/gosr</a></pre><br>して<br><pre>$ gosr input.png &gt; output.drcs</pre><br>すると出来上がります。</span>
   </span>
   <span class='slacklog-message' id='1584369509.284500'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584369509.284500'>16日 23:38:30</a>
-    <span class='slacklog-text'><code>$ cat output.drcs</code></span>
+    <span class='slacklog-text'><pre>$ cat output.drcs</pre></span>
   </span>
   <span class='slacklog-message' id='1584369539.285300'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2020-02-25/956372982963_479264cbe2e1ea3d83ee_48.png'>
@@ -5521,7 +5521,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/b52d91913fe73adf7f68f393c397a6d5.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-48.png'>
     <span class='slacklog-name'>tomoya</span>
     <a class='slacklog-datetime' href='#1584370794.291100'>16日 23:59:55</a>
-    <span class='slacklog-text'>こういうのはむりすかね?<br><br><code>$ curl -vs <a href='http://wttr.in/Tokyo.png|wttr.in/Tokyo.png'>wttr.in/Tokyo.png</a> 2&gt;&amp;1 | gosr<br>Usage of gosr: gosr [images]<br>  -blur string<br>    	Blur image by [Dev,Size]<br>  -resize string<br>    	Resize image by [WxH]<br>  -rotate float<br>    	Rotate image by [N] deg</code><br></span>
+    <span class='slacklog-text'>こういうのはむりすかね?<br><br><pre>$ curl -vs <a href='http://wttr.in/Tokyo.png|wttr.in/Tokyo.png'>wttr.in/Tokyo.png</a> 2&gt;&amp;1 | gosr<br>Usage of gosr: gosr [images]<br>  -blur string<br>    	Blur image by [Dev,Size]<br>  -resize string<br>    	Resize image by [WxH]<br>  -rotate float<br>    	Rotate image by [N] deg</pre><br></span>
   </span>
   <span class='slacklog-message' id='1584370853.291400'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
@@ -5635,7 +5635,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/b52d91913fe73adf7f68f393c397a6d5.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-48.png'>
     <span class='slacklog-name'>tomoya</span>
     <a class='slacklog-datetime' href='#1584372865.297400'>17日 00:34:26</a>
-    <span class='slacklog-text'><code>curl -s <a href='https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif'>https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif</a> | gosgif</code><br></span>
+    <span class='slacklog-text'><pre>curl -s <a href='https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif'>https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif</a> | gosgif</pre><br></span>
   </span>
   <span class='slacklog-message' id='1584372872.297600'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/b52d91913fe73adf7f68f393c397a6d5.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-48.png'>
@@ -5720,7 +5720,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <span class='slacklog-text'><a href='https://vim-jp.slack.com/archives/C03C4RC9F/p1584358026266400'>https://vim-jp.slack.com/archives/C03C4RC9F/p1584358026266400</a><br>このオプション入れてるとGinaのパッチモードが失敗するらしい</span>
     <span class='slacklog-attachments'>
           <span class='slacklog-attachment slacklog-attachment-other'>
-            <div class='slacklog-attachment-other-text'>git diff で<br><code>--- a/hoge.js<br>+++ b/hoge.js</code><br>じゃなく<br><code>--- hoge.js<br>+++ hoge.js</code><br>と表示させる設定。これで <code>gf</code> 等で飛べて快適になった<br><code>git config --global diff.noprefix true</code></div>
+            <div class='slacklog-attachment-other-text'>git diff で<br><pre>--- a/hoge.js<br>+++ b/hoge.js</pre><br>じゃなく<br><pre>--- hoge.js<br>+++ hoge.js</pre><br>と表示させる設定。これで <code>gf</code> 等で飛べて快適になった<br><pre>git config --global diff.noprefix true</pre></div>
           </span>
     </span>
   </span>
@@ -7537,7 +7537,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584589852.474100'>19日 12:50:53</a>
-    <span class='slacklog-text'>ただこれだけは絶対にいれる。 (.bash_alias)<br><code>alias mv=&#39;mv -i&#39;<br>alias rm=&#39;rm -i&#39;<br>alias cp=&#39;cp -i&#39;</code></span>
+    <span class='slacklog-text'>ただこれだけは絶対にいれる。 (.bash_alias)<br><pre>alias mv=&#39;mv -i&#39;<br>alias rm=&#39;rm -i&#39;<br>alias cp=&#39;cp -i&#39;</pre></span>
   </span>
   <span class='slacklog-message' id='1584589881.474900'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -7609,7 +7609,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/35b032d7b2d4182b0c2de1ef85ba91f2.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png'>
     <span class='slacklog-name'>raa0121</span>
     <a class='slacklog-datetime' href='#1584590154.481600'>19日 12:55:55</a>
-    <span class='slacklog-text'><code>crontab -l &gt; crotab.txt<br>vim crontab.txt<br>crontab &lt; crontab.txt</code><br>が鉄板…</span>
+    <span class='slacklog-text'><pre>crontab -l &gt; crotab.txt<br>vim crontab.txt<br>crontab &lt; crontab.txt</pre><br>が鉄板…</span>
   </span>
   <span class='slacklog-message' id='1584590185.482600'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -7991,7 +7991,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/5fdf83c448b8503add52517c7de0e3cc.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0026-48.png'>
     <span class='slacklog-name'>tyru</span>
     <a class='slacklog-datetime' href='#1584592614.020400'>19日 13:36:55</a>
-    <span class='slacklog-text'><a href='https://vim-jp.slack.com/archives/C03C4RC9F/p1584589830473300'>https://vim-jp.slack.com/archives/C03C4RC9F/p1584589830473300</a><br>これ調べてたら word を引数ごとの扱いに変えてくれそうなやつが出てきた。zsh だけど<br><code>autoload -Uz select-word-style<br>select-word-style shell</code></span>
+    <span class='slacklog-text'><a href='https://vim-jp.slack.com/archives/C03C4RC9F/p1584589830473300'>https://vim-jp.slack.com/archives/C03C4RC9F/p1584589830473300</a><br>これ調べてたら word を引数ごとの扱いに変えてくれそうなやつが出てきた。zsh だけど<br><pre>autoload -Uz select-word-style<br>select-word-style shell</pre></span>
     <span class='slacklog-attachments'>
           <span class='slacklog-attachment slacklog-attachment-other'>
             <div class='slacklog-attachment-other-text'>ちなみにzshだとWORDCHARSでvimみたいに単語区切り変えられるんで引数ごと移動も可能です</div>
@@ -9903,7 +9903,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584692061.216600'>20日 17:14:22</a>
-    <span class='slacklog-text'>こういうのあるかわからんですが<br><code>client<br>  .success(res =&gt; ...)<br>  .fail(res =&gt; ...)<br>  .notfound(res =&gt; ...)</code></span>
+    <span class='slacklog-text'>こういうのあるかわからんですが<br><pre>client<br>  .success(res =&gt; ...)<br>  .fail(res =&gt; ...)<br>  .notfound(res =&gt; ...)</pre></span>
   </span>
   <span class='slacklog-message' id='1584692068.216900'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
@@ -9996,7 +9996,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584694802.233100'>20日 18:00:03</a>
-    <span class='slacklog-text'><code>{<br>  &#34;code&#34;: 200,<br>  &#34;message&#34;: &#34;OK&#34;,<br>  &#34;error&#34;: false<br>}</code><br>こんな感じにする事もあります。</span>
+    <span class='slacklog-text'><pre>{<br>  &#34;code&#34;: 200,<br>  &#34;message&#34;: &#34;OK&#34;,<br>  &#34;error&#34;: false<br>}</pre><br>こんな感じにする事もあります。</span>
   </span>
   <span class='slacklog-message' id='1584694900.233500'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png'>
@@ -11078,7 +11078,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
     <span class='slacklog-name'>kuu</span>
     <a class='slacklog-datetime' href='#1584957984.324800'>23日 19:06:25</a>
-    <span class='slacklog-text'><code>  let mem = 0z00<br>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</code></span>
+    <span class='slacklog-text'><pre>  let mem = 0z00<br>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</pre></span>
   </span>
   <span class='slacklog-message' id='1584957986.325100'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -11138,7 +11138,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
     <span class='slacklog-name'>kuu</span>
     <a class='slacklog-datetime' href='#1584958195.331700'>23日 19:09:56</a>
-    <span class='slacklog-text'><code>let i = 0<br>echo list[i]</code><br>みたいなことをやろうとしてる時、iがポインタでlist[i]がデータ</span>
+    <span class='slacklog-text'><pre>let i = 0<br>echo list[i]</pre><br>みたいなことをやろうとしてる時、iがポインタでlist[i]がデータ</span>
   </span>
   <span class='slacklog-message' id='1584958334.332500'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -11385,7 +11385,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
     <span class='slacklog-name'>tsuyoshi_cho</span>
     <a class='slacklog-datetime' href='#1584960498.346800'>23日 19:48:19</a>
-    <span class='slacklog-text'>blobの、わりと雑な変換インプリメント<br><code><br>function! s:from_blob(blob) abort<br>  return s:List.new(len(a:blob), {i -&gt; a:blob[i]})<br>endfunction<br><br>function! s:to_blob(bytes) abort<br>  return eval(&#39;0z&#39; . s:to_hexstring(a:bytes))<br>endfunction<br></code></span>
+    <span class='slacklog-text'>blobの、わりと雑な変換インプリメント<br><pre><br>function! s:from_blob(blob) abort<br>  return s:List.new(len(a:blob), {i -&gt; a:blob[i]})<br>endfunction<br><br>function! s:to_blob(bytes) abort<br>  return eval(&#39;0z&#39; . s:to_hexstring(a:bytes))<br>endfunction<br></pre></span>
   </span>
   <span class='slacklog-message' id='1584960536.347100'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -11645,13 +11645,13 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
     <span class='slacklog-name'>mattn</span>
     <a class='slacklog-datetime' href='#1584971436.377000'>23日 22:50:37</a>
-    <span class='slacklog-text'><code>518.000  000.000: --- VIM STARTED ---</code><br>ひとまず戻した。</span>
+    <span class='slacklog-text'><pre>518.000  000.000: --- VIM STARTED ---</pre><br>ひとまず戻した。</span>
   </span>
   <span class='slacklog-message' id='1584971439.377100'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
     <span class='slacklog-name'>tsuyoshi_cho</span>
     <a class='slacklog-datetime' href='#1584971439.377100'>23日 22:50:40</a>
-    <span class='slacklog-text'><code>5159.000  000.000: --- VIM STARTED ---</code><br>キニシナイ</span>
+    <span class='slacklog-text'><pre>5159.000  000.000: --- VIM STARTED ---</pre><br>キニシナイ</span>
   </span>
   <span class='slacklog-message' id='1584971444.377300'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png'>
@@ -11717,7 +11717,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584971720.382700'>23日 22:55:21</a>
-    <span class='slacklog-text'><code>time vim +q<br><br>________________________________________________________<br>Executed in   87.15 millis    fish           external<br>   usr time   77.44 millis  435.00 micros   77.01 millis<br>   sys time    8.65 millis   98.00 micros    8.56 millis</code></span>
+    <span class='slacklog-text'><pre>time vim +q<br><br>________________________________________________________<br>Executed in   87.15 millis    fish           external<br>   usr time   77.44 millis  435.00 micros   77.01 millis<br>   sys time    8.65 millis   98.00 micros    8.56 millis</pre></span>
   </span>
   <span class='slacklog-message' id='1584971727.382900'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -11747,7 +11747,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png'>
     <span class='slacklog-name'>heavenshell</span>
     <a class='slacklog-datetime' href='#1584971774.384300'>23日 22:56:15</a>
-    <span class='slacklog-text'><code> time vim +q<br><br>/Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc &#34;$@&#34; +q  0.34s user 0.23s system 82% cpu 0.689 total</code><br>ううむ。</span>
+    <span class='slacklog-text'><pre> time vim +q<br><br>/Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc &#34;$@&#34; +q  0.34s user 0.23s system 82% cpu 0.689 total</pre><br>ううむ。</span>
   </span>
   <span class='slacklog-message' id='1584971818.385600'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -11819,7 +11819,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584972016.389700'>23日 23:00:17</a>
-    <span class='slacklog-text'>これ読んでいますが、↓は何をやっているんですか？<br><br><code>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</code></span>
+    <span class='slacklog-text'>これ読んでいますが、↓は何をやっているんですか？<br><br><pre>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</pre></span>
   </span>
   <span class='slacklog-message' id='1584972091.390100'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-07-31/407982080133_30e238cd92e6c88883f9_48.png'>
@@ -11837,7 +11837,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584972116.390500'>23日 23:01:57</a>
-    <span class='slacklog-text'>あと、これは何をやっているのでしょうか？<br><code>  let mem = 0z00</code></span>
+    <span class='slacklog-text'>あと、これは何をやっているのでしょうか？<br><pre>  let mem = 0z00</pre></span>
   </span>
   <span class='slacklog-message' id='1584972139.390700'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -11861,7 +11861,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-10-31/816062168560_170f8c3ffca39a8b27f7_48.png'>
     <span class='slacklog-name'></span>
     <a class='slacklog-datetime' href='#1584972172.391500'>23日 23:02:53</a>
-    <span class='slacklog-text'><code><br>blobリテラル                            *blob-literal* *E973*<br>------------<br> <br>0zまたは0Zで始まる任意のバイト数の16進数。<br>シーケンスは偶数個の16進数文字でなければならない。例:<br>        :let b = 0zFF00ED015DAF<br></code></span>
+    <span class='slacklog-text'><pre><br>blobリテラル                            *blob-literal* *E973*<br>------------<br> <br>0zまたは0Zで始まる任意のバイト数の16進数。<br>シーケンスは偶数個の16進数文字でなければならない。例:<br>        :let b = 0zFF00ED015DAF<br></pre></span>
   </span>
   <span class='slacklog-message' id='1584972218.391600'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -12069,7 +12069,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584973360.398900'>23日 23:22:41</a>
-    <span class='slacklog-text'><code>  let mem = 0z00<br>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</code><br>ここで、16バイト分の領域を用意するのか</span>
+    <span class='slacklog-text'><pre>  let mem = 0z00<br>  for i in range(15)<br>    let mem = mem + mem<br>  endfor</pre><br>ここで、16バイト分の領域を用意するのか</span>
   </span>
   <span class='slacklog-message' id='1584973378.399100'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -12297,7 +12297,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584975255.407700'>23日 23:54:16</a>
-    <span class='slacklog-text'><code>    elseif c == &#34;,&#34;<br>      let mem[dp] = getchar()</code><br>これって、実際入力されるのを待つんですね</span>
+    <span class='slacklog-text'><pre>    elseif c == &#34;,&#34;<br>      let mem[dp] = getchar()</pre><br>これって、実際入力されるのを待つんですね</span>
   </span>
   <span class='slacklog-message' id='1584975271.407900'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-03-19/331496519296_b6fceab653cf61d7dd8b_48.png'>
@@ -12369,7 +12369,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
     <span class='slacklog-name'>ゴリラ</span>
     <a class='slacklog-datetime' href='#1584975470.410300'>23日 23:57:51</a>
-    <span class='slacklog-text'><code>getchar() == &#34;\&lt;LeftMouse&gt;&#34;</code><br>こんなの書いていたから、思いっきり勘違いしていた</span>
+    <span class='slacklog-text'><pre>getchar() == &#34;\&lt;LeftMouse&gt;&#34;</pre><br>こんなの書いていたから、思いっきり勘違いしていた</span>
   </span>
   <span class='slacklog-message' id='1584975482.410500'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-06-23/667212021009_557c3073c5b377011dbb_48.png'>
@@ -15640,7 +15640,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png'>
     <span class='slacklog-name'>heavenshell</span>
     <a class='slacklog-datetime' href='#1585157472.163300'>26日 02:31:13</a>
-    <span class='slacklog-text'><code>「当社は、ユーザーがQiitaを利用することにより得られる情報を用いて当社の広告サービス、当社が本規約外で別途提供するQiita Jobsのサービス等で利用することがあります。なお、利用する情報は関心ワード、関心カテゴリ、行動ログ、アクセスした都道府県です。」</code><br>行動ログがどこまで含んでるのかなー。</span>
+    <span class='slacklog-text'><pre>「当社は、ユーザーがQiitaを利用することにより得られる情報を用いて当社の広告サービス、当社が本規約外で別途提供するQiita Jobsのサービス等で利用することがあります。なお、利用する情報は関心ワード、関心カテゴリ、行動ログ、アクセスした都道府県です。」</pre><br>行動ログがどこまで含んでるのかなー。</span>
   </span>
   <span class='slacklog-message' id='1585157504.164400'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-11-03/819248061205_7abadc2cdb885adbac35_48.png'>
@@ -17538,7 +17538,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
     <span class='slacklog-name'>tsuyoshi_cho</span>
     <a class='slacklog-datetime' href='#1585202950.390200'>26日 15:09:11</a>
-    <span class='slacklog-text'>vim-lspのomni<br><code>setlocal omnifunc=lsp#complete</code><br>はセットされてます?(じゃないと呼べないか)</span>
+    <span class='slacklog-text'>vim-lspのomni<br><pre>setlocal omnifunc=lsp#complete</pre><br>はセットされてます?(じゃないと呼べないか)</span>
   </span>
   <span class='slacklog-message' id='1585202970.391200'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/6cc9d2f7210145f0277ba2604a9eac76.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-48.png'>
@@ -17576,7 +17576,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/6cc9d2f7210145f0277ba2604a9eac76.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-48.png'>
     <span class='slacklog-name'>0Δ</span>
     <a class='slacklog-datetime' href='#1585203010.393100'>26日 15:10:11</a>
-    <span class='slacklog-text'><code>:version<br>VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Mar 23 2020 07:59:36)<br>Included patches: 1-430<br>Compiled by 0Delta</code></span>
+    <span class='slacklog-text'><pre>:version<br>VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Mar 23 2020 07:59:36)<br>Included patches: 1-430<br>Compiled by 0Delta</pre></span>
   </span>
   <span class='slacklog-message' id='1585203011.393200'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
@@ -19450,7 +19450,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-05-31/373472791093_ed16847a152da533e013_48.png'>
     <span class='slacklog-name'>tsuyoshi_cho</span>
     <a class='slacklog-datetime' href='#1585557648.092400'>30日 17:40:49</a>
-    <span class='slacklog-text'><code>二類感染症（同法6条3項）：結核、重症急性呼吸器症候群(SARS)、中東呼吸器症候群(MERS)等</code><br>相当?</span>
+    <span class='slacklog-text'><pre>二類感染症（同法6条3項）：結核、重症急性呼吸器症候群(SARS)、中東呼吸器症候群(MERS)等</pre><br>相当?</span>
   </span>
   <span class='slacklog-message' id='1585557662.092900'>
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2018-11-28/491043224518_feeffd2d618583c3ba1b_48.jpg'>
@@ -19909,7 +19909,7 @@ title: vim-jp.slack.com log - &#35random - 2020年03月
     <img class='slacklog-icon' src='https://avatars.slack-edge.com/2019-11-14/833953864853_aa245483338df08cd3b2_48.png'>
     <span class='slacklog-name'>heavenshell</span>
     <a class='slacklog-datetime' href='#1585560321.128200'>30日 18:25:22</a>
-    <span class='slacklog-text'><code>curl <a href='https://corona-stats.online/japan/graph'>https://corona-stats.online/japan/graph</a></code><br>グラフとか出るんすね…。すげ。</span>
+    <span class='slacklog-text'><pre>curl <a href='https://corona-stats.online/japan/graph'>https://corona-stats.online/japan/graph</a></pre><br>グラフとか出るんすね…。すげ。</span>
   </span>
   <span class='slacklog-message' id='1585560416.128900'>
     <img class='slacklog-icon' src='https://secure.gravatar.com/avatar/4b5a6f711a4e22e617b74058239ade53.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png'>
