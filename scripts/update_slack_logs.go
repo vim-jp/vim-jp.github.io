@@ -173,6 +173,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	var reCode = regexp.MustCompile("```([^`]+?)```")
 	var reCodeShort = regexp.MustCompile("`([^`]+?)`")
 	var reDel = regexp.MustCompile(`~([^~]+?)~`)
+	var reMention = regexp.MustCompile(`&lt;@(\w+?)&gt;`)
 	var reNewline = regexp.MustCompile(`\n`)
 	var text2Html = func(text string) string {
 		text = html.EscapeString(html.UnescapeString(text))
@@ -182,6 +183,14 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 		text = reCode.ReplaceAllString(text, "<pre>${1}</pre>")
 		text = reCodeShort.ReplaceAllString(text, "<code>${1}</code>")
 		text = reDel.ReplaceAllString(text, "<del>${1}</del>")
+		text = reMention.ReplaceAllStringFunc(text, func(whole string) string {
+			m := reMention.FindStringSubmatch(whole)
+			userId := m[1]
+			if user, ok := userMap[userId]; ok {
+				return "@" + user.Profile.DisplayName
+			}
+			return whole
+		})
 		return text
 	}
 	var funcText = func(msg *message) string {
