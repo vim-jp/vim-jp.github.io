@@ -392,6 +392,35 @@ type message struct {
 	Reactions []messageReaction `json:"reactions"`
 	Edited    *messageEdited    `json:"edited"`
 	Icons     *messageIcons     `json:"icons"`
+	Files     []messageFile     `json:"files"`
+}
+
+type messageFile struct {
+	Id                 string `json:"id"`
+	Created            int64  `json:"created"`
+	Timestamp          int64  `json:"timestamp"`
+	Name               string `json:"name"`
+	Title              string `json:"title"`
+	Mimetype           string `json:"mimetype"`
+	Filetype           string `json:"filetype"`
+	PrettyType         string `json:"pretty_type"`
+	User               string `json:"user"`
+	Editable           bool   `json:"editable"`
+	Size               int64  `json:"size"`
+	Mode               string `json:"mode"`
+	IsExternal         bool   `json:"is_external"`
+	ExternalType       string `json:"external_type"`
+	IsPublic           bool   `json:"is_public"`
+	PublicUrlShared    bool   `json:"public_url_shared"`
+	DisplayAsBot       bool   `json:"display_as_bot"`
+	Username           string `json:"username"`
+	UrlPrivate         string `json:"url_private"`
+	UrlPrivateDownload string `json:"url_private_download"`
+	Permalink          string `json:"permalink"`
+	PermalinkPublic    string `json:"permalink_public"`
+	EditLink           string `json:"edit_link"`
+	IsStarred          bool   `json:"is_starred"`
+	HasRichPreview     bool   `json:"has_rich_preview"`
 }
 
 type messageIcons struct {
