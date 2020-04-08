@@ -195,10 +195,12 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				return user.Profile.Image48
 			},
 			"text": func() func(*message) string {
+				var reLinkWithTitle = regexp.MustCompile(`&lt;(https?://[^>]+?\|(.+?))&gt;`)
 				var reLink = regexp.MustCompile(`&lt;(https?://[^>]+?)&gt;`)
 				var reNewline = regexp.MustCompile(`\n`)
 				return func(msg *message) string {
 					text := html.EscapeString(html.UnescapeString(msg.Text))
+					text = reLinkWithTitle.ReplaceAllString(text, "<a href='${1}'>${2}</a>")
 					text = reLink.ReplaceAllString(text, "<a href='${1}'>${1}</a>")
 					text = reNewline.ReplaceAllString(text, "<br>")
 					return text
