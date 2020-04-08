@@ -38,11 +38,11 @@ func doMain() error {
 	if err != nil {
 		return fmt.Errorf("could not read config: %s", err)
 	}
-	userMap, err := readUsers(filepath.Join(inDir, "users.json"))
+	_, userMap, err := readUsers(filepath.Join(inDir, "users.json"))
 	if err != nil {
 		return fmt.Errorf("could not read users.json: %s", err)
 	}
-	channels, err := readChannels(filepath.Join(inDir, "channels.json"))
+	channels, _, err := readChannels(filepath.Join(inDir, "channels.json"))
 	if err != nil {
 		return fmt.Errorf("could not read channels.json: %s", err)
 	}
@@ -174,6 +174,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	var reCodeShort = regexp.MustCompile("`([^`]+?)`")
 	var reDel = regexp.MustCompile(`~([^~]+?)~`)
 	var reMention = regexp.MustCompile(`&lt;@(\w+?)&gt;`)
+	var reChannel = regexp.MustCompile(`&lt;#\w+?\|([^&]+?)&gt;`)
 	var reNewline = regexp.MustCompile(`\n`)
 	var text2Html = func(text string) string {
 		text = html.EscapeString(html.UnescapeString(text))
@@ -190,6 +191,11 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				return "@" + user.Profile.DisplayName
 			}
 			return whole
+		})
+		text = reChannel.ReplaceAllStringFunc(text, func(whole string) string {
+			channelName := reChannel.FindStringSubmatch(whole)[1]
+			name := html.EscapeString(channelName)
+			return "<a href='/slacklog/" + name + "/'>#" + name + "</a>"
 		})
 		return text
 	}
@@ -524,21 +530,21 @@ type userProfile struct {
 	BotId                 string      `json:"bot_id"`
 }
 
-func readUsers(usersJsonPath string) (map[string]user, error) {
+func readUsers(usersJsonPath string) ([]user, map[string]user, error) {
 	content, err := ioutil.ReadFile(usersJsonPath)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	var users []user
 	err = json.Unmarshal(content, &users)
-	result := make(map[string]user, len(users))
+	userMap := make(map[string]user, len(users))
 	for i := range users {
-		result[users[i].Id] = users[i]
+		userMap[users[i].Id] = users[i]
 		if users[i].Profile.BotId != "" {
-			result[users[i].Profile.BotId] = users[i]
+			userMap[users[i].Profile.BotId] = users[i]
 		}
 	}
-	return result, err
+	return users, userMap, err
 }
 
 type channel struct {
@@ -574,15 +580,19 @@ type channelPurpose struct {
 	LastSet int64  `json:"last_set"`
 }
 
-func readChannels(channelsJsonPath string) ([]channel, error) {
+func readChannels(channelsJsonPath string) ([]channel, map[string]channel, error) {
 	content, err := ioutil.ReadFile(channelsJsonPath)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	var channels []channel
 	err = json.Unmarshal(content, &channels)
 	sort.Slice(channels, func(i, j int) bool {
 		return channels[i].Name < channels[j].Name
 	})
-	return channels, err
+	channelMap := make(map[string]channel, len(channels))
+	for i := range channels {
+		channelMap[channels[i].Id] = channels[i]
+	}
+	return channels, channelMap, err
 }
