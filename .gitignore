@@ -5,3 +5,4 @@ _site
 Gemfile.lock
 /.jekyll-metadata
 /tmp/
+/slacklog_data/
