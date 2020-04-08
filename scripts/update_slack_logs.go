@@ -162,7 +162,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >>
 	return out.Bytes(), err
 }
 
-func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]user, cfg *config) ([]byte, error) {
+func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]*user, cfg *config) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
@@ -361,7 +361,7 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 	if err != nil {
 		return nil, err
 	}
-	result := make(map[string]*msgPerMonth)
+	msgMap := make(map[string]*msgPerMonth)
 	for i := range names {
 		m := reMsgFilename.FindStringSubmatch(names[i])
 		if len(m) == 0 {
@@ -369,22 +369,22 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 			continue
 		}
 		key := m[1] + m[2]
-		if _, exists := result[key]; !exists {
-			result[key] = &msgPerMonth{Year: m[1], Month: m[2]}
+		if _, ok := msgMap[key]; !ok {
+			msgMap[key] = &msgPerMonth{Year: m[1], Month: m[2]}
 		}
 		msgs, err := readMessages(filepath.Join(inDir, channelName, names[i]))
 		if err != nil {
 			return nil, err
 		}
-		result[key].Messages = append(result[key].Messages, msgs...)
+		msgMap[key].Messages = append(msgMap[key].Messages, msgs...)
 	}
-	for key := range result {
-		sort.SliceStable(result[key].Messages, func(i, j int) bool {
+	for key := range msgMap {
+		sort.SliceStable(msgMap[key].Messages, func(i, j int) bool {
 			// must be the same digits, so no need to convert the timestamp to a number
-			return result[key].Messages[i].Ts < result[key].Messages[j].Ts
+			return msgMap[key].Messages[i].Ts < msgMap[key].Messages[j].Ts
 		})
 	}
-	return result, nil
+	return msgMap, nil
 }
 
 type message struct {
@@ -572,18 +572,18 @@ type userProfile struct {
 	BotId                 string      `json:"bot_id"`
 }
 
-func readUsers(usersJsonPath string) ([]user, map[string]user, error) {
+func readUsers(usersJsonPath string) ([]user, map[string]*user, error) {
 	content, err := ioutil.ReadFile(usersJsonPath)
 	if err != nil {
 		return nil, nil, err
 	}
 	var users []user
 	err = json.Unmarshal(content, &users)
-	userMap := make(map[string]user, len(users))
+	userMap := make(map[string]*user, len(users))
 	for i := range users {
-		userMap[users[i].Id] = users[i]
+		userMap[users[i].Id] = &users[i]
 		if users[i].Profile.BotId != "" {
-			userMap[users[i].Profile.BotId] = users[i]
+			userMap[users[i].Profile.BotId] = &users[i]
 		}
 	}
 	return users, userMap, err
@@ -622,7 +622,7 @@ type channelPurpose struct {
 	LastSet int64  `json:"last_set"`
 }
 
-func readChannels(channelsJsonPath string) ([]channel, map[string]channel, error) {
+func readChannels(channelsJsonPath string) ([]channel, map[string]*channel, error) {
 	content, err := ioutil.ReadFile(channelsJsonPath)
 	if err != nil {
 		return nil, nil, err
@@ -632,9 +632,9 @@ func readChannels(channelsJsonPath string) ([]channel, map[string]channel, error
 	sort.Slice(channels, func(i, j int) bool {
 		return channels[i].Name < channels[j].Name
 	})
-	channelMap := make(map[string]channel, len(channels))
+	channelMap := make(map[string]*channel, len(channels))
 	for i := range channels {
-		channelMap[channels[i].Id] = channels[i]
+		channelMap[channels[i].Id] = &channels[i]
 	}
 	return channels, channelMap, err
 }
