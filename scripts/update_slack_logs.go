@@ -194,10 +194,16 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				}
 				return user.Profile.Image48
 			},
-			"text2html": func(text string) string {
-				// TODO
-				return html.EscapeString(html.UnescapeString(text))
-			},
+			"text": func() func(*message) string {
+				var reLink = regexp.MustCompile(`&lt;(https?://[^>]+?)&gt;`)
+				var reNewline = regexp.MustCompile(`\n`)
+				return func(msg *message) string {
+					text := html.EscapeString(html.UnescapeString(msg.Text))
+					text = reLink.ReplaceAllString(text, "<a href='${1}'>${1}</a>")
+					text = reNewline.ReplaceAllString(text, "<br>")
+					return text
+				}
+			}(),
 		}).
 		Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
@@ -214,7 +220,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
   <img class='slacklog-icon' src='<< userIconUrl .User >>'>
   <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
   <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
-  <span class='slacklog-text'><< text2html .Text >></span>
+  <span class='slacklog-text'><< text . >></span>
     <<- if .Attachments >>
     <span class='slacklog-attachments'>
       <<- range .Attachments >>
