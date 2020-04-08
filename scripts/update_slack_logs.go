@@ -24,16 +24,20 @@ func main() {
 }
 
 func doMain() error {
-	if len(os.Args) < 3 {
-		fmt.Println("Usage: go run update_slack_logs {indir} {outdir}")
-		fmt.Println("   ex: go run update_slack_logs slacklog_data/ slacklog/")
+	if len(os.Args) < 4 {
+		fmt.Println("Usage: go run scripts/update_slack_logs.go {config} {indir} {outdir}")
+		fmt.Println("   ex: go run scripts/update_slack_logs.go scripts/update_slack_logs_config.json slacklog_data/ slacklog/")
 		return nil
 	}
 
-	// inDir := filepath.Join(filepath.Dir(os.Args[0]), "..", "_data", "slack_logs")
-	inDir := filepath.Clean(os.Args[1])
-	outDir := filepath.Clean(os.Args[2])
+	configFile := filepath.Clean(os.Args[1])
+	inDir := filepath.Clean(os.Args[2])
+	outDir := filepath.Clean(os.Args[3])
 
+	cfg, err := readConfig(configFile)
+	if err != nil {
+		return fmt.Errorf("could not read config: %s", err)
+	}
 	userMap, err := readUsers(filepath.Join(inDir, "users.json"))
 	if err != nil {
 		return fmt.Errorf("could not read users.json: %s", err)
@@ -76,7 +80,7 @@ func doMain() error {
 			if err := mkdir(filepath.Join(outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month)); err != nil {
 				return fmt.Errorf("could not create %s/%s/%s/%s directory: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
-			content, err := genChannelPerMonthIndex(inDir, &channels[i], msgPerMonth, userMap)
+			content, err := genChannelPerMonthIndex(inDir, &channels[i], msgPerMonth, userMap, cfg)
 			if err != nil {
 				return fmt.Errorf("could not generate %s/%s/%s/%s/index.html: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
@@ -158,7 +162,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >>
 	return out.Bytes(), err
 }
 
-func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]user) ([]byte, error) {
+func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]user, cfg *config) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
@@ -209,6 +213,9 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 					text = reCodeShort.ReplaceAllString(text, "<code>${1}</code>")
 					text = reDel.ReplaceAllString(text, "<del>${1}</del>")
 					text = reNewline.ReplaceAllString(text, "<br>")
+					if msg.Edited != nil {
+						text += cfg.EditedSuffix
+					}
 					return text
 				}
 			}(),
@@ -348,7 +355,7 @@ type message struct {
 	Attachments []messageAttachment `json:"attachments,omitempty"`
 	// Blocks      []messageBlock     `json:"blocks,omitempty"`    // TODO
 	Reactions []messageReaction `json:"reactions,omitempty"`
-	Edited    messageEdited     `json:"edited"`
+	Edited    *messageEdited    `json:"edited"`
 }
 
 type messageEdited struct {
@@ -420,6 +427,20 @@ func readMessages(msgJsonPath string) ([]message, error) {
 		return nil, fmt.Errorf("failed to unmarshal %s: %s", msgJsonPath, err)
 	}
 	return msgs, nil
+}
+
+type config struct {
+	EditedSuffix string `json:"edited_suffix"`
+}
+
+func readConfig(configPath string) (*config, error) {
+	content, err := ioutil.ReadFile(configPath)
+	if err != nil {
+		return nil, err
+	}
+	var cfg config
+	err = json.Unmarshal(content, &cfg)
+	return &cfg, err
 }
 
 type user struct {
