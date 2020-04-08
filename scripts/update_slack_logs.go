@@ -9,7 +9,10 @@ import (
 	"path/filepath"
 	"regexp"
 	"sort"
+	"strconv"
+	"strings"
 	"text/template"
+	"time"
 )
 
 func main() {
@@ -157,7 +160,30 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	var out bytes.Buffer
 	// TODO check below subtypes work correctly
 	// TODO support more subtypes
-	t, err := template.New("channelPerMonthIndex").Delims("<<", ">>").Parse(`---
+	t, err := template.New("channelPerMonthIndex").
+		Delims("<<", ">>").
+		Funcs(map[string]interface{}{
+			"datetime": func(ts string) string {
+				t := strings.Split(ts, ".")
+				if len(t) != 2 {
+					return ""
+				}
+				sec, err := strconv.ParseInt(t[0], 10, 64)
+				if err != nil {
+					return ""
+				}
+				nsec, err := strconv.ParseInt(t[0], 10, 64)
+				if err != nil {
+					return ""
+				}
+				japan, err := time.LoadLocation("Asia/Tokyo")
+				if err != nil {
+					return ""
+				}
+				return time.Unix(sec, nsec).In(japan).Format("2日 15:04:05")
+			},
+		}).
+		Parse(`---
 # vim:set ts=2 sts=2 sw=2 et:
 layout: slacklog
 title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月
@@ -171,9 +197,9 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>�
 {% raw %}
 <<- range .msgPerMonth.Messages >>
 <<- if eq .Subtype "" >>
-<pre><< or .UserProfile.DisplayName .UserProfile.RealName >> << .Ts >>: << .Text >></pre>
+<pre><< or .UserProfile.DisplayName .UserProfile.RealName >> << datetime .Ts >>: << .Text >></pre>
 <<- else if eq .Subtype "bot_message" >>
-<pre><< .Username >> << .Ts >>: << .Text >></pre>
+<pre><< .Username >> << datetime .Ts >>: << .Text >></pre>
 <<- end >>
 <<- end >>
 {% endraw %}
