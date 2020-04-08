@@ -234,6 +234,19 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				}
 				return time.Unix(sec, nsec).In(japan).Format("2æ—¥ 15:04:05")
 			},
+			"username": func(msg *message) string {
+				user, ok := userMap[msg.User]
+				if !ok {
+					return ""
+				}
+				if user.Profile.RealName != "" {
+					return user.Profile.RealName
+				}
+				if user.Profile.DisplayName != "" {
+					return user.Profile.DisplayName
+				}
+				return ""
+			},
 			"userIconUrl": func(msg *message) string {
 				switch msg.Subtype {
 				case "":
@@ -266,7 +279,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
   <span class='slacklog-message' id='<< .Ts >>'>
     <img class='slacklog-icon' src='<< userIconUrl . >>'>
     <<- if eq .Subtype "" >>
-    <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
+    <span class='slacklog-name'><< username . >></span>
     <<- else if eq .Subtype "bot_message" >>
     <span class='slacklog-name'><< .Username >></span>
 	<<- end >>
