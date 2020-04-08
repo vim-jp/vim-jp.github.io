@@ -117,6 +117,8 @@ title: vim-jp.slack.com log
 <li><a href='/slacklog/<< .Name >>/'>#<< .Name >></a></li>
 <<- end >>
 </ul>
+
+</div>
 `)
 	if err != nil {
 		return nil, err
@@ -146,6 +148,8 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >>
 <li><a href='/slacklog/<< $.channel.Name >>/<< .Year >>/<< .Month >>/index.html'><< .Year >>年<< .Month >>月</a></li>
 <<- end >>
 </ul>
+
+</div>
 `)
 	if err != nil {
 		return nil, err
@@ -260,6 +264,8 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>�
 <<- end >>
 <<- end >>
 {% endraw %}
+
+</div>
 `)
 	if err != nil {
 		return nil, err
