@@ -387,9 +387,9 @@ type message struct {
 	UserTeam    string              `json:"user_team"`
 	SourceTeam  string              `json:"source_team"`
 	UserProfile messageUserProfile  `json:"user_profile"`
-	Attachments []messageAttachment `json:"attachments,omitempty"`
-	// Blocks      []messageBlock     `json:"blocks,omitempty"`    // TODO
-	Reactions []messageReaction `json:"reactions,omitempty"`
+	Attachments []messageAttachment `json:"attachments"`
+	// Blocks      []messageBlock     `json:"blocks"`    // TODO
+	Reactions []messageReaction `json:"reactions"`
 	Edited    *messageEdited    `json:"edited"`
 	Icons     *messageIcons     `json:"icons"`
 }
@@ -417,7 +417,7 @@ type messageUserProfile struct {
 
 type messageBlock struct {
 	Typ      string                `json:"type"`
-	Elements []messageBlockElement `json:"elements,omitempty"`
+	Elements []messageBlockElement `json:"elements"`
 }
 
 type messageBlockElement struct {
@@ -452,7 +452,7 @@ type messageAttachment struct {
 
 type messageReaction struct {
 	Name  string   `json:"name"`
-	Users []string `json:"users,omitempty"`
+	Users []string `json:"users"`
 	Count int      `json:"count"`
 }
 
@@ -554,8 +554,8 @@ type channel struct {
 	Creator    string         `json:"creator"`
 	IsArchived bool           `json:"is_archived"`
 	IsGeneral  bool           `json:"is_general"`
-	Members    []string       `json:"members,omitempty"`
-	Pins       []channelPin   `json:"pins,omitempty"`
+	Members    []string       `json:"members"`
+	Pins       []channelPin   `json:"pins"`
 	Topic      channelTopic   `json:"topic"`
 	Purpose    channelPurpose `json:"purpose"`
 }
