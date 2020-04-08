@@ -188,7 +188,12 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 			m := reMention.FindStringSubmatch(whole)
 			userId := m[1]
 			if user, ok := userMap[userId]; ok {
-				return "@" + user.Profile.DisplayName
+				if user.Profile.RealName != "" {
+					return "@" + user.Profile.RealName
+				}
+				if user.Profile.DisplayName != "" {
+					return "@" + user.Profile.DisplayName
+				}
 			}
 			return whole
 		})
@@ -235,15 +240,13 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				return time.Unix(sec, nsec).In(japan).Format("2日 15:04:05")
 			},
 			"username": func(msg *message) string {
-				user, ok := userMap[msg.User]
-				if !ok {
-					return ""
-				}
-				if user.Profile.RealName != "" {
-					return user.Profile.RealName
-				}
-				if user.Profile.DisplayName != "" {
-					return user.Profile.DisplayName
+				if user, ok := userMap[msg.User]; ok {
+					if user.Profile.RealName != "" {
+						return user.Profile.RealName
+					}
+					if user.Profile.DisplayName != "" {
+						return user.Profile.DisplayName
+					}
 				}
 				return ""
 			},
