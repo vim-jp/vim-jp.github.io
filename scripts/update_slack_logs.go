@@ -192,7 +192,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 			},
 			"text2html": func(text string) string {
 				// TODO
-				return html.UnescapeString(html.EscapeString(text))
+				return html.EscapeString(html.UnescapeString(text))
 			},
 		}).
 		Parse(`---
@@ -206,14 +206,40 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 {% raw %}
 <<- range .msgPerMonth.Messages >>
 <<- if eq .Subtype "" >>
-<span class='slacklog-message' id='<< .Ts >>'>
-<img class='slacklog-icon' src='<< userIconUrl .User >>'>
-<span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
-<a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
-<span class='slacklog-text'><< text2html .Text >></span>
-</span>
+  <span class='slacklog-message' id='<< .Ts >>'>
+  <img class='slacklog-icon' src='<< userIconUrl .User >>'>
+  <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
+  <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
+  <span class='slacklog-text'><< text2html .Text >></span>
+    <<- if .Attachments >>
+    <span class='slacklog-attachments'>
+      <<- range .Attachments >>
+        <<- if eq .ServiceName "GitHub" >>
+          <span class='slacklog-attachment slacklog-attachment-github'>
+            <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
+            <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
+            <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
+            <span class='slacklog-attachment-github-text'><< html .Text >></span>
+          </span>
+        <<- else if eq .ServiceName "twitter" >>
+          <span class='slacklog-attachment slacklog-attachment-twitter'>
+            <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
+            <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
+            <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
+            <span class='slacklog-attachment-twitter-text'><< html .Text >></span>
+            <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
+            <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
+            <<- if .VideoHtml >>
+            <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
+            <<- end >>
+          </span>
+        <<- end >>
+      <<- end >>
+    </span>
+    <<- end >>
+  </span>
 <<- else if eq .Subtype "bot_message" >>
-<< .Username >> << datetime .Ts >>: << .Text >>
+<< .Username >> << datetime .Ts >>: << html .Text >>
 <<- end >>
 <<- end >>
 {% endraw %}
@@ -271,17 +297,18 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 }
 
 type message struct {
-	ClientMsgId string             `json:"client_msg_id"`
-	Typ         string             `json:"type"`
-	Subtype     string             `json:"subtype"`
-	Text        string             `json:"text"`
-	User        string             `json:"user"`
-	Ts          string             `json:"ts"`
-	Username    string             `json:"username"`
-	Team        string             `json:"team"`
-	UserTeam    string             `json:"user_team"`
-	SourceTeam  string             `json:"source_team"`
-	UserProfile messageUserProfile `json:"user_profile"`
+	ClientMsgId string              `json:"client_msg_id"`
+	Typ         string              `json:"type"`
+	Subtype     string              `json:"subtype"`
+	Text        string              `json:"text"`
+	User        string              `json:"user"`
+	Ts          string              `json:"ts"`
+	Username    string              `json:"username"`
+	Team        string              `json:"team"`
+	UserTeam    string              `json:"user_team"`
+	SourceTeam  string              `json:"source_team"`
+	UserProfile messageUserProfile  `json:"user_profile"`
+	Attachments []messageAttachment `json:"attachments,omitempty"`
 	// Blocks      []messageBlock     `json:"blocks,omitempty"`    // TODO
 	Reactions []messageReaction `json:"reactions,omitempty"`
 	Edited    messageEdited     `json:"edited"`
@@ -314,6 +341,29 @@ type messageBlockElement struct {
 	Name      string `json:"name"`       // for type = "emoji"
 	Text      string `json:"text"`       // for type = "text"
 	ChannelId string `json:"channel_id"` // for type = "channel"
+}
+
+type messageAttachment struct {
+	ServiceName     string `json:"service_name"`
+	AuthorIcon      string `json:"author_icon"`
+	AuthorName      string `json:"author_name"`
+	AuthorSubname   string `json:"author_subname"`
+	Title           string `json:"title"`
+	TitleLink       string `json:"title_link"`
+	Text            string `json:"text"`
+	Fallback        string `json:"fallback"`
+	ThumbUrl        string `json:"thumb_url"`
+	FromUrl         string `json:"from_url"`
+	ThumbWidth      int    `json:"thumb_width"`
+	ThumbHeight     int    `json:"thumb_height"`
+	ServiceIcon     string `json:"service_icon"`
+	Id              int    `json:"id"`
+	OriginalUrl     string `json:"original_url"`
+	VideoHtml       string `json:"video_html"`
+	VideoHtmlWidth  int    `json:"video_html_width"`
+	VideoHtmlHeight int    `json:"video_html_height"`
+	Footer          string `json:"footer"`
+	FooterIcon      string `json:"footer_icon"`
 }
 
 type messageReaction struct {
