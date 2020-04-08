@@ -219,12 +219,20 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				}
 				return time.Unix(sec, nsec).In(japan).Format("2æ—¥ 15:04:05")
 			},
-			"userIconUrl": func(userId string) string {
-				user, ok := userMap[userId]
-				if !ok {
-					return "" // TODO show default icon
+			"userIconUrl": func(msg *message) string {
+				switch msg.Subtype {
+				case "":
+					user, ok := userMap[msg.User]
+					if !ok {
+						return "" // TODO show default icon
+					}
+					return user.Profile.Image48
+				case "bot_message":
+					if msg.Icons != nil && msg.Icons.Image48 != "" {
+						return msg.Icons.Image48
+					}
 				}
-				return user.Profile.Image48
+				return ""
 			},
 			"text":           funcText,
 			"attachmentText": funcAttachmentText,
@@ -239,10 +247,14 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 
 {% raw %}
 <<- range .msgPerMonth.Messages >>
-<<- if eq .Subtype "" >>
+<<- if or (eq .Subtype "") (eq .Subtype "bot_message") >>
   <span class='slacklog-message' id='<< .Ts >>'>
-    <img class='slacklog-icon' src='<< userIconUrl .User >>'>
+    <img class='slacklog-icon' src='<< userIconUrl . >>'>
+    <<- if eq .Subtype "" >>
     <span class='slacklog-name'><< or .UserProfile.DisplayName .UserProfile.RealName >></span>
+    <<- else if eq .Subtype "bot_message" >>
+    <span class='slacklog-name'><< .Username >></span>
+	<<- end >>
     <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
     <span class='slacklog-text'><< text . >></span>
     <<- if .Attachments >>
@@ -289,8 +301,6 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
     </span>
     <<- end >>
   </span>
-<<- else if eq .Subtype "bot_message" >>
-<< .Username >> << datetime .Ts >>: << text . >>
 <<- end >>
 <<- end >>
 {% endraw %}
@@ -357,6 +367,7 @@ type message struct {
 	User        string              `json:"user"`
 	Ts          string              `json:"ts"`
 	Username    string              `json:"username"`
+	BotId       string              `json:"bot_id"`
 	Team        string              `json:"team"`
 	UserTeam    string              `json:"user_team"`
 	SourceTeam  string              `json:"source_team"`
@@ -365,6 +376,11 @@ type message struct {
 	// Blocks      []messageBlock     `json:"blocks,omitempty"`    // TODO
 	Reactions []messageReaction `json:"reactions,omitempty"`
 	Edited    *messageEdited    `json:"edited"`
+	Icons     *messageIcons     `json:"icons"`
+}
+
+type messageIcons struct {
+	Image48 string `json:"image_48"`
 }
 
 type messageEdited struct {
@@ -496,6 +512,7 @@ type userProfile struct {
 	Image512              string      `json:"image_512"`
 	StatusTextCanonical   string      `json:"status_text_canonical"`
 	Team                  string      `json:"team"`
+	BotId                 string      `json:"bot_id"`
 }
 
 func readUsers(usersJsonPath string) (map[string]user, error) {
@@ -508,6 +525,9 @@ func readUsers(usersJsonPath string) (map[string]user, error) {
 	result := make(map[string]user, len(users))
 	for i := range users {
 		result[users[i].Id] = users[i]
+		if users[i].Profile.BotId != "" {
+			result[users[i].Profile.BotId] = users[i]
+		}
 	}
 	return result, err
 }
