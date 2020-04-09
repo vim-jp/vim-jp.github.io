@@ -206,8 +206,8 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 	}
 	var funcText = func(msg *message) string {
 		text := text2Html(msg.Text)
-		if msg.Edited != nil {
-			text += cfg.EditedSuffix
+		if msg.Edited != nil && cfg.EditedSuffix != "" {
+			text += "<span class='slacklog-text-edited'>" + html.EscapeString(cfg.EditedSuffix) + "</span>"
 		}
 		return text
 	}
