@@ -25,16 +25,16 @@ func main() {
 
 func doMain() error {
 	if len(os.Args) < 4 {
-		fmt.Println("Usage: go run scripts/update_slack_logs.go {config} {indir} {outdir}")
-		fmt.Println("   ex: go run scripts/update_slack_logs.go scripts/update_slack_logs_config.json slacklog_data/ slacklog/")
+		fmt.Println("Usage: go run scripts/update_slack_logs.go {basedir} {indir} {outdir}")
+		fmt.Println("   ex: go run scripts/update_slack_logs.go scripts/update_slack_logs/ slacklog_data/ slacklog/")
 		return nil
 	}
 
-	configFile := filepath.Clean(os.Args[1])
+	baseDir := filepath.Clean(os.Args[1])
 	inDir := filepath.Clean(os.Args[2])
 	outDir := filepath.Clean(os.Args[3])
 
-	cfg, err := readConfig(configFile)
+	cfg, err := readConfig(filepath.Join(baseDir, "config.json"))
 	if err != nil {
 		return fmt.Errorf("could not read config: %s", err)
 	}
@@ -52,7 +52,7 @@ func doMain() error {
 	}
 
 	// Generate {outdir}/index.html (links to {channel})
-	content, err := genIndex(channels)
+	content, err := genIndex(channels, filepath.Join(baseDir, "template", "index.tmpl"))
 	err = ioutil.WriteFile(filepath.Join(outDir, "index.html"), content, 0666)
 	if err != nil {
 		return fmt.Errorf("could not create %s/index.html: %s", outDir, err)
@@ -67,7 +67,7 @@ func doMain() error {
 			return err
 		}
 		// Generate {outdir}/{channel}/index.html (links to {channel}/{year}/{month})
-		content, err := genChannelIndex(inDir, &channels[i], msgMap)
+		content, err := genChannelIndex(inDir, filepath.Join(baseDir, "template", "channel_index.tmpl"), &channels[i], msgMap)
 		if err != nil {
 			return fmt.Errorf("could not generate %s/%s: %s", outDir, channels[i].Name, err)
 		}
@@ -80,7 +80,7 @@ func doMain() error {
 			if err := mkdir(filepath.Join(outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month)); err != nil {
 				return fmt.Errorf("could not create %s/%s/%s/%s directory: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
-			content, err := genChannelPerMonthIndex(inDir, &channels[i], msgPerMonth, userMap, cfg)
+			content, err := genChannelPerMonthIndex(inDir, filepath.Join(baseDir, "template", "channel_per_month_index.tmpl"), &channels[i], msgPerMonth, userMap, cfg)
 			if err != nil {
 				return fmt.Errorf("could not generate %s/%s/%s/%s/index.html: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
@@ -101,29 +101,12 @@ func mkdir(path string) error {
 	return nil
 }
 
-func genIndex(channels []channel) ([]byte, error) {
+func genIndex(channels []channel, tmplFile string) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channels"] = channels
 	var out bytes.Buffer
-	t, err := template.New("channelIndex").Delims("<<", ">>").Parse(`---
-# vim:set ts=2 sts=2 sw=2 et:
-layout: slacklog
-title: vim-jp.slack.com log
----
-<div>
-<h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
-
-<p>参加方法、各チャンネルの概要等は以下を参照して下さい。<br>
-<a href='/docs/chat.html'>vim-jpのチャットルームについて</a></p>
-
-<ul>
-<<- range .channels >>
-<li><a href='/slacklog/<< .Name >>/'>#<< .Name >></a></li>
-<<- end >>
-</ul>
-
-</div>
-`)
+	name := filepath.Base(tmplFile)
+	t, err := template.New(name).Delims("<<", ">>").ParseFiles(tmplFile)
 	if err != nil {
 		return nil, err
 	}
@@ -131,30 +114,13 @@ title: vim-jp.slack.com log
 	return out.Bytes(), err
 }
 
-func genChannelIndex(inDir string, channel *channel, msgMap map[string]*msgPerMonth) ([]byte, error) {
+func genChannelIndex(inDir, tmplFile string, channel *channel, msgMap map[string]*msgPerMonth) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgMap"] = msgMap
 	var out bytes.Buffer
-	t, err := template.New("channelIndex").Delims("<<", ">>").Parse(`---
-# vim:set ts=2 sts=2 sw=2 et:
-layout: slacklog
-title: vim-jp.slack.com log - &#35<< .channel.Name >>
----
-<div>
-<h2><a href='/slacklog/'>vim-jp.slack.com log</a> - &#35<< .channel.Name >></h2>
-
-<p>参加方法、各チャンネルの概要等は以下を参照して下さい。<br>
-<a href='/docs/chat.html'>vim-jpのチャットルームについて</a></p>
-
-<ul>
-<<- range .msgMap >>
-<li><a href='/slacklog/<< $.channel.Name >>/<< .Year >>/<< .Month >>/index.html'><< .Year >>年<< .Month >>月</a></li>
-<<- end >>
-</ul>
-
-</div>
-`)
+	name := filepath.Base(tmplFile)
+	t, err := template.New(name).Delims("<<", ">>").ParseFiles(tmplFile)
 	if err != nil {
 		return nil, err
 	}
@@ -162,7 +128,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >>
 	return out.Bytes(), err
 }
 
-func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]*user, cfg *config) ([]byte, error) {
+func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]*user, cfg *config) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
@@ -212,7 +178,8 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 
 	// TODO check below subtypes work correctly
 	// TODO support more subtypes
-	t, err := template.New("channelPerMonthIndex").
+	name := filepath.Base(tmplFile)
+	t, err := template.New(name).
 		Delims("<<", ">>").
 		Funcs(map[string]interface{}{
 			"datetime": func(ts string) string {
@@ -255,76 +222,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 			"text":           funcText,
 			"attachmentText": funcAttachmentText,
 		}).
-		Parse(`---
-# vim:set ts=2 sts=2 sw=2 et:
-layout: slacklog
-title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月
----
-<div>
-<h2><a href='/slacklog/'>vim-jp.slack.com log</a> - <a href='/slacklog/<< .channel.Name >>/'>&#35<< .channel.Name >></a> - << .msgPerMonth.Year >>年<< .msgPerMonth.Month >>月</h2>
-
-{% raw %}
-<<- range .msgPerMonth.Messages >>
-<<- if or (eq .Subtype "") (eq .Subtype "bot_message") >>
-  <span class='slacklog-message' id='<< .Ts >>'>
-    <img class='slacklog-icon' src='<< userIconUrl . >>'>
-    <<- if eq .Subtype "" >>
-    <span class='slacklog-name'><< username . >></span>
-    <<- else if eq .Subtype "bot_message" >>
-    <span class='slacklog-name'><< .Username >></span>
-	<<- end >>
-    <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
-    <span class='slacklog-text'><< text . >></span>
-    <<- if .Attachments >>
-    <span class='slacklog-attachments'>
-      <<- range .Attachments >>
-        <<- if eq .ServiceName "GitHub" >>
-          <span class='slacklog-attachment slacklog-attachment-github'>
-            <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
-            <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
-            <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
-            <span class='slacklog-attachment-github-text'><< attachmentText . >></span>
-          </span>
-        <<- else if eq .ServiceName "twitter" >>
-          <span class='slacklog-attachment slacklog-attachment-twitter'>
-            <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
-            <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
-            <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
-            <span class='slacklog-attachment-twitter-text'><< attachmentText . >></span>
-            <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
-            <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
-            <<- if .VideoHtml >>
-            <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
-            <<- end >>
-          </span>
-        <<- else if or .Title .Text >>
-          <span class='slacklog-attachment slacklog-attachment-other'>
-            <<- if and .ServiceIcon .ServiceName >>
-            <div>
-              <span class='slacklog-attachment-other-serviceicon'><img src='<< .ServiceIcon >>'></span>
-              <span class='slacklog-attachment-other-servicename'><< html .ServiceName >></span>
-            </div>
-            <<- end >>
-            <<- if and .Title .TitleLink >>
-            <div class='slacklog-attachment-other-title'><a href='<< .TitleLink >>'><< html .Title >></a></div>
-            <<- else if .Title >>
-            <div class='slacklog-attachment-other-title'><< html .Title >></div>
-            <<- end >>
-            <<- if .Text >>
-            <div class='slacklog-attachment-other-text'><< attachmentText . >></div>
-            <<- end >>
-          </span>
-        <<- end >>
-      <<- end >>
-    </span>
-    <<- end >>
-  </span>
-<<- end >>
-<<- end >>
-{% endraw %}
-
-</div>
-`)
+		ParseFiles(tmplFile)
 	if err != nil {
 		return nil, err
 	}

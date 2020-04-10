@@ -1,0 +1,18 @@
+---
+# vim:set ts=2 sts=2 sw=2 et:
+layout: slacklog
+title: vim-jp.slack.com log
+---
+<div>
+<h2><a href='{{ post.url }}'>{{ page.title }}</a></h2>
+
+<p>参加方法、各チャンネルの概要等は以下を参照して下さい。<br>
+<a href='/docs/chat.html'>vim-jpのチャットルームについて</a></p>
+
+<ul>
+<<- range .channels >>
+<li><a href='/slacklog/<< .Name >>/'>#<< .Name >></a></li>
+<<- end >>
+</ul>
+
+</div>
