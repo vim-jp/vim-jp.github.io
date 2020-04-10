@@ -187,14 +187,8 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 		text = reDel.ReplaceAllString(text, "<del>${1}</del>")
 		text = reMention.ReplaceAllStringFunc(text, func(whole string) string {
 			m := reMention.FindStringSubmatch(whole)
-			userId := m[1]
-			if user, ok := userMap[userId]; ok {
-				if user.Profile.RealName != "" {
-					return "@" + user.Profile.RealName
-				}
-				if user.Profile.DisplayName != "" {
-					return "@" + user.Profile.DisplayName
-				}
+			if name := getDisplayNameByUserId(m[1], userMap); name != "" {
+				return "@" + name
 			}
 			return whole
 		})
@@ -241,15 +235,7 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 				return time.Unix(sec, nsec).In(japan).Format("2æ—¥ 15:04:05")
 			},
 			"username": func(msg *message) string {
-				if user, ok := userMap[msg.User]; ok {
-					if user.Profile.RealName != "" {
-						return user.Profile.RealName
-					}
-					if user.Profile.DisplayName != "" {
-						return user.Profile.DisplayName
-					}
-				}
-				return ""
+				return getDisplayNameByUserId(msg.User, userMap)
 			},
 			"userIconUrl": func(msg *message) string {
 				switch msg.Subtype {
@@ -344,6 +330,18 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 	}
 	err = t.Execute(&out, params)
 	return out.Bytes(), err
+}
+
+func getDisplayNameByUserId(userId string, userMap map[string]*user) string {
+	if user, ok := userMap[userId]; ok {
+		if user.Profile.RealName != "" {
+			return user.Profile.RealName
+		}
+		if user.Profile.DisplayName != "" {
+			return user.Profile.DisplayName
+		}
+	}
+	return ""
 }
 
 type msgPerMonth struct {
