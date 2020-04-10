@@ -170,8 +170,9 @@ func genChannelPerMonthIndex(inDir string, channel *channel, msgPerMonth *msgPer
 
 	var reLinkWithTitle = regexp.MustCompile(`&lt;(https?://[^>]+?\|(.+?))&gt;`)
 	var reLink = regexp.MustCompile(`&lt;(https?://[^>]+?)&gt;`)
-	var reCode = regexp.MustCompile("```([^`]+?)```")
-	var reCodeShort = regexp.MustCompile("`([^`]+?)`")
+	// go regexp does not support back reference
+	var reCode = regexp.MustCompile("```([^`]+?)```|｀｀｀([^`]+?)｀｀｀")
+	var reCodeShort = regexp.MustCompile("`([^`]+?)`|｀([^`]+?)｀")
 	var reDel = regexp.MustCompile(`~([^~]+?)~`)
 	var reMention = regexp.MustCompile(`&lt;@(\w+?)&gt;`)
 	var reChannel = regexp.MustCompile(`&lt;#\w+?\|([^&]+?)&gt;`)
