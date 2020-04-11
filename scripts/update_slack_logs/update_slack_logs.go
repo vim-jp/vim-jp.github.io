@@ -42,7 +42,7 @@ func doMain() error {
 	if err != nil {
 		return fmt.Errorf("could not read users.json: %s", err)
 	}
-	channels, _, err := readChannels(filepath.Join(inDir, "channels.json"))
+	channels, _, err := readChannels(filepath.Join(inDir, "channels.json"), cfg.Channels)
 	if err != nil {
 		return fmt.Errorf("could not read channels.json: %s", err)
 	}
@@ -412,7 +412,8 @@ func readMessages(msgJsonPath string) ([]message, error) {
 }
 
 type config struct {
-	EditedSuffix string `json:"edited_suffix"`
+	EditedSuffix string   `json:"edited_suffix"`
+	Channels     []string `json:"channels"`
 }
 
 func readConfig(configPath string) (*config, error) {
@@ -522,13 +523,14 @@ type channelPurpose struct {
 	LastSet int64  `json:"last_set"`
 }
 
-func readChannels(channelsJsonPath string) ([]channel, map[string]*channel, error) {
+func readChannels(channelsJsonPath string, cfgChannels []string) ([]channel, map[string]*channel, error) {
 	content, err := ioutil.ReadFile(channelsJsonPath)
 	if err != nil {
 		return nil, nil, err
 	}
 	var channels []channel
 	err = json.Unmarshal(content, &channels)
+	channels = filterChannel(channels, cfgChannels)
 	sort.Slice(channels, func(i, j int) bool {
 		return channels[i].Name < channels[j].Name
 	})
@@ -537,4 +539,20 @@ func readChannels(channelsJsonPath string) ([]channel, map[string]*channel, erro
 		channelMap[channels[i].Id] = &channels[i]
 	}
 	return channels, channelMap, err
+}
+
+func filterChannel(channels []channel, cfgChannels []string) []channel {
+	newChannels := make([]channel, 0, len(channels))
+	for i := range cfgChannels {
+		if cfgChannels[i] == "*" {
+			return channels
+		}
+		for j := range channels {
+			if cfgChannels[i] == channels[j].Name {
+				newChannels = append(newChannels, channels[j])
+				break
+			}
+		}
+	}
+	return newChannels
 }
