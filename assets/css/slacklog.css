@@ -1,10 +1,23 @@
 /* vim:set ts=8 sts=2 sw=2 noet: */
 
+:root {
+  --slacklog-message-icon-col: 64px;
+}
+
 .slacklog-message {
   display: grid;
-  grid-template-columns: 64px auto 1fr;
+  grid-template-columns: var(--slacklog-message-icon-col) auto 1fr;
   grid-template-rows: 20px auto;
-  margin: 20px 0;
+  margin: 0;
+  padding: 7px 0;
+}
+.slacklog-message-broadcasted:hover,
+.slacklog-message:hover {
+  background-color: #eef;
+}
+.slacklog-message-broadcasted:hover .slacklog-thread,
+.slacklog-message:hover .slacklog-thread {
+  background-color: white;
 }
 .slacklog-icon {
   grid-row: 1 / 3;
@@ -40,11 +53,58 @@
   margin-top: 10px;
   border-left: #ccc 3px solid
 }
+.slacklog-thread-reply-link {
+  grid-column: 2 / 4;
+  display: block;
+  text-overflow: ellipsis;
+  color: gray;
+}
+.slacklog-message-broadcasted {
+  display: grid;
+  grid-template-columns: var(--slacklog-message-icon-col) auto;
+  background-color: rgb(255, 242, 201);
+}
+.slacklog-thread-broadcast-link {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+}
+.slacklog-thread-broadcast-text {
+  padding-top: 5px;
+  grid-row: 1;
+  grid-column: 2;
+  font-size: small;
+  color: #ccc;
+}
+details.slacklog-thread summary {
+  padding: 5px;
+  font-weight: bold;
+  color: #77f
+}
+details.slacklog-thread summary:hover {
+  background-color: white;
+  border: #ccc solid 1px;
+  padding: 4px;
+}
+.slacklog-thread .slacklog-message {
+  padding-left: 10px;
+}
+.slacklog-message-broadcasted .slacklog-message {
+  grid-row: 2;
+  grid-column: 1 / 3;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+.slacklog-thread {
+  grid-row: 4;
+  grid-column: 2 / 4;
+}
 
 .slacklog-attachment-github {
   display: grid;
   align-items: center;
-  grid-template-columns: 40px auto;;
+  grid-template-columns: 40px auto;
 }
 .slacklog-attachment-github-serviceicon {
   grid-row: 1;

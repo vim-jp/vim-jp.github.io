@@ -56,7 +56,7 @@ func doMain() error {
 		if err := mkdir(filepath.Join(outDir, channels[i].Name)); err != nil {
 			return fmt.Errorf("could not create %s/%s directory: %s", outDir, channels[i].Name, err)
 		}
-		msgMap, err := getMsgPerMonth(inDir, channels[i].Name)
+		msgMap, threadMap, err := getMsgPerMonth(inDir, channels[i].Name)
 		if len(msgMap) == 0 {
 			emptyChannel[channels[i].Name] = true
 			continue
@@ -78,7 +78,7 @@ func doMain() error {
 			if err := mkdir(filepath.Join(outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month)); err != nil {
 				return fmt.Errorf("could not create %s/%s/%s/%s directory: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
-			content, err := genChannelPerMonthIndex(inDir, filepath.Join(baseDir, "template", "channel_per_month_index.tmpl"), &channels[i], msgPerMonth, userMap, cfg)
+			content, err := genChannelPerMonthIndex(inDir, filepath.Join(baseDir, "template", "channel_per_month_index.tmpl"), &channels[i], msgPerMonth, userMap, threadMap, cfg)
 			if err != nil {
 				return fmt.Errorf("could not generate %s/%s/%s/%s/index.html: %s", outDir, channels[i].Name, msgPerMonth.Year, msgPerMonth.Month, err)
 			}
@@ -117,7 +117,7 @@ func mkdir(path string) error {
 }
 
 func visibleMsg(msg *message) bool {
-	return msg.Subtype == "" || msg.Subtype == "bot_message"
+	return msg.Subtype == "" || msg.Subtype == "bot_message" || msg.Subtype == "thread_broadcast"
 }
 
 func genIndex(channels []channel, tmplFile string) ([]byte, error) {
@@ -147,10 +147,11 @@ func genChannelIndex(inDir, tmplFile string, channel *channel, msgMap map[string
 	return out.Bytes(), err
 }
 
-func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]*user, cfg *config) ([]byte, error) {
+func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMonth *msgPerMonth, userMap map[string]*user, threadMap map[string][]*message, cfg *config) ([]byte, error) {
 	params := make(map[string]interface{})
 	params["channel"] = channel
 	params["msgPerMonth"] = msgPerMonth
+	params["threadMap"] = threadMap
 	var out bytes.Buffer
 
 	var reLinkWithTitle = regexp.MustCompile(`&lt;(https?://[^>]+?\|(.+?))&gt;`)
@@ -184,6 +185,11 @@ func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMon
 		})
 		return text
 	}
+	var escapeText = func(text string) string {
+		text = html.EscapeString(html.UnescapeString(text))
+		text = reNewline.ReplaceAllString(text, " ")
+		return text
+	}
 	var funcText = func(msg *message) string {
 		text := text2Html(msg.Text)
 		if msg.Edited != nil && cfg.EditedSuffix != "" {
@@ -194,6 +200,29 @@ func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMon
 	var funcAttachmentText = func(attachment *messageAttachment) string {
 		return text2Html(attachment.Text)
 	}
+	var ts2datetime = func(ts string) time.Time {
+		t := strings.Split(ts, ".")
+		if len(t) != 2 {
+			return time.Time{}
+		}
+		sec, err := strconv.ParseInt(t[0], 10, 64)
+		if err != nil {
+			return time.Time{}
+		}
+		nsec, err := strconv.ParseInt(t[0], 10, 64)
+		if err != nil {
+			return time.Time{}
+		}
+		japan, err := time.LoadLocation("Asia/Tokyo")
+		if err != nil {
+			return time.Time{}
+		}
+		return time.Unix(sec, nsec).In(japan)
+	}
+	var ts2threadMtime = func(ts string) time.Time {
+		lastMsg := threadMap[ts][len(threadMap[ts])-1]
+		return ts2datetime(lastMsg.Ts)
+	}
 
 	// TODO check below subtypes work correctly
 	// TODO support more subtypes
@@ -203,30 +232,17 @@ func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMon
 		Funcs(map[string]interface{}{
 			"visible": visibleMsg,
 			"datetime": func(ts string) string {
-				t := strings.Split(ts, ".")
-				if len(t) != 2 {
-					return ""
-				}
-				sec, err := strconv.ParseInt(t[0], 10, 64)
-				if err != nil {
-					return ""
-				}
-				nsec, err := strconv.ParseInt(t[0], 10, 64)
-				if err != nil {
-					return ""
-				}
-				japan, err := time.LoadLocation("Asia/Tokyo")
-				if err != nil {
-					return ""
-				}
-				return time.Unix(sec, nsec).In(japan).Format("2日 15:04:05")
+				return ts2datetime(ts).Format("2日 15:04:05")
 			},
 			"username": func(msg *message) string {
+				if msg.Subtype == "bot_message" {
+					return msg.Username
+				}
 				return getDisplayNameByUserId(msg.User, userMap)
 			},
 			"userIconUrl": func(msg *message) string {
 				switch msg.Subtype {
-				case "":
+				case "", "thread_broadcast":
 					user, ok := userMap[msg.User]
 					if !ok {
 						return "" // TODO show default icon
@@ -241,6 +257,30 @@ func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMon
 			},
 			"text":           funcText,
 			"attachmentText": funcAttachmentText,
+			"threadMtime": func(ts string) string {
+				return ts2threadMtime(ts).Format("2日 15:04:05")
+			},
+			"threads": func(ts string) []*message {
+				if threads, ok := threadMap[ts]; ok {
+					return threads[1:]
+				}
+				return nil
+			},
+			"threadNum": func(ts string) int {
+				return len(threadMap[ts]) - 1
+			},
+			"threadRootText": func(ts string) string {
+				threads, ok := threadMap[ts]
+				if !ok {
+					return ""
+				}
+				runes := []rune(threads[0].Text)
+				text := string(runes)
+				if len(runes) > 20 {
+					text = string(runes[:20]) + " ..."
+				}
+				return escapeText(text)
+			},
 		}).
 		ParseFiles(tmplFile)
 	if err != nil {
@@ -271,17 +311,18 @@ type msgPerMonth struct {
 // "{year}-{month}-{day}.json"
 var reMsgFilename = regexp.MustCompile(`^(\d{4})-(\d{2})-\d{2}\.json$`)
 
-func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, error) {
+func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, map[string][]*message, error) {
 	dir, err := os.Open(filepath.Join(inDir, channelName))
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	defer dir.Close()
 	names, err := dir.Readdirnames(0)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
 	msgMap := make(map[string]*msgPerMonth)
+	threadMap := make(map[string][]*message)
 	for i := range names {
 		m := reMsgFilename.FindStringSubmatch(names[i])
 		if len(m) == 0 {
@@ -292,11 +333,10 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 		if _, ok := msgMap[key]; !ok {
 			msgMap[key] = &msgPerMonth{Year: m[1], Month: m[2]}
 		}
-		msgs, err := readMessages(filepath.Join(inDir, channelName, names[i]))
+		err := readMessages(filepath.Join(inDir, channelName, names[i]), msgMap[key], threadMap)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
-		msgMap[key].Messages = append(msgMap[key].Messages, msgs...)
 	}
 	for key := range msgMap {
 		if len(msgMap[key].Messages) == 0 {
@@ -308,7 +348,7 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 			return msgMap[key].Messages[i].Ts < msgMap[key].Messages[j].Ts
 		})
 	}
-	return msgMap, nil
+	return msgMap, threadMap, nil
 }
 
 type message struct {
@@ -318,6 +358,7 @@ type message struct {
 	Text        string              `json:"text"`
 	User        string              `json:"user"`
 	Ts          string              `json:"ts"`
+	ThreadTs    string              `json:"thread_ts"`
 	Username    string              `json:"username"`
 	BotId       string              `json:"bot_id"`
 	Team        string              `json:"team"`
@@ -330,6 +371,7 @@ type message struct {
 	Edited    *messageEdited    `json:"edited"`
 	Icons     *messageIcons     `json:"icons"`
 	Files     []messageFile     `json:"files"`
+	Root      *message          `json:"root"`
 }
 
 type messageFile struct {
@@ -422,23 +464,30 @@ type messageReaction struct {
 	Count int      `json:"count"`
 }
 
-func readMessages(msgJsonPath string) ([]message, error) {
+func readMessages(msgJsonPath string, msgPerMonth *msgPerMonth, threadMap map[string][]*message) error {
 	content, err := ioutil.ReadFile(msgJsonPath)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	var msgs []message
 	err = json.Unmarshal(content, &msgs)
 	if err != nil {
-		return nil, fmt.Errorf("failed to unmarshal %s: %s", msgJsonPath, err)
+		return fmt.Errorf("failed to unmarshal %s: %s", msgJsonPath, err)
 	}
-	newMsgs := make([]message, 0, len(msgs))
 	for i := range msgs {
-		if visibleMsg(&msgs[i]) {
-			newMsgs = append(newMsgs, msgs[i])
+		if !visibleMsg(&msgs[i]) {
+			continue
+		}
+		if msgs[i].ThreadTs == "" || msgs[i].ThreadTs == msgs[i].Ts ||
+			msgs[i].Subtype == "thread_broadcast" ||
+			msgs[i].Subtype == "bot_message" {
+			msgPerMonth.Messages = append(msgPerMonth.Messages, msgs[i])
+		}
+		if msgs[i].ThreadTs != "" {
+			threadMap[msgs[i].ThreadTs] = append(threadMap[msgs[i].ThreadTs], &msgs[i])
 		}
 	}
-	return newMsgs, nil
+	return nil
 }
 
 type config struct {

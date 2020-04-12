@@ -11,55 +11,130 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>�
 <<- if visible . >>
   <span class='slacklog-message' id='<< .Ts >>'>
     <img class='slacklog-icon' src='<< userIconUrl . >>'>
-    <<- if eq .Subtype "" >>
     <span class='slacklog-name'><< username . >></span>
-    <<- else if eq .Subtype "bot_message" >>
-    <span class='slacklog-name'><< .Username >></span>
-	<<- end >>
     <a class='slacklog-datetime' href='#<< .Ts >>'><< datetime .Ts >></a>
+
+    <<- if and (ne .ThreadTs "") (ne .ThreadTs .Ts) >>
+    <span class='slacklog-thread-reply-link'>
+      このスレッドに返信しました : <a href='#<<- .ThreadTs >>'><<- threadRootText .ThreadTs >></a>
+    </span>
+    <<- end >>
+
     <span class='slacklog-text'><< text . >></span>
+
     <<- if .Attachments >>
     <span class='slacklog-attachments'>
       <<- range .Attachments >>
-        <<- if eq .ServiceName "GitHub" >>
-          <span class='slacklog-attachment slacklog-attachment-github'>
-            <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
-            <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
-            <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
-            <span class='slacklog-attachment-github-text'><< attachmentText . >></span>
-          </span>
-        <<- else if eq .ServiceName "twitter" >>
-          <span class='slacklog-attachment slacklog-attachment-twitter'>
-            <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
-            <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
-            <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
-            <span class='slacklog-attachment-twitter-text'><< attachmentText . >></span>
-            <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
-            <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
-            <<- if .VideoHtml >>
-            <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
-            <<- end >>
-          </span>
-        <<- else if or .Title .Text >>
-          <span class='slacklog-attachment slacklog-attachment-other'>
-            <<- if and .ServiceIcon .ServiceName >>
-            <div>
-              <span class='slacklog-attachment-other-serviceicon'><img src='<< .ServiceIcon >>'></span>
-              <span class='slacklog-attachment-other-servicename'><< html .ServiceName >></span>
-            </div>
-            <<- end >>
-            <<- if and .Title .TitleLink >>
-            <div class='slacklog-attachment-other-title'><a href='<< .TitleLink >>'><< html .Title >></a></div>
-            <<- else if .Title >>
-            <div class='slacklog-attachment-other-title'><< html .Title >></div>
-            <<- end >>
-            <<- if .Text >>
-            <div class='slacklog-attachment-other-text'><< attachmentText . >></div>
-            <<- end >>
-          </span>
-        <<- end >>
+      <<- if eq .ServiceName "GitHub" >>
+        <span class='slacklog-attachment slacklog-attachment-github'>
+          <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
+          <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
+          <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
+          <span class='slacklog-attachment-github-text'><< attachmentText . >></span>
+        </span>
+      <<- else if eq .ServiceName "twitter" >>
+        <span class='slacklog-attachment slacklog-attachment-twitter'>
+          <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
+          <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
+          <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
+          <span class='slacklog-attachment-twitter-text'><< attachmentText . >></span>
+          <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
+          <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
+          <<- if .VideoHtml >>
+          <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
+          <<- end >>
+        </span>
+      <<- else if or .Title .Text >>
+        <span class='slacklog-attachment slacklog-attachment-other'>
+          <<- if and .ServiceIcon .ServiceName >>
+          <div>
+            <span class='slacklog-attachment-other-serviceicon'><img src='<< .ServiceIcon >>'></span>
+            <span class='slacklog-attachment-other-servicename'><< html .ServiceName >></span>
+          </div>
+          <<- end >>
+          <<- if and .Title .TitleLink >>
+          <div class='slacklog-attachment-other-title'><a href='<< .TitleLink >>'><< html .Title >></a></div>
+          <<- else if .Title >>
+          <div class='slacklog-attachment-other-title'><< html .Title >></div>
+          <<- end >>
+          <<- if .Text >>
+          <div class='slacklog-attachment-other-text'><< attachmentText . >></div>
+          <<- end >>
+        </span>
+      <<- end >>
       <<- end >>
     </span>
+    <<- end >>
+
+    <<- if threads .Ts >>
+    <details class='slacklog-thread'>
+      <summary class-'slacklog-thread-summary'>
+        <<- threadNum .ThreadTs >> 件の返信
+        <span class='slacklog-thread-mtime'>最終返信: <<- threadMtime .ThreadTs >></span>
+      </summary>
+      <<- range threads .Ts >>
+      <<- if eq .Subtype "thread_broadcast" >>
+      <span class='slacklog-message-broadcasted'>
+        <a href='#<<- .Ts >>'>#</a>
+        <span class='slacklog-thread-broadcast-text'>チャンネルにも投稿済</span>
+        <span class='slacklog-message' id='thread-<< .Ts >>'>
+      <<- else >>
+      <span class='slacklog-message' id='thread-<< .Ts >>'>
+      <<- end >>
+        <img class='slacklog-icon' src='<< userIconUrl . >>'>
+        <span class='slacklog-name'><< username . >></span>
+        <a class='slacklog-datetime' href='#thread-<< .Ts >>'><< datetime .Ts >></a>
+        <span class='slacklog-text'><< text . >></span>
+
+        <<- if .Attachments >>
+        <span class='slacklog-attachments'>
+          <<- range .Attachments >>
+          <<- if eq .ServiceName "GitHub" >>
+            <span class='slacklog-attachment slacklog-attachment-github'>
+              <span class='slacklog-attachment-github-serviceicon'><img src='<< .ServiceIcon >>'></span>
+              <span class='slacklog-attachment-github-servicename'><< html .ServiceName >></span>
+              <span class='slacklog-attachment-github-title'><a href='<< .TitleLink >>'><< html .Title >></a></span>
+              <span class='slacklog-attachment-github-text'><< attachmentText . >></span>
+            </span>
+          <<- else if eq .ServiceName "twitter" >>
+            <span class='slacklog-attachment slacklog-attachment-twitter'>
+              <span class='slacklog-attachment-twitter-authoricon'><img src='<< .AuthorIcon >>'></span>
+              <span class='slacklog-attachment-twitter-authorname'><< .AuthorName >></span>
+              <span class='slacklog-attachment-twitter-authorsubname'><< .AuthorSubname >></span>
+              <span class='slacklog-attachment-twitter-text'><< attachmentText . >></span>
+              <span class='slacklog-attachment-twitter-footericon'><img src='<< .FooterIcon >>'></span>
+              <span class='slacklog-attachment-twitter-footer'><< html .Footer >></span>
+              <<- if .VideoHtml >>
+              <span class='slacklog-attachment-twitter-video'><< .VideoHtml >></span>
+              <<- end >>
+            </span>
+          <<- else if or .Title .Text >>
+            <span class='slacklog-attachment slacklog-attachment-other'>
+              <<- if and .ServiceIcon .ServiceName >>
+              <div>
+                <span class='slacklog-attachment-other-serviceicon'><img src='<< .ServiceIcon >>'></span>
+                <span class='slacklog-attachment-other-servicename'><< html .ServiceName >></span>
+              </div>
+              <<- end >>
+              <<- if and .Title .TitleLink >>
+              <div class='slacklog-attachment-other-title'><a href='<< .TitleLink >>'><< html .Title >></a></div>
+              <<- else if .Title >>
+              <div class='slacklog-attachment-other-title'><< html .Title >></div>
+              <<- end >>
+              <<- if .Text >>
+              <div class='slacklog-attachment-other-text'><< attachmentText . >></div>
+              <<- end >>
+            </span>
+          <<- end >>
+          <<- end >>
+        </span>
+        <<- end >>
+      </span>
+      <<- if eq .Subtype "thread_broadcast" >>
+      </span>
+      <<- end >>
+      <<- end >>
+    </details>
     <<- end >>
   </span>
 <<- end >>
