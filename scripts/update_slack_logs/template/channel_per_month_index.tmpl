@@ -8,7 +8,7 @@ title: vim-jp.slack.com log - &#35<< .channel.Name >> - << .msgPerMonth.Year >>å
 
 {% raw %}
 <<- range .msgPerMonth.Messages >>
-<<- if or (eq .Subtype "") (eq .Subtype "bot_message") >>
+<<- if visible . >>
   <span class='slacklog-message' id='<< .Ts >>'>
     <img class='slacklog-icon' src='<< userIconUrl . >>'>
     <<- if eq .Subtype "" >>

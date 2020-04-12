@@ -51,18 +51,16 @@ func doMain() error {
 		return fmt.Errorf("could not create out directory: %s", err)
 	}
 
-	// Generate {outdir}/index.html (links to {channel})
-	content, err := genIndex(channels, filepath.Join(baseDir, "template", "index.tmpl"))
-	err = ioutil.WriteFile(filepath.Join(outDir, "index.html"), content, 0666)
-	if err != nil {
-		return fmt.Errorf("could not create %s/index.html: %s", outDir, err)
-	}
-
+	emptyChannel := make(map[string]bool, len(channels))
 	for i := range channels {
 		if err := mkdir(filepath.Join(outDir, channels[i].Name)); err != nil {
 			return fmt.Errorf("could not create %s/%s directory: %s", outDir, channels[i].Name, err)
 		}
 		msgMap, err := getMsgPerMonth(inDir, channels[i].Name)
+		if len(msgMap) == 0 {
+			emptyChannel[channels[i].Name] = true
+			continue
+		}
 		if err != nil {
 			return err
 		}
@@ -90,6 +88,23 @@ func doMain() error {
 			}
 		}
 	}
+
+	// Remove empty channels
+	newChannels := make([]channel, 0, len(channels))
+	for i := range channels {
+		if !emptyChannel[channels[i].Name] {
+			newChannels = append(newChannels, channels[i])
+		}
+	}
+	channels = newChannels
+
+	// Generate {outdir}/index.html (links to {channel})
+	content, err := genIndex(channels, filepath.Join(baseDir, "template", "index.tmpl"))
+	err = ioutil.WriteFile(filepath.Join(outDir, "index.html"), content, 0666)
+	if err != nil {
+		return fmt.Errorf("could not create %s/index.html: %s", outDir, err)
+	}
+
 	return nil
 }
 
@@ -99,6 +114,10 @@ func mkdir(path string) error {
 		return err
 	}
 	return nil
+}
+
+func visibleMsg(msg *message) bool {
+	return msg.Subtype == "" || msg.Subtype == "bot_message"
 }
 
 func genIndex(channels []channel, tmplFile string) ([]byte, error) {
@@ -182,6 +201,7 @@ func genChannelPerMonthIndex(inDir, tmplFile string, channel *channel, msgPerMon
 	t, err := template.New(name).
 		Delims("<<", ">>").
 		Funcs(map[string]interface{}{
+			"visible": visibleMsg,
 			"datetime": func(ts string) string {
 				t := strings.Split(ts, ".")
 				if len(t) != 2 {
@@ -279,6 +299,10 @@ func getMsgPerMonth(inDir string, channelName string) (map[string]*msgPerMonth, 
 		msgMap[key].Messages = append(msgMap[key].Messages, msgs...)
 	}
 	for key := range msgMap {
+		if len(msgMap[key].Messages) == 0 {
+			delete(msgMap, key)
+			continue
+		}
 		sort.SliceStable(msgMap[key].Messages, func(i, j int) bool {
 			// must be the same digits, so no need to convert the timestamp to a number
 			return msgMap[key].Messages[i].Ts < msgMap[key].Messages[j].Ts
@@ -408,7 +432,13 @@ func readMessages(msgJsonPath string) ([]message, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to unmarshal %s: %s", msgJsonPath, err)
 	}
-	return msgs, nil
+	newMsgs := make([]message, 0, len(msgs))
+	for i := range msgs {
+		if visibleMsg(&msgs[i]) {
+			newMsgs = append(newMsgs, msgs[i])
+		}
+	}
+	return newMsgs, nil
 }
 
 type config struct {
