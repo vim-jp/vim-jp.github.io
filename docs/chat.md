@@ -9,19 +9,23 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 
 [招待用ページ](https://join.slack.com/t/vim-jp/shared_invite/enQtMzk2NDI1NjMwNTc5LTIxNWRjNDNjNTlhZmIzMDdlZmZkM2ZjMTY3N2U1ZmUwMTBkZDRhMWZmYjQ4MTUwYTdhODFjNDJjODMwZjU4ODk)
 
-2019年5月現在、Slack には以下のようなチャンネルがあります(一部です)。
+2020年5月現在、Slack には以下のようなチャンネルがあります(一部です)。
 
-| チャンネル                                                                                                    | 説明                                               |
-| ------------                                                                                                  | ----------------------------                       |
-| #random                                                                                                       | 雑談チャンネルです。                               |
-| #general                                                                                                      | イベント告知、自作プラグイン宣伝用チャンネルです。 |
-| #question                                                                                                     | 気軽に質問できるチャンネルです。                   |
-| #dev                                                                                                          | Vim 本体の開発について相談できるチャンネルです。   |
-| #update                                                                                                       | Vim 本体のパッチ情報が流れてくるチャンネルです。   |
-| #elixir<br>#golang<br>#java<br>#javascript<br>#python<br>#ruby                                                | 各種プログラミング言語について話すチャンネルです。 |
-| #asakusavim<br>#girlsvim<br>#gorillavim<br>#megurovim<br>#osakavim<br>#sapporovim<br>#vimconf<br>#yokohamavim | 各種 Vim イベントのチャンネルです。                |
+| チャンネル                                                                                                                                                    | 説明                                                                                 |
+| ------------                                                                                                                                                  | ----------------------------                                                         |
+| #random                                                                                                                                                       | 雑談チャンネルです。                                                                 |
+| #general                                                                                                                                                      | イベント告知や全体周知用のチャンネルです。                                           |
+| #question                                                                                                                                                     | 気軽に質問できるチャンネルです。                                                     |
+| #welcome                                                                                                                                                      | 自己紹介をするチャンネルです。                                                       |
+| #plugins                                                                                                                                                      | Vim プラグインの紹介(自薦他薦問わず)やプラグインに関する相談ができるチャンネルです。 |
+| #dev                                                                                                                                                          | Vim 本体の開発について相談できるチャンネルです。                                     |
+| #update                                                                                                                                                       | Vim 本体のパッチ情報が流れてくるチャンネルです。                                     |
+| #lang-elixir<br>#lang-haskell<br>#lang-go<br>#lang-java<br>#lang-javascript<br>#lang-python<br>#lang-ruby<br>#lang-rust<br>#lang-vim-script                   | 各種プログラミング言語について話すチャンネルです。                                   |
+| #event-asakusavim<br>#event-girlsvim<br>#event-gorillavim<br>#event-megurovim<br>#event-osakavim<br>#event-sapporovim<br>#event-vimconf<br>#event-yokohamavim | 各種 Vim イベントのチャンネルです。                                                  |
 
 もちろん必要であれば追加することも可能です。
+
+また、全ての会話ログは将来公開され、誰でも閲覧可能になる予定です。
 
 これを機にぜひvim-jpのSlackに参加してみませんか？
 
