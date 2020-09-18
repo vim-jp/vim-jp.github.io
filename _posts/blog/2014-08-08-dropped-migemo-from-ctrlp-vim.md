@@ -16,7 +16,7 @@ function! MigemoMatch(items, str, limit, mmode, ispath, crfile, regex)
   let tmp = tempname()
   try
     if a:str =~ '^\s*$'
-      return a:items
+      return copy(a:items)
     endif
     call writefile(split(iconv(join(a:items, "\n"), &encoding, 'utf-8'), "\n"), tmp)
     return split(iconv(system(
