@@ -22,6 +22,7 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 | #update                                                                                                                                                                              | Vim 本体のパッチ情報が流れてくるチャンネルです。                                     |
 | #lang-c<br>#lang-csharp<br>#lang-elixir<br>#lang-haskell<br>#lang-go<br>#lang-java<br>#lang-javascript<br>#lang-lisp<br>#lang-python<br>#lang-ruby<br>#lang-rust<br>#lang-vim-script | 各種プログラミング言語について話すチャンネルです。                                   |
 | #event-asakusavim<br>#event-girlsvim<br>#event-gorillavim<br>#event-megurovim<br>#event-osakavim<br>#event-sapporovim<br>#event-vimconf<br>#event-yokohamavim                        | 各種 Vim イベントのチャンネルです。                                                  |
+| #vim-jp                                                                                                                                                                              | vim-jp の Slack やコミュニティの運営について緩く相談するチャンネルです。             |
 
 もちろん必要であれば追加することも可能です。
 
