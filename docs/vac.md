@@ -8,6 +8,7 @@ Vim Advent Calendar の一覧です。
 * 2020年
   * [Vim Advent Calendar 2020](https://qiita.com/advent-calendar/2020/vim)
   * [Vim 2 Advent Calendar 2020](https://qiita.com/advent-calendar/2020/vim2)
+  * [Vim Short Tips Advent Calendar 2020](https://qiita.com/advent-calendar/2020/vim-short-tips)
 * 2019年
   * [Vim Advent Calendar 2019](https://qiita.com/advent-calendar/2019/vim)
   * [Vim2 Advent Calendar 2019](https://qiita.com/advent-calendar/2019/vim2)
