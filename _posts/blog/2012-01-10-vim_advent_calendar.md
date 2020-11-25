@@ -180,7 +180,7 @@ Vimに関する記事をVim Hacker達が繰り広げる「Vim Advent Calendar」
 <tr>
 	<td>01/01(日)</td>
 	<td>@ujm</td>
-	<td><a href="http://vim-users.jp/2012/01/happy-new-year-vim/">新年あけましておめでとうございます</a></td>
+	<td><a href="/vim-users-jp/2012/01/01/a-happy-new-year.html">新年あけましておめでとうございます</a></td>
 </tr>
 <tr>
 	<td>01/02(月)</td>
