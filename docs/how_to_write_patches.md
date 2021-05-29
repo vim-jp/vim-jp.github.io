@@ -14,7 +14,7 @@ Vimはバージョン管理ツールとして Git を採用しているおかげ
 ## 準備
 
 まず前提条件として、あなたのPCではコンパイル環境が整備されており、[Git](https://git-scm.com/)が使える状態になっているとします。
-Linuxユーザーであれば[Linuxでのビルド方法](http://vim-jp.org/docs/build_windows_msvc.html)を、Windowsユーザーであれば[Visual Studioでのコンパイル方法](http://vim-jp.org/docs/build_windows_msvc.html)もしくは[MinGWでのコンパイル方法](http://vim-jp.org/docs/build_windows_mingw.html)も参照して下さい。
+Linuxユーザーであれば[Linuxでのビルド方法](http://vim-jp.org/docs/build_linux.md)を、Windowsユーザーであれば[Visual Studioでのコンパイル方法](http://vim-jp.org/docs/build_windows_msvc.html)もしくは[MinGWでのコンパイル方法](http://vim-jp.org/docs/build_windows_mingw.html)も参照して下さい。
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
