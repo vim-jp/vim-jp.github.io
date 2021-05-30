@@ -54,7 +54,7 @@ Linuxユーザーであれば[Linuxでのビルド方法](http://vim-jp.org/docs
 コードを修正したならテストも書きましょう。不具合修正であれば、同じ不具合を再発させないためにもテストは重要です。テストの書き方は以下を参照してください。
 
 - [`:help testing`](http://vim-jp.org/vimdoc-ja/testing.html#testing)
-- [src/testing/README.txt](https://github.com/vim/vim/blob/master/src/testing/README.txt)
+- [src/testdir/README.txt](https://github.com/vim/vim/blob/master/src/testdir/README.txt)
 
 ### テストの実行方法
 
