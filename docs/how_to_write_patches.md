@@ -14,7 +14,7 @@ Vimはバージョン管理ツールとして Git を採用しているおかげ
 ## 準備
 
 まず前提条件として、あなたのPCではコンパイル環境が整備されており、[Git](https://git-scm.com/)が使える状態になっているとします。
-Linuxユーザーであれば[Linuxでのビルド方法](http://vim-jp.org/docs/build_linux.md)を、Windowsユーザーであれば[Visual Studioでのコンパイル方法](http://vim-jp.org/docs/build_windows_msvc.html)もしくは[MinGWでのコンパイル方法](http://vim-jp.org/docs/build_windows_mingw.html)も参照して下さい。
+Linuxユーザーであれば[Linuxでのビルド方法](http://vim-jp.org/docs/build_linux.html)を、Windowsユーザーであれば[Visual Studioでのコンパイル方法](http://vim-jp.org/docs/build_windows_msvc.html)もしくは[MinGWでのコンパイル方法](http://vim-jp.org/docs/build_windows_mingw.html)も参照して下さい。
 
 最新のソースコードを取得する為に、シェル(Windowsであればコマンドプロンプト)から以下を実行します。
 
@@ -77,16 +77,16 @@ Unix 系の場合:
 Windows の場合 (MSVC):
 
     全テストを実行
-    $ nmake -f Make_dos.mak
+    > nmake -f Make_dos.mak
 
     特定のファイルのテストを実行
-    $ nmake -f Make_dos.mak test_channel
+    > nmake -f Make_dos.mak test_channel
 
     特定のファイルの特定名称のテストを実行 (部分一致)
-    $ nmake -f Make_dos.mak test_channel TEST_FILTER=Test_communicate
+    > nmake -f Make_dos.mak test_channel TEST_FILTER=Test_communicate
 
     GUI で実行
-    $ nmake -f Make_dos.mak VIMPROG=..\gvim
+    > nmake -f Make_dos.mak VIMPROG=..\gvim
 
 ## 送信
 
