@@ -8,7 +8,7 @@
 	border: 1px solid #dedede; /* gray */
 	font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 	margin-bottom: 1em;
-	overflow: hidden;
+	overflow: auto;
 	padding: .5em;
 	background-color: #eaeaea;
 }
