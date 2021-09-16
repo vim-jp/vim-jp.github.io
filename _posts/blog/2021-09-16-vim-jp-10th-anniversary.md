@@ -6,7 +6,7 @@ author: KoRoN (a.k.a. kaoriya)
 
 ---
 本日 2021年9月16日に vim-jp は10周年を迎えました。
-vim-jp 立ち上げ当時の記事は以下になります。
+vim-jp 立ち上げ当初の記事は以下になります。
 
 * 2011-09-07 [github上にvim-users-jpというorganizationを作った。](https://mattn.kaoriya.net/software/vim/20110907120904.htm) by mattn
 
@@ -17,6 +17,10 @@ vim-jp 立ち上げ当時の記事は以下になります。
 * 2011-10-01 [個々の作業はチームを作る事で効率を上げられる](https://mattn.kaoriya.net/software/vim/20111001015313.htm) by mattn
 
     vim-jp 立ち上げ約1か月の振り返り記事
+
+* 2012-11 [vim-jpの活動報告](http://koron.github.io/ujihisa-201211/) (by KoRoN)
+
+    1年目の振り返り。VimConfの前身である ujihisa.vim 2012 での発表スライド
 
 この10年ものあいだ vim-jp が存続・機能できたのは、
 何より vim と vim-jp に携わってくれた皆様のおかげです。
