@@ -76,7 +76,7 @@ vim-jp は発足当初より変わらず明確な団体ではありません。
 * [マニュアル邦訳](https://vim-jp.org/vimdoc-ja/)をはじめ日本語リソースの集約
 * CI化
 * vim本体のGitHubへの移行
-* vim-jp初の新機能
+* vim-jp発の新機能
     * +lambda
     * +directx
 * 各種プラグインのメンテナンス
