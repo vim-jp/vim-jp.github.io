@@ -4,5 +4,12 @@ title: Vimのユーザーと開発者を結ぶコミュニティサイト
 ---
 <div class="posts">
   <p>E149: お探しのページが見つかりません。</p>
-  <p>slacklog は運用を停止しました。
+  <p id="slacklog-404" style="display: none">slacklog は運用を停止しました。
 </div>
+
+<script>
+  var path = window.location.pathname;
+  if (path === "/slacklog" || path.startsWith("/slacklog/")) {
+    document.getElementById("slacklog-404").style.display = 'inline'
+  }
+</script>
