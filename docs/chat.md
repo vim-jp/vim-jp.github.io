@@ -7,6 +7,8 @@ title: vim-jpのチャットルームについて
 
 vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.com/)に用意しています。vim-jp に興味のある方ならどなたでも参加できます。以下の招待用ページからメールアドレスを入力して、気軽にご参加ください。
 
+## 参加方法
+
 [招待用ページ](https://join.slack.com/t/vim-jp/shared_invite/zt-zcifn2id-e6EsDjIKEzx~UlF~hE2Njg)
 
 2020年5月現在、Slack には以下のようなチャンネルがあります(一部です)。
@@ -29,3 +31,9 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 これを機にぜひvim-jpのSlackに参加してみませんか？
 
 vim-jp一同、みなさんの参加をお待ちしております！
+
+## 行動規範
+
+vim-jp Slack コミュニティでは以下のリンク先に記する行動規範を適用しています。
+
+[vim-jp Slack コミュニティの行動規範](https://vim-jp.org/coc/slack.html)
