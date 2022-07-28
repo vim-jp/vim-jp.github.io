@@ -14,8 +14,8 @@ vim-w64: &vim-w64
 
 vim-mac: &vim-mac
   title: macOS 10.9+
-  version: '8.2 snapshot'
-  info: macvim, 22.6MB DMG
+  version: '9.0 snapshot'
+  info: macvim, 24.1MB DMG
   url: https://vim-jp.org/redirects/macvim-dev/macvim/latest/
 
 list:
