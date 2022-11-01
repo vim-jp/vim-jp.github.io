@@ -5,6 +5,8 @@ title: Vim Advent Calendar 一覧
 
 Vim Advent Calendar の一覧です。
 
+* 2022年
+  * [Vim Advent Calendar 2022](https://qiita.com/advent-calendar/2022/vim)
 * 2021年
   * [Vim Advent Calendar 2021](https://qiita.com/advent-calendar/2021/vim)
   * [Vim Short Tips Advent Calendar 2021](https://qiita.com/advent-calendar/2021/vim-short-tips)
