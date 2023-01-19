@@ -8,9 +8,6 @@ title: パッチの書き方
 Vimはバージョン管理ツールとして Git を採用しているおかげで、簡単にパッチを作成し管理することができます。
 ここではパッチの作成方法について学びましょう。
 
-最近、www.vim.org のページに[Vim development](http://www.vim.org/develop.php)という記事ができました。
-こちらは英語ですが、手順がよくまとまっているため、英語を苦にしない人はこちらを参照するとよいでしょう。
-
 ## 準備
 
 まず前提条件として、あなたのPCではコンパイル環境が整備されており、[Git](https://git-scm.com/)が使える状態になっているとします。
@@ -77,16 +74,18 @@ Unix 系の場合:
 Windows の場合 (MSVC):
 
     全テストを実行
-    > nmake -f Make_dos.mak
+    > nmake -f Make_mvc.mak
 
     特定のファイルのテストを実行
-    > nmake -f Make_dos.mak test_channel
+    > nmake -f Make_mvc.mak test_channel
 
     特定のファイルの特定名称のテストを実行 (部分一致)
-    > nmake -f Make_dos.mak test_channel TEST_FILTER=Test_communicate
+    > nmake -f Make_mvc.mak test_channel TEST_FILTER=Test_communicate
 
     GUI で実行
-    > nmake -f Make_dos.mak VIMPROG=..\gvim
+    > nmake -f Make_mvc.mak VIMPROG=..\gvim
+
+MinGW を使う場合は `Make_mvc.mak` の代わりに `Make_ming.mak` を指定します。
 
 ## 送信
 
