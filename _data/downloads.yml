@@ -13,9 +13,9 @@ vim-w64: &vim-w64
   url: https://vim-jp.org/redirects/vim/vim-win32-installer/latest/x64/
 
 vim-mac: &vim-mac
-  title: macOS 10.9+
-  version: '9.0 snapshot'
-  info: macvim, 24.1MB DMG
+  title: macOS 10.13+
+  version: '9.0 release'
+  info: macvim, 23.9MB DMG
   url: https://vim-jp.org/redirects/macvim-dev/macvim/latest/
 
 list:
