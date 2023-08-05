@@ -5,7 +5,7 @@ title: Vim Boss が亡くなりました。
 author: mattn
 
 ---
-本日 8/5、悲しいお知らせが入ってきました。Vim の作者 Bram Moolenaar 氏が亡くなりました。謹んでお悔やみを申し上げます。
+本日 2023-08-05、悲しいお知らせが入ってきました。Vim の作者 Bram Moolenaar 氏が亡くなりました。謹んでお悔やみを申し上げます。
 以下は Bram Moolenaar 氏のご家族から vim_announce に送られたメッセージです。
 
 <https://groups.google.com/g/vim_announce/c/tWahca9zkt4t>
