@@ -9,6 +9,9 @@ exclude:
   - 'README.md'
   - 'vendor'
   - 'eyecatch.rb'
+include:
+  - '.well-known'
+
 # デフォルトと同じだが「utf-8で記事を書こう」という宣言的な意味合で残した。
 encoding: utf-8
 
