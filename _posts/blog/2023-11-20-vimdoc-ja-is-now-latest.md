@@ -1,7 +1,7 @@
 ---
 layout: blog
 category: blog
-title: vimdoc-ja が最新に追従しました。
+title: 日本語 help ドキュメント vimdoc-ja が最新に追従しました。
 author: mattn
 
 ---
