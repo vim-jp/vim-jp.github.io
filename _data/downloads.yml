@@ -1,6 +1,6 @@
 vim-win: &vim-win
   title: Windows 32ビット/64ビット
-  version: '9.0 latest'
+  version: '9.1 latest'
 vim-w32: &vim-w32
   <<: *vim-win
   title: Windows 32ビット
@@ -14,14 +14,14 @@ vim-w64: &vim-w64
 
 vim-mac: &vim-mac
   title: macOS 10.13+
-  version: '9.0 release'
-  info: macvim, 23.9MB DMG
+  version: '9.1 release'
+  info: macvim, 20.4MB DMG
   url: https://vim-jp.org/redirects/macvim-dev/macvim/latest/
 
 vim-mac-legacy: &vim-mac-legacy
   title: macOS 10.9-10.12
-  version: '9.0 release'
-  info: macvim, 21.6MB DMG
+  version: '9.1 release'
+  info: macvim, 20.8MB DMG
   url: https://vim-jp.org/redirects/macvim-dev/macvim-legacy/latest/
 
 list:
