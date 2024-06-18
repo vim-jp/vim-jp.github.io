@@ -1,4 +1,8 @@
-## VimConf 2024 開催のお知らせと企業スポンサーの募集
+---
+layout: blog
+category: blog
+title: VimConf 2024 開催のお知らせと企業スポンサーの募集
+---
 
 VimConf 2024 を 2024-11-23 (土) に開催します！  
 
