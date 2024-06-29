@@ -1,4 +1,8 @@
-## VimConf 2024 の登壇者を募集します
+---
+layout: blog
+category: blog
+title: VimConf 2024 の登壇者を募集します
+---
 
 [English version is here](https://vimconf.wordpress.com/2024/06/29/vimconf-2024-call-for-proposal-form-is-open/)
 
