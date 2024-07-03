@@ -11,9 +11,17 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 
 ※ Slackの仕様上、極端に人数が少ないチャンネル(~30人程度)や、他のユーザーによってに招待された場合は入退室ログが表示されます。
 
+## 行動規範
+
+vim-jp Slack コミュニティでは以下のリンク先に記する行動規範を適用しています。
+
+[vim-jp Slack コミュニティの行動規範](https://vim-jp.org/coc/slack.html)
+
 ## 参加方法
 
-[招待用ページ](https://join.slack.com/t/vim-jp/shared_invite/zt-zcifn2id-e6EsDjIKEzx~UlF~hE2Njg)
+[行動規範に同意して招待ページへ移動する](https://join.slack.com/t/vim-jp/shared_invite/zt-zcifn2id-e6EsDjIKEzx~UlF~hE2Njg)
+
+## チャンネル紹介
 
 2020年5月現在、Slack には以下のようなチャンネルがあります(一部です)。
 
@@ -35,9 +43,3 @@ vim-jp のメンバーが集まるチャットルームを[Slack](https://slack.
 これを機にぜひvim-jpのSlackに参加してみませんか？
 
 vim-jp一同、みなさんの参加をお待ちしております！
-
-## 行動規範
-
-vim-jp Slack コミュニティでは以下のリンク先に記する行動規範を適用しています。
-
-[vim-jp Slack コミュニティの行動規範](https://vim-jp.org/coc/slack.html)
