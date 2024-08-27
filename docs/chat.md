@@ -19,7 +19,7 @@ vim-jp Slack コミュニティでは以下のリンク先に記する行動規�
 
 ## 参加方法
 
-[行動規範に同意して招待ページへ移動する](https://join.slack.com/t/vim-jp/shared_invite/zt-zcifn2id-e6EsDjIKEzx~UlF~hE2Njg)
+[行動規範に同意して招待ページへ移動する](https://join.slack.com/t/vim-jp/shared_invite/zt-2pcvr34mu-KrgfIcyfIz1WmiHzpKmldA)
 
 ## チャンネル紹介
 
