@@ -10,7 +10,7 @@ title: VimConf 2024 のチケット販売とLT募集を開始します
 [https://vimconf-2024-ticket.peatix.com](https://vimconf-2024-ticket.peatix.com)
 
 同時に個人スポンサーも募集します。  
-[https://vimconf-2024-ticket.peatix.com](https://vimconf2024-individual-sponsor.peatix.com)  
+[https://vimconf2024-individual-sponsor.peatix.com](https://vimconf2024-individual-sponsor.peatix.com)  
 皆様のご支援が VimConf の存続に繋がります。
 
 5分間の Lightning Talk (LT) 登壇を6名募集します。  
