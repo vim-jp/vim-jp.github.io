@@ -19,7 +19,7 @@ It seems that the third-party ticket sales site Peatix has introduced a mechanis
 
 5分間の Lightning Talk (LT) 登壇を6名募集します。  
 [LT応募フォーム](https://forms.gle/N55rNqsYPD1wtp996)  
-応募締切は 2024-10-18 (金) 23:59 JST です。  
+応募締切は 2024-10-25 (金) 23:59 JST です。  
 **注意: LT登壇にはチケットの購入必須です。**
 
 [VimConf 公式サイト](https://vimconf.org)から過去の登壇スライドや動画を見ることができます。  
