@@ -13,9 +13,9 @@ title: VimConf 2024 のチケット販売とLT募集を開始します
 [https://vimconf2024-individual-sponsor.peatix.com](https://vimconf2024-individual-sponsor.peatix.com)  
 皆様のご支援が VimConf の存続に繋がります。
 
-It seems that the third-party ticket sales site Peatix has introduced a mechanism that restricts access to users residing in the US. According to Peatix, US residents can bypass this issue by taking either of the following actions:
-* Change your country of residence at peatix account profile page to one other than the US (<a href="https://help-organizer.peatix.com/en/support/solutions/articles/44002540318--country-settings">official information</a>)
-* Change your browser's user-agent to empty
+チケット申し込みサイトの Peatix の方針により、米国からのアクセスと判断された場合は申し込みページが表示されないことがあります。その場合、以下のことを試してみてください:
+* Peatix にログインの上、アカウント設定で「国」を米国以外に変更してください (<a href="https://help-organizer.peatix.com/ja-JP/support/solutions/articles/44002540318--country-settings">公式情報</a>)
+* ブラウザの user-agent を空にしてください
 
 5分間の Lightning Talk (LT) 登壇を6名募集します。  
 [LT応募フォーム](https://forms.gle/N55rNqsYPD1wtp996)  
