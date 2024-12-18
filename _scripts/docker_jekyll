@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# This uses GitHub Container Registry.
+# So you need to login ghcr.io with Personal Access Token which have scope read:packages at least.
+#
+# Example:
+#
+#   cat | docker login ghcr.io -u USERNAME --password-stdin
+#   (type your PAT and Ctrl-D twice)
+
+set -eu
+
+dir="$(pwd)"
+
+case $(uname -s) in
+  MSYS*) dir=$(cygpath -w $dir) ;;
+esac
+
+docker run --rm -it \
+  --workdir //srv/jekyll \
+  -v "${dir}:/srv/jekyll" \
+  -p 4000:4000 \
+  --entrypoint "" \
+  ghcr.io/actions/jekyll-build-pages:v1.0.13 \
+  "$@"
