@@ -19,7 +19,7 @@ vim-jp Slack コミュニティでは以下のリンク先に記する行動規�
 
 ## 参加方法
 
-[行動規範に同意して招待ページへ移動する](https://join.slack.com/t/vim-jp/shared_invite/zt-2pit016n8-JdjK2bXpR3vmY7WI3tavTA)
+[行動規範に同意して招待ページへ移動する](https://join.slack.com/t/vim-jp/shared_invite/zt-2zvpj2pbl-Pb_k0owijQ8HuZtQSbtFww)
 
 Slack の仕様によりリンク切れが起きる場合があります。その場合はお手数ですが [GitHub の issue で連絡](https://github.com/vim-jp/vim-jp.github.io/issues/new?title=Slack%E6%8B%9B%E5%BE%85%E3%83%AA%E3%83%B3%E3%82%AF%E5%88%87%E3%82%8C&labels=contents)して頂けますようお願い致します。
 
