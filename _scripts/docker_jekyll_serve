@@ -10,6 +10,4 @@
 
 set -eu
 
-dir="$(pwd)"
-
 docker compose run -d --rm -p 4000:4000 jekyll jekyll server -H 0.0.0.0 "$@"
