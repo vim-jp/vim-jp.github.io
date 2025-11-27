@@ -1,0 +1,9 @@
+services:
+  jekyll:
+    image: ghcr.io/actions/jekyll-build-pages:v1.0.13
+    entrypoint: ""
+    working_dir: /srv/jekyll
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - "4000:4000"
