@@ -10,4 +10,4 @@
 
 set -eu
 
-docker compose run -d --rm -p 4000:4000 jekyll jekyll server -H 0.0.0.0 "$@"
+docker compose run --rm -p 4000:4000 jekyll jekyll server -H 0.0.0.0 "$@"
