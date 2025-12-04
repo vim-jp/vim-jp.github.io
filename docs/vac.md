@@ -5,6 +5,8 @@ title: Vim Advent Calendar 一覧
 
 Vim Advent Calendar の一覧です。
 
+* 2025年
+  * [Vim Advent Calendar 2025 - Adventar](https://adventar.org/calendars/11912)
 * 2024年
   * [Vim Advent Calendar 2024 - Adventar](https://adventar.org/calendars/10040)
   * [Vim Advent Calendar 2024 - Qiita](https://qiita.com/advent-calendar/2024/vim)
