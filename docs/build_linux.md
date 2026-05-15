@@ -3,7 +3,7 @@ layout: docs
 title: Linuxでのビルド方法
 ---
 
-Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
+Ubuntu 24.04 LTSを使った場合のビルド方法を説明します。(Ubuntu 16.04以降、ほぼ同じ手順でビルドできます。)
 
 1.  必要なパッケージのインストール
 
@@ -15,21 +15,19 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
     build-dep コマンドを使わずに、パッケージを個別にインストールするには以下を実行します。
 
-        $ sudo apt install git gettext libtinfo-dev
-          libacl1-dev libgpm-dev
-
-    ※実際は1行
+        $ sudo apt install git gettext libtinfo-dev \
+          libacl1-dev libgpm-dev libsodium-dev
 
     GCC等のビルドツールをまだインストールしていない場合は以下も実行します。
 
         $ sudo apt install build-essential
 
-    gvim (GTK2 GUI版)をビルドするには以下も追加で必要です。(GUI版は一般的にはGTK2またはGTK3を使うのがよいでしょう。)
+    gvim (GTK3 GUI版)をビルドするには以下も追加で必要です。(GUI版は一般的にはGTK3を使うのがよいでしょう。)
 
-        $ sudo apt install libxmu-dev libgtk2.0-dev libxpm-dev
+        $ sudo apt install libxmu-dev libgtk-3-dev libxpm-dev
 
-    ※GTK3 GUI版の場合は`libgtk2.0-dev`の代わりに、`libgtk-3-dev`を指定。<br />
-    ※GTK2-GNOME GUI版の場合は`libgtk2.0-dev`の代わりに、`libgnomeui-dev`を指定。<br />
+    ※GTK2 GUI版の場合は`libgtk-3-dev`の代わりに、`libgtk2.0-dev`を指定。<br />
+    ※GTK2-GNOME GUI版の場合は`libgtk-3-dev`の代わりに、`libgnomeui-dev`を指定。<br />
 
     Perl, Python2,3, Ruby拡張を使うには以下も追加で必要です。
 
@@ -38,6 +36,8 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
     Lua拡張を使うには以下も追加で必要です。
 
         $ sudo apt install lua5.2 liblua5.2-dev
+
+    ※Lua 5.1 ~ 5.4の中から必要なバージョンを選択してください。
 
     LuaJITのLua拡張を使うには代わりに以下も追加で必要です。
 
@@ -59,40 +59,37 @@ Ubuntu 16.04 LTSを使った場合のビルド方法を説明します。
 
     特定のバージョンを指定して取得する場合は、以下のコマンドを実行します。
 
-        $ git checkout v7.4.393
+        $ git checkout v9.2.0000
 
 3.  コンパイル
 
     `vim/src`フォルダに移動し以下のコマンドを実行します。
 
-        $ ./configure --with-features=huge --enable-gui=gtk2
+        $ ./configure --with-features=huge --enable-gui=gtk3 \
           --enable-fail-if-missing
         $ make
 
-    ※`./configure`の行は実際は1行<br />
-    ※GTK3 GUI版の場合は`--enable-gui=gtk2`の代わりに、`--enable-gui=gtk3`を指定<br />
-    ※GTK2-GNOME GUI版の場合は`--enable-gui=gtk2`の代わりに、`--enable-gui=gnome2`を指定<br />
+    ※GTK2 GUI版の場合は`--enable-gui=gtk3`の代わりに、`--enable-gui=gtk2`を指定<br />
+    ※GTK2-GNOME GUI版の場合は`--enable-gui=gtk3`の代わりに、`--enable-gui=gnome2`を指定<br />
     ※`--enable-fail-if-missing`は足りないパッケージがある場合にエラーとするためのオプション<br />
 
     もしPerl拡張やPython2/3拡張、Ruby拡張、Lua拡張を使う場合は以下の様に指定します。
 
-        $ ./configure --with-features=huge --enable-gui=gtk2
-          --enable-perlinterp --enable-pythoninterp
-          --enable-python3interp --enable-rubyinterp
-          --enable-luainterp
+        $ ./configure --with-features=huge --enable-gui=gtk3 \
+          --enable-perlinterp --enable-pythoninterp \
+          --enable-python3interp --enable-rubyinterp \
+          --enable-luainterp \
           --enable-fail-if-missing
         $ make
 
     もしLuaインタプリタとしてLuaJITを利用したい場合は以下の様に`--with-luajit`を追加します。
 
-        $ ./configure --with-features=huge --enable-gui=gtk2
-          --enable-perlinterp --enable-pythoninterp
-          --enable-python3interp --enable-rubyinterp
-          --enable-luainterp --with-luajit
+        $ ./configure --with-features=huge --enable-gui=gtk3 \
+          --enable-perlinterp --enable-pythoninterp \
+          --enable-python3interp --enable-rubyinterp \
+          --enable-luainterp --with-luajit \
           --enable-fail-if-missing
         $ make
-
-    ※`./configure`の行は実際は1行
 
     `./configure`のオプションの詳細は以下のコマンドで確認できます。
 
